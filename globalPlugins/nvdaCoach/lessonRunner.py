@@ -7,7 +7,14 @@
 import wx
 import ui
 import tones
+import config
 from logHandler import log
+
+
+def _beep(freq, duration):
+	"""Play a tone only if sounds are enabled in NVDA Coach settings."""
+	if config.conf["nvdaCoach"]["playSounds"]:
+		tones.beep(freq, duration)
 
 
 class LessonRunner:
@@ -26,6 +33,7 @@ class LessonRunner:
 		self._pendingTimer = None
 		self.coachWindow = None  # Set by GlobalPlugin after creation.
 		self.onOpenPracticePage = None  # Callback: fired when a step with openPracticePageAfter is advanced past.
+		self.onOpenPracticeFrame = None  # Callback: fired when a step with openPracticeFrameAfter is advanced past.
 		self.onChapterComplete = None   # Callback: fired when a lesson with chapterComplete: true finishes.
 
 	# ------------------------------------------------------------------
@@ -43,9 +51,9 @@ class LessonRunner:
 		self.isActive = True
 
 		# Welcome tone.
-		tones.beep(600, 80)
-		wx.CallLater(150, lambda: tones.beep(900, 80))
-		wx.CallLater(350, lambda: tones.beep(1200, 120))
+		_beep(600, 80)
+		wx.CallLater(150, lambda: _beep(900, 80))
+		wx.CallLater(350, lambda: _beep(1200, 120))
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		if LessonRunner._controlsIntroShown:
@@ -69,7 +77,7 @@ class LessonRunner:
 		self._cancelPendingTimer()
 		self.isActive = False
 		if announce:
-			tones.beep(400, 150)
+			_beep(400, 150)
 			ui.message(
 				"Lesson stopped. "
 				"Press NVDA+Shift+C to choose another lesson, "
@@ -91,7 +99,7 @@ class LessonRunner:
 		if not self.isActive:
 			return
 		self._cancelPendingTimer()
-		tones.beep(880, 40)
+		_beep(880, 40)
 		self._advanceStep()
 
 	def repeatInstruction(self):
@@ -109,14 +117,14 @@ class LessonRunner:
 		step = self._currentStep()
 		if step:
 			hint = step.get("hint", "No additional hint is available for this step.")
-			tones.beep(700, 60)
+			_beep(700, 60)
 			ui.message(f"Hint: {hint}")
 
 	def skipStep(self):
 		"""Skip the current step without marking it correct. Called by F3."""
 		if not self.isActive:
 			return
-		tones.beep(500, 100)
+		_beep(500, 100)
 		ui.message("Step skipped.")
 		self._advanceStep()
 
@@ -175,7 +183,10 @@ class LessonRunner:
 				displayInstruction,
 			)
 
-		ui.message(prefix + instruction)
+		spokenMsg = prefix + instruction
+		if stepType == "gesture":
+			spokenMsg += " Try it now. When you are ready to continue, press Enter or click Next Step."
+		ui.message(spokenMsg)
 
 	def _advanceStep(self):
 		"""Move to the next step, or complete the lesson if done."""
@@ -190,6 +201,8 @@ class LessonRunner:
 		else:
 			if prevStep and prevStep.get("openPracticePageAfter") and self.onOpenPracticePage:
 				wx.CallAfter(self.onOpenPracticePage)
+			if prevStep and prevStep.get("openPracticeFrameAfter") and self.onOpenPracticeFrame:
+				wx.CallAfter(self.onOpenPracticeFrame)
 			self._speakCurrentStep()
 
 	def _completeLesson(self):
@@ -207,7 +220,7 @@ class LessonRunner:
 
 		# Celebration tones.
 		for i, freq in enumerate([523, 659, 784, 1047]):
-			wx.CallLater(i * 120, tones.beep, freq, 100)
+			wx.CallLater(i * 120, _beep, freq, 100)
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		msg = (

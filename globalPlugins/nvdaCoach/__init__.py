@@ -12,12 +12,38 @@ import globalPluginHandler
 from scriptHandler import script
 import ui
 import gui
+import gui.settingsDialogs
 import wx
 from logHandler import log
 import tones
+import config
 
 from .lessonRunner import LessonRunner
 from .progressTracker import ProgressTracker
+
+# Register NVDA Coach config spec so settings persist across sessions.
+config.conf.spec["nvdaCoach"] = {"playSounds": "boolean(default=True)"}
+
+
+# ---------------------------------------------------------------------------
+# NVDA Settings panel
+# ---------------------------------------------------------------------------
+
+class NvdaCoachSettingsPanel(gui.settingsDialogs.SettingsPanel):
+	"""NVDA Coach settings panel — appears in NVDA Preferences > NVDA Coach."""
+
+	title = "NVDA Coach"
+
+	def makeSettings(self, settingsSizer):
+		self._playSoundsCheckbox = wx.CheckBox(
+			self,
+			label="Play sounds during lessons (correct/incorrect/completion chimes)",
+		)
+		self._playSoundsCheckbox.SetValue(config.conf["nvdaCoach"]["playSounds"])
+		settingsSizer.Add(self._playSoundsCheckbox)
+
+	def onSave(self):
+		config.conf["nvdaCoach"]["playSounds"] = self._playSoundsCheckbox.GetValue()
 
 
 def _loadLessonCategories():
@@ -407,6 +433,16 @@ class CoachWindow(wx.Frame):
 			return
 
 		# ----- BETWEEN LESSONS / IDLE -------------------------------------
+		# Enter / Numpad Enter → go to next lesson (mirrors the "Next Step" button intent).
+		if key in (wx.WXK_RETURN, wx.WXK_NUMPAD_ENTER):
+			focused = wx.Window.FindFocus()
+			# Let Back, Restart, and other buttons handle their own Enter.
+			if isinstance(focused, wx.Button) and focused is not self._nextStepBtn:
+				evt.Skip()
+				return
+			self._plugin.nextLesson()
+			return
+
 		if key == wx.WXK_ESCAPE:
 			self._handleIdleEscape()
 			return
@@ -963,10 +999,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._lessonRunner.coachWindow = self._coachWindow
 		# Create the practice window (hidden; shown automatically per lesson).
 		self._practiceFrame = PracticeFrame(gui.mainFrame, self)
+		# Register NVDA settings panel.
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(NvdaCoachSettingsPanel)
 		log.info(f"NVDA Coach loaded. {len(self._categories)} lesson categories found.")
 
 	def terminate(self):
 		self._lessonRunner.cleanup()
+		# Deregister settings panel.
+		try:
+			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(NvdaCoachSettingsPanel)
+		except ValueError:
+			pass
 		for win in (self._coachWindow, self._practiceFrame):
 			try:
 				win.Destroy()
@@ -1046,10 +1089,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				),
 				0,
 			)
-			# Open practice environment if this lesson has one.
+			# Wire up practice frame callback so it opens only after the priming step.
 			lessonId = lesson.get("id", "")
 			if lessonId in PracticeFrame.SUPPORTED_LESSONS:
-				self._practiceFrame.showForLesson(lessonId, lesson.get("title", ""))
+				_lid, _ltitle = lessonId, lesson.get("title", "")
+				self._lessonRunner.onOpenPracticeFrame = (
+					lambda lid=_lid, lt=_ltitle: self._practiceFrame.showForLesson(lid, lt)
+				)
 
 			if category and category.get("practicePage"):
 				# Wire up browse-mode callbacks on the runner.
@@ -1095,6 +1141,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Lesson navigation — called from CoachWindow keyboard handler
 	# ------------------------------------------------------------------
 
+	def _wirePracticeFrame(self, lessonId, lessonTitle):
+		"""If the lesson uses a PracticeFrame, wire the callback for deferred opening."""
+		if lessonId in PracticeFrame.SUPPORTED_LESSONS:
+			self._lessonRunner.onOpenPracticeFrame = (
+				lambda lid=lessonId, lt=lessonTitle: self._practiceFrame.showForLesson(lid, lt)
+			)
+		else:
+			self._lessonRunner.onOpenPracticeFrame = None
+
 	def nextLesson(self):
 		"""Advance to the next lesson in the current category (Ctrl+N)."""
 		if not self._currentCategoryLessons:
@@ -1112,8 +1167,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._currentLessonIndex += 1
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
-		if lessonId in PracticeFrame.SUPPORTED_LESSONS:
-			self._practiceFrame.showForLesson(lessonId, lesson.get("title", ""))
+		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
 		ui.message(f"Moving to: {lesson.get('title', 'next lesson')}.")
 		wx.CallLater(
 			1000,
@@ -1136,8 +1190,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._currentLessonIndex -= 1
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
-		if lessonId in PracticeFrame.SUPPORTED_LESSONS:
-			self._practiceFrame.showForLesson(lessonId, lesson.get("title", ""))
+		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
 		ui.message(f"Going back to: {lesson.get('title', 'previous lesson')}.")
 		wx.CallLater(
 			1000,
@@ -1156,8 +1209,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._lessonRunner.stopLesson(announce=False)
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
-		if lessonId in PracticeFrame.SUPPORTED_LESSONS:
-			self._practiceFrame.showForLesson(lessonId, lesson.get("title", ""))
+		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
 		ui.message("Restarting lesson.")
 		wx.CallLater(
 			600,

@@ -12,7 +12,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Browse mode is how NVDA helps you read web pages. When you open a web page in your browser, NVDA creates a virtual text copy of the page. You can move through it with arrow keys, just like a document. Single-letter shortcut keys also become available for fast navigation. When you press Enter, a practice web page will open in your browser in a separate window. Stay here and finish reading these instructions first. NVDA Coach will remain focused so you can read the next step. When you are ready, press Alt+Tab to switch to your browser. Press Enter to open the practice page and continue.",
+					"instruction": "[NVDA feature] Browse mode is how NVDA helps you read web pages. Sighted users can see a web page laid out visually. NVDA creates a virtual text copy of the page that you can navigate with arrow keys and single-letter shortcuts, as if it were a document. When you press Enter, a practice web page will open in your browser in a separate window. Stay here and finish reading these instructions first. NVDA Coach will remain focused so you can read the next step. When you are ready, press Alt+Tab to switch to your browser. Press Enter to open the practice page and continue.",
 					"openPracticePageAfter": true
 				},
 				{
@@ -50,7 +50,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Web pages are structured with headings, like chapters in a book. Headings help you understand the layout of a page and jump to sections quickly. In browse mode, press H to jump to the next heading. Shift plus H goes back to the previous heading. Make sure you are in your browser on the practice page. Press Enter to continue."
+					"instruction": "[NVDA browse mode key] Web pages are structured with headings, like chapters in a book. Sighted users see headings visually — they are larger or bold. NVDA announces the heading text and its level. In browse mode, press H to jump to the next heading. Shift plus H goes back to the previous heading. Make sure you are in your browser on the practice page. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -94,7 +94,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Web pages use different heading levels for structure. Heading level 1 is usually the main page title. Level 2 headings are major sections. Level 3 headings are sub-sections within those. In browse mode, you can press a number from 1 to 6 to jump directly to a heading of that level. Press Enter to continue."
+					"instruction": "[NVDA browse mode key] Web pages use different heading levels for structure — level 1 is the main title, level 2 is a major section, level 3 is a sub-section. Sighted users can see this hierarchy by the size of the text. In browse mode, you can press a number from 1 to 6 to jump directly to a heading of that level. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -138,7 +138,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Links are what you click to move between web pages. In browse mode, press K to jump to the next link. Shift plus K goes to the previous link. Tab also moves you forward between links and other interactive elements. Press Enter to continue."
+					"instruction": "[NVDA browse mode key] Links are what you activate to move between web pages. Sighted users can see links as underlined or colored text. In browse mode, press K to jump to the next link — NVDA announces the link text so you know where it goes. Shift plus K goes to the previous link. Tab also moves you forward between links and other interactive elements. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -193,7 +193,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Web pages often have forms with text boxes, buttons, and checkboxes. In browse mode, press F to jump to the next form field. Press E to jump to the next edit field, which is a text box you can type in. Press B to jump to the next button. Press Enter to continue."
+					"instruction": "[NVDA browse mode keys] Web pages often have forms with text boxes, buttons, and checkboxes. Sighted users can see these visually; NVDA announces what type of field you land on. In browse mode, press F to jump to the next form field. Press E to jump to the next edit field, which is a text box you can type in. Press B to jump to the next button. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -237,7 +237,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Browse mode lets you read and navigate pages. But when you need to type into a text box, you need to switch to focus mode. In focus mode, your keypresses go directly to the application instead of being used as navigation shortcuts. NVDA often switches automatically when you Tab into a text field. You can also toggle manually with NVDA+Space. Press Enter to continue."
+					"instruction": "[NVDA command] Browse mode lets you read and navigate pages. But when you need to type into a text box, you need to switch to focus mode. In focus mode, your keypresses go directly to the application instead of being used as navigation shortcuts. NVDA often switches automatically when you Tab into a text field. You can also toggle manually with NVDA+Space. This switching between modes is unique to screen readers — it is how NVDA gives you both powerful navigation and full keyboard control in the same browser. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -262,7 +262,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Well-designed web pages use landmarks, which are named regions such as navigation, main content, and footer. In browse mode, press D to jump to the next landmark. Shift plus D goes backward. Pages also have lists of items. Press L to jump to the next list. These shortcuts help you skip to the right part of a page without reading everything. Press Enter to continue."
+					"instruction": "[NVDA browse mode keys] Well-designed web pages use landmarks — named regions such as navigation, main content, and footer. Sighted users can see these sections at a glance. In browse mode, press D to jump to the next landmark and skip directly to the part of the page you need. Shift plus D goes backward. Pages also have lists of items. Press L to jump to the next list. These shortcuts help you skip to the right part of a page without reading everything. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -303,11 +303,10 @@
 			"id": "elements_list",
 			"title": "The Elements List",
 			"order": 8,
-			"chapterComplete": true,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "NVDA has a powerful dialog called the Elements List that shows you all the headings, links, form fields, or landmarks on the current page in one place. You can filter the list and jump directly to any item. It is like a table of contents for the whole page. Press Enter to continue."
+					"instruction": "[NVDA command] NVDA has a powerful dialog called the Elements List that shows you all the headings, links, form fields, or landmarks on the current page in one place. You can filter the list and jump directly to any item. Sighted users can visually scan a page and spot what they need; the Elements List gives you the same overview in one accessible dialog. It is like a table of contents for the whole page. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -318,7 +317,52 @@
 				},
 				{
 					"type": "info",
-					"instruction": "Excellent work — you have completed the Browse Mode and Web Navigation chapter! You now know how to navigate web pages using headings, links, form fields, landmarks, lists, the Elements List, and how to switch between browse mode and focus mode. These skills let you navigate any web page quickly and independently. To explore more resources, press NVDA+Shift+C to open the lesson picker and check the Additional Training and Help section at the bottom of the list. Press Enter to finish."
+					"instruction": "Well done. The Elements List is one of the fastest ways to get an overview of any page. Press Enter to continue to the next lesson."
+				}
+			]
+		},
+		{
+			"id": "nvda_find",
+			"title": "Find Text on a Page",
+			"order": 9,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "[NVDA command] NVDA+Ctrl+F opens the NVDA Find dialog, which lets you search for any text on the current web page. Sighted users can press Ctrl+F in their browser to find text on screen. NVDA's Find dialog works the same way but announces the result through speech. It works in browse mode and in many documents. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "Try it now. Hold your NVDA key, then hold Control, then press F. The Find dialog will open. Type a word that appears on the practice page — such as 'heading' or 'link' — then press Enter to jump to the first match. NVDA will announce the text around the result. Press Escape to close the dialog without searching. When you are done, press NVDA+Shift+C to return here, then press Enter to continue.",
+					"monitorGestures": [
+						"kb:nvda+control+f"
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "You can also find the next or previous occurrence without reopening the dialog. Press NVDA+F3 to find the next match, and NVDA+Shift+F3 to find the previous match. These work the same way as Find Next in other applications. Press Enter to continue."
+				}
+			]
+		},
+		{
+			"id": "toggle_single_letter_nav",
+			"title": "Toggle Single-Letter Navigation",
+			"order": 10,
+			"chapterComplete": true,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "[NVDA command] In browse mode, single-letter keys like H, K, and D are shortcuts for jumping to headings, links, and landmarks. But when you are filling in a form, those same letter keys need to type characters into a text field — not navigate the page. NVDA+Shift+Space toggles single-letter navigation on and off. This is unique to NVDA and gives you precise control over how your keyboard behaves on any web page. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "Try it now. Hold your NVDA key, hold Shift, and press Space. NVDA will announce either 'single letter navigation on' or 'single letter navigation off.' When it is off, letters type normally into any field you are in. When it is on, single letters are shortcuts again. Toggle it back on before moving on. Press Enter here to continue.",
+					"monitorGestures": [
+						"kb:nvda+shift+space"
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Excellent work — you have completed the Browse Mode and Web Navigation chapter! You now know how to navigate web pages using headings, links, form fields, landmarks, lists, the Elements List, NVDA Find, and how to switch between browse mode, focus mode, and single-letter navigation. These skills let you navigate any web page quickly and independently. To explore more resources, press NVDA+Shift+C to open the lesson picker and check the Additional Training and Help section at the bottom of the list. Press Enter to finish."
 				}
 			]
 		}

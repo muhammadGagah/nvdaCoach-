@@ -1,0 +1,58 @@
+{
+	"id": "nvda_settings",
+	"title": "Customizing NVDA",
+	"description": "Learn how to adjust NVDA's keyboard layout, speech rate, and voice to suit your preferences.",
+	"order": 5,
+	"lessons": [
+		{
+			"id": "keyboard_layout",
+			"title": "Changing Your Keyboard Layout",
+			"order": 1,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "NVDA supports two keyboard layouts: desktop and laptop. Desktop layout uses the numeric keypad on the right side of a full-size keyboard for many NVDA commands. Laptop layout uses NVDA plus letter keys instead, so you do not need a numpad. Most desktop computers use desktop layout by default. Most laptops use laptop layout. You can change this at any time in NVDA settings. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "To open NVDA settings, press NVDA+N to open the NVDA menu. Then press P for Preferences, then S for Settings. You will hear NVDA announce the Settings dialog opening. The first category you land on may vary. Press Tab to move between settings categories or use the arrow keys in the category list. Navigate to the Keyboard category to find the layout setting. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "Inside the Keyboard settings, you will find a combo box labeled 'Keyboard layout' with two options: Desktop and Laptop. Use the Up and Down Arrow keys to choose the layout that matches your keyboard. Once selected, press Enter or Tab to move to the OK button and press Enter to save. Your new layout takes effect immediately without restarting NVDA. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "A note on NVDA Coach lessons: the lesson instructions in this course mention both desktop and laptop key alternatives when they differ. If you have changed your layout to laptop, use the laptop key combinations shown. If you are unsure which layout is active, open NVDA Settings and check the Keyboard category. Press Enter to finish this lesson."
+				}
+			]
+		},
+		{
+			"id": "speech_settings",
+			"title": "Adjusting Speech Rate and Voice",
+			"order": 2,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "NVDA's speech can be customized to suit your listening preferences. You can change the speed at which NVDA reads, the voice it uses, the pitch, and the volume. These settings are found in NVDA Settings under the Speech category. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "The quickest way to adjust speech rate on the fly is with keyboard shortcuts. Press NVDA+Control+Right Arrow to increase the speech rate. Press NVDA+Control+Left Arrow to decrease it. These work at any time, even during reading, so you can tune the speed without opening any dialog. Find a rate that feels comfortable for you — most new users start slower and increase speed as they become more experienced. Press Enter to continue.",
+					"monitorGestures": [
+						"kb:nvda+control+rightArrow",
+						"kb:nvda+control+leftArrow"
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "To change the voice, open NVDA Settings with NVDA+N, then P for Preferences, then S for Settings. Navigate to the Speech category. There you will find combo boxes for Synthesizer and Voice. Use the arrow keys to choose a different voice. Microsoft's built-in voices — such as David, Zira, or Mark — are available by default. Third-party synthesizers like eSpeak NG (included with NVDA) offer additional options. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "You can also save a voice profile once you have found settings you like. In NVDA Settings, use the Save button to store your current configuration. This ensures your preferred voice and speed are restored every time NVDA starts. If you ever want to go back to defaults, use the Reset to defaults option in the same dialog. Press Enter to finish this lesson."
+				}
+			]
+		}
+	]
+}
