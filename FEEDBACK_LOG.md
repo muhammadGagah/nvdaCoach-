@@ -65,6 +65,21 @@ Tracks user feedback for prioritization, implementation, and release planning.
 
 ---
 
+## Feedback #005 — Rui Fontes (received 2026-03-20)
+
+**Source:** Email / community feedback
+**Credentials:** NVDA Portuguese translation team
+
+### Localization / i18n
+- `[ ]` **Localize the add-on and lessons by language subfolder.** Support language-specific lesson content by organizing the `lessons/` directory into language subfolders (e.g., `lessons/en/`, `lessons/pt/`). The add-on would detect NVDA's current language setting and load the matching subfolder, falling back to `en/` if no translation exists. This would allow the Portuguese team (and others) to translate lesson content without touching Python code.
+
+**Notes:**
+- Rui is on the NVDA Portuguese translation team — potential collaborator for a `pt/` lesson set
+- UI strings (button labels, error messages, settings panel) would also need gettext/`.po` file support to be fully localizable
+- Consider reaching out to Rui if/when localization work begins
+
+---
+
 ## Change Log
 
 | Version | Date       | Item         | Description |
