@@ -7,7 +7,6 @@
 import os
 import wx
 import ui
-import tones
 import nvwave
 import config
 from logHandler import log
@@ -15,14 +14,8 @@ from logHandler import log
 _SOUNDS_DIR = os.path.join(os.path.dirname(__file__), "sounds")
 
 
-def _beep(freq, duration):
-	"""Play a tone only if sounds are enabled in NVDA Coach settings."""
-	if config.conf["nvdaCoach"]["playSounds"]:
-		tones.beep(freq, duration)
-
-
 def _playSound(filename):
-	"""Play a .ogg/.wav file from the sounds/ folder, if sounds are enabled."""
+	"""Play a WAV file from the sounds/ folder, gated on the playSounds setting."""
 	if config.conf["nvdaCoach"]["playSounds"]:
 		path = os.path.join(_SOUNDS_DIR, filename)
 		nvwave.playWaveFile(path)
@@ -61,10 +54,8 @@ class LessonRunner:
 		self._stepIndex = 0
 		self.isActive = True
 
-		# Welcome tone.
-		_beep(600, 80)
-		wx.CallLater(150, lambda: _beep(900, 80))
-		wx.CallLater(350, lambda: _beep(1200, 120))
+		# Lesson start sound.
+		_playSound("lesson_start.wav")
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		if LessonRunner._controlsIntroShown:
@@ -88,7 +79,7 @@ class LessonRunner:
 		self._cancelPendingTimer()
 		self.isActive = False
 		if announce:
-			_beep(400, 150)
+			_playSound("lesson_stop.wav")
 			ui.message(
 				"Lesson stopped. "
 				"Press NVDA+Shift+C to choose another lesson, "
@@ -110,7 +101,7 @@ class LessonRunner:
 		if not self.isActive:
 			return
 		self._cancelPendingTimer()
-		_beep(880, 40)
+		_playSound("step_advance.wav")
 		self._advanceStep()
 
 	def repeatInstruction(self):
@@ -128,14 +119,13 @@ class LessonRunner:
 		step = self._currentStep()
 		if step:
 			hint = step.get("hint", "No additional hint is available for this step.")
-			_beep(700, 60)
+			_playSound("hint.wav")
 			ui.message(f"Hint: {hint}")
 
 	def skipStep(self):
 		"""Skip the current step without marking it correct. Called by F3."""
 		if not self.isActive:
 			return
-		_beep(500, 100)
 		ui.message("Step skipped.")
 		self._advanceStep()
 

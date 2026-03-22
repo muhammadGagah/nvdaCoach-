@@ -1001,6 +1001,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._practiceFrame = PracticeFrame(gui.mainFrame, self)
 		# Register NVDA settings panel.
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(NvdaCoachSettingsPanel)
+		# Add NVDA Coach item to NVDA Help menu.
+		self._helpMenuItem = gui.mainFrame.sysTrayIcon.helpMenu.Append(
+			wx.ID_ANY,
+			_("NVDA Coach &Help"),
+			_("Open the NVDA Coach user guide"),
+		)
+		gui.mainFrame.sysTrayIcon.helpMenu.Bind(
+			wx.EVT_MENU, self._onHelpMenuActivated, self._helpMenuItem
+		)
 		log.info(f"NVDA Coach loaded. {len(self._categories)} lesson categories found.")
 
 	def terminate(self):
@@ -1010,11 +1019,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(NvdaCoachSettingsPanel)
 		except ValueError:
 			pass
+		# Remove Help menu item.
+		try:
+			gui.mainFrame.sysTrayIcon.helpMenu.Remove(self._helpMenuItem)
+		except Exception:
+			pass
 		for win in (self._coachWindow, self._practiceFrame):
 			try:
 				win.Destroy()
 			except Exception:
 				pass
+
+	def _onHelpMenuActivated(self, evt):
+		"""Open the NVDA Coach user guide from the NVDA Help menu."""
+		docPath = os.path.abspath(
+			os.path.join(os.path.dirname(__file__), "..", "..", "doc", "en", "readme.html")
+		)
+		if os.path.isfile(docPath):
+			os.startfile(docPath)
+		else:
+			webbrowser.open("https://tonygebhard.me/NVDACoach")
 
 	@script(
 		description=_("Show NVDA Coach window, or open the lesson picker"),
