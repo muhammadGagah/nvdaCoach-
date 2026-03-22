@@ -1,0 +1,131 @@
+GROUPS.IO POST — NVDA Coach v1.2.0
+====================================
+Subject: NVDA Coach v1.2.0 — new lesson, sound overhaul, and community thanks
+
+
+--- POST TEXT ---
+
+Hello all,
+
+I wanted to share a new release of NVDA Coach and take a moment to properly thank
+some community members whose feedback shaped it.
+
+NVDA Coach is a free add-on for NVDA that teaches commands through guided,
+step-by-step practice sessions from inside NVDA itself — no PDFs, no videos,
+no switching contexts. Press NVDA+Shift+C and the Coach walks you through what
+to do and why, one step at a time.
+
+Version 1.2.0 is available now.
+
+Download:
+https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon
+
+Full release notes:
+https://github.com/tonygeb23/nvdaCoach-/releases/tag/v1.2.0
+
+
+WHAT'S NEW IN V1.2.0
+---------------------
+
+1. Understanding Command Categories — new opening lesson in Chapter 1
+
+This is the change I'm most proud of in this release, and it came directly from
+a conversation in this community.
+
+Brian made a point that stopped me in my tracks: rather than labeling individual
+commands with tags like "[NVDA command]" or "[Universal shortcut]" on every step,
+learners need to understand the framework once — clearly, early, and conceptually.
+
+There are three categories:
+
+  Windows commands — handled by the operating system. Cut, Copy, Paste, and opening
+  the Start Menu are all Windows operations. Many programs call Windows to perform
+  these; the programs themselves are not doing the work.
+
+  Program commands — handled by the application. Pressing Ctrl+N in Word opens a new
+  document. Pressing the down arrow moves the cursor in the program. The screen reader
+  reads what you moved to, but the *program* moved the cursor.
+
+  Screen reader commands — handled by NVDA. These take no action in the program.
+  They only announce, read, or describe. NVDA+T announces the title bar — nothing
+  changes, you just find out where you are. A sighted person can glance at the title
+  bar; a blind person cannot, so NVDA supplies the equivalent.
+
+That last distinction — "it takes no action, it only informs" — is something Brian
+articulated better than I had in two years of writing this material. It's now Lesson 1.
+
+All the inline labels from v1.1.0 have been removed (28 instances across all five
+lesson files). The framework lesson does that work instead. We're trusting learners
+to carry the concept forward on their own.
+
+2. Sound branding overhaul
+
+All five sound moments in the Coach — lesson start, step advance, hint, lesson stop,
+and lesson complete — now use custom audio files instead of generated beeps. The
+sound toggle in NVDA Settings (NVDA menu > Preferences > Settings > NVDA Coach)
+disables everything if you prefer silence.
+
+3. NVDA Coach Help in the NVDA Help menu
+
+NVDA menu > Help > NVDA Coach Help now opens the user guide directly.
+
+
+COMMUNITY THANKS
+----------------
+
+This release reflects feedback from several people, and I want to name them.
+
+Brian — your breakdown of the three command categories, and your point that
+Cut/Copy/Paste are Windows operations (not application operations), completely
+reframed how Chapter 1 opens. The "it takes no action, it only informs" framing
+for screen reader commands is now the foundation of Lesson 1. Thank you.
+
+Gene — your v1.1.0 feedback on distinguishing NVDA commands from Windows commands
+planted the seed, and your note about the sound toggle gave us the accessibility
+control that should have been there from the start.
+
+Darrell Hilliker — the UX fixes in v1.1.0 (practice windows opening on your cue,
+Enter advancing after lesson completion, prompts announced automatically) came
+directly from your testing. The add-on is substantially more polished because of it.
+
+Joseph — the Object Navigation and Customizing NVDA chapters in v1.1.0 exist because
+you asked for them. Those are two of the most-used chapters in the add-on now.
+
+Rui Fontes — thank you for the localization suggestion. Organizing lessons into
+language subfolders so teams like the Portuguese NVDA team can translate them without
+touching Python code is exactly the right approach. That work is on the roadmap.
+I hope to be in touch when we get there.
+
+This is the kind of feedback loop that makes a tool worth building. I'm grateful
+for it.
+
+
+ABOUT NVDA COACH
+----------------
+
+35 lessons across five chapters:
+
+  Chapter 1: Getting Started with NVDA — 11 lessons
+  Chapter 2: Reading and Moving Through Text — 6 lessons
+  Chapter 3: Browse Mode and Web Navigation — 10 lessons
+  Chapter 4: Object Navigation — 6 lessons
+  Chapter 5: Customizing NVDA — 2 lessons
+
+Free. No account. No internet connection required after install.
+Works with NVDA 2024.1 and later.
+
+Download:
+https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon
+
+Source code and issue tracker:
+https://github.com/tonygeb23/nvdaCoach-
+
+Website:
+https://tonygebhard.me/NVDACoach
+
+Questions, bug reports, and lesson suggestions are always welcome —
+either here, via GitHub issues, or at info@tonygebhard.me.
+
+Thanks for everything,
+Tony Gebhard
+Assistive Technology Instructor
