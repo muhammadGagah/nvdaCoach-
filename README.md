@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.1.0
+**Current version:** 1.2.0
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.1.0](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.1.0/nvdaCoach-1.1.0.nvda-addon)**
+**[Download NVDA Coach v1.2.0](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -22,16 +22,11 @@ NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add
 
 ---
 
-## What's New in v1.1.0
+## What's New in v1.2.0
 
-- **Sound toggle** — NVDA menu → Preferences → Settings → NVDA Coach to turn chimes on or off
-- **Practice windows open on your cue** — a priming step gives the Alt+Tab reminder before any practice form appears
-- **Enter advances after lesson completion** — consistent with all other key behavior in the Coach window
-- **"Try it now" prompts now spoken aloud** — NVDA announces the advance cue automatically, not just on screen
-- **NVDA vs. Windows command labels** — every step now tells you whether a command is NVDA-specific or universal
-- **New chapter: Object Navigation** — 6 lessons on navigating controls that Tab cannot reach
-- **New chapter: Customizing NVDA** — keyboard layout, speech rate, and voice settings
-- **Two new browse mode lessons** — NVDA Find (`NVDA+Ctrl+F`) and toggling single-letter navigation (`NVDA+Shift+Space`)
+- **Understanding Command Categories** — new Lesson 1 in Chapter 1 teaches the three-way framework (Windows commands, program commands, screen reader commands) before any key practice begins. Screen reader commands take no action — they only inform. This concept now carries the pedagogical weight rather than inline labels on every step.
+- **Sound branding overhaul** — all five sound moments (lesson start, step advance, hint, lesson stop, lesson complete) now use custom audio files instead of generated beeps. The sound toggle in NVDA Settings disables everything.
+- **NVDA Coach Help in the NVDA Help menu** — NVDA menu → Help → NVDA Coach Help opens the user guide directly.
 
 See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
@@ -59,7 +54,7 @@ Changing your keyboard layout between desktop (numpad) and laptop (letter keys),
 ## How It Works
 
 The Coach presents one step at a time. Each step:
-- Speaks an instruction, labels it as an NVDA command or universal shortcut, and tells you which key to press
+- Speaks an instruction and tells you which key to press
 - Waits for you to perform the action and press Enter to continue
 - Offers **F1** to repeat the instruction, **F2** for a hint, **F3** to skip the step
 
@@ -101,7 +96,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.1.0.nvda-addon'
+output = 'nvdaCoach-1.2.0.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')

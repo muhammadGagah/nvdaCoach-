@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introducing NVDA Coach: Interactive Screen Reader Training Built Into NVDA</title>
+<style>
+body {
+  font-family: Georgia, serif;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1.5em 2em;
+  line-height: 1.75;
+  color: #222;
+}
+h1 { font-size: 2em; line-height: 1.2; margin-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; border-bottom: 2px solid #ddd; padding-bottom: 0.2em; }
+h3 { font-size: 1.1em; margin-top: 1.5em; }
+.meta { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+.callout {
+  background: #f0f7ff;
+  border-left: 4px solid #1a73e8;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+.callout p { margin: 0; }
+code { background: #f4f4f4; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.95em; }
+ul, ol { padding-left: 1.5em; }
+li { margin-bottom: 0.3em; }
+a { color: #1a73e8; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #666; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<article>
+
+<h1>Introducing NVDA Coach: Interactive Screen Reader Training Built Into NVDA</h1>
+<p class="meta">By Tony Gebhard, Assistive Technology Instructor &nbsp;·&nbsp; March 2026</p>
+
+<p>One of the most common things I hear from people just starting with screen readers is some version of: <em>"I read the manual, but I still don't know what to do."</em></p>
+
+<p>Reading about a keyboard shortcut and actually using it are very different things. The gap between the two is where most beginners get stuck — and where good instruction makes all the difference.</p>
+
+<p>That's the problem NVDA Coach is designed to solve.</p>
+
+<h2>What Is NVDA Coach?</h2>
+
+<p>NVDA Coach is a free add-on for the NVDA screen reader that teaches commands through interactive, step-by-step practice sessions — all from inside NVDA itself. No videos to watch, no PDFs to navigate, no switching to another application. You press a key combination, NVDA Coach opens, and a voice walks you through what to do and why.</p>
+
+<div class="callout">
+<p>Press <strong>NVDA+Shift+C</strong> to open the Coach. That's the only thing you need to remember to get started.</p>
+</div>
+
+<p>The Coach presents a lesson one step at a time. Each step gives you a spoken instruction, tells you which key to press, and waits for you to do it. When you're ready to continue, you press Enter. If you get stuck, F1 repeats the instruction, F2 gives a hint, and F3 lets you skip the step. The Coach never leaves you stranded.</p>
+
+<h2>Why I Built It</h2>
+
+<p>I work directly with students who are learning NVDA — many of them late adopters who have lost significant vision and are encountering a screen reader for the first time. For these users, the official documentation is comprehensive but overwhelming. Third-party tutorials are often outdated, hard to find, or designed for people who already know the basics.</p>
+
+<p>What these students need is a patient, structured guide who can walk them through each command one at a time and give them a chance to try it right now, in a safe environment, without fear of breaking something. That's what NVDA Coach tries to be.</p>
+
+<p>As an instructor, I also wanted something I could hand a student before a session and know they'd have a productive fifteen minutes on their own. Something with no barriers — no login, no internet, no installation wizard beyond what NVDA already handles.</p>
+
+<h2>What's Included in Version 1.0.0</h2>
+
+<p>The first release covers three complete chapters with 24 lessons total.</p>
+
+<h3>Chapter 1: Getting Started with NVDA (10 lessons)</h3>
+<p>This chapter covers the 10 commands that every NVDA user needs in their first day. Starting from "what is the NVDA key and where is it on my keyboard," each lesson builds on the last:</p>
+<ul>
+  <li>The NVDA modifier key</li>
+  <li>Reading the title bar (NVDA+T)</li>
+  <li>Checking the time (NVDA+F12)</li>
+  <li>Silencing speech (Control)</li>
+  <li>Identifying your current focus (NVDA+Tab)</li>
+  <li>Tab navigation through forms and dialogs</li>
+  <li>Activating buttons and checkboxes</li>
+  <li>Reading the current line (NVDA+Up Arrow)</li>
+  <li>Input Help mode for keyboard exploration</li>
+  <li>Opening the NVDA user guide</li>
+</ul>
+<p>Several of these lessons open a live accessible practice form alongside the Coach window — with real text fields, checkboxes, and buttons — so students are practicing on actual controls, not a simulation.</p>
+
+<h3>Chapter 2: Reading and Moving Through Text (6 lessons)</h3>
+<p>This chapter teaches precise cursor navigation. What makes it different from most resources is that the practice happens <em>inside the Coach window itself</em> — a block of practice text is embedded directly below each instruction. Students arrow down from the instruction into the text and practice right there, without switching applications or dealing with Alt+Tab.</p>
+<ul>
+  <li>Character-by-character navigation</li>
+  <li>Word-by-word navigation</li>
+  <li>Line-by-line navigation</li>
+  <li>Jumping to document start and end</li>
+  <li>Say All (continuous reading)</li>
+  <li>Text selection with Shift+arrows</li>
+</ul>
+
+<h3>Chapter 3: Browse Mode and Web Navigation (8 lessons)</h3>
+<p>This chapter covers NVDA's most powerful feature for web users: browse mode. A fully accessible practice web page opens in the browser automatically when you start any lesson in this chapter, giving students a real page to navigate. Lessons cover:</p>
+<ul>
+  <li>What browse mode is and how it works</li>
+  <li>Heading navigation (H, Shift+H)</li>
+  <li>Heading level navigation (1–6 keys)</li>
+  <li>Link navigation (K, Shift+K, Tab)</li>
+  <li>Form navigation (F, E, B keys)</li>
+  <li>Toggling between browse mode and focus mode</li>
+  <li>Landmark and list navigation</li>
+  <li>The Elements List dialog (NVDA+F7)</li>
+</ul>
+
+<h2>How the Lesson Engine Works</h2>
+
+<p>A few design decisions I'm particularly happy with:</p>
+
+<p><strong>No gesture interception.</strong> Earlier prototypes of NVDA Coach tried to detect whether the student had pressed the right key and give immediate feedback. This created endless conflicts with NVDA's own processing, especially for commands that open menus or dialogs. The current design takes a more practical approach: the student performs the action on their own (NVDA processes it normally), then comes back to the Coach window and presses Enter to confirm. The confirmation is the learning moment, not the detection.</p>
+
+<p><strong>Inline practice text.</strong> For reading and navigation drills, asking beginners to Alt+Tab to a separate Notepad window is too many steps. The practice text is embedded directly below the instruction in the same text area. The student arrows down from the instruction into the text. It works because NVDA's TextCtrl readout handles exactly this use case — NVDA reads each character, word, or line as the cursor moves through it.</p>
+
+<p><strong>Persistent window.</strong> The Coach window stays open across lessons. After each lesson completes, Ctrl+N moves to the next lesson, Ctrl+B goes back, and Ctrl+R restarts. The lesson picker (NVDA+Shift+C) is there when you need to jump around, but most students can go through an entire chapter without touching it.</p>
+
+<p><strong>JSON lessons.</strong> Every lesson is a plain JSON file. Adding a new category is as simple as adding a new <code>.json</code> file to the lessons folder. For instructors who want to build custom lesson sets for their students or organizations, the format is documented in the readme and the existing files serve as templates.</p>
+
+<h2>Who Is It For?</h2>
+
+<p>NVDA Coach is designed for <strong>absolute beginners</strong> — people who have just installed NVDA, or who have been "getting by" with minimal skills and want to fill in the gaps. It assumes you know how to type letters and numbers and use arrow keys, but it does not assume any prior screen reader knowledge.</p>
+
+<p>It's also a useful tool for <strong>AT instructors and teachers of the visually impaired (TVIs)</strong>. You can assign a chapter as homework before a session, use it as a warm-up or review activity, or simply point a student to it and know they'll have a structured, self-paced resource that works without help.</p>
+
+<h2>What's Next</h2>
+
+<p>Version 1.0.0 is the foundation. Planned additions for future releases include:</p>
+<ul>
+  <li>Additional lesson chapters: NVDA settings, working with email, working with Microsoft Office</li>
+  <li>A braille display interaction module</li>
+  <li>Lesson difficulty/pace settings</li>
+  <li>Instructor reporting on progress</li>
+</ul>
+
+<p>If you have ideas for lessons you'd like to see, commands you think are missing, or feedback on your experience using NVDA Coach, I'd love to hear from you.</p>
+
+<h2>Get NVDA Coach</h2>
+
+<p>NVDA Coach is completely free. You can download it, install it, and use it without creating an account or connecting to the internet.</p>
+
+<div class="callout">
+<p>
+  <strong>Download:</strong> <a href="https://tonygebhard.me/NVDACoach">tonygebhard.me/NVDACoach</a><br>
+  <strong>Install:</strong> Open the downloaded <code>.nvda-addon</code> file — NVDA handles the rest.<br>
+  <strong>Start:</strong> Press <code>NVDA+Shift+C</code>.
+</p>
+</div>
+
+<p>If you're using the NVDA Add-on Store (Tools → Add-on Store inside NVDA), NVDA Coach is being submitted and should appear there shortly.</p>
+
+<p>Share it with anyone who needs it. That's what it's here for.</p>
+
+</article>
+
+<footer>
+  <p>
+    <strong>Tony Gebhard</strong>, Assistive Technology Instructor<br>
+    <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a> &nbsp;·&nbsp;
+    <a href="https://tonygebhard.me">tonygebhard.me</a>
+  </p>
+</footer>
+
+</body>
+</html>

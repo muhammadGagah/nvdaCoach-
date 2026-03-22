@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVDA Coach — Free Interactive Screen Reader Training</title>
+<style>
+/* Reset + base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1a73e8;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+}
+.skip-link:focus { top: 0; }
+
+/* Header / Hero */
+.hero {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 60%, #1976d2 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem 3.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+.hero .tagline {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  opacity: 0.92;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 20px;
+  padding: 0.25em 0.9em;
+  font-size: 0.85rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.5px;
+}
+.cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn:hover, .btn:focus { opacity: 0.88; outline: 3px solid #fff; outline-offset: 3px; }
+.btn-primary { background: #fff; color: #0d47a1; }
+.btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
+
+/* Main content */
+main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+/* Section headings */
+section { margin-bottom: 3.5rem; }
+section h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  border-bottom: 3px solid #e3eeff;
+  padding-bottom: 0.4rem;
+}
+
+/* Intro paragraph */
+.intro { font-size: 1.1rem; color: #333; max-width: 720px; }
+
+/* Feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.feature-card {
+  background: #f4f8ff;
+  border: 1px solid #dce8ff;
+  border-radius: 8px;
+  padding: 1.3rem 1.4rem;
+}
+.feature-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; color: #1a1a1a; }
+.feature-card p { font-size: 0.95rem; color: #444; }
+
+/* Chapter list */
+.chapter-list { list-style: none; counter-reset: chapter; }
+.chapter-list li {
+  counter-increment: chapter;
+  position: relative;
+  padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: #fafafa;
+}
+.chapter-list li::before {
+  content: counter(chapter);
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  background: #1565c0;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.chapter-list li strong { font-size: 1.05rem; color: #111; }
+.chapter-list li p { margin-top: 0.3rem; font-size: 0.95rem; color: #555; }
+
+/* How it works steps */
+.steps { list-style: none; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.8rem 0 0.8rem 3rem;
+  border-bottom: 1px solid #eee;
+}
+.steps li:last-child { border-bottom: none; }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  background: #1565c0;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.steps li strong { color: #111; }
+code {
+  background: #eef2ff;
+  color: #1a3a7a;
+  padding: 0.1em 0.45em;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* Quote */
+.quote {
+  background: #e8f0fe;
+  border-left: 5px solid #1565c0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+.quote p { font-size: 1.05rem; font-style: italic; color: #1a1a1a; }
+.quote cite { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: #555; font-style: normal; }
+
+/* CTA section */
+.cta-section {
+  background: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+.cta-section h2 { color: #fff; border-color: rgba(255,255,255,0.3); font-size: 1.8rem; }
+.cta-section p { opacity: 0.9; max-width: 540px; margin: 0.8rem auto 1.8rem; font-size: 1.05rem; }
+
+/* Footer */
+footer {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+footer a { color: #1565c0; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- HERO -->
+<header>
+  <div class="hero">
+    <p class="badge">Version 1.2.0 &nbsp;·&nbsp; Free &nbsp;·&nbsp; No Account Required</p>
+    <h1>NVDA Coach</h1>
+    <p class="tagline">Interactive screen reader training built right into NVDA. Learn by doing, one step at a time.</p>
+    <div class="cta-group">
+      <a href="https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon" class="btn btn-primary" download>Download Free — v1.2.0</a>
+      <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- INTRO -->
+  <section aria-labelledby="intro-heading">
+    <h2 id="intro-heading">What Is NVDA Coach?</h2>
+    <p class="intro">
+      NVDA Coach is a free add-on for the NVDA screen reader that teaches you commands
+      through short, guided practice sessions — from inside NVDA itself. No videos.
+      No PDFs. No switching between windows to follow along. Press one key and the Coach
+      begins walking you through what to do and why, one step at a time.
+    </p>
+
+    <div class="quote">
+      <p>"The hardest part of learning a screen reader isn't finding the right resource —
+      it's the gap between reading about a command and actually using one. NVDA Coach
+      closes that gap."</p>
+      <cite>— Tony Gebhard, Assistive Technology Instructor</cite>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section aria-labelledby="features-heading">
+    <h2 id="features-heading">Built for Real Learning</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">💡</div>
+        <h3>Command Category Framework</h3>
+        <p>Lesson 1 teaches the three-way framework — Windows commands, program commands,
+           and screen reader commands — so learners understand who controls what before
+           touching a single shortcut.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">🎓</div>
+        <h3>Guided, Step-by-Step Lessons</h3>
+        <p>Each step speaks an instruction, tells you which key to press, and waits for you.
+           F1 repeats the instruction, F2 gives a hint, F3 skips the step.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">📝</div>
+        <h3>Inline Practice Text</h3>
+        <p>Reading and navigation lessons embed practice text directly in the Coach window.
+           Arrow down from the instruction into real text — no extra windows needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">📋</div>
+        <h3>Live Practice Forms</h3>
+        <p>Tab navigation and control lessons open a real accessible form alongside the
+           Coach window — actual buttons, checkboxes, and text fields to practice on.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">🌐</div>
+        <h3>Practice Web Page</h3>
+        <p>Browse mode lessons open a fully accessible HTML practice page in your browser,
+           with headings, links, forms, landmarks, and lists ready to navigate.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">📊</div>
+        <h3>Progress Tracking</h3>
+        <p>Completed lessons are marked in the picker. Your progress saves across NVDA
+           restarts so you can pick up exactly where you left off.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon" aria-hidden="true">🛠️</div>
+        <h3>Instructor-Extensible</h3>
+        <p>All lessons are plain JSON files. Add a new <code>.json</code> file to create
+           custom lesson sets for your students or organization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section aria-labelledby="lessons-heading">
+    <h2 id="lessons-heading">35 Lessons Across Five Chapters</h2>
+    <ul class="chapter-list">
+      <li>
+        <strong>Getting Started with NVDA — 11 lessons</strong>
+        <p>Opens with a dedicated lesson on the three categories of keyboard commands —
+           Windows, program, and screen reader — so learners understand who controls what
+           before any key practice begins. Then: the NVDA key, title bar, time, silencing
+           speech, identifying focus, Tab navigation, activating controls, reading the
+           current line, Input Help, and the user guide.</p>
+      </li>
+      <li>
+        <strong>Reading and Moving Through Text — 6 lessons</strong>
+        <p>Character, word, line, and document-boundary navigation; Say All; and text
+           selection with Shift+arrows. Each lesson includes inline practice text so
+           you can practice without leaving the Coach window.</p>
+      </li>
+      <li>
+        <strong>Browse Mode and Web Navigation — 10 lessons</strong>
+        <p>Heading navigation, heading levels, links, forms, focus mode vs browse mode,
+           landmarks, lists, the Elements List dialog, NVDA Find, and toggling
+           single-letter navigation. A live practice web page opens automatically.</p>
+      </li>
+      <li>
+        <strong>Object Navigation — 6 lessons</strong>
+        <p>The NVDA object tree, moving to next/previous/parent/child objects, reading
+           the current object, and routing keyboard focus to controls that Tab cannot
+           reach. Desktop and laptop layouts documented throughout.</p>
+      </li>
+      <li>
+        <strong>Customizing NVDA — 2 lessons</strong>
+        <p>Switching keyboard layout (desktop vs. laptop) and adjusting speech rate,
+           voice, and synthesizer settings — including on-the-fly speed shortcuts.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section aria-labelledby="how-it-works">
+    <h2 id="how-it-works">How to Get Started</h2>
+    <ol class="steps">
+      <li>
+        <strong>Make sure NVDA is installed.</strong><br>
+        NVDA is free at <a href="https://nvaccess.org">nvaccess.org</a>. Any version 2024.1 or later works.
+      </li>
+      <li>
+        <strong>Download and open the add-on file.</strong><br>
+        Download <code>nvdaCoach-1.2.0.nvda-addon</code> using the button above.
+        Open the file — NVDA will install it automatically and ask you to confirm.
+      </li>
+      <li>
+        <strong>Press NVDA+Shift+C.</strong><br>
+        That's all. The Coach window opens and you're ready to start.
+        Choose a lesson from the picker, press Enter, and begin.
+      </li>
+      <li>
+        <strong>Work at your own pace.</strong><br>
+        Each lesson is self-contained and takes 2–5 minutes.
+        Use <code>Ctrl+N</code> to move to the next lesson at any time.
+      </li>
+    </ol>
+  </section>
+
+  <!-- FOR INSTRUCTORS -->
+  <section aria-labelledby="instructors-heading">
+    <h2 id="instructors-heading">For AT Instructors and TVIs</h2>
+    <p>NVDA Coach was built by an AT instructor for classroom and one-on-one use.
+       Assign a chapter before a session, use it as a warm-up or structured review, or
+       give it to students to work through independently between appointments. The lesson
+       picker shows progress so you and the student can see at a glance what has been covered.</p>
+    <p>Need custom lessons for a specific program, organization, or student population?
+       Lessons are plain JSON files — documented and designed to be extended.
+       <a href="mailto:info@tonygebhard.me">Get in touch</a> to discuss custom lesson development.</p>
+  </section>
+
+  <!-- CTA -->
+  <section aria-labelledby="download-heading">
+    <div class="cta-section">
+      <h2 id="download-heading">Download NVDA Coach — Free</h2>
+      <p>No account. No internet connection after install. Just open the file and press
+         NVDA+Shift+C to begin.</p>
+      <div class="cta-group">
+        <a href="https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon" class="btn btn-primary" download>Download v1.2.0</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    NVDA Coach is free and open source.<br>
+    Created by <strong>Tony Gebhard</strong>, Assistive Technology Instructor.<br>
+    <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a>
+    &nbsp;·&nbsp;
+    <a href="https://tonygebhard.me">tonygebhard.me</a>
+  </p>
+</footer>
+
+</body>
+</html>
