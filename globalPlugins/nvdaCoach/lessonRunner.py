@@ -230,7 +230,7 @@ class LessonRunner:
 		)
 
 		# Lesson complete sound.
-		_playSound("lesson_complete.ogg")
+		_playSound("lesson_complete.wav")
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		msg = (
