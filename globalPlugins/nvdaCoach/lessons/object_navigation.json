@@ -30,7 +30,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] To move to the next object at the same level, press NVDA+NumPad6 on desktop layout, or NVDA+Right Arrow on laptop layout. To move to the previous object, press NVDA+NumPad4 on desktop, or NVDA+Left Arrow on laptop. NVDA announces each object as you land on it. Press Enter to continue."
+					"instruction": "To move to the next object at the same level, press NVDA+NumPad6 on desktop layout, or NVDA+Right Arrow on laptop layout. To move to the previous object, press NVDA+NumPad4 on desktop, or NVDA+Left Arrow on laptop. NVDA announces each object as you land on it. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -53,7 +53,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] To move up to the parent object (the container that holds the current object), press NVDA+NumPad8 on desktop layout, or NVDA+Up Arrow on laptop layout. To move down to the first child object inside the current one, press NVDA+NumPad2 on desktop, or NVDA+Down Arrow on laptop. This is how you explore the object tree in depth. Press Enter to continue."
+					"instruction": "To move up to the parent object (the container that holds the current object), press NVDA+NumPad8 on desktop layout, or NVDA+Up Arrow on laptop layout. To move down to the first child object inside the current one, press NVDA+NumPad2 on desktop, or NVDA+Down Arrow on laptop. This is how you explore the object tree in depth. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -72,7 +72,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] When you have navigated to an object, you can have NVDA read it in different ways. Press NVDA+NumPad5 (desktop) or NVDA+Shift+, (laptop — that is NVDA, Shift, and the comma key) to hear the full description of the current navigator object. Press it twice quickly to spell out the object name. This is your primary way to examine any object you have landed on. Press Enter to continue."
+					"instruction": "When you have navigated to an object, you can have NVDA read it in different ways. Press NVDA+NumPad5 (desktop) or NVDA+Shift+, (laptop — that is NVDA, Shift, and the comma key) to hear the full description of the current navigator object. Press it twice quickly to spell out the object name. This is your primary way to examine any object you have landed on. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -91,7 +91,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] Once you have used object navigation to find a control, you can move keyboard focus to it so you can interact with it normally. Press NVDA+Shift+NumPadMinus (desktop) or NVDA+Shift+BackSpace (laptop) to route focus to the current navigator object. If the object can accept focus, your keyboard focus will move to it and you can then press Enter, Space, or type as normal. Press Enter to continue."
+					"instruction": "Once you have used object navigation to find a control, you can move keyboard focus to it so you can interact with it normally. Press NVDA+Shift+NumPadMinus (desktop) or NVDA+Shift+BackSpace (laptop) to route focus to the current navigator object. If the object can accept focus, your keyboard focus will move to it and you can then press Enter, Space, or type as normal. Press Enter to continue."
 				},
 				{
 					"type": "info",

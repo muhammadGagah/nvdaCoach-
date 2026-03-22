@@ -90,8 +90,8 @@ Tracks user feedback for prioritization, implementation, and release planning.
   1. **Windows commands** — handled by the OS. Cut/Copy/Paste, opening Start Menu. Many programs call Windows to do these; the programs themselves are not performing the operation.
   2. **Program/application commands** — handled by the application. Ctrl+N in Word opens a new document. Pressing down arrow moves the cursor — the screen reader reads what you moved to, but the *program* moved the cursor.
   3. **Screen reader commands** — handled by NVDA. They **take no action** in the program. They only announce, read, or describe. NVDA+T announces the title bar — nothing changes, you just find out where you are. A sighted person can glance at the title bar; a blind person cannot, so NVDA supplies the equivalent.
-- `[ ]` **Remove inline labels entirely in favor of conceptual understanding.** Hearing "[NVDA command]" before every command during active practice is cumbersome. **Decision (v1.2.0): Option B — add the framework lesson, remove all inline labels.** Teach the concept once and trust learners to carry it. A dedicated lesson is more durable and respects the learner's intelligence. All `[NVDA command]`, `[NVDA browse mode key]`, and `[Universal shortcut]` tags to be stripped from every lesson step across all JSON files.
-- `[ ]` **Add a dedicated "Understanding Command Categories" lesson** as a new lesson in Chapter 1 (before any command practice begins) that teaches the three-way framework with clear examples.
+- `[x]` **Remove inline labels entirely in favor of conceptual understanding.** **Resolution (v1.2.0):** All `[NVDA command]`, `[NVDA browse mode key]`, `[NVDA feature]`, `[NVDA browse mode keys]`, and `[Universal shortcut]` tags stripped from every step across all five lesson JSON files (28 instances total).
+- `[x]` **Add a dedicated "Understanding Command Categories" lesson** as a new lesson in Chapter 1. **Resolution (v1.2.0):** New lesson `command_categories` added as order 1 in `getting_started.json`. Four steps teach the Windows / program / screen reader framework before any command practice begins. All existing Chapter 1 lessons shifted to orders 2–11.
 
 **Notes:**
 - Brian explicitly called out that Cut/Copy/Paste are Windows shortcuts — many users and even documentation sources misattribute these to the application
@@ -104,6 +104,8 @@ Tracks user feedback for prioritization, implementation, and release planning.
 
 | Version | Date       | Item         | Description |
 |---------|------------|--------------|-------------|
+| 1.2.0   | 2026-03-21 | #006         | New lesson: Understanding Command Categories (Chapter 1, lesson 1) |
+| 1.2.0   | 2026-03-21 | #006         | Removed all inline command labels from all five lesson files (28 instances) |
 | 1.1.0   | 2026-03-19 | #004         | "Try it now" cue now spoken aloud for all gesture steps |
 | 1.1.0   | 2026-03-19 | #003         | Enter key advances to next lesson after completion |
 | 1.1.0   | 2026-03-19 | #003         | Practice windows now open only after priming step |

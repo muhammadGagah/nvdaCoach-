@@ -11,7 +11,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[Universal shortcut — works in all Windows applications] When your cursor is in text, the Right Arrow key moves forward one character at a time and the Left Arrow key moves backward. NVDA speaks each character as you land on it. Sighted users can see each character; NVDA announces it for you as you move. A practice text area is included right in each practice step below. Press Enter to continue."
+					"instruction": "When your cursor is in text, the Right Arrow key moves forward one character at a time and the Left Arrow key moves backward. NVDA speaks each character as you land on it. Sighted users can see each character; NVDA announces it for you as you move. A practice text area is included right in each practice step below. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -42,7 +42,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[Universal shortcut — works in all Windows applications] Character by character is slow when you need to scan text. Control plus Right Arrow jumps to the start of the next word. Control plus Left Arrow jumps back to the previous word. NVDA speaks the word you land on. This shortcut works the same way in Word, Notepad, email, and most other programs — with or without a screen reader. Press Enter to continue."
+					"instruction": "Character by character is slow when you need to scan text. Control plus Right Arrow jumps to the start of the next word. Control plus Left Arrow jumps back to the previous word. NVDA speaks the word you land on. This shortcut works the same way in Word, Notepad, email, and most other programs — with or without a screen reader. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -73,7 +73,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[Universal shortcut — works in all Windows applications] Down Arrow moves to the next line in a document. Up Arrow moves to the previous line. NVDA reads the entire line each time you move to it. Sighted users can scan lines visually; you move to each one and NVDA reads it aloud. This is one of the most important navigation methods for documents and web pages. Press Enter to continue."
+					"instruction": "Down Arrow moves to the next line in a document. Up Arrow moves to the previous line. NVDA reads the entire line each time you move to it. Sighted users can scan lines visually; you move to each one and NVDA reads it aloud. This is one of the most important navigation methods for documents and web pages. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -104,7 +104,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[Universal shortcut — works in all Windows applications] Control+Home jumps immediately to the very beginning of a document, list, or web page. Control+End jumps to the very end. These are great for getting your bearings when you land in a new document. Sighted users can scroll quickly to get the full picture; these keys do the equivalent instantly for keyboard users. Press Enter to continue."
+					"instruction": "Control+Home jumps immediately to the very beginning of a document, list, or web page. Control+End jumps to the very end. These are great for getting your bearings when you land in a new document. Sighted users can scroll quickly to get the full picture; these keys do the equivalent instantly for keyboard users. Press Enter to continue."
 				},
 				{
 					"type": "gesture",
@@ -135,7 +135,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] NVDA plus Down Arrow starts reading everything from the current position to the end of the document. This is called Say All. NVDA keeps reading until it reaches the end or you stop it. Sighted users can skim an entire page at a glance; Say All is your equivalent — let NVDA read the whole thing while you listen. You can press Control at any time to stop. Press Enter to continue."
+					"instruction": "NVDA plus Down Arrow starts reading everything from the current position to the end of the document. This is called Say All. NVDA keeps reading until it reaches the end or you stop it. Sighted users can skim an entire page at a glance; Say All is your equivalent — let NVDA read the whole thing while you listen. You can press Control at any time to stop. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -152,7 +152,7 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[Universal shortcut — works in all Windows applications] You can select text by holding the Shift key while pressing arrow keys. As you select, NVDA reads the characters, words, or lines being added to the selection. Sighted users can see highlighted text; NVDA announces each piece you select so you always know exactly what is included. Selected text can be copied with Control+C and pasted with Control+V anywhere you can type. Press Enter to continue."
+					"instruction": "You can select text by holding the Shift key while pressing arrow keys. As you select, NVDA reads the characters, words, or lines being added to the selection. Sighted users can see highlighted text; NVDA announces each piece you select so you always know exactly what is included. Selected text can be copied with Control+C and pasted with Control+V anywhere you can type. Press Enter to continue."
 				},
 				{
 					"type": "gesture",

@@ -37,10 +37,10 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 ---
 
-## What's Included — 34 Lessons Across Five Chapters
+## What's Included — 35 Lessons Across Five Chapters
 
-### Chapter 1: Getting Started with NVDA — 10 lessons
-The essential commands every new NVDA user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, and opening the user guide. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
+### Chapter 1: Getting Started with NVDA — 11 lessons
+An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, and opening the user guide. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
 
 ### Chapter 2: Reading and Moving Through Text — 6 lessons
 Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (continuous reading); and text selection with Shift+arrows. Every lesson embeds a practice text area directly in the Coach window — no switching to Notepad or another application.

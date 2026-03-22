@@ -1,5 +1,15 @@
 # NVDA Coach — Changelog
 
+## v1.2.0 (2026-03-21)
+
+### New Lesson Content
+- **New lesson: Understanding Command Categories** — added as Lesson 1 of Chapter 1 (Getting Started). Four steps teach learners to distinguish Windows commands, program/application commands, and screen reader commands before any command practice begins. Key framing: screen reader commands take no action — they only inform. (#006 — Brian)
+
+### Lesson Content Changes
+- **Removed all inline command labels** — all `[NVDA command]`, `[NVDA browse mode key]`, `[NVDA feature]`, and `[Universal shortcut]` tags stripped from every step across all five lesson files (28 instances). The Understanding Command Categories lesson carries this pedagogical weight instead, trusting learners to apply the framework themselves. (#006 — Brian)
+
+---
+
 ## v1.1.0 (2026-03-19)
 
 ### Bug Fixes

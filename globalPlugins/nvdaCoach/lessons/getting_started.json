@@ -5,9 +5,32 @@
 	"order": 1,
 	"lessons": [
 		{
+			"id": "command_categories",
+			"title": "Understanding Command Categories",
+			"order": 1,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Welcome to NVDA Coach. Before you practice any commands, it helps to understand something that most documentation glosses over: when you press a key on your keyboard, who is actually doing the work? There are three different layers that control keyboard commands on Windows, and knowing which layer a command belongs to will help you learn faster and make fewer mistakes. This lesson covers all three. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "The first layer is Windows itself. Some commands belong entirely to the operating system. Cut, Copy, and Paste — Control+X, Control+C, and Control+V — are Windows commands. When any application lets you paste text, it is not the application doing the pasting; it is making a request to Windows to do it. Opening the Start Menu, switching between windows with Alt+Tab, and closing a window with Alt+F4 are also Windows commands. They work the same way in every program because Windows itself is in charge. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "The second layer is the application you are using. When you press Down Arrow in a word processor, you are telling the word processor to move your cursor to the next line. The application moves the cursor — that is a program command. Control+N in Microsoft Word opens a new document — that is Word's command, not Windows. Your screen reader has nothing to do with moving that cursor. It simply reads aloud what the application already did. Press Enter to continue."
+				},
+				{
+					"type": "info",
+					"instruction": "The third layer is your screen reader. NVDA commands are unique: they take no action in the application. They only inform. When you press NVDA+T, nothing changes in your document. The title bar does not move, no dialog opens, nothing is activated. NVDA simply announces what is already there — because sighted users can glance at the title bar any time, and you need a way to hear it. This distinction — take no action, only inform — is the heart of what makes screen reader commands different from all others. As you work through NVDA Coach, you will begin to recognize which layer each command belongs to without being told. Press Enter to begin your first lesson."
+				}
+			]
+		},
+		{
 			"id": "nvda_key",
 			"title": "Meet Your NVDA Key",
-			"order": 1,
+			"order": 2,
 			"steps": [
 				{
 					"type": "info",
@@ -15,7 +38,7 @@
 				},
 				{
 					"type": "info",
-					"instruction": "[NVDA command] NVDA+N opens the NVDA menu — your hub for all of NVDA's settings and features. Sighted users can click a menu with a mouse; NVDA+N is your equivalent. Try it now. Hold your NVDA key and press the letter N. You should hear NVDA open a menu and begin announcing items such as Preferences, Tools, and Help. Once you hear the menu open, press Escape to close it and come back here, then press Enter to continue.",
+					"instruction": "NVDA+N opens the NVDA menu — your hub for all of NVDA's settings and features. Sighted users can click a menu with a mouse; NVDA+N is your equivalent. Try it now. Hold your NVDA key and press the letter N. You should hear NVDA open a menu and begin announcing items such as Preferences, Tools, and Help. Once you hear the menu open, press Escape to close it and come back here, then press Enter to continue.",
 					"monitorGestures": [
 						"kb:nvda+n"
 					]
@@ -29,11 +52,11 @@
 		{
 			"id": "title_bar",
 			"title": "Read the Title Bar",
-			"order": 2,
+			"order": 3,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Every window has a title bar at the top that tells you which program you are in. Sighted users can glance at the title bar at any time. [NVDA command] NVDA+T speaks the title bar aloud — your equivalent of that glance. Press Enter to continue."
+					"instruction": "Every window has a title bar at the top that tells you which program you are in. Sighted users can glance at the title bar at any time. NVDA+T speaks the title bar aloud — your equivalent of that glance. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -54,11 +77,11 @@
 		{
 			"id": "read_time",
 			"title": "Read the Time",
-			"order": 3,
+			"order": 4,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Sighted users can glance at the clock in the corner of the screen. [NVDA command] NVDA+F12 speaks the current time without you having to navigate anywhere. NVDA can tell you the current time and date without leaving what you are doing. Press Enter to continue."
+					"instruction": "Sighted users can glance at the clock in the corner of the screen. NVDA+F12 speaks the current time without you having to navigate anywhere. NVDA can tell you the current time and date without leaving what you are doing. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -72,15 +95,15 @@
 		{
 			"id": "stop_speech",
 			"title": "Stop NVDA from Talking",
-			"order": 4,
+			"order": 5,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Sometimes NVDA talks too much or you want it to stop mid sentence. [Universal shortcut — works in most screen readers] The Control key by itself immediately silences speech. This is called stopping speech, and it works in Narrator, JAWS, and VoiceOver as well. Press Enter to continue."
+					"instruction": "Sometimes NVDA talks too much or you want it to stop mid sentence. The Control key by itself immediately silences speech. This is called stopping speech, and it works in Narrator, JAWS, and VoiceOver as well — it is a universal screen reader convention. Press Enter to continue."
 				},
 				{
 					"type": "info",
-					"instruction": "There is also a second option: the Shift key. [NVDA command] Pressing Shift pauses NVDA's speech mid-sentence. Press Shift again and NVDA resumes reading right where it left off. This pause-and-resume behavior is specific to NVDA. It is useful when you need a brief moment to focus — for example, reading a phone number from a document while you dial it. Press Shift once to pause, then press Shift again to continue. Control stops completely. Shift pauses and resumes. Both are worth knowing. Press Enter to continue."
+					"instruction": "There is also a second option: the Shift key. Pressing Shift pauses NVDA's speech mid-sentence. Press Shift again and NVDA resumes reading right where it left off. This pause-and-resume behavior is specific to NVDA. It is useful when you need a brief moment to focus — for example, reading a phone number from a document while you dial it. Press Shift once to pause, then press Shift again to continue. Control stops completely. Shift pauses and resumes. Both are worth knowing. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -91,11 +114,11 @@
 		{
 			"id": "where_am_i",
 			"title": "Find Out Where You Are",
-			"order": 5,
+			"order": 6,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Sighted users can see which control is highlighted on screen. [NVDA command] NVDA+Tab speaks the name, type, and state of whatever control you are currently focused on — your equivalent of that visual glance. Press Enter to continue."
+					"instruction": "Sighted users can see which control is highlighted on screen. NVDA+Tab speaks the name, type, and state of whatever control you are currently focused on — your equivalent of that visual glance. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -114,11 +137,11 @@
 		{
 			"id": "tab_navigation",
 			"title": "Move Between Controls with Tab",
-			"order": 6,
+			"order": 7,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "In dialog boxes, settings windows, and forms, you press the Tab key to move forward between controls like buttons, checkboxes, and text fields. [Universal shortcut — works in all Windows applications] Shift+Tab moves you backwards. This is the same in every Windows program — learning it here means you can use it everywhere. Press Enter to continue."
+					"instruction": "In dialog boxes, settings windows, and forms, you press the Tab key to move forward between controls like buttons, checkboxes, and text fields. Shift+Tab moves you backwards. This is the same in every Windows program — learning it here means you can use it everywhere. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -152,11 +175,11 @@
 		{
 			"id": "activate_controls",
 			"title": "Activate Buttons and Controls",
-			"order": 7,
+			"order": 8,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Once you have Tabbed to a button or control, you need to activate it. [Universal shortcuts — work in all Windows applications] Enter activates buttons and default actions. Space toggles checkboxes on and off. These keys work the same way in every Windows program. Press Enter to continue."
+					"instruction": "Once you have Tabbed to a button or control, you need to activate it. Enter activates buttons and default actions. Space toggles checkboxes on and off. These keys work the same way in every Windows program. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -192,11 +215,11 @@
 		{
 			"id": "read_current_line",
 			"title": "Read the Current Line",
-			"order": 8,
+			"order": 9,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "When you are in a document or text area, you can have NVDA read the line where your cursor is sitting. [NVDA command] NVDA+Up Arrow reads the current line — useful whenever you want to confirm exactly where you are in a document. A practice text area is included right in the next step. Press Enter to continue."
+					"instruction": "When you are in a document or text area, you can have NVDA read the line where your cursor is sitting. NVDA+Up Arrow reads the current line — useful whenever you want to confirm exactly where you are in a document. A practice text area is included right in the next step. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -211,11 +234,11 @@
 		{
 			"id": "input_help",
 			"title": "Explore Keys with Input Help",
-			"order": 9,
+			"order": 10,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "[NVDA command] NVDA+1 toggles Input Help mode. When it is on, pressing any key tells you what that key does in NVDA — without actually doing anything. It is a completely safe way to explore your keyboard, and it is unique to NVDA. Press Enter to continue."
+					"instruction": "NVDA+1 toggles Input Help mode. When it is on, pressing any key tells you what that key does in NVDA — without actually doing anything. It is a completely safe way to explore your keyboard, and it is unique to NVDA. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -236,11 +259,11 @@
 		{
 			"id": "getting_help",
 			"title": "Open the User Guide",
-			"order": 10,
+			"order": 11,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "NVDA comes with a complete user guide that you can open at any time. [NVDA command] The user guide is found in the NVDA menu under Help. It is a great reference when you want to learn more on your own. Press Enter to continue."
+					"instruction": "NVDA comes with a complete user guide that you can open at any time. The user guide is found in the NVDA menu under Help. It is a great reference when you want to learn more on your own. Press Enter to continue."
 				},
 				{
 					"type": "info",
@@ -251,7 +274,7 @@
 				},
 				{
 					"type": "info",
-					"instruction": "Excellent work — you have completed the Getting Started chapter! You now know the essential NVDA commands that will carry you through daily use: your NVDA key, reading the title bar and time, stopping speech, finding your focus, navigating with Tab, activating controls, reading lines, using Input Help, and opening the user guide. Practice a little every day and these commands will become automatic. When you are ready for more, press NVDA+Shift+C to open the lesson picker and start the next chapter: Reading and Moving Through Text. Press Enter to finish.",
+					"instruction": "Excellent work — you have completed the Getting Started chapter! You now know how to identify the three categories of commands, and you have practiced the essential NVDA commands that will carry you through daily use: your NVDA key, reading the title bar and time, stopping speech, finding your focus, navigating with Tab, activating controls, reading lines, using Input Help, and opening the user guide. Practice a little every day and these commands will become automatic. When you are ready for more, press NVDA+Shift+C to open the lesson picker and start the next chapter: Reading and Moving Through Text. Press Enter to finish.",
 					"chapterComplete": true
 				}
 			]
