@@ -1,0 +1,51 @@
+SOCIAL MEDIA POST — NVDA Coach v1.2.0
+=======================================
+
+
+--- SHORT FORM (Twitter/X — fits in one post) ---
+
+Learning NVDA shouldn't mean reading a manual and hoping it sticks.
+
+NVDA Coach is a free add-on that teaches screen reader commands through
+guided, step-by-step practice — from inside NVDA itself.
+
+35 lessons. 5 chapters. Press one key and it walks you through everything.
+
+Free download:
+https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon
+
+#NVDA #ScreenReader #Accessibility #AssistiveTechnology #A11y
+
+
+--- LONG FORM (LinkedIn / Facebook) ---
+
+Learning a screen reader is hard. Not because the commands are complicated —
+but because there's always a gap between reading about a command and actually
+using one.
+
+NVDA Coach closes that gap.
+
+It's a free add-on for the NVDA screen reader that teaches commands through
+short, guided practice sessions — from inside NVDA itself. No PDFs. No videos.
+No switching windows to follow along. Press NVDA+Shift+C and the Coach starts
+walking you through what to do and why, one step at a time.
+
+Version 1.2.0 is out now — 35 lessons across 5 chapters, including a brand-new
+opening lesson that answers the question every new screen reader user has but
+rarely gets a straight answer to:
+
+"Who's actually in charge of this key — Windows, the app, or the screen reader?"
+
+That one concept changes how everything else clicks into place.
+
+Completely free. No account. No internet required after install.
+
+Download it here:
+https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon
+
+If you work with someone who's learning NVDA — a student, a client, a family
+member — send them this link. It's the structured starting point I wish existed
+when I started teaching.
+
+#NVDA #ScreenReader #AssistiveTechnology #Accessibility #BlindTech
+#DigitalInclusion #A11y #AT
