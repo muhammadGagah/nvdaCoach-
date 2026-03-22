@@ -4,17 +4,28 @@
 # freely on their own, then returns to the CoachWindow and presses Enter
 # (or clicks Next Step) to confirm and move on.
 
+import os
 import wx
 import ui
 import tones
+import nvwave
 import config
 from logHandler import log
+
+_SOUNDS_DIR = os.path.join(os.path.dirname(__file__), "sounds")
 
 
 def _beep(freq, duration):
 	"""Play a tone only if sounds are enabled in NVDA Coach settings."""
 	if config.conf["nvdaCoach"]["playSounds"]:
 		tones.beep(freq, duration)
+
+
+def _playSound(filename):
+	"""Play a .ogg/.wav file from the sounds/ folder, if sounds are enabled."""
+	if config.conf["nvdaCoach"]["playSounds"]:
+		path = os.path.join(_SOUNDS_DIR, filename)
+		nvwave.playWaveFile(path)
 
 
 class LessonRunner:
@@ -218,9 +229,8 @@ class LessonRunner:
 			totalSteps,
 		)
 
-		# Celebration tones.
-		for i, freq in enumerate([523, 659, 784, 1047]):
-			wx.CallLater(i * 120, _beep, freq, 100)
+		# Lesson complete sound.
+		_playSound("lesson_complete.ogg")
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		msg = (
