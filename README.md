@@ -122,6 +122,19 @@ If you have ideas for lessons, commands that should be covered, or feedback on y
 
 ---
 
+## Acknowledgments
+
+Thank you to the testers and community members who have shaped NVDA Coach through their feedback:
+
+- **Jessica Tegner** (Be My Eyes)
+- **Darrell Hilliker**, CPWA, Salesforce Certified UX Designer
+- **Rui Fontes** (NVDA Portuguese translation team)
+- **Brian**
+- **Gene**
+- **Joseph**
+
+---
+
 ## Contact
 
 **Tony Gebhard**, Assistive Technology Instructor
