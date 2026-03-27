@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.2.0
+**Current version:** 1.2.1
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.2.0](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.0/nvdaCoach-1.2.0.nvda-addon)**
+**[Download NVDA Coach v1.2.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.1/nvdaCoach-1.2.1.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,12 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.2.1
+
+- **Bug fix — Object Navigation, laptop layout:** Four laptop layout gestures were missing the required Shift key. Moving to the next and previous object at the same level is NVDA+Shift+Right/Left Arrow; moving to parent and first child is NVDA+Shift+Up/Down Arrow. Without Shift, those keystrokes invoke review cursor movement instead. Reported and verified by John Hess, AT Specialist, State Services for the Blind.
+- **Bug fix — Say All lesson, laptop layout:** The lesson previously showed only the desktop layout keystroke (NVDA+Down Arrow). Laptop layout users press NVDA+A. Both layouts are now documented throughout. Reported by a community member.
+- **Audio:** Lesson complete sound volume raised by 15%.
 
 ## What's New in v1.2.0
 
@@ -38,7 +44,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history.
 An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, and opening the user guide. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
 
 ### Chapter 2: Reading and Moving Through Text — 6 lessons
-Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (continuous reading); and text selection with Shift+arrows. Every lesson embeds a practice text area directly in the Coach window — no switching to Notepad or another application.
+Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (desktop: NVDA+Down Arrow, laptop: NVDA+A); and text selection with Shift+arrows. Every lesson embeds a practice text area directly in the Coach window — no switching to Notepad or another application.
 
 ### Chapter 3: Browse Mode and Web Navigation — 10 lessons
 What browse mode is and how it works, heading navigation, heading level shortcuts, link navigation, form field navigation, toggling between browse mode and focus mode, landmark and list navigation, the Elements List dialog, finding text with NVDA Find, and toggling single-letter navigation. A fully accessible practice web page opens automatically in your browser when you start any lesson in this chapter.
@@ -96,7 +102,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.2.0.nvda-addon'
+output = 'nvdaCoach-1.2.1.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -126,12 +132,15 @@ If you have ideas for lessons, commands that should be covered, or feedback on y
 
 Thank you to the testers and community members who have shaped NVDA Coach through their feedback:
 
-- **Jessica Tegner** (Be My Eyes)
+- **Jessica Tegner** (Be My Eyes) — invaluable early feedback and feature and lesson requests
 - **Darrell Hilliker**, CPWA, Salesforce Certified UX Designer
 - **Rui Fontes** (NVDA Portuguese translation team)
+- **John Hess**, Adaptive Technology Specialist, State Services for the Blind — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter
+- **Nash** — feature and lesson requests
 - **Brian**
 - **Gene**
 - **Joseph**
+- Anonymous community members who have written in with corrections and encouragement
 
 ---
 

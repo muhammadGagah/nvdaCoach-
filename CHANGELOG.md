@@ -1,5 +1,20 @@
 # NVDA Coach — Changelog
 
+## v1.2.1 (2026-03-27)
+
+### Bug Fixes
+- **Object Navigation — laptop layout:** Four laptop layout gestures were missing the Shift key. Moving to the next and previous object at the same level is NVDA+Shift+Right/Left Arrow; moving to parent and first child is NVDA+Shift+Up/Down Arrow. Without Shift, those keystrokes invoke review cursor movement (by character/line) instead of object navigation. Reported and verified via NVDA input help by John Hess, AT Specialist, State Services for the Blind, Saint Paul, MN.
+- **Say All lesson — laptop layout:** The lesson previously showed only the desktop layout keystroke (NVDA+Down Arrow). Laptop layout users press NVDA+A. Both layouts are now documented in the lesson intro, practice step, and chapter summary. Reported by an anonymous community member using laptop layout.
+
+### Audio
+- Lesson complete sound volume raised by 15%.
+
+### Documentation
+- README.md, CHANGELOG.md, and doc/en/readme.html updated in tandem.
+- Acknowledgments updated to include John Hess and anonymous contributors.
+
+---
+
 ## v1.2.0 (2026-03-21)
 
 ### New Lesson Content
@@ -7,6 +22,13 @@
 
 ### Lesson Content Changes
 - **Removed all inline command labels** — all `[NVDA command]`, `[NVDA browse mode key]`, `[NVDA feature]`, and `[Universal shortcut]` tags stripped from every step across all five lesson files (28 instances). The Understanding Command Categories lesson carries this pedagogical weight instead, trusting learners to apply the framework themselves. (#006 — Brian)
+
+### Sound and Audio
+- **Sound branding overhaul** — all five sound moments (lesson start, step advance, hint, lesson stop, lesson complete) replaced with custom WAV audio files. The sound toggle in NVDA Settings disables all of them.
+
+### New Features
+- **NVDA Coach Help in the NVDA Help menu** — NVDA menu → Help → NVDA Coach Help opens the user guide directly. (#008 — Jessica Tegner)
+- **Chapter navigation keys** — Ctrl+N (next lesson), Ctrl+B (previous lesson), Ctrl+R (restart current lesson) added to the Coach window.
 
 ---
 
