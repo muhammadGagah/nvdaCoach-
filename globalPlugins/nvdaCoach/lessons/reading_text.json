@@ -135,12 +135,12 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "NVDA plus Down Arrow starts reading everything from the current position to the end of the document. This is called Say All. NVDA keeps reading until it reaches the end or you stop it. Sighted users can skim an entire page at a glance; Say All is your equivalent — let NVDA read the whole thing while you listen. You can press Control at any time to stop. Press Enter to continue."
+					"instruction": "Say All tells NVDA to start reading from the current position to the end of the document without stopping. The keystroke depends on your keyboard layout. If you are on the desktop layout, press NVDA plus Down Arrow. If you are on the laptop layout, press NVDA plus A. NVDA keeps reading until it reaches the end or you stop it. Sighted users can skim an entire page at a glance; Say All is your equivalent — let NVDA read the whole thing while you listen. You can press Control at any time to stop. Press Enter to continue."
 				},
 				{
 					"type": "info",
-					"instruction": "Arrow down into the practice text area below and position your cursor somewhere in the middle. Then hold your NVDA key and press the Down Arrow key. NVDA will begin reading everything from your cursor to the end without stopping. Press Control to stop it at any time. When done, press Enter to continue.",
-					"monitorGestures": ["kb:nvda+downArrow"],
+					"instruction": "Arrow down into the practice text area below and position your cursor somewhere in the middle. Then start Say All: desktop layout users press NVDA plus Down Arrow; laptop layout users press NVDA plus A. NVDA will begin reading everything from your cursor to the end without stopping. Press Control to stop it at any time. When done, press Enter to continue.",
+					"monitorGestures": ["kb:nvda+downArrow", "kb:nvda+a"],
 					"practiceText": "The quick brown fox jumps over the lazy dog.\nScreen readers open the digital world to everyone.\nNVDA is free and open source software.\nPractice builds the habit of screen reader navigation.\nArrow keys move through text one step at a time.\nControl plus arrows jump by whole words at once.\nHome and End move to a line boundary.\nControl plus Home or End jumps to document extremes.\nThis is the last line of the practice area."
 				}
 			]
@@ -190,7 +190,7 @@
 				},
 				{
 					"type": "info",
-					"instruction": "Excellent work — you have completed the Reading and Moving Through Text chapter! You now know how to navigate by character, word, and line, jump to the start and end of a document, use Say All, and select text with Shift plus arrow keys. These skills work everywhere NVDA is active. Press NVDA+Shift+C to open the lesson picker and start the next chapter: Browse Mode and Web Navigation. Press Enter to finish."
+					"instruction": "Excellent work — you have completed the Reading and Moving Through Text chapter! You now know how to navigate by character, word, and line, jump to the start and end of a document, use Say All (NVDA plus Down Arrow on desktop layout, NVDA plus A on laptop layout), and select text with Shift plus arrow keys. These skills work everywhere NVDA is active. Press NVDA+Shift+C to open the lesson picker and start the next chapter: Browse Mode and Web Navigation. Press Enter to finish."
 				}
 			]
 		}

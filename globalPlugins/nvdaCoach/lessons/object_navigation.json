@@ -30,14 +30,14 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "To move to the next object at the same level, press NVDA+NumPad6 on desktop layout, or NVDA+Right Arrow on laptop layout. To move to the previous object, press NVDA+NumPad4 on desktop, or NVDA+Left Arrow on laptop. NVDA announces each object as you land on it. Press Enter to continue."
+					"instruction": "To move to the next object at the same level, press NVDA+NumPad6 on desktop layout, or NVDA+Shift+Right Arrow on laptop layout. To move to the previous object, press NVDA+NumPad4 on desktop, or NVDA+Shift+Left Arrow on laptop. NVDA announces each object as you land on it. Press Enter to continue."
 				},
 				{
 					"type": "info",
-					"instruction": "Try it now. Hold your NVDA key and press NumPad6 (desktop) or Right Arrow (laptop) to move to the next object. NVDA will announce what it is. Then hold NVDA and press NumPad4 (desktop) or Left Arrow (laptop) to move to the previous object. Try moving through a few objects in any open application to get the feel of it. Press Enter here when you are ready to continue.",
+					"instruction": "Try it now. Hold your NVDA key and press NumPad6 (desktop) or Shift+Right Arrow (laptop) to move to the next object. NVDA will announce what it is. Then hold NVDA and press NumPad4 (desktop) or Shift+Left Arrow (laptop) to move to the previous object. Try moving through a few objects in any open application to get the feel of it. Press Enter here when you are ready to continue.",
 					"monitorGestures": [
 						"kb:nvda+numpad6",
-						"kb:nvda+rightArrow"
+						"kb:nvda+shift+rightArrow"
 					]
 				},
 				{
@@ -53,14 +53,14 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "To move up to the parent object (the container that holds the current object), press NVDA+NumPad8 on desktop layout, or NVDA+Up Arrow on laptop layout. To move down to the first child object inside the current one, press NVDA+NumPad2 on desktop, or NVDA+Down Arrow on laptop. This is how you explore the object tree in depth. Press Enter to continue."
+					"instruction": "To move up to the parent object (the container that holds the current object), press NVDA+NumPad8 on desktop layout, or NVDA+Shift+Up Arrow on laptop layout. To move down to the first child object inside the current one, press NVDA+NumPad2 on desktop, or NVDA+Shift+Down Arrow on laptop. This is how you explore the object tree in depth. Press Enter to continue."
 				},
 				{
 					"type": "info",
-					"instruction": "Try it now. Hold NVDA and press NumPad8 (desktop) or Up Arrow (laptop) to move to the parent of the current object. NVDA will announce the parent. Then press NVDA+NumPad2 (desktop) or NVDA+Down Arrow (laptop) to move back down to the first child. Exploring up and down the tree helps you find controls that are grouped together in panels or toolbars. Press Enter when you are ready to continue.",
+					"instruction": "Try it now. Hold NVDA and press NumPad8 (desktop) or Shift+Up Arrow (laptop) to move to the parent of the current object. NVDA will announce the parent. Then press NVDA+NumPad2 (desktop) or NVDA+Shift+Down Arrow (laptop) to move back down to the first child. Exploring up and down the tree helps you find controls that are grouped together in panels or toolbars. Press Enter when you are ready to continue.",
 					"monitorGestures": [
 						"kb:nvda+numpad8",
-						"kb:nvda+upArrow"
+						"kb:nvda+shift+upArrow"
 					]
 				}
 			]
@@ -76,7 +76,7 @@
 				},
 				{
 					"type": "info",
-					"instruction": "Try it now. Navigate to any object using NVDA+NumPad6 or NVDA+Right Arrow. Then press NVDA+NumPad5 (desktop) or NVDA+Shift+Comma (laptop) to hear the full description of that object. Press it twice quickly to spell the name character by character. When you are ready, press Enter to continue.",
+					"instruction": "Try it now. Navigate to any object using NVDA+NumPad6 (desktop) or NVDA+Shift+Right Arrow (laptop). Then press NVDA+NumPad5 (desktop) or NVDA+Shift+Comma (laptop) to hear the full description of that object. Press it twice quickly to spell the name character by character. When you are ready, press Enter to continue.",
 					"monitorGestures": [
 						"kb:nvda+numpad5",
 						"kb:nvda+shift+,"
