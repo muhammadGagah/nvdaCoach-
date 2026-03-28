@@ -1,5 +1,16 @@
 # NVDA Coach — Changelog
 
+## v1.3 (2026-03-28)
+
+### New Features
+- **Localization infrastructure:** Lesson content is now organized into language subfolders (`lessons/en/`). NVDA Coach automatically detects the active NVDA language using `languageHandler.getLanguage()` and loads lessons from the matching subfolder (e.g. `lessons/fr/` for French, `lessons/pt/` from `pt_BR`), falling back to `lessons/en/` when no translation is available. Translators can contribute localized lesson sets by adding a language folder — no code changes required. Proposed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community.
+- **Full i18n string wrapping (`__init__.py` and `lessonRunner.py`):** All user-facing strings in the add-on code are now wrapped with `_()` for gettext translation. This covers button labels, status bar text, spoken announcements, hint output, lesson picker UI, practice frame headings and feedback messages, and all `ui.message()` calls throughout both plugin files. Combined with the lesson folder architecture, this provides the complete foundation for community-contributed localizations.
+
+### Acknowledgments
+- Valentin Kupriyanov, Head of the Russian-speaking NVDA user community — internationalization and localization architecture proposal
+
+---
+
 ## v1.2.2 (2026-03-28)
 
 ### Bug Fixes

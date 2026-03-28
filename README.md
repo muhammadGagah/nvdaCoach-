@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.2.2
+**Current version:** 1.3
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.2.2](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.2/nvdaCoach-1.2.2.nvda-addon)**
+**[Download NVDA Coach v1.3](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3/nvdaCoach-1.3.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,11 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.3
+
+- **Localization infrastructure:** Lesson content is now organized into language subfolders (`lessons/en/`). NVDA Coach automatically detects the active NVDA language and loads lessons from the matching folder (e.g. `lessons/fr/` for French), falling back to `lessons/en/` when no translation is available. This enables community contributors to add fully translated lesson sets without touching any code — drop a new language folder in and it works. Proposed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community.
+- **Full i18n string wrapping:** All user-facing strings in the plugin code (button labels, status messages, spoken announcements, hint output, lesson picker text) are now wrapped with `_()` for gettext translation. Combined with the lesson folder architecture, this lays the complete foundation for full NVDA Coach localizations.
 
 ## What's New in v1.2.2
 
@@ -109,7 +114,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.2.2.nvda-addon'
+output = 'nvdaCoach-1.3.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')

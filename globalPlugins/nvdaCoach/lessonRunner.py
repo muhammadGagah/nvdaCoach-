@@ -60,13 +60,15 @@ class LessonRunner:
 
 		lessonTitle = self._lesson.get("title", "Lesson")
 		if LessonRunner._controlsIntroShown:
-			introMsg = f"Starting lesson: {lessonTitle}."
+			introMsg = _("Starting lesson: {title}.").format(title=lessonTitle)
 		else:
 			introMsg = (
-				f"Starting lesson: {lessonTitle}. "
-				"Press Enter or the Next Step button to advance. "
-				"F1 repeats the instruction, F2 gives a hint, "
-				"Escape stops the lesson."
+				_("Starting lesson: {title}.").format(title=lessonTitle) + " "
+				+ _(
+					"Press Enter or the Next Step button to advance. "
+					"F1 repeats the instruction, F2 gives a hint, "
+					"Escape stops the lesson."
+				)
 			)
 			LessonRunner._controlsIntroShown = True
 
@@ -81,13 +83,13 @@ class LessonRunner:
 		self.isActive = False
 		if announce:
 			_playSound("lesson_stop.wav")
-			ui.message(
+			ui.message(_(
 				"Lesson stopped. "
 				"Press NVDA+Shift+C to choose another lesson, "
 				"or Ctrl+R to restart this one."
-			)
+			))
 		if self.coachWindow:
-			self.coachWindow.showIdle("Lesson stopped.")
+			self.coachWindow.showIdle(_("Lesson stopped."))
 
 	def cleanup(self):
 		"""Called when the add-on terminates."""
@@ -124,20 +126,25 @@ class LessonRunner:
 		if hints and isinstance(hints, list) and len(hints) > 0:
 			hint = hints[self._hintIndex % len(hints)]
 			self._hintIndex += 1
-			count_label = f" {(self._hintIndex - 1) % len(hints) + 1} of {len(hints)}" if len(hints) > 1 else ""
+			idx = (self._hintIndex - 1) % len(hints) + 1
+			if len(hints) > 1:
+				# Translators: hint counter, e.g. "Hint 2 of 3: ..."
+				label = _("Hint {idx} of {total}: {hint}").format(idx=idx, total=len(hints), hint=hint)
+			else:
+				label = _("Hint: {hint}").format(hint=hint)
 			_playSound("hint.wav")
-			ui.message(f"Hint{count_label}: {hint}")
+			ui.message(label)
 		else:
 			# Fall back to legacy single hint string.
-			hint = step.get("hint", "No additional hint is available for this step.")
+			hint = step.get("hint", _("No additional hint is available for this step."))
 			_playSound("hint.wav")
-			ui.message(f"Hint: {hint}")
+			ui.message(_("Hint: {hint}").format(hint=hint))
 
 	def skipStep(self):
 		"""Skip the current step without marking it correct. Called by F3."""
 		if not self.isActive:
 			return
-		ui.message("Step skipped.")
+		ui.message(_("Step skipped."))
 		self._advanceStep()
 
 	# ------------------------------------------------------------------
@@ -165,13 +172,16 @@ class LessonRunner:
 		stepType = step.get("type", "info")
 		stepNum = self._stepIndex + 1
 		totalSteps = len(self._lesson.get("steps", []))
-		prefix = f"Step {stepNum} of {totalSteps}. "
+		# Translators: step position prefix spoken before each instruction
+		prefix = _("Step {stepNum} of {totalSteps}. ").format(stepNum=stepNum, totalSteps=totalSteps)
 
 		# Gesture steps tell the student to try the key themselves, then confirm.
 		if stepType == "gesture":
 			advance_cue = (
-				"\n\nTry it now. When you are ready to continue, "
-				"press Enter or click Next Step."
+				"\n\n" + _(
+					"Try it now. When you are ready to continue, "
+					"press Enter or click Next Step."
+				)
 			)
 			displayInstruction = instruction + advance_cue
 		else:
@@ -183,7 +193,8 @@ class LessonRunner:
 		if practiceText:
 			displayInstruction += (
 				"\n\n"
-				"PRACTICE AREA \u2014 NAVIGATE WITH ARROW KEYS:\n\n"
+				# Translators: heading shown above inline practice text area
+				+ _("PRACTICE AREA \u2014 NAVIGATE WITH ARROW KEYS:") + "\n\n"
 				+ practiceText
 			)
 
@@ -198,7 +209,9 @@ class LessonRunner:
 
 		spokenMsg = prefix + instruction
 		if stepType == "gesture":
-			spokenMsg += " Try it now. When you are ready to continue, press Enter or click Next Step."
+			spokenMsg += " " + _(
+				"Try it now. When you are ready to continue, press Enter or click Next Step."
+			)
 		ui.message(spokenMsg)
 
 	def _advanceStep(self):
@@ -234,29 +247,28 @@ class LessonRunner:
 		# Lesson complete sound.
 		_playSound("lesson_complete.wav")
 
-		lessonTitle = self._lesson.get("title", "Lesson")
+		lessonTitle = self._lesson.get("title", _("Lesson"))
 		msg = (
-			f"Lesson complete: {lessonTitle}! Well done. "
+			_("Lesson complete: {title}! Well done. "
 			"Press NVDA+Shift+C to open the lesson picker and choose your next lesson "
 			"or continue to the next chapter. "
 			"Ctrl+N moves to the next lesson in this category, "
-			"or Ctrl+R repeats this one."
+			"or Ctrl+R repeats this one.").format(title=lessonTitle)
 		)
 		wx.CallLater(600, ui.message, msg)
 		if self.coachWindow:
-			wx.CallLater(
-				600,
-				self.coachWindow.showIdle,
-				f"Lesson complete: {lessonTitle}!\n\n"
-				"Well done.\n\n"
-				"--- WHAT TO DO NEXT ---\n"
-				"  Press NVDA+Shift+C to open the lesson picker.\n"
-				"  Choose the next lesson in this chapter, or start the next chapter.\n\n"
-				"--- STAY IN THIS CHAPTER ---\n"
-				"  Ctrl+N  \u2014  Next lesson in this category.\n"
-				"  Ctrl+R  \u2014  Repeat this lesson.\n"
-				"  Ctrl+B  \u2014  Go back to the previous lesson."
+			idleMsg = (
+				_("Lesson complete: {title}!").format(title=lessonTitle) + "\n\n"
+				+ _("Well done.") + "\n\n"
+				"--- " + _("WHAT TO DO NEXT") + " ---\n"
+				"  " + _("Press NVDA+Shift+C to open the lesson picker.") + "\n"
+				"  " + _("Choose the next lesson in this chapter, or start the next chapter.") + "\n\n"
+				"--- " + _("STAY IN THIS CHAPTER") + " ---\n"
+				"  Ctrl+N  \u2014  " + _("Next lesson in this category.") + "\n"
+				"  Ctrl+R  \u2014  " + _("Repeat this lesson.") + "\n"
+				"  Ctrl+B  \u2014  " + _("Go back to the previous lesson.")
 			)
+			wx.CallLater(600, self.coachWindow.showIdle, idleMsg)
 		# If this lesson marks the end of a chapter, fire the chapter-complete callback
 		# after the normal completion screen has been shown.
 		if self._lesson.get("chapterComplete") and self.onChapterComplete:

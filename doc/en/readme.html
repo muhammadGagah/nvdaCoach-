@@ -13,7 +13,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <body>
 
 <h1>NVDA Coach</h1>
-<p><strong>Version 1.2.2</strong></p>
+<p><strong>Version 1.3</strong></p>
 <p>Created by <strong>Tony Gebhard</strong>, Assistive Technology Instructor</p>
 <ul>
   <li>Email: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
@@ -135,6 +135,12 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 </ul>
 
 <h2>What's New</h2>
+
+<h3>Version 1.3</h3>
+<ul>
+  <li><strong>Localization infrastructure:</strong> Lesson content is now organized into language subfolders (<code>lessons/en/</code>). NVDA Coach automatically detects the active NVDA language and loads lessons from the matching folder (e.g. <code>lessons/fr/</code> for French), falling back to <code>lessons/en/</code>. Community contributors can add translated lesson sets by creating a new language subfolder — no code changes required. Proposed by Valentin Kupriyanov.</li>
+  <li><strong>Full i18n string wrapping:</strong> All user-facing strings in the add-on code are now wrapped with <code>_()</code> for gettext translation, covering button labels, status messages, spoken announcements, hint output, and all UI text throughout the plugin.</li>
+</ul>
 
 <h3>Version 1.2.2</h3>
 <ul>

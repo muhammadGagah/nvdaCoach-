@@ -17,6 +17,7 @@ import wx
 from logHandler import log
 import tones
 import config
+import languageHandler
 
 from .lessonRunner import LessonRunner
 from .progressTracker import ProgressTracker
@@ -37,7 +38,7 @@ class NvdaCoachSettingsPanel(gui.settingsDialogs.SettingsPanel):
 	def makeSettings(self, settingsSizer):
 		self._playSoundsCheckbox = wx.CheckBox(
 			self,
-			label="Play sounds during lessons (correct/incorrect/completion chimes)",
+			label=_("Play sounds during lessons (correct/incorrect/completion chimes)"),
 		)
 		self._playSoundsCheckbox.SetValue(config.conf["nvdaCoach"]["playSounds"])
 		settingsSizer.Add(self._playSoundsCheckbox)
@@ -47,12 +48,41 @@ class NvdaCoachSettingsPanel(gui.settingsDialogs.SettingsPanel):
 
 
 def _loadLessonCategories():
-	"""Load all lesson category JSON files from the lessons directory."""
-	lessonsDir = os.path.join(os.path.dirname(__file__), "lessons")
+	"""Load all lesson category JSON files from the lessons directory.
+
+	Looks for lessons in a language-specific subfolder first (e.g. lessons/fr/
+	for French, lessons/pt_BR/ for Brazilian Portuguese), then the base language
+	code alone (e.g. lessons/pt/ from pt_BR), then falls back to lessons/en/.
+	This allows translators to contribute localized lesson sets by dropping a
+	new language subfolder into the lessons/ directory.
+	"""
+	baseDir = os.path.join(os.path.dirname(__file__), "lessons")
+
+	# Build a prioritized list of candidate directories.
+	lang = languageHandler.getLanguage()  # e.g. "fr_BE", "pt_BR", "en", "Windows"
+	candidates = []
+	if lang and lang != "Windows":
+		candidates.append(os.path.join(baseDir, lang))        # e.g. lessons/fr_BE/
+		baseLang = lang.split("_")[0]
+		if baseLang != lang:
+			candidates.append(os.path.join(baseDir, baseLang))  # e.g. lessons/fr/
+	candidates.append(os.path.join(baseDir, "en"))             # Always-present fallback.
+
+	lessonsDir = None
+	for candidate in candidates:
+		if os.path.isdir(candidate):
+			lessonsDir = candidate
+			break
+
 	categories = []
-	if not os.path.isdir(lessonsDir):
-		log.warning(f"NVDA Coach: Lessons directory not found: {lessonsDir}")
+	if not lessonsDir:
+		log.warning(
+			f"NVDA Coach: No lessons directory found for language '{lang}'. "
+			f"Checked: {candidates}"
+		)
 		return categories
+
+	log.info(f"NVDA Coach: Loading lessons from {lessonsDir}")
 	for filename in sorted(os.listdir(lessonsDir)):
 		if not filename.endswith(".json"):
 			continue
@@ -98,7 +128,7 @@ class CoachWindow(wx.Frame):
 		sizer = wx.BoxSizer(wx.VERTICAL)
 
 		# Status line: "Category  ›  Lesson  ·  Step N of M"
-		self._statusText = wx.StaticText(panel, label="NVDA Coach — ready")
+		self._statusText = wx.StaticText(panel, label=_("NVDA Coach \u2014 ready"))
 		statusFont = self._statusText.GetFont()
 		statusFont.SetPointSize(10)
 		self._statusText.SetFont(statusFont)
@@ -150,7 +180,7 @@ class CoachWindow(wx.Frame):
 		# During-lesson shortcut reminder (compact, single line).
 		lessonBar = wx.StaticText(
 			panel,
-			label=(
+			label=_(
 				"During a lesson:  "
 				"Enter \u2014 Next Step  \u00b7  "
 				"F1 Repeat  \u00b7  F2 Hint  \u00b7  F3 Skip step  \u00b7  "
@@ -163,9 +193,9 @@ class CoachWindow(wx.Frame):
 		sizer.Add(lessonBar, 0, wx.LEFT | wx.RIGHT | wx.TOP, 8)
 
 		# Primary action button: advance the current lesson step.
-		self._nextStepBtn = wx.Button(panel, label="Next Step  (Enter)")
+		self._nextStepBtn = wx.Button(panel, label=_("Next Step  (Enter)"))
 		self._nextStepBtn.SetToolTip(
-			"Confirm you have tried the current step and move to the next one."
+			_("Confirm you have tried the current step and move to the next one.")
 		)
 		self._nextStepBtn.Bind(
 			wx.EVT_BUTTON,
@@ -174,9 +204,9 @@ class CoachWindow(wx.Frame):
 		sizer.Add(self._nextStepBtn, 0, wx.ALL | wx.EXPAND, 8)
 
 		# Start Course button — shown only on the introduction screen.
-		self._startCourseBtn = wx.Button(panel, label="Start Course  (Enter)")
+		self._startCourseBtn = wx.Button(panel, label=_("Start Course  (Enter)"))
 		self._startCourseBtn.SetToolTip(
-			"Begin the first lesson of the Getting Started chapter."
+			_("Begin the first lesson of the Getting Started chapter.")
 		)
 		self._startCourseBtn.Bind(
 			wx.EVT_BUTTON,
@@ -187,12 +217,12 @@ class CoachWindow(wx.Frame):
 
 		# Secondary navigation buttons — lesson-level, always visible.
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
-		self._prevBtn = wx.Button(panel, label="\u25c4 Back  (Ctrl+B)")
-		self._repeatBtn = wx.Button(panel, label="\u21ba Restart  (Ctrl+R)")
-		self._nextBtn = wx.Button(panel, label="Next Lesson \u25ba  (Ctrl+N)")
-		self._prevBtn.SetToolTip("Go to the previous lesson in this category.")
-		self._repeatBtn.SetToolTip("Restart the current lesson from the beginning.")
-		self._nextBtn.SetToolTip("Go to the next lesson in this category.")
+		self._prevBtn = wx.Button(panel, label=_("\u25c4 Back  (Ctrl+B)"))
+		self._repeatBtn = wx.Button(panel, label=_("\u21ba Restart  (Ctrl+R)"))
+		self._nextBtn = wx.Button(panel, label=_("Next Lesson \u25ba  (Ctrl+N)"))
+		self._prevBtn.SetToolTip(_("Go to the previous lesson in this category."))
+		self._repeatBtn.SetToolTip(_("Restart the current lesson from the beginning."))
+		self._nextBtn.SetToolTip(_("Go to the next lesson in this category."))
 		self._prevBtn.Bind(wx.EVT_BUTTON, lambda e: self._plugin.prevLesson())
 		self._repeatBtn.Bind(wx.EVT_BUTTON, lambda e: self._plugin.repeatLesson())
 		self._nextBtn.Bind(wx.EVT_BUTTON, lambda e: self._plugin.nextLesson())
@@ -222,7 +252,8 @@ class CoachWindow(wx.Frame):
 		"""Refresh the window with the current lesson step."""
 		status = (
 			f"{categoryTitle}  \u203a  {lessonTitle}"
-			f"  \u00b7  Step {stepIdx + 1} of {stepTotal}"
+			# Translators: status bar showing step position within a lesson
+			f"  \u00b7  " + _("Step {stepNum} of {stepTotal}").format(stepNum=stepIdx + 1, stepTotal=stepTotal)
 		)
 		self._statusText.SetLabel(status)
 		self._statusText.GetParent().Layout()
@@ -237,7 +268,7 @@ class CoachWindow(wx.Frame):
 
 	def showIntroduction(self):
 		"""Show the full introduction/welcome text and speak it."""
-		self._statusText.SetLabel("NVDA Coach \u2014 Introduction")
+		self._statusText.SetLabel(_("NVDA Coach \u2014 Introduction"))
 		self._statusText.GetParent().Layout()
 		introText = (
 			"NVDA Coach\n"
@@ -270,11 +301,11 @@ class CoachWindow(wx.Frame):
 		self._nextStepBtn.Hide()
 		self._panel.Layout()
 		self._clearEscapeCount()
-		ui.message(
+		ui.message(_(
 			"Welcome to NVDA Coach. "
 			"Use your reading cursor or arrow keys to read this introduction. "
 			"When you are ready, press Tab to reach the Start Course button and press Enter to begin."
-		)
+		))
 
 	def showDrillProgress(self, current, total, message):
 		"""Update the window during a multi-press practice drill.
@@ -293,7 +324,7 @@ class CoachWindow(wx.Frame):
 
 	def showIdle(self, message=None):
 		"""Show the idle/between-lesson state in the window."""
-		self._statusText.SetLabel("NVDA Coach \u2014 ready")
+		self._statusText.SetLabel(_("NVDA Coach \u2014 ready"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Show()
@@ -318,7 +349,7 @@ class CoachWindow(wx.Frame):
 
 	def showBrowseModeCompletion(self):
 		"""Show the chapter-completion congratulations screen for Browse Mode."""
-		self._statusText.SetLabel("NVDA Coach \u2014 Chapter 3 Complete!")
+		self._statusText.SetLabel(_("NVDA Coach \u2014 Chapter 3 Complete!"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Hide()
@@ -343,12 +374,12 @@ class CoachWindow(wx.Frame):
 			"  Or press Ctrl+R to repeat any lesson in this chapter."
 		)
 		self._clearEscapeCount()
-		ui.message(
+		ui.message(_(
 			"Congratulations! You have completed Browse Mode and Web Navigation, "
 			"Chapter 3 of NVDA Coach. "
 			"The practice page in your browser can now be closed. "
 			"Press NVDA+Shift+C to continue to additional training resources."
-		)
+		))
 
 	def beginEscapeSequence(self):
 		"""Arm the 3-Escape-to-close sequence after a lesson is stopped by Escape.
@@ -472,14 +503,14 @@ class CoachWindow(wx.Frame):
 		self._escapeCount += 1
 
 		if self._escapeCount == 1:
-			msg = "Press Escape two more times to close NVDA Coach."
+			msg = _("Press Escape two more times to close NVDA Coach.")
 			ui.message(msg)
 			self._instructionText.SetValue(
-				msg + "\n\nOr press NVDA+Shift+C to start a lesson."
+				msg + "\n\n" + _("Or press NVDA+Shift+C to start a lesson.")
 			)
 			self._resetEscapeTimer()
 		elif self._escapeCount == 2:
-			msg = "Press Escape one more time to close NVDA Coach."
+			msg = _("Press Escape one more time to close NVDA Coach.")
 			ui.message(msg)
 			self._instructionText.SetValue(msg)
 			self._resetEscapeTimer()
@@ -618,7 +649,7 @@ class PracticeFrame(wx.Frame):
 	def _addTip(self):
 		lbl = wx.StaticText(
 			self._scroll,
-			label=(
+			label=_(
 				"When you are done, press NVDA+Shift+C to return to the "
 				"Coach window, then press Enter or Next Step to continue."
 			),
@@ -632,12 +663,12 @@ class PracticeFrame(wx.Frame):
 	# ---- Tab Navigation --------------------------------------------------
 
 	def _buildTabNavigation(self):
-		self._addHeading("Tab Navigation Practice Form")
-		self._addDesc(
+		self._addHeading(_("Tab Navigation Practice Form"))
+		self._addDesc(_(
 			"Press Tab to move forward through these controls. "
 			"Press Shift+Tab to move backward. "
 			"NVDA announces each control as you land on it."
-		)
+		))
 		self._addSep()
 
 		fgs = wx.FlexGridSizer(rows=0, cols=2, hgap=10, vgap=6)
@@ -688,24 +719,24 @@ class PracticeFrame(wx.Frame):
 		self._addTip()
 
 		submitBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(
-			"Form submitted. In a real form, this would send your information.",
+			_("Form submitted. In a real form, this would send your information."),
 		))
 		cancelBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(
-			"Cancelled. The form was not submitted.",
+			_("Cancelled. The form was not submitted."),
 		))
 		cb.Bind(wx.EVT_CHECKBOX, lambda e: ui.message(
-			"Subscribed to newsletter." if e.IsChecked() else "Unsubscribed.",
+			_("Subscribed to newsletter.") if e.IsChecked() else _("Unsubscribed."),
 		))
 
 	# ---- Activate Controls -----------------------------------------------
 
 	def _buildActivateControls(self):
-		self._addHeading("Activating Controls Practice")
-		self._addDesc(
+		self._addHeading(_("Activating Controls Practice"))
+		self._addDesc(_(
 			"Tab to a control and activate it. "
 			"Press Space to check or uncheck a checkbox. "
 			"Press Enter to activate a button."
-		)
+		))
 		self._addSep()
 
 		self._scrollSizer.Add(
@@ -730,37 +761,37 @@ class PracticeFrame(wx.Frame):
 		self._addTip()
 
 		cb1.Bind(wx.EVT_CHECKBOX, lambda e: ui.message(
-			"Screen reader tips enabled." if e.IsChecked()
-			else "Screen reader tips disabled.",
+			_("Screen reader tips enabled.") if e.IsChecked()
+			else _("Screen reader tips disabled."),
 		))
 		cb2.Bind(wx.EVT_CHECKBOX, lambda e: ui.message(
-			"Practice hints on." if e.IsChecked() else "Practice hints off.",
+			_("Practice hints on.") if e.IsChecked() else _("Practice hints off."),
 		))
 		cb3.Bind(wx.EVT_CHECKBOX, lambda e: ui.message(
-			"Auto-start enabled." if e.IsChecked() else "Auto-start disabled.",
+			_("Auto-start enabled.") if e.IsChecked() else _("Auto-start disabled."),
 		))
 
 		def _playBeep(e):
 			tones.beep(880, 120)
-			ui.message("Beep! You activated the button with Enter.")
+			ui.message(_("Beep! You activated the button with Enter."))
 
 		playBtn.Bind(wx.EVT_BUTTON, _playBeep)
 		greetBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(
-			"Hello! You just activated a button. Great work.",
+			_("Hello! You just activated a button. Great work."),
 		))
-		tipBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(
+		tipBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(_(
 			"Tip: Tab moves between controls. "
-			"Enter activates buttons. Space checks or unchecks checkboxes.",
-		))
+			"Enter activates buttons. Space checks or unchecks checkboxes."
+		),))
 
 	# ---- Where Am I? / Focus Reporter -----------------------------------
 
 	def _buildWhereAmI(self):
-		self._addHeading("Find Your Focus \u2014 Practice Login Form")
-		self._addDesc(
+		self._addHeading(_("Find Your Focus \u2014 Practice Login Form"))
+		self._addDesc(_(
 			"Tab around this form. When you land on a control, press "
 			"NVDA+Tab to hear its name, type, and current state."
-		)
+		))
 		self._addSep()
 
 		fgs = wx.FlexGridSizer(rows=0, cols=2, hgap=10, vgap=6)
@@ -779,9 +810,9 @@ class PracticeFrame(wx.Frame):
 		self._scrollSizer.Add(rememberCb, 0, wx.LEFT | wx.TOP, 12)
 
 		for label, msg in [
-			("Sign in", "Sign in activated. In a real application, this would log you in."),
-			("Create account", "Create account activated. This would open a registration form."),
-			("Forgot your password?", "Password reset activated. A reset link would be sent."),
+			(_("Sign in"), _("Sign in activated. In a real application, this would log you in.")),
+			(_("Create account"), _("Create account activated. This would open a registration form.")),
+			(_("Forgot your password?"), _("Password reset activated. A reset link would be sent.")),
 		]:
 			btn = wx.Button(self._scroll, label=label)
 			self._scrollSizer.Add(btn, 0, wx.LEFT | wx.TOP, 8)
@@ -830,7 +861,7 @@ class LessonPickerDialog(wx.Dialog):
 
 		hint = wx.StaticText(
 			panel,
-			label=(
+			label=_(
 				"Browse lessons and resources below. "
 				"Right arrow expands a section, Left arrow collapses it. "
 				"Press Enter or the Open / Start button to activate the selected item."
@@ -851,23 +882,25 @@ class LessonPickerDialog(wx.Dialog):
 		root = self._tree.AddRoot("NVDA Coach")
 
 		# ---- Introduction ------------------------------------------------
-		introItem = self._tree.AppendItem(root, "Introduction / About NVDA Coach")
+		introItem = self._tree.AppendItem(root, _("Introduction / About NVDA Coach"))
 		self._tree.SetItemData(introItem, {"type": "intro"})
 
 		# ---- Lesson categories -------------------------------------------
 		for category in self._categories:
 			catId = category.get("id", "")
-			catTitle = category.get("title", "Unknown Category")
+			catTitle = category.get("title", _("Unknown Category"))
 			lessons = category.get("lessons", [])
 			completed, total = self._progress.getCategoryProgress(catId, len(lessons))
-			catLabel = f"{catTitle}  \u2014  {completed} of {total} complete"
+			# Translators: progress label in the lesson picker tree
+			catLabel = f"{catTitle}  \u2014  " + _("{completed} of {total} complete").format(completed=completed, total=total)
 			catItem = self._tree.AppendItem(root, catLabel)
 			self._tree.SetItemData(catItem, {"type": "category"})
 			for lesson in sorted(lessons, key=lambda l: l.get("order", 999)):
 				lessonId = lesson.get("id", "")
-				lessonTitle = lesson.get("title", "Untitled")
+				lessonTitle = lesson.get("title", _("Untitled"))
 				done = self._progress.isLessonComplete(catId, lessonId)
-				label = lessonTitle + ("  [Done]" if done else "")
+				# Translators: suffix shown next to a completed lesson in the picker
+				label = lessonTitle + ("  " + _("[Done]") if done else "")
 				lessonItem = self._tree.AppendItem(catItem, label)
 				self._tree.SetItemData(lessonItem, {
 					"type": "lesson",
@@ -877,10 +910,10 @@ class LessonPickerDialog(wx.Dialog):
 
 		# ---- Additional Training and Help --------------------------------
 		# Opens a single standalone resources page in the browser.
-		helpItem = self._tree.AppendItem(root, "Additional Training and Help")
+		helpItem = self._tree.AppendItem(root, _("Additional Training and Help"))
 		self._tree.SetItemData(helpItem, {
 			"type": "file",
-			"label": "Additional Training and Help",
+			"label": _("Additional Training and Help"),
 			"path": os.path.join(self._addonRoot, "doc", "en", "resources.html"),
 		})
 
@@ -889,9 +922,9 @@ class LessonPickerDialog(wx.Dialog):
 		sizer.Add(self._tree, proportion=1, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=10)
 
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
-		startBtn = wx.Button(panel, wx.ID_OK, label="&Open / Start")
+		startBtn = wx.Button(panel, wx.ID_OK, label=_("&Open / Start"))
 		startBtn.SetDefault()
-		cancelBtn = wx.Button(panel, wx.ID_CANCEL, label="&Cancel")
+		cancelBtn = wx.Button(panel, wx.ID_CANCEL, label=_("&Cancel"))
 		btnSizer.Add(startBtn, flag=wx.RIGHT, border=5)
 		btnSizer.Add(cancelBtn)
 		sizer.Add(btnSizer, flag=wx.ALL | wx.ALIGN_RIGHT, border=10)
@@ -907,7 +940,7 @@ class LessonPickerDialog(wx.Dialog):
 		"""Handle Enter / double-click / Start button on the selected tree item."""
 		item = self._tree.GetSelection()
 		if not item.IsOk():
-			ui.message("Please select an item first.")
+			ui.message(_("Please select an item first."))
 			return
 
 		data = self._tree.GetItemData(item)
@@ -928,44 +961,44 @@ class LessonPickerDialog(wx.Dialog):
 			if self._tree.IsExpanded(item):
 				self._tree.Collapse(item)
 				count = self._tree.GetChildrenCount(item, recursively=False)
-				ui.message(f"Section collapsed. {count} items hidden.")
+				ui.message(_("Section collapsed. {count} items hidden.").format(count=count))
 			else:
 				self._tree.Expand(item)
 				count = self._tree.GetChildrenCount(item, recursively=False)
 				ui.message(
-					f"Section expanded. {count} items available. "
-					"Use the Down arrow to browse them."
+					_("Section expanded. {count} items available. "
+					"Use the Down arrow to browse them.").format(count=count)
 				)
 
 		elif itemType == "file":
 			path = data.get("path", "")
-			label = data.get("label", "File")
+			label = data.get("label", _("File"))
 			if not os.path.exists(path):
 				ui.message(
-					f"{label} is not available in this version of NVDA Coach."
+					_("{label} is not available in this version of NVDA Coach.").format(label=label)
 				)
 				return
 			try:
 				os.startfile(path)
-				ui.message(f"Opening {label}.")
+				ui.message(_("Opening {label}.").format(label=label))
 			except Exception as e:
 				log.warning(f"NVDA Coach: Could not open {path}: {e}")
 				ui.message(
-					f"Could not open {label}. "
-					"Please check that the add-on is installed correctly."
+					_("Could not open {label}. "
+					"Please check that the add-on is installed correctly.").format(label=label)
 				)
 
 		elif itemType == "url":
 			url = data.get("url", "")
 			try:
 				webbrowser.open(url)
-				ui.message(f"Opening {url} in your web browser.")
+				ui.message(_("Opening {url} in your web browser.").format(url=url))
 			except Exception as e:
 				log.warning(f"NVDA Coach: Could not open URL {url}: {e}")
-				ui.message(
+				ui.message(_(
 					"Could not open the website. "
 					"Please check your internet connection."
-				)
+				))
 
 	def _onCancel(self, event):
 		self.Destroy()
@@ -1062,17 +1095,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# the wx.Frame itself leaves NVDA with no readable control target.
 			self._coachWindow.Raise()
 			wx.CallAfter(self._coachWindow.focusInstructionText)
-			ui.message(
+			ui.message(_(
 				"NVDA Coach. "
 				"Press Enter or Next Step to continue, "
 				"or Escape to stop the lesson."
-			)
+			))
 			return
 		if not self._categories:
-			ui.message(
+			ui.message(_(
 				"NVDA Coach: No lesson files found. "
 				"Please check that the lessons folder is in the add-on directory."
-			)
+			))
 			return
 		# Ensure the coach window is visible before showing the picker.
 		if not self._coachWindow.IsShown():
@@ -1177,14 +1210,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def nextLesson(self):
 		"""Advance to the next lesson in the current category (Ctrl+N)."""
 		if not self._currentCategoryLessons:
-			ui.message("No active category. Press NVDA+Shift+C to choose a lesson.")
+			ui.message(_("No active category. Press NVDA+Shift+C to choose a lesson."))
 			return
 		if self._currentLessonIndex >= len(self._currentCategoryLessons) - 1:
-			ui.message(
+			ui.message(_(
 				"You are on the last lesson in this category. "
 				"Press NVDA+Shift+C to open the lesson picker "
 				"and continue to the next chapter."
-			)
+			))
 			return
 		if self._lessonRunner.isActive:
 			self._lessonRunner.stopLesson(announce=False)
@@ -1192,7 +1225,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
 		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
-		ui.message(f"Moving to: {lesson.get('title', 'next lesson')}.")
+		ui.message(_("Moving to: {title}.").format(title=lesson.get("title", _("next lesson"))))
 		wx.CallLater(
 			1000,
 			self._lessonRunner.startLesson,
@@ -1204,10 +1237,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def prevLesson(self):
 		"""Go back to the previous lesson in the current category (Ctrl+B)."""
 		if not self._currentCategoryLessons:
-			ui.message("No active category. Press NVDA+Shift+C to choose a lesson.")
+			ui.message(_("No active category. Press NVDA+Shift+C to choose a lesson."))
 			return
 		if self._currentLessonIndex <= 0:
-			ui.message("You are on the first lesson in this category.")
+			ui.message(_("You are on the first lesson in this category."))
 			return
 		if self._lessonRunner.isActive:
 			self._lessonRunner.stopLesson(announce=False)
@@ -1215,7 +1248,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
 		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
-		ui.message(f"Going back to: {lesson.get('title', 'previous lesson')}.")
+		ui.message(_("Going back to: {title}.").format(title=lesson.get("title", _("previous lesson"))))
 		wx.CallLater(
 			1000,
 			self._lessonRunner.startLesson,
@@ -1227,14 +1260,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def repeatLesson(self):
 		"""Restart the current lesson from the beginning (Ctrl+R)."""
 		if not self._currentCategoryLessons:
-			ui.message("No active category. Press NVDA+Shift+C to choose a lesson.")
+			ui.message(_("No active category. Press NVDA+Shift+C to choose a lesson."))
 			return
 		if self._lessonRunner.isActive:
 			self._lessonRunner.stopLesson(announce=False)
 		lesson = self._currentCategoryLessons[self._currentLessonIndex]
 		lessonId = lesson.get("id", "")
 		self._wirePracticeFrame(lessonId, lesson.get("title", ""))
-		ui.message("Restarting lesson.")
+		ui.message(_("Restarting lesson."))
 		wx.CallLater(
 			600,
 			self._lessonRunner.startLesson,
@@ -1249,7 +1282,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			(c for c in self._categories if c.get("id") == "getting_started"), None
 		)
 		if not category:
-			ui.message("Could not find the Getting Started chapter.")
+			ui.message(_("Could not find the Getting Started chapter."))
 			return
 		lessons = sorted(
 			category.get("lessons", []), key=lambda l: l.get("order", 999)
