@@ -39,6 +39,7 @@ class LessonRunner:
 		self.onOpenPracticePage = None  # Callback: fired when a step with openPracticePageAfter is advanced past.
 		self.onOpenPracticeFrame = None  # Callback: fired when a step with openPracticeFrameAfter is advanced past.
 		self.onChapterComplete = None   # Callback: fired when a lesson with chapterComplete: true finishes.
+		self._hintIndex = 0  # Tracks which hint in a hints array to show next.
 
 	# ------------------------------------------------------------------
 	# Public API
@@ -113,11 +114,21 @@ class LessonRunner:
 			ui.message(step.get("instruction", ""))
 
 	def speakHint(self):
-		"""Read the hint for the current step. Called by F2."""
+		"""Read the hint for the current step. Called by F2. Cycles through hints array."""
 		if not self.isActive:
 			return
 		step = self._currentStep()
-		if step:
+		if not step:
+			return
+		hints = step.get("hints")
+		if hints and isinstance(hints, list) and len(hints) > 0:
+			hint = hints[self._hintIndex % len(hints)]
+			self._hintIndex += 1
+			count_label = f" {(self._hintIndex - 1) % len(hints) + 1} of {len(hints)}" if len(hints) > 1 else ""
+			_playSound("hint.wav")
+			ui.message(f"Hint{count_label}: {hint}")
+		else:
+			# Fall back to legacy single hint string.
 			hint = step.get("hint", "No additional hint is available for this step.")
 			_playSound("hint.wav")
 			ui.message(f"Hint: {hint}")
@@ -144,6 +155,7 @@ class LessonRunner:
 		"""Announce the instruction for the current step and update CoachWindow."""
 		if not self.isActive:
 			return
+		self._hintIndex = 0  # Reset hint cycling whenever a new step begins.
 		step = self._currentStep()
 		if step is None:
 			self._completeLesson()

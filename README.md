@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.2.1
+**Current version:** 1.2.2
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.2.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.1/nvdaCoach-1.2.1.nvda-addon)**
+**[Download NVDA Coach v1.2.2](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.2.2/nvdaCoach-1.2.2.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,13 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.2.2
+
+- **Bug fix — Synth settings ring:** The lesson previously stated that NVDA+Ctrl+Right/Left Arrow changes speech speed. This is incorrect. NVDA+Ctrl+Right/Left Arrow navigates between items in the synth settings ring (Rate, Pitch, Volume, Voice, Variant). Speed is adjusted with NVDA+Ctrl+Up/Down Arrow (increase/decrease). Both desktop and laptop layouts documented throughout. Reported by Brandon Patterson.
+- **F2 hints now cycle:** Pressing F2 during a lesson now cycles through up to three hints per step — key location, finger placement, and context. Previously only one hint was available per step. All five chapters fully covered.
+- **All lessons fully hinted:** Every step across all five chapters now has a hints array. Previously many steps returned "no hint available" when F2 was pressed.
+- **Full cross-chapter connectivity:** Every chapter's final lesson now names the next chapter and references earlier lessons where relevant, creating a complete connected path from Getting Started through Customizing NVDA.
 
 ## What's New in v1.2.1
 
@@ -69,7 +76,7 @@ The Coach presents one step at a time. Each step:
 |-----|--------|
 | Enter / Space | Advance to next step (or next lesson after completion) |
 | F1 | Repeat current instruction |
-| F2 | Get a hint |
+| F2 | Get a hint (press again to cycle through up to 3 hints per step) |
 | F3 | Skip this step |
 | Ctrl+N | Move to next lesson |
 | Ctrl+B | Go back to previous lesson |
@@ -102,7 +109,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.2.1.nvda-addon'
+output = 'nvdaCoach-1.2.2.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -136,6 +143,8 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **Darrell Hilliker**, CPWA, Salesforce Certified UX Designer
 - **Rui Fontes** (NVDA Portuguese translation team)
 - **John Hess**, Adaptive Technology Specialist, State Services for the Blind — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter
+- **Brandon Patterson** — correction of synth settings ring keystrokes in the Customizing NVDA chapter
+- **Valentin Kupriyanov**, Head of the Russian-speaking NVDA user community — internationalization and localization proposal
 - **Nash** — feature and lesson requests
 - **Brian**
 - **Gene**

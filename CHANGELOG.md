@@ -1,5 +1,21 @@
 # NVDA Coach — Changelog
 
+## v1.2.2 (2026-03-28)
+
+### Bug Fixes
+- **Synth settings ring — Customizing NVDA chapter:** The lesson previously stated that NVDA+Ctrl+Right/Left Arrow changes speech speed. This is incorrect. NVDA+Ctrl+Right/Left Arrow navigates between synth settings ring items (Rate, Pitch, Volume, Voice, Variant). Speech speed (Rate) is increased with NVDA+Ctrl+Up Arrow and decreased with NVDA+Ctrl+Down Arrow. Both desktop and laptop layouts documented throughout. Reported by Brandon Patterson.
+
+### New Features
+- **F2 hint cycling:** Pressing F2 during a lesson now cycles through up to three hints per step, announced as "Hint 1 of 3", "Hint 2 of 3", etc. The hint index resets automatically when advancing to the next step. Falls back gracefully to the legacy single-hint string format for any steps that use it. Previously, many steps returned "no hint available."
+- **All steps fully hinted:** Every step across all five chapters and 35 lessons now has a hints array covering key location, finger placement, and real-world context. Previously only gesture steps had hints; info steps had none.
+- **Full cross-chapter connectivity:** Every chapter's final lesson now names the next chapter and references earlier lessons where relevant. Key chapters cross-reference each other — e.g., the synth settings ring step references the Tab navigation lesson from Getting Started; the chapter complete screens name the next chapter explicitly.
+
+### Acknowledgments
+- Brandon Patterson — synth settings ring keystroke correction
+- Valentin Kupriyanov, Head of the Russian-speaking NVDA user community — internationalization and localization proposal (logged for a future release)
+
+---
+
 ## v1.2.1 (2026-03-27)
 
 ### Bug Fixes

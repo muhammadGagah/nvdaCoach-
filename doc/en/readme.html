@@ -13,7 +13,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <body>
 
 <h1>NVDA Coach</h1>
-<p><strong>Version 1.2.1</strong></p>
+<p><strong>Version 1.2.2</strong></p>
 <p>Created by <strong>Tony Gebhard</strong>, Assistive Technology Instructor</p>
 <ul>
   <li>Email: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
@@ -33,7 +33,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <ul>
   <li><strong>Enter</strong>: Advance to the next step.</li>
   <li><strong>F1</strong>: Repeat the current instruction.</li>
-  <li><strong>F2</strong>: Get a hint for the current step.</li>
+  <li><strong>F2</strong>: Get a hint for the current step. Press again to cycle through up to three hints per step.</li>
   <li><strong>F3</strong>: Skip the current step.</li>
   <li><strong>Escape</strong>: Stop the current lesson.</li>
   <li><strong>NVDA+Shift+C</strong>: Return to the Coach window from any other window.</li>
@@ -129,10 +129,20 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
   <li><strong>Jessica Tegner</strong> (Be My Eyes) — invaluable early feedback and feature and lesson requests that shaped the add-on from the ground up.</li>
   <li><strong>Nash</strong> — feature and lesson requests.</li>
   <li><strong>John Hess</strong>, Adaptive Technology Specialist, State Services for the Blind, Saint Paul, MN — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter, verified through NVDA input help.</li>
+  <li><strong>Brandon Patterson</strong> — correction of synth settings ring keystrokes in the Customizing NVDA chapter.</li>
+  <li><strong>Valentin Kupriyanov</strong>, Head of the Russian-speaking NVDA user community — internationalization and localization proposal.</li>
   <li>Anonymous participants and community members who have taken the time to write in with corrections and encouragement.</li>
 </ul>
 
 <h2>What's New</h2>
+
+<h3>Version 1.2.2</h3>
+<ul>
+  <li><strong>Bug fix — Synth settings ring:</strong> The lesson previously stated that NVDA+Ctrl+Right/Left Arrow changes speech speed. This is incorrect. NVDA+Ctrl+Right/Left Arrow navigates between synth settings ring items (Rate, Pitch, Volume, Voice, Variant). Speech speed is adjusted with NVDA+Ctrl+Up Arrow (increase) and NVDA+Ctrl+Down Arrow (decrease). Both desktop and laptop layouts documented throughout. Reported by Brandon Patterson.</li>
+  <li><strong>F2 hints now cycle:</strong> Pressing F2 during a lesson cycles through up to three hints per step, announced as "Hint 1 of 3", "Hint 2 of 3", etc. The hint index resets on each new step.</li>
+  <li><strong>All steps fully hinted:</strong> Every step across all five chapters now has hints covering key location, finger placement, and real-world context. Previously many steps returned "no hint available."</li>
+  <li><strong>Full cross-chapter connectivity:</strong> Every chapter's final lesson now names the next chapter and back-references earlier lessons where relevant.</li>
+</ul>
 
 <h3>Version 1.2.1</h3>
 <ul>
