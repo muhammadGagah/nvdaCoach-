@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.3
+**Current version:** 1.3.1
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.3](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3/nvdaCoach-1.3.nvda-addon)**
+**[Download NVDA Coach v1.3.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3.1/nvdaCoach-1.3.1.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,10 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.3.1
+
+- **Localization scaffolding complete:** Added `locale/nvda.pot` (the translation template containing all 101 translatable UI strings), `locale/en/LC_MESSAGES/nvda.po` (the English base), and `TRANSLATING.md` (a step-by-step guide for contributors). This is the missing piece flagged by Rui Fontes of the NVDA Portuguese translation team — the `_()` wrapping was in place but the `.pot` file and `locale/` folder structure were absent.
 
 ## What's New in v1.3
 
@@ -114,7 +118,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.3.nvda-addon'
+output = 'nvdaCoach-1.3.1.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')

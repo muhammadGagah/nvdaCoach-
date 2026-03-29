@@ -1,5 +1,15 @@
 # NVDA Coach — Changelog
 
+## v1.3.1 (2026-03-28)
+
+### Bug Fixes / Patch
+- **Localization scaffolding added:** `locale/nvda.pot` (101-string translation template), `locale/en/LC_MESSAGES/nvda.po` (English base file), and `TRANSLATING.md` (contributor guide) were missing from v1.3. The `_()` wrapping was in place but translators had no `.pot` file to work from and no `locale/` folder structure. Issue identified by Rui Fontes of the NVDA Portuguese translation team.
+
+### Acknowledgments
+- Rui Fontes, NVDA Portuguese translation team — identified missing `.pot` file and `locale/` folder structure
+
+---
+
 ## v1.3 (2026-03-28)
 
 ### New Features

@@ -1,8 +1,9 @@
-# NVDA Coach Add-on - Translation Template
-# Copyright (C) 2025-2026 Tony Gebhard
+# NVDA Coach Add-on — Translation Template
+# Copyright (C) 2025-2026 Tony Gebhard <info@tonygebhard.me>
 # This file is distributed under the same license as the NVDA Coach package.
 #
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translators:
+#   FIRST AUTHOR <EMAIL@ADDRESS>, YEAR
 #
 #, fuzzy
 msgid ""
@@ -17,6 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: globalPlugins/nvdaCoach/__init__.py:41
 msgid "Play sounds during lessons (correct/incorrect/completion chimes)"
