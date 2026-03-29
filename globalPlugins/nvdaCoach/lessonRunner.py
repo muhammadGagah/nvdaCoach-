@@ -196,7 +196,7 @@ class LessonRunner:
 			displayInstruction += (
 				"\n\n"
 				# Translators: heading shown above inline practice text area
-				+ _("PRACTICE AREA \u2014 NAVIGATE WITH ARROW KEYS:") + "\n\n"
+				+ _("PRACTICE AREA — NAVIGATE WITH ARROW KEYS:") + "\n\n"
 				+ practiceText
 			)
 
@@ -266,9 +266,9 @@ class LessonRunner:
 				"  " + _("Press NVDA+Shift+C to open the lesson picker.") + "\n"
 				"  " + _("Choose the next lesson in this chapter, or start the next chapter.") + "\n\n"
 				"--- " + _("STAY IN THIS CHAPTER") + " ---\n"
-				"  Ctrl+N  \u2014  " + _("Next lesson in this category.") + "\n"
-				"  Ctrl+R  \u2014  " + _("Repeat this lesson.") + "\n"
-				"  Ctrl+B  \u2014  " + _("Go back to the previous lesson.")
+				"  Ctrl+N  —  " + _("Next lesson in this category.") + "\n"
+				"  Ctrl+R  —  " + _("Repeat this lesson.") + "\n"
+				"  Ctrl+B  —  " + _("Go back to the previous lesson.")
 			)
 			wx.CallLater(600, self.coachWindow.showIdle, idleMsg)
 		# If this lesson marks the end of a chapter, fire the chapter-complete callback

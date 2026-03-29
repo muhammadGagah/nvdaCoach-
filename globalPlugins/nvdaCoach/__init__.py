@@ -151,7 +151,7 @@ class CoachWindow(wx.Frame):
 		sizer = wx.BoxSizer(wx.VERTICAL)
 
 		# Status line: "Category  ›  Lesson  ·  Step N of M"
-		self._statusText = wx.StaticText(panel, label=_("NVDA Coach \u2014 ready"))
+		self._statusText = wx.StaticText(panel, label=_("NVDA Coach — ready"))
 		statusFont = self._statusText.GetFont()
 		statusFont.SetPointSize(10)
 		self._statusText.SetFont(statusFont)
@@ -205,8 +205,8 @@ class CoachWindow(wx.Frame):
 			panel,
 			label=_(
 				"During a lesson:  "
-				"Enter \u2014 Next Step  \u00b7  "
-				"F1 Repeat  \u00b7  F2 Hint  \u00b7  F3 Skip step  \u00b7  "
+				"Enter — Next Step  ·  "
+				"F1 Repeat  ·  F2 Hint  ·  F3 Skip step  ·  "
 				"Esc Stop lesson"
 			),
 		)
@@ -240,9 +240,9 @@ class CoachWindow(wx.Frame):
 
 		# Secondary navigation buttons — lesson-level, always visible.
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
-		self._prevBtn = wx.Button(panel, label=_("\u25c4 Back  (Ctrl+B)"))
-		self._repeatBtn = wx.Button(panel, label=_("\u21ba Restart  (Ctrl+R)"))
-		self._nextBtn = wx.Button(panel, label=_("Next Lesson \u25ba  (Ctrl+N)"))
+		self._prevBtn = wx.Button(panel, label=_("◄ Back  (Ctrl+B)"))
+		self._repeatBtn = wx.Button(panel, label=_("↺ Restart  (Ctrl+R)"))
+		self._nextBtn = wx.Button(panel, label=_("Next Lesson ►  (Ctrl+N)"))
 		self._prevBtn.SetToolTip(_("Go to the previous lesson in this category."))
 		self._repeatBtn.SetToolTip(_("Restart the current lesson from the beginning."))
 		self._nextBtn.SetToolTip(_("Go to the next lesson in this category."))
@@ -276,7 +276,7 @@ class CoachWindow(wx.Frame):
 		status = (
 			f"{categoryTitle}  \u203a  {lessonTitle}"
 			# Translators: status bar showing step position within a lesson
-			f"  \u00b7  " + _("Step {stepNum} of {stepTotal}").format(stepNum=stepIdx + 1, stepTotal=stepTotal)
+			f"  ·  " + _("Step {stepNum} of {stepTotal}").format(stepNum=stepIdx + 1, stepTotal=stepTotal)
 		)
 		self._statusText.SetLabel(status)
 		self._statusText.GetParent().Layout()
@@ -291,7 +291,7 @@ class CoachWindow(wx.Frame):
 
 	def showIntroduction(self):
 		"""Show the full introduction/welcome text and speak it."""
-		self._statusText.SetLabel(_("NVDA Coach \u2014 Introduction"))
+		self._statusText.SetLabel(_("NVDA Coach — Introduction"))
 		self._statusText.GetParent().Layout()
 		introText = _(
 			"NVDA Coach\n"
@@ -338,7 +338,7 @@ class CoachWindow(wx.Frame):
 		"""
 		bar = "\u25a0" * current + "\u25a1" * (total - current)
 		self._instructionText.SetValue(
-			f"Practice drill \u2014 {current} of {total} complete\n"
+			f"Practice drill — {current} of {total} complete\n"
 			f"[{bar}]\n\n"
 			f"{message}"
 		)
@@ -347,7 +347,7 @@ class CoachWindow(wx.Frame):
 
 	def showIdle(self, message=None):
 		"""Show the idle/between-lesson state in the window."""
-		self._statusText.SetLabel(_("NVDA Coach \u2014 ready"))
+		self._statusText.SetLabel(_("NVDA Coach — ready"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Show()
@@ -358,9 +358,9 @@ class CoachWindow(wx.Frame):
 				"--- WHAT TO DO NEXT ---\n"
 				"  Press NVDA+Shift+C to open the lesson picker and choose a lesson.\n\n"
 				"--- LESSON NAVIGATION ---\n"
-				"  Ctrl+N  \u2014  Move to the next lesson in this category.\n"
-				"  Ctrl+B  \u2014  Go back to the previous lesson.\n"
-				"  Ctrl+R  \u2014  Restart this lesson from the beginning.\n\n"
+				"  Ctrl+N  —  Move to the next lesson in this category.\n"
+				"  Ctrl+B  —  Go back to the previous lesson.\n"
+				"  Ctrl+R  —  Restart this lesson from the beginning.\n\n"
 				"The Control key (Ctrl) is in the bottom-left corner of your keyboard.\n\n"
 				"--- NEW TO KEYBOARD NAVIGATION? ---\n"
 				"Use NVDA Input Help: press NVDA+1 to turn it on, press any key to hear "
@@ -374,7 +374,7 @@ class CoachWindow(wx.Frame):
 
 	def showBrowseModeCompletion(self):
 		"""Show the chapter-completion congratulations screen for Browse Mode."""
-		self._statusText.SetLabel(_("NVDA Coach \u2014 Chapter 3 Complete!"))
+		self._statusText.SetLabel(_("NVDA Coach — Chapter 3 Complete!"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Hide()
@@ -384,14 +384,14 @@ class CoachWindow(wx.Frame):
 			"You have finished all eight lessons in Chapter 3. "
 			"You now know how to navigate any web page using NVDA's browse mode.\n\n"
 			"Commands you have mastered:\n"
-			"  H \u2014 Jump between headings\n"
-			"  1 through 6 \u2014 Jump to heading levels\n"
-			"  K \u2014 Jump between links\n"
-			"  F, E, B \u2014 Navigate form fields and buttons\n"
-			"  D \u2014 Jump between landmarks\n"
-			"  L \u2014 Jump between lists\n"
-			"  NVDA+Space \u2014 Toggle browse mode and focus mode\n"
-			"  NVDA+F7 \u2014 Open the Elements List\n\n"
+			"  H — Jump between headings\n"
+			"  1 through 6 — Jump to heading levels\n"
+			"  K — Jump between links\n"
+			"  F, E, B — Navigate form fields and buttons\n"
+			"  D — Jump between landmarks\n"
+			"  L — Jump between lists\n"
+			"  NVDA+Space — Toggle browse mode and focus mode\n"
+			"  NVDA+F7 — Open the Elements List\n\n"
 			"The practice page in your browser can now be closed.\n\n"
 			"What to do next:\n"
 			"  Press NVDA+Shift+C to open the lesson picker.\n"
@@ -591,7 +591,7 @@ class PracticeFrame(wx.Frame):
 	def __init__(self, parent, plugin):
 		super().__init__(
 			parent,
-			title="NVDA Coach \u2014 Practice Area",
+			title="NVDA Coach — Practice Area",
 			size=(520, 480),
 			style=wx.DEFAULT_FRAME_STYLE,
 		)
@@ -621,7 +621,7 @@ class PracticeFrame(wx.Frame):
 			return
 		self._currentLessonId = lessonId
 		title = lessonTitle or "Practice Area"
-		self.SetTitle(f"NVDA Coach \u2014 Practice: {title}")
+		self.SetTitle(f"NVDA Coach — Practice: {title}")
 		self._rebuildContent(lessonId)
 		if not self.IsShown():
 			self.Show()
@@ -765,7 +765,7 @@ class PracticeFrame(wx.Frame):
 		self._addSep()
 
 		self._scrollSizer.Add(
-			wx.StaticText(self._scroll, label="Checkboxes \u2014 press Space to toggle:"),
+			wx.StaticText(self._scroll, label="Checkboxes — press Space to toggle:"),
 			0, wx.LEFT | wx.TOP, 12,
 		)
 		cb1 = wx.CheckBox(self._scroll, label="Enable screen reader tips")
@@ -775,7 +775,7 @@ class PracticeFrame(wx.Frame):
 			self._scrollSizer.Add(cb, 0, wx.LEFT | wx.TOP, 8)
 
 		self._scrollSizer.Add(
-			wx.StaticText(self._scroll, label="Buttons \u2014 press Enter to activate:"),
+			wx.StaticText(self._scroll, label="Buttons — press Enter to activate:"),
 			0, wx.LEFT | wx.TOP, 16,
 		)
 		playBtn = wx.Button(self._scroll, label="Play a beep sound")
@@ -812,7 +812,7 @@ class PracticeFrame(wx.Frame):
 	# ---- Where Am I? / Focus Reporter -----------------------------------
 
 	def _buildWhereAmI(self):
-		self._addHeading(_("Find Your Focus \u2014 Practice Login Form"))
+		self._addHeading(_("Find Your Focus — Practice Login Form"))
 		self._addDesc(_(
 			"Tab around this form. When you land on a control, press "
 			"NVDA+Tab to hear its name, type, and current state."
@@ -868,7 +868,7 @@ class LessonPickerDialog(wx.Dialog):
 	def __init__(self, parent, categories, progressTracker, onLessonSelected):
 		super().__init__(
 			parent,
-			title=_("NVDA Coach \u2014 Choose a Lesson"),
+			title=_("NVDA Coach — Choose a Lesson"),
 			size=(600, 500),
 		)
 		self._categories = categories
@@ -917,7 +917,7 @@ class LessonPickerDialog(wx.Dialog):
 			lessons = category.get("lessons", [])
 			completed, total = self._progress.getCategoryProgress(catId, len(lessons))
 			# Translators: progress label in the lesson picker tree
-			catLabel = f"{catTitle}  \u2014  " + _("{completed} of {total} complete").format(completed=completed, total=total)
+			catLabel = f"{catTitle}  —  " + _("{completed} of {total} complete").format(completed=completed, total=total)
 			catItem = self._tree.AppendItem(root, catLabel)
 			self._tree.SetItemData(catItem, {"type": "category"})
 			for lesson in sorted(lessons, key=lambda l: l.get("order", 999)):
