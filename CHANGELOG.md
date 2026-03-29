@@ -1,5 +1,27 @@
 # NVDA Coach — Changelog
 
+## v1.3.2 (2026-03-29)
+
+### Bug Fixes — Localization
+- **`addonHandler.initTranslation()` added to both plugin modules:** This call was missing from `__init__.py` and `lessonRunner.py`, which meant all `_()` wrapped strings silently fell back to English regardless of the user's NVDA language. Translation was structurally in place but never activated. Identified by Valentin Kupriyanov.
+- **Dialog title now translatable:** The lesson picker window title ("NVDA Coach — Choose a Lesson") was not wrapped in `_()`.
+- **Introduction / About NVDA Coach text now translatable:** The full introduction text shown when a user selects "Introduction / About NVDA Coach" from the lesson picker was not wrapped in `_()`.
+- **Welcome screen text now translatable:** The initial welcome text displayed in the Coach window on first launch was not wrapped in `_()`.
+- **`showIdle()`, `showBrowseModeCompletion()`, and `beginEscapeSequence()` text blocks now translatable:** These display strings were bare Python string literals with no `_()` wrapper.
+- **Language-aware doc file resolution:** The resources page, browse mode practice page, and user guide (readme.html) were hardcoded to open from `doc/en/` regardless of the user's language. A new `_localizedDocPath()` helper now resolves to `doc/{lang}/` first, falling back to `doc/en/`. Identified by Valentin Kupriyanov.
+
+### New Translation — Russian
+- **First complete Russian localization of NVDA Coach**, contributed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community (nvda.ru):
+  - `locale/ru/LC_MESSAGES/nvda.po` — full translation of all UI strings
+  - `locale/ru/manifest.ini` — localized add-on summary and description
+  - `globalPlugins/nvdaCoach/lessons/ru/` — all five lesson chapters translated into Russian
+  - `doc/ru/` — practice page, user guide, resources page, and TTS scripts translated into Russian
+
+### Acknowledgments
+- Valentin Kupriyanov, Head of the Russian-speaking NVDA user community — first complete Russian localization of NVDA Coach, and detailed localization bug report identifying all issues fixed in this release
+
+---
+
 ## v1.3.1 (2026-03-28)
 
 ### Bug Fixes / Patch

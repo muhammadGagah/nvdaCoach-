@@ -9,6 +9,8 @@ import wx
 import ui
 import nvwave
 import config
+import addonHandler
+addonHandler.initTranslation()
 from logHandler import log
 
 _SOUNDS_DIR = os.path.join(os.path.dirname(__file__), "sounds")

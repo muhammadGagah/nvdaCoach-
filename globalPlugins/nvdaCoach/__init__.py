@@ -18,6 +18,8 @@ from logHandler import log
 import tones
 import config
 import languageHandler
+import addonHandler
+addonHandler.initTranslation()
 
 from .lessonRunner import LessonRunner
 from .progressTracker import ProgressTracker
@@ -97,6 +99,27 @@ def _loadLessonCategories():
 	return categories
 
 
+def _localizedDocPath(filename):
+	"""Return the path to a localized doc file, falling back to doc/en/.
+
+	Mirrors the language-resolution logic in _loadLessonCategories():
+	tries doc/{lang}/, then doc/{baseLang}/, then doc/en/.
+	"""
+	addonRoot = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+	lang = languageHandler.getLanguage()
+	candidates = []
+	if lang and lang != "Windows":
+		candidates.append(os.path.join(addonRoot, "doc", lang, filename))
+		baseLang = lang.split("_")[0]
+		if baseLang != lang:
+			candidates.append(os.path.join(addonRoot, "doc", baseLang, filename))
+	candidates.append(os.path.join(addonRoot, "doc", "en", filename))
+	for candidate in candidates:
+		if os.path.isfile(candidate):
+			return candidate
+	return candidates[-1]  # Return fallback path even if not present.
+
+
 # ---------------------------------------------------------------------------
 # CoachWindow — the persistent lesson display window
 # ---------------------------------------------------------------------------
@@ -145,7 +168,7 @@ class CoachWindow(wx.Frame):
 			14, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL
 		)
 		self._instructionText.SetFont(instrFont)
-		self._instructionText.SetValue(
+		self._instructionText.SetValue(_(
 			"Welcome to NVDA Coach\n"
 			"Created by Tony Gebhard, Assistive Technology Instructor\n"
 			"github.com/tonygeb23/nvdacoach\n\n"
@@ -172,7 +195,7 @@ class CoachWindow(wx.Frame):
 			"You can also press NVDA+Shift+C to open the lesson picker and choose any lesson directly. "
 			"At any time during a lesson, press Ctrl+N to move to the next lesson, "
 			"Ctrl+B to go back, Ctrl+R to restart, or press Escape three times to close this window."
-		)
+		))
 		sizer.Add(self._instructionText, 1, wx.ALL | wx.EXPAND, 8)
 
 		sizer.Add(wx.StaticLine(panel), 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 8)
@@ -270,7 +293,7 @@ class CoachWindow(wx.Frame):
 		"""Show the full introduction/welcome text and speak it."""
 		self._statusText.SetLabel(_("NVDA Coach \u2014 Introduction"))
 		self._statusText.GetParent().Layout()
-		introText = (
+		introText = _(
 			"NVDA Coach\n"
 			"Created by Tony Gebhard, Assistive Technology Instructor\n"
 			"github.com/tonygeb23/nvdacoach\n\n"
@@ -330,21 +353,23 @@ class CoachWindow(wx.Frame):
 		self._nextStepBtn.Show()
 		self._panel.Layout()
 		self._instructionText.SetValue(
-			(message or "Ready.") + "\n\n"
-			"--- WHAT TO DO NEXT ---\n"
-			"  Press NVDA+Shift+C to open the lesson picker and choose a lesson.\n\n"
-			"--- LESSON NAVIGATION ---\n"
-			"  Ctrl+N  \u2014  Move to the next lesson in this category.\n"
-			"  Ctrl+B  \u2014  Go back to the previous lesson.\n"
-			"  Ctrl+R  \u2014  Restart this lesson from the beginning.\n\n"
-			"The Control key (Ctrl) is in the bottom-left corner of your keyboard.\n\n"
-			"--- NEW TO KEYBOARD NAVIGATION? ---\n"
-			"Use NVDA Input Help: press NVDA+1 to turn it on, press any key to hear "
-			"what it does without anything happening, then press NVDA+1 to turn it off.\n\n"
-			"--- A NOTE FOR INSTRUCTORS AND STUDENTS ---\n"
-			"If an instructor is present, this is a great time to ask any questions "
-			"before the next lesson. If you are working independently, keep going "
-			"at your own pace. Every step forward counts."
+			(message or _("Ready.")) + "\n\n"
+			+ _(
+				"--- WHAT TO DO NEXT ---\n"
+				"  Press NVDA+Shift+C to open the lesson picker and choose a lesson.\n\n"
+				"--- LESSON NAVIGATION ---\n"
+				"  Ctrl+N  \u2014  Move to the next lesson in this category.\n"
+				"  Ctrl+B  \u2014  Go back to the previous lesson.\n"
+				"  Ctrl+R  \u2014  Restart this lesson from the beginning.\n\n"
+				"The Control key (Ctrl) is in the bottom-left corner of your keyboard.\n\n"
+				"--- NEW TO KEYBOARD NAVIGATION? ---\n"
+				"Use NVDA Input Help: press NVDA+1 to turn it on, press any key to hear "
+				"what it does without anything happening, then press NVDA+1 to turn it off.\n\n"
+				"--- A NOTE FOR INSTRUCTORS AND STUDENTS ---\n"
+				"If an instructor is present, this is a great time to ask any questions "
+				"before the next lesson. If you are working independently, keep going "
+				"at your own pace. Every step forward counts."
+			)
 		)
 
 	def showBrowseModeCompletion(self):
@@ -354,7 +379,7 @@ class CoachWindow(wx.Frame):
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Hide()
 		self._panel.Layout()
-		self._instructionText.SetValue(
+		self._instructionText.SetValue(_(
 			"Congratulations — Browse Mode and Web Navigation Complete!\n\n"
 			"You have finished all eight lessons in Chapter 3. "
 			"You now know how to navigate any web page using NVDA's browse mode.\n\n"
@@ -372,7 +397,7 @@ class CoachWindow(wx.Frame):
 			"  Press NVDA+Shift+C to open the lesson picker.\n"
 			"  Choose Additional Training and Help for more resources.\n"
 			"  Or press Ctrl+R to repeat any lesson in this chapter."
-		)
+		))
 		self._clearEscapeCount()
 		ui.message(_(
 			"Congratulations! You have completed Browse Mode and Web Navigation, "
@@ -388,11 +413,11 @@ class CoachWindow(wx.Frame):
 		the visual text here without generating extra audio.
 		"""
 		self._escapeCount = 1
-		self._instructionText.SetValue(
+		self._instructionText.SetValue(_(
 			"Lesson stopped.\n\n"
 			"Press Escape two more times to close NVDA Coach.\n"
 			"Or press NVDA+Shift+C to start another lesson."
-		)
+		))
 		self._resetEscapeTimer()
 
 	# ------------------------------------------------------------------
@@ -843,7 +868,7 @@ class LessonPickerDialog(wx.Dialog):
 	def __init__(self, parent, categories, progressTracker, onLessonSelected):
 		super().__init__(
 			parent,
-			title="NVDA Coach \u2014 Choose a Lesson",
+			title=_("NVDA Coach \u2014 Choose a Lesson"),
 			size=(600, 500),
 		)
 		self._categories = categories
@@ -914,7 +939,7 @@ class LessonPickerDialog(wx.Dialog):
 		self._tree.SetItemData(helpItem, {
 			"type": "file",
 			"label": _("Additional Training and Help"),
-			"path": os.path.join(self._addonRoot, "doc", "en", "resources.html"),
+			"path": _localizedDocPath("resources.html"),
 		})
 
 		# Focus Introduction by default.
@@ -1065,9 +1090,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def _onHelpMenuActivated(self, evt):
 		"""Open the NVDA Coach user guide from the NVDA Help menu."""
-		docPath = os.path.abspath(
-			os.path.join(os.path.dirname(__file__), "..", "..", "doc", "en", "readme.html")
-		)
+		docPath = _localizedDocPath("readme.html")
 		if os.path.isfile(docPath):
 			os.startfile(docPath)
 		else:
@@ -1306,8 +1329,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def _openPracticePage(self):
 		"""Open the browse mode practice HTML page in the default browser."""
-		addonRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-		practiceFile = os.path.join(addonRoot, "doc", "en", "practice.html")
+		practiceFile = _localizedDocPath("practice.html")
 		try:
 			os.startfile(practiceFile)
 		except Exception as e:

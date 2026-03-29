@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.3.1
+**Current version:** 1.3.2
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.3.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3.1/nvdaCoach-1.3.1.nvda-addon)**
+**[Download NVDA Coach v1.3.2](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3.2/nvdaCoach-1.3.2.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,13 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.3.2
+
+- **Localization fully activated:** `addonHandler.initTranslation()` was missing from both plugin modules — meaning all `_()` wrapped strings silently fell back to English for every user. This is now fixed. Identified by Valentin Kupriyanov.
+- **Language-aware doc file resolution:** The resources page, browse mode practice page, and user guide now open from the user's language folder (e.g. `doc/ru/`) when a translation exists, falling back to `doc/en/`. Previously hardcoded to English.
+- **Additional strings wrapped for translation:** Dialog title, introduction text, welcome screen, and several display text blocks were bare string literals not accessible to translators. All wrapped.
+- **First complete Russian localization:** All UI strings, all five lesson chapters, the user guide, practice page, and resources page are now available in Russian. Contributed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community (nvda.ru).
 
 ## What's New in v1.3.1
 
@@ -118,7 +125,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.3.1.nvda-addon'
+output = 'nvdaCoach-1.3.2.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -153,7 +160,7 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **Rui Fontes** (NVDA Portuguese translation team)
 - **John Hess**, Adaptive Technology Specialist, State Services for the Blind — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter
 - **Brandon Patterson** — correction of synth settings ring keystrokes in the Customizing NVDA chapter
-- **Valentin Kupriyanov**, Head of the Russian-speaking NVDA user community — internationalization and localization proposal
+- **Valentin Kupriyanov**, Head of the Russian-speaking NVDA user community — internationalization and localization proposal, first complete Russian localization, and detailed localization bug report
 - **Nash** — feature and lesson requests
 - **Brian**
 - **Gene**
