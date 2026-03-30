@@ -135,6 +135,8 @@ with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
             if not file.endswith('.pyc'): zf.write(os.path.join(root,file), os.path.join(root,file).replace(os.sep,'/'))
     for root, dirs, files in os.walk('doc'):
         for file in files: zf.write(os.path.join(root,file), os.path.join(root,file).replace(os.sep,'/'))
+    for root, dirs, files in os.walk('locale'):
+        for file in files: zf.write(os.path.join(root,file), os.path.join(root,file).replace(os.sep,'/'))
 "
 ```
 
