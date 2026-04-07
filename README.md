@@ -42,35 +42,7 @@ NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add
 - **Additional strings wrapped for translation:** Dialog title, introduction text, welcome screen, and several display text blocks were bare string literals not accessible to translators. All wrapped.
 - **First complete Russian localization:** All UI strings, all five lesson chapters, the user guide, practice page, and resources page are now available in Russian. Contributed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community (nvda.ru).
 
-## What's New in v1.3.1
-
-- **Localization scaffolding complete:** Added `locale/nvda.pot` (the translation template containing all 101 translatable UI strings), `locale/en/LC_MESSAGES/nvda.po` (the English base), and `TRANSLATING.md` (a step-by-step guide for contributors). This is the missing piece flagged by Rui Fontes of the NVDA Portuguese translation team — the `_()` wrapping was in place but the `.pot` file and `locale/` folder structure were absent.
-
-## What's New in v1.3
-
-- **Localization infrastructure:** Lesson content is now organized into language subfolders (`lessons/en/`). NVDA Coach automatically detects the active NVDA language and loads lessons from the matching folder (e.g. `lessons/fr/` for French), falling back to `lessons/en/` when no translation is available. This enables community contributors to add fully translated lesson sets without touching any code — drop a new language folder in and it works. Proposed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community.
-- **Full i18n string wrapping:** All user-facing strings in the plugin code (button labels, status messages, spoken announcements, hint output, lesson picker text) are now wrapped with `_()` for gettext translation. Combined with the lesson folder architecture, this lays the complete foundation for full NVDA Coach localizations.
-
-## What's New in v1.2.2
-
-- **Bug fix — Synth settings ring:** The lesson previously stated that NVDA+Ctrl+Right/Left Arrow changes speech speed. This is incorrect. NVDA+Ctrl+Right/Left Arrow navigates between items in the synth settings ring (Rate, Pitch, Volume, Voice, Variant). Speed is adjusted with NVDA+Ctrl+Up/Down Arrow (increase/decrease). Both desktop and laptop layouts documented throughout. Reported by Brandon Patterson.
-- **F2 hints now cycle:** Pressing F2 during a lesson now cycles through up to three hints per step — key location, finger placement, and context. Previously only one hint was available per step. All five chapters fully covered.
-- **All lessons fully hinted:** Every step across all five chapters now has a hints array. Previously many steps returned "no hint available" when F2 was pressed.
-- **Full cross-chapter connectivity:** Every chapter's final lesson now names the next chapter and references earlier lessons where relevant, creating a complete connected path from Getting Started through Customizing NVDA.
-
-## What's New in v1.2.1
-
-- **Bug fix — Object Navigation, laptop layout:** Four laptop layout gestures were missing the required Shift key. Moving to the next and previous object at the same level is NVDA+Shift+Right/Left Arrow; moving to parent and first child is NVDA+Shift+Up/Down Arrow. Without Shift, those keystrokes invoke review cursor movement instead. Reported and verified by John Hess, AT Specialist, State Services for the Blind.
-- **Bug fix — Say All lesson, laptop layout:** The lesson previously showed only the desktop layout keystroke (NVDA+Down Arrow). Laptop layout users press NVDA+A. Both layouts are now documented throughout. Reported by a community member.
-- **Audio:** Lesson complete sound volume raised by 15%.
-
-## What's New in v1.2.0
-
-- **Understanding Command Categories** — new Lesson 1 in Chapter 1 teaches the three-way framework (Windows commands, program commands, screen reader commands) before any key practice begins. Screen reader commands take no action — they only inform. This concept now carries the pedagogical weight rather than inline labels on every step.
-- **Sound branding overhaul** — all five sound moments (lesson start, step advance, hint, lesson stop, lesson complete) now use custom audio files instead of generated beeps. The sound toggle in NVDA Settings disables everything.
-- **NVDA Coach Help in the NVDA Help menu** — NVDA menu → Help → NVDA Coach Help opens the user guide directly.
-
-See [CHANGELOG.md](CHANGELOG.md) for the full history.
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ---
 
