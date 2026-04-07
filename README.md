@@ -161,6 +161,16 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 
 ---
 
+## Support This Project
+
+NVDA Coach is free and will always remain free. If it has been useful to you, your students, or someone you care about, a contribution helps keep it going — covering development time, testing, and continued expansion of lessons and language support.
+
+**[Contribute via PayPal](https://paypal.me/tonygebhard)**
+
+Contributors are recognized by name in the project's acknowledgments with their permission. If you'd prefer to remain anonymous, just note that when you contribute and your name will not be listed. Every contribution, at any amount, is genuinely appreciated.
+
+---
+
 ## Contact
 
 **Tony Gebhard**, Assistive Technology Instructor
