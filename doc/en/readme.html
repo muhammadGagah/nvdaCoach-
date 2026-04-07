@@ -13,7 +13,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <body>
 
 <h1>NVDA Coach</h1>
-<p><strong>Version 1.3.2</strong></p>
+<p><strong>Version 1.4</strong></p>
 <p>Created by <strong>Tony Gebhard</strong>, Assistive Technology Instructor</p>
 <ul>
   <li>Email: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
@@ -51,10 +51,10 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <h2>Lessons Included</h2>
 
 <h3>1. Getting Started with NVDA</h3>
-<p>Eleven short drills covering the essential commands every beginner needs, beginning with a framework for understanding how NVDA commands work. No prior experience required.</p>
+<p>Thirteen short drills covering the essential commands every beginner needs, beginning with a framework for understanding how NVDA commands work. No prior experience required.</p>
 <ol>
   <li><strong>Understanding Command Categories</strong> — Learn the three categories of keyboard commands (Windows, program, and screen reader) and why NVDA commands only inform rather than change things.</li>
-  <li><strong>Meet Your NVDA Key</strong> — Find and use the NVDA modifier key (Insert, Caps Lock, or Num Pad Zero).</li>
+  <li><strong>Meet Your NVDA Key</strong> — Find and use the NVDA modifier key (Insert or Caps Lock).</li>
   <li><strong>Read the Title Bar</strong> — Learn NVDA+T to identify the active window at any time.</li>
   <li><strong>Read the Time</strong> — Learn NVDA+F12 to hear the current time and date.</li>
   <li><strong>Stop NVDA from Talking</strong> — Use the Control key to silence speech instantly.</li>
@@ -64,17 +64,20 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
   <li><strong>Read the Current Line</strong> — Learn NVDA+Up Arrow to re-read any line on demand. Includes inline practice text.</li>
   <li><strong>Explore Keys with Input Help</strong> — Use NVDA+1 to safely discover what any key does.</li>
   <li><strong>Open the User Guide</strong> — Find the NVDA help system from the NVDA menu.</li>
+  <li><strong>Understanding Your Keyboard</strong> — Physical keyboard reference: Ctrl key location variants, Fn+Arrow keys as Home/End/Page Up/Page Down, Fn Lock, and multimedia vs F-key mode.</li>
+  <li><strong>Switching Windows with Alt+Tab</strong> — Single Alt+Tab to toggle between two windows; hold Alt and tap Tab to cycle through multiple windows.</li>
 </ol>
 
 <h3>2. Reading and Moving Through Text</h3>
-<p>Six lessons for navigating documents, emails, and text fields with precision. Each lesson includes an inline practice text area built directly into the Coach window — no switching to another application required.</p>
+<p>Seven lessons for navigating documents, emails, and text fields with precision. Each lesson includes an inline practice text area built directly into the Coach window — no switching to another application required.</p>
 <ol>
   <li><strong>Move by Character</strong> — Right and Left Arrow to step through text one character at a time.</li>
   <li><strong>Jump Word by Word</strong> — Control+Right and Control+Left Arrow to move word by word.</li>
   <li><strong>Move Line by Line</strong> — Down and Up Arrow to read through a document line by line.</li>
   <li><strong>Jump to Start and End</strong> — Control+Home and Control+End to jump to either end instantly.</li>
   <li><strong>Read Everything from Here</strong> — Say All reads without stopping. Desktop: NVDA+Down Arrow. Laptop: NVDA+A.</li>
-  <li><strong>Select and Highlight Text</strong> — Shift plus arrow keys to select by character, word, and line; copy with Control+C.</li>
+  <li><strong>Select and Highlight Text</strong> — Shift plus arrow keys to select by character, word, and line; report selection with NVDA+Shift+Up Arrow (desktop) or NVDA+Shift+S (laptop); copy with Control+C.</li>
+  <li><strong>Navigate by Paragraph and Page</strong> — Control+Up/Down Arrow to move by paragraph; Page Up/Page Down for larger jumps.</li>
 </ol>
 
 <h3>3. Browse Mode and Web Navigation</h3>
@@ -85,11 +88,37 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
   <li><strong>Jump to Heading Levels</strong> — Number keys 1 through 6 to jump to specific heading levels.</li>
   <li><strong>Navigate by Link</strong> — K and Shift+K to move between links; Tab for interactive elements.</li>
   <li><strong>Interact with Forms</strong> — F, E, and B to find form fields, edit fields, and buttons.</li>
-  <li><strong>Focus Mode vs Browse Mode</strong> — NVDA+Space to toggle between reading and typing modes.</li>
+  <li><strong>Focus Mode vs Browse Mode</strong> — NVDA+Space to toggle between reading and typing modes; focus mode places your cursor in the edit box.</li>
   <li><strong>Landmarks and Lists</strong> — D to jump between page landmarks; L to jump between lists.</li>
   <li><strong>The Elements List</strong> — NVDA+F7 to open a full list of all headings, links, or form fields.</li>
   <li><strong>Find Text on a Page</strong> — NVDA+Ctrl+F to search within a page; NVDA+F3 and NVDA+Shift+F3 to move forward and backward through results.</li>
-  <li><strong>Toggle Single-Letter Navigation</strong> — NVDA+Shift+Space to enable or disable single-letter browse mode navigation keys.</li>
+  <li><strong>Navigate Tables</strong> — Ctrl+Alt+Arrow keys to move between table cells; what NVDA announces when entering a table.</li>
+</ol>
+
+<h3>4. Object Navigation</h3>
+<p>Six lessons for reaching controls that Tab cannot access. Uses a levels/pyramid model throughout — "one level above," "one level below," same level — rather than parent/child terminology. Desktop and laptop layouts documented throughout.</p>
+<ol>
+  <li><strong>What Is Object Navigation?</strong> — The pyramid model, when to use object navigation, and the importance of maximizing your window first.</li>
+  <li><strong>Move to the Next and Previous Object</strong> — NVDA+NumPad6 and NumPad4 (desktop); NVDA+Shift+Right/Left Arrow (laptop). Distinction between NVDA+Tab and the object navigator.</li>
+  <li><strong>Move Up and Down Levels</strong> — NVDA+NumPad8 and NumPad2 (desktop); NVDA+Shift+Up/Down Arrow (laptop).</li>
+  <li><strong>Read the Current Navigator Object</strong> — NVDA+NumPad5 (desktop); NVDA+Shift+Comma (laptop). Press twice to spell the name.</li>
+  <li><strong>Move Keyboard Focus to a Navigator Object</strong> — Route focus to any object found via navigation; sync navigator to current focus.</li>
+  <li><strong>When Object Navigation Helps</strong> — Three scenarios where object navigation is the right tool; practice recommendations.</li>
+</ol>
+
+<h3>5. Customizing NVDA</h3>
+<p>Two lessons on adjusting NVDA to fit your keyboard and voice preferences.</p>
+<ol>
+  <li><strong>Changing Your Keyboard Layout</strong> — Switch between desktop (numpad) and laptop (letter keys) layout in NVDA Settings.</li>
+  <li><strong>The Synth Settings Ring</strong> — Adjust speech rate, pitch, volume, and voice on the fly without opening a dialog. Includes the NVDA Settings Speech panel for precise control.</li>
+</ol>
+
+<h3>6. Your Keyboard</h3>
+<p>Three lessons to orient you to the physical keyboard — a common barrier before command learning can begin. Covers standard and laptop keyboard variants.</p>
+<ol>
+  <li><strong>Modifier Keys and Their Locations</strong> — Where to find Ctrl, Shift, Alt, Windows key, and NVDA key (Insert and Caps Lock) on standard and laptop keyboards.</li>
+  <li><strong>Function Keys and the Fn Key</strong> — F1 through F12, multimedia vs F-key mode, Fn+Arrow keys as Home/End/Page Up/Page Down, and Fn Lock.</li>
+  <li><strong>Desktop vs Laptop Keyboard Layout</strong> — What the layout setting means, how to check and change it, and how NVDA Coach presents both alternatives throughout every lesson.</li>
 </ol>
 
 <h2>Practice Environments</h2>
@@ -134,10 +163,26 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
   <li><strong>John Hess</strong>, Adaptive Technology Specialist, State Services for the Blind, Saint Paul, MN — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter, verified through NVDA input help.</li>
   <li><strong>Brandon Patterson</strong> — correction of synth settings ring keystrokes in the Customizing NVDA chapter.</li>
   <li><strong>Valentin Kupriyanov</strong>, Head of the Russian-speaking NVDA user community — internationalization and localization proposal, first complete Russian localization, and detailed localization bug report.</li>
+  <li><strong>Umut KORKMAZ</strong> (Turkey) — Turkish translation.</li>
+  <li><strong>Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler</strong> — assistive technology specialists with Pacific Northwest state agencies, whose hands-on feedback from April 2026 training sessions shaped the content of this release.</li>
   <li>Anonymous participants and community members who have taken the time to write in with corrections and encouragement.</li>
 </ul>
 
 <h2>What's New</h2>
+
+<h3>Version 1.4</h3>
+<ul>
+  <li><strong>Six new lessons across four chapters:</strong> Understanding Your Keyboard (Ch. 1), Switching Windows with Alt+Tab (Ch. 1), Navigate by Paragraph and Page (Ch. 2), Navigate Tables (Ch. 3), and a new Chapter 6 (Your Keyboard) with three lessons on modifier keys, function keys, and NVDA layout selection.</li>
+  <li><strong>Bug fix — practice frame button feedback:</strong> The "Play a beep sound" button announced "You activated the button with Enter" even when activated with the Space key. Now correctly says "You activated the button."</li>
+  <li><strong>Object Navigation — levels/pyramid terminology:</strong> Parent/child language replaced throughout with levels-based terminology ("one level above," "one level below"). Pyramid model introduced in the chapter intro. Maximizing the window before navigating is now explicitly recommended.</li>
+  <li><strong>Object Navigation — NVDA+Tab distinction clarified:</strong> Added explanation distinguishing NVDA+Tab (reads keyboard-focused control) from object navigation (moves independently of keyboard focus).</li>
+  <li><strong>Browse Mode — Toggle Single-Letter Navigation lesson removed:</strong> Per instructor feedback that the lesson's purpose was unclear.</li>
+  <li><strong>Browse Mode — Navigate Tables lesson added:</strong> Ctrl+Alt+Arrow keys for table cell navigation, with command category context.</li>
+  <li><strong>Browse Mode — Focus Mode explanation enhanced:</strong> Added explicit statement that focus mode places the cursor inside the edit box.</li>
+  <li><strong>Text selection — report selection step added:</strong> NVDA+Shift+Up Arrow (desktop) or NVDA+Shift+S (laptop) reads back the current selection before copying.</li>
+  <li><strong>Command category labels throughout:</strong> [NVDA command] and [Windows command] inline labels added where commands are introduced across all five original chapters.</li>
+  <li><strong>Turkish localization:</strong> First Turkish translation contributed by Umut KORKMAZ (pending integration).</li>
+</ul>
 
 <h3>Version 1.3.2</h3>
 <ul>

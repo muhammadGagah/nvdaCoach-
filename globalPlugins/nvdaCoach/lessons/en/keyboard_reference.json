@@ -1,0 +1,165 @@
+{
+	"id": "keyboard_reference",
+	"title": "Your Keyboard",
+	"description": "Understand the physical keyboard — modifier key locations, function keys, Fn key behavior, and how to match your keyboard to your NVDA layout setting.",
+	"order": 6,
+	"lessons": [
+		{
+			"id": "modifier_keys",
+			"title": "Modifier Keys and Their Locations",
+			"order": 1,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Modifier keys are keys you hold while pressing another key to change its meaning. The four main modifier keys in Windows are: Control (Ctrl), Shift, Alt, and the Windows key. None of these do anything by themselves — they modify other keys. Understanding where they are on your keyboard is as important as knowing which commands to use. This lesson covers where to find each one. Press Enter to continue.",
+					"hints": [
+						"Modifier keys are always held down while you press another key. Releasing them first — or pressing them in the wrong order — can prevent a command from working.",
+						"Most keyboards have duplicate modifier keys on both sides: Ctrl on the left and right, Shift on the left and right, Alt on the left and right. Either side works for most commands.",
+						"The Windows key and the Menu key (if present) are usually only on the left side or only on one side of the keyboard."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The Control key (Ctrl) is usually in the bottom-left corner of the keyboard and in the bottom-right corner. However, on some laptops the Fn key occupies the bottom-left corner, pushing Ctrl one key to the right. If you expect Ctrl to be in the very corner and it is not working, look for the key labeled Ctrl just to the right of the Fn key. Both Ctrl keys — left and right — work identically for almost all commands. Press Enter to continue.",
+					"hints": [
+						"Standard placement: Ctrl is the very bottom-left key. Some laptops: Fn is bottom-left and Ctrl is the second key from the left in that row.",
+						"The right Ctrl key works the same as the left for all commands in this course. Use whichever is more comfortable for your hand position.",
+						"Not sure which is Ctrl? Press NVDA plus 1 to turn on Input Help, press the key you think is Ctrl, and NVDA will confirm whether it recognized it as Control. Press NVDA plus 1 again to turn off Input Help."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The Shift key is the wide key directly above Control on both sides of the keyboard. It is one of the widest keys on most keyboards, making it easy to find by feel. The left Shift is above the left Control; the right Shift is above the right Control. Either Shift key works for most commands. Shift is used constantly with NVDA: Shift+Tab moves backward through controls (Windows command), Shift+H moves backward through headings in browse mode, and NVDA+Shift+C opens the lesson picker. Press Enter to continue.",
+					"hints": [
+						"Left Shift is above the left Ctrl key on the left side of the keyboard. Right Shift is above the right Ctrl key on the right side.",
+						"Shift is wider than most keys — you can usually find it by feel without looking. It is the wide key just above Ctrl on both sides.",
+						"Either Shift key works for any command. Use whichever side is closer to the other keys you need to press at the same time."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The Alt key is immediately to the left and right of the Space bar. The Space bar is the long flat key at the bottom center of the keyboard — the longest key on the board. Alt is the key directly adjacent to it on each side. The left Alt is used most often. Alt+Tab (Windows command) uses the left Alt. Alt+F4 (Windows command) closes a window. Some programs use the right Alt (also called AltGr on some keyboards) for special characters, but for NVDA and Windows navigation you will almost always use the left Alt. Press Enter to continue.",
+					"hints": [
+						"Alt is directly to the left and right of the Space bar. The Space bar is easy to find — it is the longest key on the keyboard.",
+						"Use the left Alt for Alt+Tab and other Windows navigation commands. The right Alt (AltGr) is typically used for special characters in some languages.",
+						"Alt plus Tab is a Windows command. Alt plus F4 closes the current window. Both use the left Alt key."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The Windows key has the Windows logo printed on it and is usually between the left Ctrl key and the left Alt key. On some laptops it may be in a slightly different position, but it is always somewhere in the bottom row. The Windows key opens the Start menu when pressed alone. Windows+Up Arrow (Windows command) maximizes a window. Windows+D (Windows command) shows the desktop. Windows+L (Windows command) locks the screen. Press Enter to continue.",
+					"hints": [
+						"The Windows key is usually between the left Ctrl and left Alt keys in the bottom row. It has the Windows logo — four colored squares arranged in a grid — printed on it.",
+						"Windows plus Up Arrow maximizes the current window to full screen. This is useful before using object navigation — a maximized window shows all objects.",
+						"Windows key alone opens the Start menu. Press Escape to close it without selecting anything."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Your NVDA key is one of two options: Insert or Caps Lock. Insert is in the cluster of keys above the arrow keys on most keyboards, near Home, Delete, Page Up, and Page Down. Caps Lock is on the far left side of the keyboard, just above the left Shift key. Both can serve as your NVDA key at the same time — NVDA accepts either. Many laptop users prefer Caps Lock because Insert may be harder to reach. You can choose your preferred NVDA key in NVDA Settings under Keyboard. Press Enter to finish this lesson.",
+					"hints": [
+						"Insert is in the cluster above the arrow keys — near Home, Delete, End, Page Up, and Page Down. It is not a modifier by itself; it only becomes the NVDA key because NVDA assigns it that role.",
+						"Caps Lock is on the far left, just above Shift. Using Caps Lock as your NVDA key means Caps Lock no longer toggles uppercase — press NVDA plus F2 and then Caps Lock to actually toggle it when needed.",
+						"Both Insert and Caps Lock work as the NVDA key simultaneously. You do not have to choose — you can use either one depending on which is more convenient for each command."
+					]
+				}
+			]
+		},
+		{
+			"id": "function_keys",
+			"title": "Function Keys and the Fn Key",
+			"order": 2,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "The top row of your keyboard has keys labeled F1 through F12 — these are function keys. Each one can be assigned a specific action by Windows, NVDA, or the application you are using. In NVDA Coach, F1 repeats the current step instruction, F2 gives a hint, and F3 skips a step. F1 also opens Help in most Windows applications (application command). F5 refreshes web pages in most browsers (application command). NVDA uses F12 to read the time (NVDA+F12). These are just a few examples — function keys serve many purposes. Press Enter to continue.",
+					"hints": [
+						"Function keys are in the top row, labeled F1 through F12 from left to right. F1 is on the far left; F12 is on the far right.",
+						"In NVDA Coach: F1 repeats the instruction, F2 gives a hint, F3 skips the step. These are NVDA Coach-specific commands.",
+						"In most Windows applications, F1 opens Help (application command). In most browsers, F5 refreshes the page (application command). NVDA+F12 reads the time (NVDA command)."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "On many laptops, the function key row has two modes. In one mode, the keys act as F1 through F12 for software commands. In the other mode, the same keys control hardware functions — adjusting screen brightness, speaker volume, keyboard backlight, and media playback. These hardware functions are often shown as icons printed on the keys. Which mode is active by default depends on your laptop model. Press Enter to continue.",
+					"hints": [
+						"Look at your F1 through F12 keys. If they have small icons printed on them — a sun for brightness, a speaker for volume, a musical note for media — those are the hardware function actions.",
+						"On some laptops, the hardware icons (multimedia) are primary and you press Fn plus the key to get F1 through F12. On others, F1 through F12 are primary and you press Fn for hardware functions.",
+						"The Fn key is not a standard Windows modifier — it is processed by the keyboard firmware before Windows sees it. This means NVDA and Windows do not know about Fn presses."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The Fn key is typically in the bottom-left corner of a laptop keyboard, or to the right of the left Ctrl key. When you hold Fn and press an arrow key, many laptops produce Home, End, Page Up, or Page Down — because compact keyboards often do not have those as dedicated keys. Fn plus Left Arrow is typically Home. Fn plus Right Arrow is End. Fn plus Up Arrow is Page Up. Fn plus Down Arrow is Page Down. Check the labels on your arrow keys for these secondary symbols. Press Enter to continue.",
+					"hints": [
+						"Look at your arrow keys for small secondary labels — a horizontal line with arrow for Home/End, or up-arrow-with-bar for Page Up/Down.",
+						"Fn plus Left Arrow is Home on most compact laptops. Fn plus Right Arrow is End. Fn plus Up Arrow is Page Up. Fn plus Down Arrow is Page Down.",
+						"These Fn combinations are keyboard firmware functions — they are invisible to Windows and NVDA. They produce the same result as dedicated Home, End, Page Up, and Page Down keys."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Many laptop keyboards have an Fn Lock feature. When Fn Lock is active, you do not need to hold Fn — the secondary functions are active all the time. This is useful if you need F1 through F12 constantly and do not want to hold Fn each time. Fn Lock is often toggled by pressing Fn plus Escape, Fn plus Caps Lock, or a dedicated key with a padlock icon. Check your laptop's documentation to find the Fn Lock key and how to toggle it. Different manufacturers place it differently and may use different key combinations. Press Enter to continue.",
+					"hints": [
+						"Look for a key with a padlock icon combined with Fn, or check your laptop's manual for the Fn Lock combination. Common options are Fn plus Escape or Fn plus Caps Lock.",
+						"Some laptops indicate the current Fn Lock state with a small indicator light. Others make a sound or show an on-screen display when you toggle it.",
+						"If pressing F2 in NVDA Coach gives you a hint — rather than changing screen brightness — then either Fn Lock is active or your laptop defaults to F-key mode."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "A practical tip for using NVDA Coach: if pressing F2 changes your screen brightness or volume instead of giving you a hint, your keyboard is in multimedia mode. Either hold Fn and press F2, or toggle Fn Lock to make F1 through F12 primary. Once function keys work as F1 through F12, F1 repeats the lesson instruction, F2 gives you a hint, and F3 skips the step. These are NVDA Coach-specific commands. Press Enter to finish this lesson.",
+					"hints": [
+						"Test: press F2 while in a lesson. If you hear a hint, function keys are in software mode. If your screen brightness changes, you are in multimedia mode — hold Fn and press F2 instead.",
+						"Once you know your Fn Lock state, you can use Coach shortcut keys without frustration. F1 repeats instruction, F2 gives a hint, F3 skips — all Coach-specific commands.",
+						"Fn Lock state usually persists across restarts on most laptops. Once you set it the way you want, you should not need to change it again."
+					]
+				}
+			]
+		},
+		{
+			"id": "nvda_keyboard_layout",
+			"title": "Desktop vs Laptop Keyboard Layout",
+			"order": 3,
+			"chapterComplete": true,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "NVDA has two keyboard layout settings: desktop and laptop. This is not about your physical keyboard hardware — it is a setting inside NVDA that determines which key combinations NVDA listens for. Desktop layout uses the numeric keypad for many NVDA commands. Laptop layout uses NVDA plus letter or symbol keys instead, so that users without a numpad can reach all NVDA commands. You choose your layout in NVDA Settings. Press Enter to continue.",
+					"hints": [
+						"Desktop layout and laptop layout are NVDA software settings — they do not change how Windows or your applications behave, only how NVDA responds to key presses.",
+						"If your keyboard has a numeric keypad on the right side, desktop layout may be natural. If you are on a laptop without a numpad, laptop layout is designed for you.",
+						"You can switch between layouts at any time without restarting NVDA. The change takes effect immediately."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "To check or change your layout: press NVDA+N (NVDA command) to open the NVDA menu, then P for Preferences, then S for Settings. The Settings dialog opens. In the category list on the left, press K to jump to the Keyboard category using first-letter navigation. Tab to the Keyboard layout combo box, use the Up and Down Arrow keys to choose Desktop or Laptop, then Tab to OK and press Enter to save. The Customizing NVDA chapter covers this process in detail. Press Enter to continue.",
+					"hints": [
+						"NVDA plus N opens the NVDA menu. P for Preferences, S for Settings. Then K in the category list jumps to Keyboard using first-letter navigation.",
+						"The Keyboard layout combo box has two options: Desktop and Laptop. Use Arrow keys to choose, Tab to OK, and Enter to save.",
+						"If you are unsure which layout is currently active, press NVDA plus 1 to turn on Input Help, press a numpad key, and listen to what NVDA says. Press NVDA plus 1 again to turn off Input Help."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "When commands differ between layouts, NVDA Coach always shows both. For example: 'Press NVDA+NumPad5 (desktop) or NVDA+Shift+Comma (laptop).' Use whichever matches your current layout setting. If a command is not working as expected, the most common cause is a mismatch between your NVDA layout setting and the keys you are pressing. Check your layout setting first before trying other troubleshooting steps. Press Enter to continue.",
+					"hints": [
+						"Desktop layout command listed first, laptop layout in parentheses or after 'or'. Use the version that matches your NVDA layout setting.",
+						"A mismatch between layout setting and keys pressed is the most common reason a command does not work. Open NVDA Settings and verify your Keyboard layout if commands seem wrong.",
+						"Remember: layout is an NVDA setting, not a keyboard hardware feature. You can use laptop layout on a desktop keyboard or desktop layout on a laptop if you prefer."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "You have completed the Your Keyboard chapter! You now know where modifier keys are located on standard and laptop keyboards, how function keys and Fn key behavior work, and how to choose and change your NVDA keyboard layout setting. With this foundation, all the key combinations throughout NVDA Coach will make more sense — you will know exactly where your fingers need to go. When you are ready, press NVDA+Shift+C to open the lesson picker and explore the other chapters. Press Enter to finish.",
+					"hints": [
+						"This chapter is a reference you can return to at any time. If a command is not working and you are not sure where a key is, come back here.",
+						"Modifier key locations summary: Ctrl is bottom-left (or right of Fn on some laptops). Shift is above Ctrl. Alt is next to Space. Windows key is between Ctrl and Alt. NVDA key is Insert or Caps Lock.",
+						"NVDA Coach saves your progress automatically. All completed lessons are marked when you return."
+					]
+				}
+			]
+		}
+	]
+}

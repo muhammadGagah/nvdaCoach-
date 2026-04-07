@@ -798,7 +798,7 @@ class PracticeFrame(wx.Frame):
 
 		def _playBeep(e):
 			tones.beep(880, 120)
-			ui.message(_("Beep! You activated the button with Enter."))
+			ui.message(_("Beep! You activated the button."))
 
 		playBtn.Bind(wx.EVT_BUTTON, _playBeep)
 		greetBtn.Bind(wx.EVT_BUTTON, lambda e: ui.message(

@@ -1,0 +1,153 @@
+{
+    "id": "nvda_settings",
+    "title": "NVDA'yı Kişiselleştirme",
+    "description": "NVDA'nın klavye düzenini, konuşma hızını ve sesini tercihlerinize göre nasıl ayarlayacağınızı öğrenin.",
+    "order": 5,
+    "lessons": [
+        {
+            "id": "keyboard_layout",
+            "title": "Klavye Düzeninizi Değiştirme",
+            "order": 1,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA iki klavye düzenini destekler: masaüstü ve dizüstü bilgisayar. Masaüstü düzeni, birçok NVDA komutu için tam boyutlu klavyenin sağ tarafındaki sayısal tuş takımını kullanır. Dizüstü bilgisayar düzeni bunun yerine NVDA artı harf tuşlarını kullanır, dolayısıyla sayısal tuş takımına ihtiyacınız yoktur. Çoğu masaüstü bilgisayar varsayılan olarak masaüstü düzenini kullanır. Çoğu dizüstü bilgisayar dizüstü bilgisayar düzenini kullanır. Bunu istediğiniz zaman NVDA ayarlarından değiştirebilirsiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni, tam boyutlu bir klavyenin sağ tarafındaki sayı tuşları bloğu olan sayısal tuş takımına dayanır. Klavyenizde sayısal tuş takımı yoksa dizüstü bilgisayar düzenini kullanın.",
+                        "Dizüstü bilgisayar düzeni sayısal tuş takımı komutlarının yerini NVDA artı harf tuş bileşimleriyle alıyor. Çoğu dizüstü bilgisayar kullanıcısı sayısal tuş takımına sahip olmadığı için bunu daha doğal buluyor.",
+                        "NVDA'yı yeniden başlatmaya gerek kalmadan istediğiniz zaman düzenler arasında geçiş yapabilirsiniz. Değişiklik, Ayarlar'a kaydetmenizden hemen sonra geçerli olur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA ayarlarını açmak için NVDA+N tuşlarına basarak NVDA menüsünü açın. Daha sonra Tercihler için T'ye, ardından Ayarlar için de L'ye basın. NVDA'nın Ayarlar iletişim kutusunun açıldığını seslendirdiğini duyacaksınız. İlk girdiğiniz kategori değişebilir. Ayar kategorileri arasında geçiş yapmak için Sekme tuşuna basın veya kategori listesindeki ok tuşlarını kullanın. Düzen ayarını bulmak için Klavye kategorisine gidin. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA menüsünü açmak için NVDA artı N tuşlarına basın, ardından Tercihler için T'ye, ardından da Ayarlar için L tuşuna basın. Bu üç adımlı sıra, ana NVDA Ayarları iletişim kutusunu açar.",
+                        "Ayarlar iletişim kutusu açıldığında soldaki kategori listesinde olacaksınız. Kategoriler arasında gezinmek için Yukarı ve Aşağı Ok tuşlarını kullanın veya kategoriye atlamak için kategori adının ilk harfine basın.",
+                        "İlk harfli gezinmeyi de kullanabilirsiniz; doğrudan Klavye kategorisine atlamak için K tuşuna veya Konuşma kategorisine atlamak için yine K tuşuna basın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Klavye ayarlarının içinde 'Klavye düzeni' etiketli ve iki seçeneğin bulunduğu bir açılır kutu bulacaksınız: Masaüstü ve Dizüstü Bilgisayar. Klavyenize uygun düzeni seçmek için Yukarı ve Aşağı Ok tuşlarını kullanın. Tamam düğmesine gitmek için Sekme'yi kullanın ve kaydetmek için Enter'a basın; Başlarken bölümündeki Kontroller Arasında Geçiş dersinde uyguladığınız Sekme dolaşımının aynısı. Yeni düzeniniz, NVDA'yı yeniden başlatmanıza gerek kalmadan hemen geçerli olur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Klavye kategorisine girdikten sonra, Klavye düzeni açılır kutusuna gitmek için Sekme tuşuna basın. Masaüstü veya Dizüstü Bilgisayarı seçmek için Yukarı ve Aşağı Ok tuşlarını kullanın.",
+                        "Düzeninizi seçtikten sonra, Tamam düğmesine ulaşmak için Sekme tuşuna basın ve kaydetmek için Enter tuşuna basın. Bu, Başlarken bölümündeki Sekme dolaşımının aynısıdır.",
+                        "Tamam yerine Escape tuşuna basarsanız değişiklikleriniz iptal edilecek ve düzen değişmeden kalacaktır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA Eğitmeni dersleriyle ilgili bir not: Bu kurstaki ders talimatları, farklı olduklarında hem masaüstü hem de dizüstü bilgisayar Tuş alternatiflerinden bahseder. Düzeninizi dizüstü bilgisayar olarak değiştirdiyseniz gösterilen dizüstü bilgisayar tuş bileşimlerini kullanın. Hangi düzenin etkin olduğundan emin değilseniz NVDA Ayarları'nı açın ve Klavye kategorisini kontrol edin. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "NVDA Eğitmeni'nde ilk olarak masaüstü düzeni komutları görünür, ardından parantez içinde dizüstü bilgisayar düzeni komutları gelir. Klavyenize hangisi uyuyorsa onu kullanın.",
+                        "Bir komut çalışmıyor gibi görünüyorsa klavye düzeni ayarınızı kontrol edin. NVDA dizüstü bilgisayar düzenine ayarlandığında (veya tam tersi) masaüstü düzeni tuşlarına basmak, beklenen sonucu vermeyecektir.",
+                        "Hangi düzeni kullandığınızdan emin değil misiniz? Girdi Yardımını açmak için NVDA artı 1 tuşuna basın, sayısal tuş takımından bir tuşa basın ve NVDA'nın söylediklerini dinleyin. Daha sonra Giriş Yardımını kapatmak için NVDA artı 1 tuşuna tekrar basın."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "speech_settings",
+            "title": "Sentezleyici Ayar Halkası",
+            "order": 2,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA, Sentezleyici ayar halkası adı verilen güçlü bir anında konuşma kontrol sistemi içerir. Ayarlar iletişim kutusunu açmadan hız, perde, ses seviyesi, ses ve değişken gibi konuşma özelliklerini ayarlamanıza olanak tanır. Bunu, farklı ayarlar arasında geçiş yapabileceğiniz ve ardından yukarı veya aşağı çevirebileceğiniz bir kadran olarak düşünün. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sentezleyici ayar halkası, herhangi bir işin ortasındayken, herhangi bir iletişim kutusunu açmadan konuşmayı anında ayarlamanıza olanak tanır.",
+                        "Halkadaki mevcut ayarlar şunları içerir: hız (hız), perde, ses seviyesi, ses ve değişken. Aralarında gezinip her birini ayarlıyorsunuz.",
+                        "Bunu iki adımlı bir süreç olarak düşünün: önce istediğiniz ayarı seçin (oran gibi), ardından artırın veya azaltın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Sentezleyici ayar halkasının iki tür hareketi vardır. İlk olarak, hangi özelliği ayarlamak istediğinizi seçmek için ayarlar arasında geçiş yaparsınız; örneğin, hızdan perdeye ve ses seviyesine geçiş. İkincisi, istediğiniz ayara geldiğinizde değerini artırır veya azaltırsınız. Bunlar iki ayrı Tuş setidir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Birinci adım: sol ve sağ ok tuşlarını kullanarak ayarlar arasında dolaşın. İkinci adım: Yukarı ve aşağı ok tuşlarını kullanarak değeri ayarlayın. İki ayrı tuş seti.",
+                        "NVDA, üzerine gittiğinizde ayarın adını duyurur; örneğin 'Hız' veya 'Perde'. Daha sonra siz ayarladığınızda değeri seslendirir; örneğin 'Hız 60'.",
+                        "Ayarlamadan önce doğru ayarda olmanız gerekir. Yukarı veya aşağı yön tuşlarına basarsanız ancak yanlış ayar değişikliğini duyarsanız, istediğiniz ayara ulaşmak için önce sola veya sağa gidin."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Halkadaki bir sonraki ayara geçmek için masaüstü düzeninde NVDA+Kontrol+Sağ Ok tuşlarına veya dizüstü düzende NVDA+Shift+Kontrol+Sağ Ok tuşlarına basın. Önceki ayara geçmek için masaüstünde NVDA+Kontrol+Sol Ok tuşlarına veya dizüstü bilgisayarda NVDA+Shift+Kontrol+Sol Ok tuşlarına basın. NVDA, 'Hız' veya 'Perde' gibi, geldiğiniz ayarın adını anons edecektir. Devam etmek için Enter'a basın.",
+                    "monitorGestures": [
+                        "kb:nvda+kontrol+sağ ok",
+                        "kb:nvda+shift+kontrol+sağ ok"
+                    ],
+                    "hints": [
+                        "Masaüstü düzeni: NVDA ve Kontrol'e birlikte basın, ardından bir sonraki ayara geçmek için Sağ Ok tuşuna basın. Sol Ok önceki ayara gider.",
+                        "Dizüstü bilgisayar düzeni: NVDA, Shift ve Kontrol'e birlikte basın, ardından sonraki ayar için Sağ Ok'a veya önceki ayar için Sol Ok'a basın.",
+                        "NVDA siz ilgili ayara geldiğinizde ayarın adını seslendirir; örneğin 'Hız', 'Perde', 'Ses Seviyesi', 'Ses' veya 'Varyant'. Ayarlamak istediğiniz sesi duyduğunuzda durun."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Değiştirmek istediğiniz ayara geldiğinizde, değeri artırmak için NVDA+Kontrol+Yukarı Ok (masaüstü) veya NVDA+Shift+Kontrol+Yukarı Ok (dizüstü bilgisayar) tuşlarına basın. Azaltmak için NVDA+Kontrol+Aşağı Ok (masaüstü) veya NVDA+Shift+Kontrol+Aşağı Ok (dizüstü bilgisayar) tuşlarına basın. NVDA, siz ayarlama yaptıkça yeni değeri duyurur. Örneğin Hız'daysanız ve artırma tuşuna basarsanız 'Hız 60' gibi bir ses duyacaksınız. Devam etmek için Enter'a basın.",
+                    "monitorGestures": [
+                        "kb:nvda+kontrol+yukarı ok",
+                        "kb:nvda+shift+kontrol+yukarı ok",
+                        "kb:nvda+kontrol+aşağı ok",
+                        "kb:nvda+shift+kontrol+aşağı Ok"
+                    ],
+                    "hints": [
+                        "Masaüstü düzeni: NVDA ve Kontrol tuşlarını basılı tutun, ardından geçerli ayarın değerini artırmak için Yukarı Ok tuşuna basın. Aşağı Ok bunu azaltır.",
+                        "Dizüstü bilgisayar düzeni: NVDA, Shift ve Kontrol tuşlarını basılı tutun, ardından artırmak için Yukarı Ok'a veya azaltmak için Aşağı Ok'a basın.",
+                        "NVDA her ayarlamadan sonra yeni değeri duyurur; örneğin 'Hız 75'. Aynı yönde ayarlamaya devam etmek için basmaya devam edin."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Daha büyük ayarlamaları daha hızlı yapmak istiyorsanız, daha büyük adımlarla artırmak için NVDA+Kontrol+Sayfa Yukarı (masaüstü) veya NVDA+Shift+Kontrol+Sayfa Yukarı (dizüstü bilgisayar) ve daha büyük adımlarla azaltmak için NVDA+Kontrol+Sayfa Aşağı (masaüstü) veya NVDA+Shift+Kontrol+Sayfa Aşağı (dizüstü bilgisayar) tuşlarını kullanın. Bu, ayar tuşuna art arda birçok kez basmadan dramatik bir değişiklik yapmak istediğinizde kullanışlıdır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA artı Kontrol artı Sayfa Yukarı daha büyük adımlarla artar. NVDA artı Kontrol artı Sayfa Aşağı daha büyük adımlarla azalır.",
+                        "Dizüstü bilgisayar düzeni: Daha büyük artış için NVDA artı Shift artı Kontrol artı Sayfa Yukarı. Daha büyük azalma için NVDA artı Shift artı Kontrol artı Sayfa Aşağı.",
+                        "Sayfa Yukarı ve Sayfa Aşağı genellikle Home (Baş) ve End (Son) tuşunun yakınındaki ok tuşlarının üzerindeki tuş kümesindedir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. Kullanılabilir ayarlar arasında geçiş yapmak için NVDA+Kontrol+Sağ Ok (masaüstü) veya NVDA+Shift+Kontrol+Sağ Ok (dizüstü bilgisayar) tuşlarına birkaç kez basın; hareket ettikçe Hız, Ses Perdesi, Ses Düzeyi, Ses ve Değişken'in anons edildiğini duyacaksınız. Daha sonra Hız üzerinde durun ve değiştirmek için artırma veya azaltma tuşlarına basın. NVDA'nın yeni hızda gerçek zamanlı olarak nasıl konuştuğuna dikkat edin. Devam etmeye hazır olduğunuzda Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+kontrol+sağ ok",
+                        "kb:nvda+shift+kontrol+sağ ok"
+                    ],
+                    "hints": [
+                        "Mevcut tüm ayarlar arasında geçiş yapmak için Sağ ok tuşuna birkaç kez basın. Sırasıyla Hız, Perde, Ses Düzeyi, Ses ve Değişken'i duyacaksınız.",
+                        "'Hız' sesini duyduğunuzda durun. Ardından yukarı ok tuşuna birkaç kez basın ve her bastığınızda NVDA'nın gerçek zamanlı olarak daha hızlı konuştuğunu fark edin.",
+                        "İşiniz bittiğinde hızı anlaşılır bir seviyeye doğru azaltın. NVDA her yeni değeri duyurur, böylece tam olarak girebilirsiniz."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Daha hassas kontrol için NVDA Ayarları iletişim kutusunda konuşma ayarlarını yapabilirsiniz. NVDA menüsünü açmak için NVDA+N tuşlarına basın, ardından Tercihler için T'ye, ardından da Ayarlar için L'ye basın. Ayarlar iletişim kutusu solda bir kategori listesiyle açılır. Yukarı ve Aşağı Ok tuşlarını kullanarak kategoriler arasında dolaşabilir veya tek harfli dolaşımı kullanabilirsiniz; atlamak için kategori adının ilk harfine basmanız yeterlidir. Örneğin, doğrudan Konuşma'ya geçmek için K tuşuna basın. Konuşma kategorisine girdikten sonra, hız, perde, ses seviyesi, tonlama, ses ve sentezleyici için kaydırıcılar ve birleşik giriş kutuları arasında ilerlemek için Sekme tuşuna basın. Geriye doğru gitmek için Shift+Sekme tuşlarına basın. Sekme Dolaşımı hakkında bilgilerinizi tazelemeye ihtiyacınız varsa bu, Başlarken bölümündeki Kontroller Arasında Geçiş dersinde ele alınmıştır. Burada yapılan değişiklikler Tamam'a veya Uygula'ya bastığınızda kaydedilir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA artı N, Tercihler için T, Ayarlar için L ile Ayarları açın. Daha sonra, Tek harf dolaşımını kullanarak doğrudan Konuşma kategorisine atlamak için kategori listesinde K tuşuna basın.",
+                        "Konuşma kategorisinin içinde Sekme, kontroller arasında ileri doğru hareket eder: hız kaydırıcısı, ses perdesi kaydırıcısı, ses düzeyi kaydırıcısı, ses açılan kutusu ve daha fazlası. Shift artı Sekme geriye doğru hareket eder.",
+                        "Konuşma ayarlarındaki kaydırıcılar, değerlerini ayarlamak için Sol ve Sağ Ok tuşlarına yanıt verir. Kaydırıcıyı hareket ettirdikçe NVDA değeri duyurur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA, varsayılan olarak birçok dili ve sesi destekleyen eSpeak NG sentezleyiciyi içerir. Windows OneCore sesleri veya üçüncü taraf Sentezleyicileri gibi ek sentezleyiciler yüklediyseniz, Sentezleyici açılan kutusunun altındaki Konuşma ayarlarında bunlar arasında geçiş yapabilirsiniz. Her sentezleyici farklı ses seçenekleri ve kalite seviyeleri sunabilir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "eSpeak NG, NVDA ile birlikte yüklenir ve çevrimdışı çalışır. Windows OneCore sesleri, Microsoft'un yerleşik seslerini kullanır ve daha doğal bir konuşma sunar.",
+                        "Sentezleyicileri değiştirmek için NVDA Ayarları'nı açın, Konuşma kategorisine gidin ve Sentezleyici açılır kutusunu bulun. Farklı bir sentezleyici seçmek için ok tuşlarını kullanın.",
+                        "Sentezleyiciler değiştirildikten sonra Ses açılır kutusu, yeni sentezleyici için mevcut sesleri gösterecek şekilde güncellenecektir. Tercih etmek istediğinizi bulmak için birkaçını deneyin."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Memnun kaldığınız konuşma ayarlarını bulduğunuzda, ayarlar iletişim kutusunu Tamam ile kapattığınızda NVDA bunları otomatik olarak kaydeder. Tercih ettiğiniz seviye, ses ve perde NVDA her başlatıldığında aktif olacaktır. Deneme yapmak ve bilinen bir duruma geri dönmek isterseniz, değiştirmeden önce ayarlarınızı not edin veya Konuşma ayarları panelindeki Varsayılanlara sıfırla düğmesini kullanın. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "NVDA, Ayarlar iletişim kutusunda Tamam'a bastığınızda tüm konuşma ayarlarını kaydeder. NVDA her başlatıldığında tercihleriniz geri yüklenir.",
+                        "Konuşma kategorisindeki Varsayılanlara sıfırla düğmesi, tüm konuşma ayarlarını fabrika değerlerine geri yükler. Geri almak istediğiniz değişiklikleri yaptıysanız bunu kullanın.",
+                        "Anında hızlı ayarlamalar için Sentezleyici ayar halkasını, hassas ince ayar için Ayarlar iletişim kutusuyla birleştirebilirsiniz. Her iki yöntem de tercihlerinizi kaydeder."
+                    ]
+                }
+            ]
+        }
+    ]
+}

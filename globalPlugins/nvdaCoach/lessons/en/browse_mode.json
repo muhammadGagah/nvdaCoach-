@@ -342,11 +342,11 @@
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "Browse mode lets you read and navigate pages. But when you need to type into a text box, you need to switch to focus mode. In focus mode, your keypresses go directly to the application instead of being used as navigation shortcuts. NVDA often switches automatically when you Tab into a text field. You can also toggle manually with NVDA+Space. This switching between modes is unique to screen readers — it is how NVDA gives you both powerful navigation and full keyboard control in the same browser. Press Enter to continue.",
+					"instruction": "Browse mode lets you read and navigate pages. But when you need to type into a text box, you need to switch to focus mode. When focus mode activates, your cursor is placed inside the edit box and you can type directly — this is intentional. Focus mode puts the cursor in the edit box so you can interact with form fields. Your keypresses go directly to the application instead of being used as navigation shortcuts. NVDA often switches to focus mode automatically when you Tab into a text field. You can also toggle manually with NVDA+Space (NVDA command). Press Enter to continue.",
 					"hints": [
-						"Browse mode: letter keys are navigation shortcuts. Focus mode: letter keys type characters into a field. NVDA plus Space toggles between them.",
-						"NVDA usually switches to focus mode automatically when you enter a text field. You will hear 'focus mode' announced when this happens.",
-						"If you are trying to type and letters are jumping around the page instead of appearing in a field, you are in browse mode. Press NVDA plus Space to switch to focus mode."
+						"Browse mode: letter keys are navigation shortcuts. Focus mode: letter keys type characters into a field — your cursor is in the edit box. NVDA plus Space toggles between them.",
+						"NVDA usually switches to focus mode automatically when you enter a text field. You will hear 'focus mode' announced, and your cursor lands in the edit box ready to type.",
+						"If you are trying to type and letters are jumping around the page instead of appearing in a field, you are in browse mode. Press NVDA plus Space to switch to focus mode and place the cursor in the edit box."
 					]
 				},
 				{
@@ -514,38 +514,59 @@
 			]
 		},
 		{
-			"id": "toggle_single_letter_nav",
-			"title": "Toggle Single-Letter Navigation",
+			"id": "navigate_tables",
+			"title": "Navigate Tables",
 			"order": 10,
 			"chapterComplete": true,
 			"steps": [
 				{
 					"type": "info",
-					"instruction": "In browse mode, single-letter keys like H, K, and D are shortcuts for jumping to headings, links, and landmarks. But when you are filling in a form, those same letter keys need to type characters into a text field — not navigate the page. NVDA+Shift+Space toggles single-letter navigation on and off. This is unique to NVDA and gives you precise control over how your keyboard behaves on any web page. Press Enter to continue.",
+					"instruction": "Web pages often use tables to display structured information — rows and columns of data such as schedules, pricing, or comparison charts. Sighted users can see the grid layout visually. When your cursor lands on a table in browse mode, NVDA announces 'table with X rows and Y columns' so you know the size of the table. Understanding what kind of command you are using is important here: table cell navigation commands are NVDA commands — they require your NVDA key or a combination that NVDA interprets. They are not Windows commands or browser commands. Press Enter to continue.",
 					"hints": [
-						"NVDA plus Shift plus Space toggles single-letter navigation. When off, letter keys type normally. When on, letter keys are navigation shortcuts.",
-						"NVDA usually handles this automatically — it turns off single-letter navigation when you enter a text field. This toggle is for situations where you need manual control.",
-						"If letters are jumping around the page when you try to type, press NVDA plus Shift plus Space to turn off single-letter navigation."
+						"NVDA announces 'table with X rows and Y columns' when you land on a table. This tells you how large it is before you start navigating inside it.",
+						"Table navigation commands in this lesson are NVDA commands — they only work when NVDA is running and you are in browse mode on a web page.",
+						"Not all tables on web pages are data tables. Some pages use tables for visual layout. NVDA will still announce them, but they may not have meaningful row and column structure."
 					]
 				},
 				{
 					"type": "info",
-					"instruction": "Try it now. Hold your NVDA key, hold Shift, and press Space. NVDA will announce either 'single letter navigation on' or 'single letter navigation off.' When it is off, letters type normally into any field you are in. When it is on, single letters are shortcuts again. Toggle it back on before moving on. Press Enter here to continue.",
+					"instruction": "To move between cells in a table, use Ctrl+Alt+Arrow keys — these are NVDA commands for table navigation. Ctrl+Alt+Right Arrow moves to the next cell in the same row. Ctrl+Alt+Left Arrow moves to the previous cell. Ctrl+Alt+Down Arrow moves to the cell directly below in the same column. Ctrl+Alt+Up Arrow moves to the cell directly above. As you move, NVDA announces the cell content and its row and column position. This works the same way whether you are on desktop or laptop keyboard layout. Press Enter to continue.",
+					"hints": [
+						"Hold Ctrl and Alt together, then press an Arrow key to move through table cells. Right and Left move across a row. Down and Up move through a column.",
+						"NVDA announces the cell content, plus its row and column position — for example, 'row 2, column 3, Price: 49 dollars'. This tells you exactly where you are in the table.",
+						"These are NVDA commands — Ctrl+Alt+Arrow keys are intercepted by NVDA in browse mode. They do not work the same way outside of a web page table."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Try it now on the practice page. Navigate to a table using H or Down Arrow to find the section labeled Tables. Once you are inside the table, try pressing Ctrl+Alt+Right Arrow to move to the next cell, then Ctrl+Alt+Down Arrow to move down a row. NVDA will announce the cell content and position as you move. When you are ready to continue, press NVDA+Shift+C to return here and press Enter.",
 					"monitorGestures": [
-						"kb:nvda+shift+space"
+						"kb:control+alt+rightArrow",
+						"kb:control+alt+leftArrow",
+						"kb:control+alt+downArrow",
+						"kb:control+alt+upArrow"
 					],
 					"hints": [
-						"Hold NVDA, hold Shift, and press Space. The Space bar is the long flat key at the bottom of the keyboard.",
-						"NVDA announces 'single letter navigation on' or 'single letter navigation off' to confirm the toggle.",
-						"Toggle it back on before continuing — make sure NVDA announces 'single letter navigation on' before you press Enter to move forward."
+						"Hold Ctrl and Alt at the same time — both with your left hand — then press Right Arrow to move to the next cell in the row.",
+						"Hold Ctrl and Alt, then press Down Arrow to move to the cell directly below in the same column. NVDA announces the row and column number.",
+						"If the table has headers, NVDA announces the column or row header label as you move — for example 'Monday, column 1' or 'Price, row 3'."
 					]
 				},
 				{
 					"type": "info",
-					"instruction": "Excellent work — you have completed the Browse Mode and Web Navigation chapter! You now know how to navigate web pages using headings, links, form fields, landmarks, lists, the Elements List, NVDA Find, and how to switch between browse mode, focus mode, and single-letter navigation. These skills let you navigate any web page quickly and independently. When you are ready, press NVDA+Shift+C to open the lesson picker and continue to the next chapter: Object Navigation — where you will learn to reach any control on screen, even ones that Tab cannot get to. Press Enter to finish.",
+					"instruction": "A reminder about command categories: Ctrl+Alt+Arrow for table navigation is an NVDA command. The regular Tab key and Arrow keys are Windows commands that work anywhere. H, K, D, and other single-letter shortcuts are NVDA browse mode commands that only work in browse mode on web pages. Keeping track of which commands belong to which category helps you understand why some keys work in some places but not others. Press Enter to continue.",
+					"hints": [
+						"NVDA commands require NVDA to be running and active. Tab and Arrow keys are Windows commands — they work in any application.",
+						"Browse mode single-letter shortcuts like H and K only work when you are in browse mode. If they are not working, you may be in focus mode — press NVDA plus Space to check.",
+						"Ctrl+Alt+Arrow for tables is an NVDA command that only activates inside a table in browse mode. Outside a table, Ctrl+Alt+Arrow may do something different or nothing at all."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Excellent work — you have completed the Browse Mode and Web Navigation chapter! You now know how to navigate web pages using headings, links, form fields, landmarks, lists, the Elements List, NVDA Find, focus mode, and table navigation. These skills let you navigate any web page quickly and independently. When you are ready, press NVDA+Shift+C to open the lesson picker and continue to the next chapter: Object Navigation — where you will learn to reach any control on screen, even ones that Tab cannot get to. Press Enter to finish.",
 					"hints": [
 						"The next chapter is Object Navigation. It teaches you to reach any element on screen — even controls that Tab and browse mode cannot access.",
-						"The browse mode shortcuts you learned here — H, K, D, F, B, L — are all part of a larger set. The NVDA user guide lists all of them. Open it with NVDA plus N, H for Help, G for User Guide.",
+						"Browse mode quick reference: H for headings, K for links, F for form fields, D for landmarks, L for lists, Ctrl+Alt+Arrow for table cells. Shift plus any of these goes backward.",
 						"NVDA Coach saves your progress automatically. All completed lessons are marked when you return."
 					]
 				}

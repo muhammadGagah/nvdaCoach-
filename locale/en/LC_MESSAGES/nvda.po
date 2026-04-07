@@ -165,7 +165,7 @@ msgid "Auto-start disabled."
 msgstr ""
 
 #: globalPlugins/nvdaCoach/__init__.py:776
-msgid "Beep! You activated the button with Enter."
+msgid "Beep! You activated the button."
 msgstr ""
 
 #: globalPlugins/nvdaCoach/__init__.py:780

@@ -1,5 +1,39 @@
 # NVDA Coach — Changelog
 
+## v1.4 (2026-04-07)
+
+### Bug Fixes
+- **Practice frame button feedback corrected:** The "Play a beep sound" button in the practice frame announced "Beep! You activated the button with Enter" — but the button responds to both Enter and Space (standard Windows button activation). The message now says "Beep! You activated the button." Reported by AT specialists during Pacific Northwest training sessions.
+
+### New Lesson Content
+- **New lesson: Understanding Your Keyboard** (Chapter 1, Lesson 12) — Physical keyboard reference covering Ctrl key location variants (some laptops place Fn at bottom-left instead of Ctrl), Fn+Arrow keys as Home/End/Page Up/Page Down on compact keyboards, and multimedia vs F-key toggling with Fn Lock.
+- **New lesson: Switching Windows with Alt+Tab** (Chapter 1, Lesson 13) — Dedicated lesson covering both Alt+Tab patterns: single Alt+Tab to toggle between two windows, and hold-Alt tap-Tab to cycle through multiple windows and land on the target.
+- **New lesson: Navigate by Paragraph and Page** (Chapter 2, Lesson 7) — Ctrl+Up/Down Arrow for paragraph navigation (Windows command), Page Up/Page Down for large document jumps (Windows command). Includes inline practice text with labeled paragraphs.
+- **New lesson: Navigate Tables** (Chapter 3, Lesson 10, new chapter complete) — Web table navigation with Ctrl+Alt+Arrow keys (NVDA commands), what NVDA announces when entering a table, and command category context distinguishing NVDA, Windows, and application commands.
+- **New Chapter 6: Your Keyboard** — Three-lesson chapter covering modifier key locations, function key and Fn key behavior, and NVDA desktop vs laptop layout selection. Addresses consistent instructor feedback that keyboard orientation is a barrier before command learning begins.
+
+### Lesson Content Changes
+- **Object Navigation — terminology:** "Parent object" and "child object" language replaced throughout with levels/pyramid metaphor ("object one level above," "object one level below," "level below," etc.) and a pyramid framing in the chapter intro. Recommended by Pacific Northwest AT specialists.
+- **Object Navigation — maximize window tip:** Added prominent instruction to maximize the current application window (Windows+Up Arrow) before using object navigation. Now appears in the chapter intro and the "When Object Navigation Helps" lesson.
+- **Object Navigation — NVDA+Tab distinction:** Added explicit explanation that NVDA+Tab reads the keyboard-focused control while object navigation moves independently of focus — two separate systems.
+- **Object Navigation — lesson titles:** "Move to Parent and First Child" renamed to "Move Up and Down Levels" to match the revised terminology.
+- **Browse Mode — Toggle Single-Letter Navigation lesson removed:** Per instructor feedback that the lesson's purpose was unclear and potentially confusing. Students discover single-letter navigation through practice.
+- **Browse Mode — Focus Mode lesson enhanced:** Added explicit statement that "focus mode puts the cursor in the edit box" — a common point of confusion flagged by instructors.
+- **Text Selection lesson — command categories:** Added explicit [Windows command] labels for Shift+Arrow selections, Ctrl+C, Ctrl+V, and Ctrl+A. Added [NVDA command] label for the new report-selection step.
+- **Report highlighted text step added:** New step in the Select and Highlight Text lesson teaches NVDA+Shift+Up Arrow (desktop) and NVDA+Shift+S (laptop) to have NVDA read back the current selection before copying. Requested by Pacific Northwest AT specialists.
+- **Command category labels — all five chapters:** Added [NVDA command] and [Windows command] inline labels throughout all lesson files where commands are introduced. Building on the "Understanding Command Categories" lesson established in v1.2.0.
+- **Getting Started — lesson 11 closing text:** Updated to indicate two additional lessons remain (keyboard orientation and Alt+Tab) rather than declaring chapter complete at lesson 11.
+- **Customizing NVDA — command labels:** Added clarifying labels (NVDA command, Windows command) to NVDA menu navigation steps and synth settings ring steps.
+
+### New Translation
+- **Turkish localization** — Full Turkish translation contributed by Umut KORKMAZ (umutkork@gmail.com, Turkey): all lesson chapters, UI strings, and documentation. (Integration pending receipt of final files.)
+
+### Acknowledgments
+- **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — assistive technology specialists with Pacific Northwest state agencies, whose hands-on feedback from April 1–2, 2026 training sessions drove the majority of changes in this release.
+- **Umut KORKMAZ** (umutkork@gmail.com, Turkey) — Turkish translation.
+
+---
+
 ## v1.3.2 (2026-03-29)
 
 ### Bug Fixes — Localization

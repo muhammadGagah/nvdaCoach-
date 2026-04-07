@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.3.2
+**Current version:** 1.4
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.3.2](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.3.2/nvdaCoach-1.3.2.nvda-addon)**
+**[Download NVDA Coach v1.4](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.4/nvdaCoach-1.4.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -21,6 +21,19 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
 
 ---
+
+## What's New in v1.4
+
+- **6 new lessons** across all chapters (now 41 lessons, 6 chapters): Understanding Your Keyboard, Switching Windows with Alt+Tab, Navigate by Paragraph and Page, Navigate Tables, and a brand-new Chapter 6 (Your Keyboard) with 3 lessons on modifier keys, function keys, and NVDA layout selection.
+- **Bug fix — practice frame button feedback:** Button now correctly says "You activated the button" instead of "with Enter" when Space is used to activate it.
+- **Object Navigation — new terminology:** Parent/child language replaced with levels/pyramid metaphor ("one level above/below") throughout. Maximize window tip added. NVDA+Tab distinction clarified.
+- **Browse Mode — table navigation:** New lesson covers Ctrl+Alt+Arrow keys for navigating table cells in browse mode.
+- **Browse Mode — Toggle Single-Letter Navigation lesson removed:** Per instructor feedback — students discover this through practice.
+- **Focus Mode enhanced:** Added explicit statement that focus mode "puts the cursor in the edit box."
+- **Report highlighted text:** New step in the selection lesson — NVDA+Shift+Up Arrow (desktop) / NVDA+Shift+S (laptop) reads back selected text before copying.
+- **Command category labels:** [NVDA command] / [Windows command] labels added throughout all five chapters where commands are introduced.
+- **Turkish localization:** First Turkish translation contributed by Umut KORKMAZ (pending integration).
+- Thank you to **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — AT specialists with Pacific Northwest state agencies — for hands-on feedback from April 2026 training sessions that drove this release.
 
 ## What's New in v1.3.2
 
@@ -61,22 +74,25 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 ---
 
-## What's Included — 35 Lessons Across Five Chapters
+## What's Included — 41 Lessons Across Six Chapters
 
-### Chapter 1: Getting Started with NVDA — 11 lessons
-An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, and opening the user guide. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
+### Chapter 1: Getting Started with NVDA — 13 lessons
+An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, opening the user guide, keyboard physical orientation, and switching windows with Alt+Tab. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
 
-### Chapter 2: Reading and Moving Through Text — 6 lessons
-Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (desktop: NVDA+Down Arrow, laptop: NVDA+A); and text selection with Shift+arrows. Every lesson embeds a practice text area directly in the Coach window — no switching to Notepad or another application.
+### Chapter 2: Reading and Moving Through Text — 7 lessons
+Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (desktop: NVDA+Down Arrow, laptop: NVDA+A); text selection with Shift+arrows including NVDA's report-selection command; and navigating by paragraph (Ctrl+Up/Down) and page (Page Up/Down). Every lesson embeds a practice text area directly in the Coach window — no switching to another application required.
 
 ### Chapter 3: Browse Mode and Web Navigation — 10 lessons
-What browse mode is and how it works, heading navigation, heading level shortcuts, link navigation, form field navigation, toggling between browse mode and focus mode, landmark and list navigation, the Elements List dialog, finding text with NVDA Find, and toggling single-letter navigation. A fully accessible practice web page opens automatically in your browser when you start any lesson in this chapter.
+What browse mode is and how it works, heading navigation, heading level shortcuts, link navigation, form field navigation, toggling between browse mode and focus mode, landmark and list navigation, the Elements List dialog, finding text with NVDA Find, and navigating table cells with Ctrl+Alt+Arrow keys. A fully accessible practice web page opens automatically when you start any lesson in this chapter.
 
 ### Chapter 4: Object Navigation — 6 lessons
-How NVDA's object tree works, moving to next and previous objects, moving to parent and child objects, reading the current navigator object, routing keyboard focus to any control on screen, and when object navigation is the right tool. Desktop and laptop keyboard layouts are both documented throughout. This chapter covers controls that Tab cannot reach.
+How NVDA's object pyramid works, moving across objects at the same level, climbing up and descending through levels, reading the current navigator object, routing keyboard focus to any control on screen, and when object navigation is the right tool. Uses levels/pyramid terminology throughout. Desktop and laptop layouts documented.
 
 ### Chapter 5: Customizing NVDA — 2 lessons
-Changing your keyboard layout between desktop (numpad) and laptop (letter keys), and adjusting speech rate, voice, and synthesizer settings — including on-the-fly speed shortcuts.
+Changing your keyboard layout between desktop (numpad) and laptop (letter keys), and adjusting speech rate, voice, and synthesizer settings — including on-the-fly speed shortcuts with the synth settings ring.
+
+### Chapter 6: Your Keyboard — 3 lessons
+Where modifier keys live on standard and laptop keyboards (Ctrl, Shift, Alt, Windows key, NVDA key), how function keys and the Fn key work (Fn+arrows for Home/End/Page Up/Page Down, Fn Lock, multimedia vs F-key mode), and how to select and switch your NVDA keyboard layout setting.
 
 ---
 
@@ -125,7 +141,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.3.2.nvda-addon'
+output = 'nvdaCoach-1.4.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -163,6 +179,8 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **John Hess**, Adaptive Technology Specialist, State Services for the Blind — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter
 - **Brandon Patterson** — correction of synth settings ring keystrokes in the Customizing NVDA chapter
 - **Valentin Kupriyanov**, Head of the Russian-speaking NVDA user community — internationalization and localization proposal, first complete Russian localization, and detailed localization bug report
+- **Umut KORKMAZ** (Turkey) — Turkish translation
+- **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — assistive technology specialists with Pacific Northwest state agencies, hands-on feedback from April 2026 training sessions
 - **Nash** — feature and lesson requests
 - **Brian**
 - **Gene**

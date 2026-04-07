@@ -444,8 +444,8 @@ msgid "Auto-start disabled."
 msgstr "Автозапуск отключён."
 
 #: nvdaCoach/__init__.py:801
-msgid "Beep! You activated the button with Enter."
-msgstr "Сигнал! Вы активировали кнопку с помощью Enter."
+msgid "Beep! You activated the button."
+msgstr "Сигнал! Вы активировали кнопку."
 
 #: nvdaCoach/__init__.py:805
 msgid "Hello! You just activated a button. Great work."

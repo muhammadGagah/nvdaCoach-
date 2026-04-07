@@ -1,0 +1,453 @@
+{
+    "id": "getting_started",
+    "title": "NVDA'ya Başlarken",
+    "description": "Her yeni başlayanın ihtiyaç duyduğu temel NVDA komutlarını öğrenin. Her ders yaklaşık bir ila üç dakika süren kısa bir alıştırmadır.",
+    "order": 1,
+    "lessons": [
+        {
+            "id": "command_categories",
+            "title": "Komut Kategorilerini Anlamak",
+            "order": 1,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA Eğitmeni'ne hoş geldiniz. Herhangi bir komutla pratik yapmadan önce, çoğu belgenin gözden kaçırdığı bir şeyi anlamanıza yardımcı olur: Klavyenizde bir tuşa bastığınızda işi gerçekte kim yapıyor? Windows'ta klavye komutlarını kontrol eden üç farklı katman vardır ve bir komutun hangi katmana ait olduğunu bilmek, daha hızlı öğrenmenize ve daha az hata yapmanıza yardımcı olacaktır. Bu ders üçünü de kapsamaktadır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Üç katman şunlardır: Windows'un kendisi, kullandığınız uygulama ve ekran okuyucunuz. Her biri farklı komutları işler.",
+                        "Windows komutları her programda aynı şekilde çalışır. Uygulama komutları yalnızca ait oldukları programda çalışır. NVDA komutları yalnızca bilgileri duyurur; hiçbir şeyi değiştirmez.",
+                        "Bu kurs boyunca alıştırma yaparken, size söylenmeden önce her yeni komutun hangi kategoriye ait olduğunu tahmin etmeye çalışın. Bu alışkanlık daha hızlı sezgi geliştirir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "İlk katman Windows'un kendisidir. Bazı komutlar tamamen işletim sistemine aittir. Kes, Kopyala ve Yapıştır (Kontrol+X, Kontrol+C ve Kontrol+V) Windows komutlarıdır. Herhangi bir uygulama metni yapıştırmanıza izin verdiğinde, yapıştırmayı yapan uygulama değildir; bunu yapmak için Windows'a bir istekte bulunuyor. Başlat Menüsünü açmak, Alt+Sekme tuşlarıyla pencereler arasında geçiş yapmak ve Alt+F4 tuşlarıyla pencereyi kapatmak da Windows komutlarındandır. Windows'un kendisi sorumlu olduğundan her programda aynı şekilde çalışırlar. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kontrol artı C kopyala, Kontrol artı V yapıştır — bunlar her Windows programında çalışır çünkü bunları uygulama değil işletim sistemi yönetir.",
+                        "Alt artı Sekme açık pencereler arasında geçiş yapar. Alt artı F4 geçerli pencereyi kapatır. Her ikisi de her yerde çalışan Windows komutlarıdır.",
+                        "Windows komutları öğreneceğiniz en aktarılabilir becerilerdir; bunlarda bir kez ustalaştığınızda kullanacağınız her programda işe yararlar."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "İkinci katman kullandığınız uygulamadır. Bir kelime işlemcide Aşağı Ok tuşuna bastığınızda, kelime işlemciye imlecinizi bir sonraki satıra taşımasını söylüyorsunuz. Uygulama imleci hareket ettirir; bu bir program komutudur. Microsoft Word'de Kontrol+N yeni bir belge açar; bu, Windows'un değil Word'ün komutudur. Ekran okuyucunuzun imleci hareket ettirmekle hiçbir ilgisi yoktur. Uygulamanın halihazırda ne yaptığını yüksek sesle okur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kelime işlemcideki Aşağı Ok imleci hareket ettirir; işi uygulama yapar ve NVDA yalnızca olanları yüksek sesle okur.",
+                        "Aynı anahtar farklı uygulamalarda farklı anlamlara gelebilir. Kontrol artı N, Word'de yeni bir belge açar ancak tarayıcıda yeni bir sekme açar; çünkü her uygulama kendi komutlarını tanımlar.",
+                        "Bir şey beklendiği gibi çalışmadığında şunu unutmayın: NVDA yalnızca uygulamanın gösterdiğini okur. Uygulama hatalı çalışıyorsa bu bir NVDA sorunu değil, bir uygulama sorunudur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Üçüncü katman ekran okuyucunuzdur. NVDA komutları benzersizdir: uygulamada hiçbir işlem yapmazlar. Sadece bilgilendiriyorlar. NVDA+T'ye bastığınızda belgenizde hiçbir şey değişmez. Başlık çubuğu hareket etmiyor, hiçbir iletişim kutusu açılmıyor, hiçbir şey etkinleştirilmiyor. NVDA basitçe zaten orada olanı duyurur; çünkü gören kullanıcılar başlık çubuğuna istedikleri zaman bakabilirler ve sizin de onu duymanın bir yoluna ihtiyacınız vardır. Bu ayrım (hiçbir eylemde bulunma, yalnızca bilgilendir) ekran okuyucu komutlarını diğerlerinden farklı kılan şeyin özüdür. NVDA Eğitmeni üzerinde çalışırken, size söylenmeden her komutun hangi katmana ait olduğunu anlamaya başlayacaksınız. İlk dersinize başlamak için Enter tuşuna basın.",
+                    "hints": [
+                        "NVDA komutları her zaman NVDA değiştirici tuşuyla başlar (genellikle Insert veya Caps Lock) ve ekrandaki hiçbir şeyi değiştirmezler. Sadece bilgi konuşuyorlar.",
+                        "NVDA artı T tuşuna bastığınızda ekranda hiçbir şey değişmezse bu doğru davranıştır. NVDA hiçbir şeyi değiştirmeden başlık çubuğunu yüksek sesle okur.",
+                        "NVDA komutlarını soru olarak düşünün. NVDA plus T 'bu pencerenin başlığı nedir?' diye sorar. NVDA konuşarak yanıt veriyor ve hiçbir şey değişmiyor."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "nvda_key",
+            "title": "NVDA Tuşuyla Tanışın",
+            "order": 2,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA Eğitmeni'ne hoş geldiniz! Şu anda yanınızda yardımcı bir teknoloji eğitmeniniz varsa, bu onlara başladığınızı bildirmek için harika bir andır. Sizinle birlikte oturabilir, tuşları bulmanıza yardımcı olabilir ve giderken sorularınızı yanıtlayabilirler. Kendi başınıza çalışıyorsanız, bu kesinlikle sorun değil. NVDA Eğitmeni, size bağımsız olarak rehberlik etmek üzere tasarlanmıştır ve bunu yapabilirsiniz. Takıldığınızı hissederseniz ipucu için F2'ye, talimatı tekrar dinlemek için F1'e veya bir adımı atlayıp daha sonra o adıma geri dönmek için F3'e basın. Bu ilk derste NVDA değiştirici tuşunu öğreneceksiniz. Bu, NVDA'ya komut göndermek için diğer tuşlara basarken basılı tuttuğunuz özel tuştur. Çoğu klavyede Insert tuşu bulunur. Birçok dizüstü bilgisayarda Caps Lock'tur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Çoğu masaüstü klavyede NVDA tuşu Insert tuşudur. Ana Sayfa, Sil ve Sayfa Yukarı yakınındaki ok tuşlarının üzerindeki tuş kümesindedir.",
+                        "Birçok dizüstü bilgisayarda Caps Lock, NVDA Tuşu görevi görür. Klavyenin en solunda, sol Shift tuşunun hemen üstündedir.",
+                        "Insert ve Caps Lock'u aynı anda NVDA tuşları olarak kullanabilirsiniz. NVDA her ikisini de kabul eder, böylece hiçbir zaman aralarında seçim yapmak zorunda kalmazsınız."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA+N, NVDA'nın tüm ayarları ve özellikleri için merkeziniz olan NVDA menüsünü açar. Görme yeteneği olan kullanıcılar fareyle bir menüye tıklayabilir; NVDA+N sizin eşdeğerinizdir. Şimdi deneyin. NVDA tuşunu basılı tutun ve N harfine basın. NVDA'nın bir menü açtığını ve Tercihler, Araçlar ve Yardım gibi öğeleri duyurmaya başladığını duymalısınız. Menünün açıldığını duyduğunuzda, kapatmak için Escape tuşuna basın ve buraya geri dönün, ardından devam etmek için Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+n"
+                    ],
+                    "hints": [
+                        "Önce Insert veya Caps Lock tuşunu basılı tutun ve hemen ardından N harfine basın. Her iki tuşa aynı anda değil, birlikte basılmalıdır.",
+                        "Menü açılmazsa tekrar deneyin. N'ye basmadan önce NVDA tuşunu basılı tuttuğunuzdan emin olun. NVDA tuşunu çok erken bırakmak yaygın bir hatadır.",
+                        "Menü açıldıktan sonra kapatmak ve kaldığınız yere dönmek için Escape tuşuna basın. Escape, tüm Windows'taki menüleri ve iletişim kutularını iptal eder."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Tebrikler! Artık NVDA menüsünü nasıl açıp kapatacağınızı biliyorsunuz. NVDA+N menüyü açar; tercihler, araçlar ve yardım için ana merkezinizdir. Escape tuşu menüleri kapatıp işlemleri iptal eder ve sürekli olarak kullandığınız tuştur. Bu iki kısayol birlikte NVDA'nın yapabileceği her şeye tam erişim sağlar. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "NVDA artı N, NVDA'nın yapabileceği her şey (ayarlar, araçlar, yardım ve daha fazlası) için ana tuşunuzdur. Bunu ilk alışkanlığınız haline getirmeye değer.",
+                        "Escape tuşu herhangi bir işlem yapmadan menüleri kapatır ve diyalogları iptal eder. Hiçbir zaman zarar vermez; şüpheye düştüğünüzde Escape tuşuna basın.",
+                        "NVDA menüsünü kendi başınıza birkaç kez daha açıp kapatma alıştırması yapın. Kas hafızası hızla gelişecektir."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "title_bar",
+            "title": "Başlık Çubuğunu Okuyun",
+            "order": 3,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Her pencerenin üst kısmında, hangi programda olduğunuzu söyleyen bir başlık çubuğu bulunur. Görebilen kullanıcılar, başlık çubuğuna istedikleri zaman bakabilirler. NVDA+T başlık çubuğunu yüksek sesle söyler; bu bakışın eşdeğeridir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Başlık çubuğu her pencerenin en üstünde bulunan şerittir. Genellikle programın adını ve bazen de geçerli belgeyi veya sayfa başlığını gösterir.",
+                        "NVDA artı T hızlı bir yönlendirme komutudur. Şu anda hangi programın etkin olduğundan emin olmadığınız her zaman kullanın.",
+                        "NVDA artı T'ye iki kez bastığınızda başlık çubuğu karakter karakter hızlı bir şekilde görüntülenir; başlık tanımadığınız bir kısaltma içerdiğinde kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve T harfine basın. NVDA'nın geçerli pencerenin başlık çubuğunu okuduğunu duymalısınız; şu anda içinde bulunduğunuz programın adı gibi bir şey. Hangi programa baktığınızdan emin olmadığınızda NVDA+T bunu size hemen söyleyecektir. Öğreneceğiniz en yararlı komutlardan biridir. Devam etmek için burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+t"
+                    ],
+                    "hints": [
+                        "NVDA tuşunu (Insert veya Caps Lock) basılı tutun ve T harfine basın. T tuşu, harflerin orta sırasında, R ile Y arasındadır.",
+                        "NVDA'da 'NVDA Eğitmeni — ders penceresi' gibi bir şey yazıyorsa bu doğrudur. Şu anda aktif olan pencerenin başlığını okuyor.",
+                        "NVDA'nın başlığı karakter karakter yazmasını sağlamak için NVDA artı T tuşlarına iki kez hızlı bir şekilde basın. Bu, başlığın alışılmadık bir kelime veya kısaltma olduğu durumlarda kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Alışkanlığı geliştirmek için bunu bir kez daha yapalım. NVDA tuşunu basılı tutun ve tekrar T tuşuna basın. NVDA'nın başlık çubuğunu yüksek sesle okumasını dinleyin. Tekrarlama, klavye komutlarının nasıl otomatik hale geldiğini gösterir; ne kadar çok pratik yaparsanız, her komut o kadar hızlı ikinci doğanız haline gelir. Devam etmeye hazır olduğunuzda burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+t"
+                    ],
+                    "hints": [
+                        "Bu sefer, önce Alt artı Sekme tuşlarına basarak farklı bir açık pencereye geçmeyi deneyin, ardından o pencerenin başlığını duymak için NVDA artı T tuşlarına basın.",
+                        "NVDA artı T, Alt artı Sekme ile pencere değiştirdikten sonra özellikle kullanışlıdır, çünkü hangi programa girdiğinizi her zaman kulaktan söyleyemezsiniz.",
+                        "NVDA'yı basılı tutun, T'ye basın ve ardından ikisini birden bırakın. Başlığın hemen söylendiğini duymalısınız."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "read_time",
+            "title": "Saati Seslendir",
+            "order": 4,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Görebilen kullanıcılar ekranın köşesindeki saate bakabilirler. NVDA+F12, herhangi bir yere gitmenize gerek kalmadan geçerli saati söyler. NVDA, yaptığınız işi bırakmadan size o anki saati ve tarihi söyleyebilir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "F12, klavyenizin üst satırında, F1'den F12'ye kadar olan satırın en sağ ucunda yer alan son işlev tuşudur.",
+                        "NVDA artı F12 tuşuna iki kez basmak, saat yerine geçerli tarihi hızlı bir şekilde okur; bu, herhangi bir programı açmadan her ikisini de kontrol etmenin kullanışlı bir yoludur.",
+                        "İşlev tuşları klavyenin en üst kısmında bulunur. F12 bu satırın en sağ ucunda, genellikle Print Screen veya Scroll Lock tuşunun yanındadır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve klavyenizin üst satırında, genellikle en sağda yer alan son işlev tuşu olan F12'ye basın. NVDA'nın geçerli saati seslendirdiğini duymalısınız. Kısa ipucu: NVDA+F12 tuşlarına art arda iki kez basarsanız, NVDA saat yerine tarihi okur. İsterseniz ikisini de deneyin, ardından devam etmek için burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+f12"
+                    ],
+                    "hints": [
+                        "F12, klavyenin üst kısmındaki işlev tuşları sırasındaki son tuştur. NVDA anahtarınızı basılı tutun ve F12 tuşuna basın.",
+                        "Doğru tuşa bastığınızdan emin değilseniz Girdi Yardımı'nı kullanın: açmak için NVDA artı 1'e basın, test etmek istediğiniz tuşa basın, açıklamayı dinleyin ve ardından kapatmak için NVDA artı 1'e tekrar basın.",
+                        "Tarihin tamamını dinlemek için NVDA artı F12 tuşlarına art arda iki kez basın. İlk basış zamanı verir; ikinci hızlı basış tarihi verir."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "stop_speech",
+            "title": "NVDA'nın Konuşmasını Durdurun",
+            "order": 5,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bazen NVDA çok fazla konuşuyor ya da cümlenin ortasında durmasını istiyorsunuz. Kontrol tuşu tek başına konuşmayı hemen susturur. Buna konuşmayı durdurma denir. Narrator, JAWS ve VoiceOver'da da çalışır; evrensel bir ekran okuyucu kuralıdır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kontrol tuşu klavyenizin sol alt köşesindedir. Çoğu klavyenin sağ alt köşesinde ikinci bir Kontrol tuşu da bulunur. Her ikisi de NVDA'yı susturur.",
+                        "Tek bir Kontrol dokunuşu NVDA konuşmasını anında durdurur. Tutmanıza veya başka bir tuşla birleştirmenize gerek yoktur.",
+                        "Kontrol konuşmayı tamamen durdurur ve devam edemez. Daha sonra öğreneceğiniz Shift tuşu duraklatır ve NVDA'nın kaldığı yerden devam etmesi için tekrar basılması yeterlidir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Ayrıca ikinci bir seçenek daha var: Shift tuşu. Shift tuşuna basmak NVDA'nın konuşmasını cümlenin ortasında duraklatır. Tekrar Shift tuşuna bastığınızda NVDA okumaya kaldığı yerden devam eder. Bu duraklatma ve devam ettirme davranışı NVDA'ya özeldir. Odaklanmak için kısa bir süreye ihtiyaç duyduğunuzda (örneğin, bir belgeyi çevirirken bir telefon numarasını okurken) kullanışlıdır. Duraklatmak için Shift tuşuna bir kez basın, ardından devam etmek için tekrar Shift tuşuna basın. Kontrol tamamen durur. Vardiya duraklar ve devam eder. Her ikisi de bilmeye değer. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Shift tuşu, klavyenin her iki yanındaki Kontrol tuşunun hemen üzerindeki geniş tuştur. Tek bir basış NVDA'yı duraklatır; tekrar basıldığında kaldığı yerden devam edilir.",
+                        "Harekete geçmek için biraz zamana ihtiyacınız olduğunda duraklatmak için Shift'i kullanın; örneğin, NVDA bir telefon numarasını okuyor ve onu çevirmeniz gerekiyor. Devam etmek için Shift ile duraklatın, çevirin ve ardından tekrar Shift tuşuna basın.",
+                        "Devam edilmeden kontrol tamamen durur. Vardiya duraklar ve devam eder. Her ikisi de hiçbir değiştiriciye ihtiyaç duymadan tek tuşa basılmıştır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Bu tuşların alıştırmalarına ilişkin bir not: Aktif bir ders sırasında Kontrol veya Shift tuşlarına basmak dersin kendisini olumsuz etkileyebilir, bu nedenle burada güvenilir ders içi alıştırma yapmak mümkün değildir. Bunun yerine alışkanlığı doğal bir şekilde geliştirin. Bir dahaki sefere NVDA çok uzun veya çok hızlı bir şey okuduğunda, onu durdurmak için Kontrol'e ulaşın. Okumanın ortasında biraz zamana ihtiyacınız olduğunda duraklatmak ve devam ettirmek için Shift tuşunu deneyin. Gerçek kullanımda her iki refleksi de hızlı bir şekilde keşfedeceksiniz. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "Pratik yapmak için en iyi zaman Tümünü seslendir sırasındadır; okumaya başlamak için NVDA artı Aşağı Ok (masaüstü düzeni) veya NVDA artı A (dizüstü bilgisayar düzeni) tuşlarına basın, ardından durdurmak için Kontrol'ü veya duraklatmak için Shift tuşunu kullanın. Tümünü Seslendir konusu Metin Okuma bölümünde ele alınmaktadır.",
+                        "Bu tuşlara istediğiniz zaman basmak tamamen güvenlidir. Bunlar yalnızca NVDA'nın konuşma çıktısını etkiler ve kullandığınız uygulama üzerinde hiçbir etkisi yoktur.",
+                        "Bu refleksleri günlük kullanımla doğal olarak geliştireceksiniz. Bir dahaki sefere NVDA çok uzun bir şey okuduğunda Kontrol'e ulaşın; otomatik hale gelecektir."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "where_am_i",
+            "title": "Nerede Olduğunuzu Öğrenin",
+            "order": 6,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Görebilen kullanıcılar ekranda hangi kontrolün vurgulandığını görebilir. NVDA+Sekme, o anda odaklandığınız kontrolün adını, türünü ve durumunu seslendirir; bu görsel bakışın eşdeğeridir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA artı Sekme o anda odaklanılan kontrolü okur - adı, türü (düğme, onay kutusu, düzenleme alanı) ve durumu (işaretli, basılmış vb.).",
+                        "Farkı not edin: Yalnızca sekme sizi bir sonraki kontrole taşır. NVDA artı Sekme, mevcut kontrolü hiçbir yere hareket etmeden okur.",
+                        "Bu komut en çok beklenmedik bir yere indiğinizde ve başka bir şey yapmadan önce nerede olduğunuzu bulmanız gerektiğinde kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Uygulama giriş formu ayrı bir pencerede açılmak üzere. Göründüğünde geçiş yapmak için Alt+Sekme tuşlarına basın. Sekme tuşuyla farklı kontrollere gidin ve NVDA'nın bunları tanımladığını duymak için her birinde NVDA+Sekme tuşlarına basın. İşiniz bittiğinde buraya dönmek için Alt+Sekme tuşlarına basın, ardından Eğitmen penceresini öne getirmek için NVDA+Shift+C tuşlarına basın ve devam etmek için Enter tuşuna basın. Hazır? Pratik formunu açmak için şimdi Enter tuşuna basın.",
+                    "openPracticeFrameAfter": true,
+                    "hints": [
+                        "Uygulama penceresine açıldıktan sonra geçmek için Alt artı Sekme tuşlarına basın. Bir sonraki açık pencereye geçmek için Alt tuşunu basılı tutun ve Sekme tuşuna bir kez basın.",
+                        "Yanlış pencereye geçerseniz, Alt tuşunu basılı tutun ve alıştırma formunu duyana kadar tüm açık pencereler arasında geçiş yapmak için Sekme tuşuna tekrar basın.",
+                        "Uygulama formunda bir kullanıcı adı alanı, bir şifre alanı, bir onay kutusu ve düğmeler bulunur. NVDA'nın her bir kontrol türünü nasıl tanımladığını duymak için her birine dokunun ve NVDA artı Sekme tuşlarına basın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi uygulama penceresinde, oturum açma formundaki herhangi bir kontrole Sekme tuşuyla gidin ve ardından NVDA+Sekme tuşlarına basın. NVDA, odaklandığınız kontrolün adını, türünü ve durumunu duyuracaktır. Örneğin 'Kullanıcı adını düzenle' veya 'Oturum aç düğmesi' diyebilir. NVDA'nın her türü nasıl tanımladığını öğrenmek için bunu birkaç farklı kontrolde (metin alanları, onay kutusu ve her düğme) deneyin. Keşfetmeyi tamamladığınızda buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+Sekme"
+                    ],
+                    "hints": [
+                        "NVDA tuşunu basılı tutun ve Sekme tuşuna basın. Bu, tek başına Sekme'den farklıdır; Tek başına Sekme odağı hareket ettirir, ancak NVDA artı Sekme, hareket etmeden yalnızca geçerli kontrolü okur.",
+                        "NVDA artı Sekme'yi birkaç farklı kontrol türünde deneyin. Bir metin alanı, bir düğmeden, onay kutusundan farklı bir ses çıkarır.",
+                        "İşiniz bittiğinde Eğitmen penceresini öne getirmek için NVDA artı Shift artı C tuşlarına basın, ardından devam etmek için Enter tuşuna basın."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tab_navigation",
+            "title": "Sekmeyle Kontroller Arasında Geçiş Yapın",
+            "order": 7,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "İletişim kutularında, ayar pencerelerinde ve formlarda düğmeler, onay kutuları ve metin alanları gibi denetimler arasında ilerlemek için Sekme tuşuna basarsınız. Shift+Sekme sizi geriye doğru hareket ettirir. Bu, her Windows programında aynıdır; burada öğrenmek, onu her yerde kullanabileceğiniz anlamına gelir. NVDA'yı Kişiselleştirme bölümündeki NVDA Ayarları iletişim kutusu da dahil olmak üzere, bu kurs boyunca Sekme ve Shift+Sekme tuşlarını kullanacaksınız. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sekme tuşu klavyenin en sol tarafında, Caps Lock'un hemen üstündedir. Genellikle zıt yönleri gösteren iki ok içeren bir sembol bulunur.",
+                        "Shift artı Sekme, denetimler arasında geriye doğru hareket eder; yalnızca Sekme'nin tersi yöndedir. Birlikte herhangi bir form veya diyalogda özgürce hareket etmenize olanak tanırlar.",
+                        "Sekme ve Shift artı Sekme, her Windows iletişim kutusunda, formunda ve ayarlar penceresinde aynı şekilde çalışır. Burada ustalaşın. Bunları herhangi bir programda kullanabilirsiniz."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Ayrı bir pencerede uygulama formu açılmak üzeredir. Göründüğünde geçiş yapmak için Alt+Sekme tuşlarına basın. Denetimler arasında ilerlemek için Sekme tuşuna basın. İşiniz bittiğinde buraya dönmek için Alt+Sekme tuşlarına basın, Eğitmen penceresini etkinleştirmek için NVDA+Shift+C tuşlarına basın ve devam etmek için Enter tuşuna basın. Hazır? Pratik formunu açmak için şimdi Enter tuşuna basın.",
+                    "openPracticeFrameAfter": true,
+                    "hints": [
+                        "Alıştırma formu açıldıktan sonra geçiş yapmak için Alt artı Sekme tuşlarına basın. Alt tuşunu basılı tutun ve Sekme tuşuna bir kez dokunun.",
+                        "Eğitmen penceresini tekrar etkinleştirmek için istediğiniz zaman NVDA artı Shift artı C tuşlarına basın.",
+                        "Alıştırma formunda metin alanları, onay kutuları ve düğmeler gibi çeşitli kontroller bulunur. Geri dönmeden önce formun tamamı boyunca Sekme tuşuna basın."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Alt+Sekme tuşlarına basarak pratik formuna geçin. Oraya vardığınızda bir sonraki kontrole geçmek için Sekme tuşuna basın. NVDA, her kontrolün adını ve türünü, üzerine geldiğinizde duyuracaktır. Formun tamamında dolaşmak için Sekme tuşuna basmaya devam edin. Hazır olduğunuzda buraya geri dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+                    "hint": "Sekme tuşu klavyenizin sol tarafında, Caps Lock'un üstünde bulunur. Sadece tek başına basın. Sekme tuşuna her bastığınızda NVDA, taşındığınız kontrolü duyurur.",
+                    "hints": [
+                        "Sekme tuşu klavyenin en solunda, Caps Lock'un hemen üstündedir. Tek başına basın; değiştirici tuşa gerek yoktur.",
+                        "Sekme tuşuna her basıldığında bir sonraki kontrole geçilir ve NVDA bu kontrolün adını ve türünü duyurur. 'Düğme', 'düzenle' veya 'onay kutusu' gibi kelimeleri dinleyin.",
+                        "Sekme tuşuyla formdaki son kontrolü geçerseniz odak ilk kontrole geri döner. Bu normaldir; süresiz olarak geçiş yapmak için Sekme tuşuna basmaya devam edebilirsiniz."
+                    ],
+                    "expectedGestures": [
+                        "kb:sekme"
+                    ],
+                    "successMessage": "Bir sonraki kontrole geçtiniz. NVDA neye ulaştığınızı açıkladı.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1500
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi alıştırma formunda, önceki kontrole geri dönmek için Shift+Sekme tuşlarına basın. Shift'i basılı tutun ve Sekme tuşuna basın. NVDA, geri döndüğünüz kontrolü duyuracaktır. Sekme ileri gider, Shift+Sekme geri gider. Hazır olduğunuzda buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+                    "hint": "Shift tuşunu basılı tutun ve Sekme tuşuna basın. Shift, klavyenin her iki yanında Ctrl'nin hemen üzerindeki büyük geniş tuştur.",
+                    "hints": [
+                        "Önce Shift'i basılı tutun, ardından Shift'i basılı tutarken Sekme tuşuna basın. Shift, sol Kontrol tuşunun üzerindeki geniş tuştur.",
+                        "Shift artı Sekme her zaman geriye doğru hareket eder; tek başına Sekme tuşunun tam tersi. Bir kontrolü aştığınızda ve geri dönmeniz  gerektiğinde bunu kullanın.",
+                        "Hiçbir zaman bir formun başından başlamak zorunda kalmazsınız. Çok ileri giderseniz Shift artı Sekme sizi hemen geri getirir."
+                    ],
+                    "expectedGestures": [
+                        "kb:Shift+sekme"
+                    ],
+                    "successMessage": "Geriye doğru gittiniz. Sekme ileri gider, Shift+Sekme geri gider. Bu iki anahtar sizi çoğu iletişim kutusu ve formda yönlendirecektir.",
+                    "allowExecution": true,
+                    "feedbackDelay": 2000
+                }
+            ]
+        },
+        {
+            "id": "activate_Kontrols",
+            "title": "Düğmeleri ve Kontrolleri Etkinleştirin",
+            "order": 8,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bir düğmeye veya kontrole Sekme tuşu ile geldikten sonra onu etkinleştirmeniz gerekir. Etkinleştirme düğmelerini ve varsayılan eylemleri girin. Boşluk, onay kutularını açar ve kapatır. Bu tuşlar her Windows programında aynı şekilde çalışır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Enter activates buttons. Boşluk, onay kutularını açar ve kapatır. Bu iki anahtar, Windows iletişim kutularındaki neredeyse tüm etkinleştirme görevlerini yerine getirir.",
+                        "Bir onay kutusunda Aralık tuşuna bastıktan sonra NVDA, yeni durumu onaylamak için 'işaretli' veya 'işaretsiz' ifadesini duyurur.",
+                        "Radyo düğmeleri için seçenekler arasında geçiş yapmak için Aralık veya Enter yerine Yukarı ve Aşağı Ok tuşlarını kullanın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Onay kutularını ve düğmeleri içeren bir uygulama penceresi açılmak üzere. Göründüğünde geçiş yapmak için Alt+Sekme tuşlarına basın. İşiniz bittiğinde buraya dönmek için Alt+Sekme tuşlarına basın, Eğitmen penceresini etkinleştirmek için NVDA+Shift+C tuşlarına basın ve devam etmek için Enter tuşuna basın. Hazır? Uygulama penceresini açmak için şimdi Enter tuşuna basın.",
+                    "openPracticeFrameAfter": true,
+                    "hints": [
+                        "Uygulama penceresine açıldıktan sonra geçmek için Alt artı Sekme tuşlarına basın.",
+                        "Uygulama penceresinde onay kutuları ve düğmeler bulunur. Her birine dokunun ve NVDA'nın kontrol tipini nasıl duyurduğunu dinleyin, böylece hangi tuşu kullanacağınızı bilirsiniz.",
+                        "NVDA, siz Sekme tuşuna bastığınızda düğme adlarını ve onay kutusu etiketlerini duyurur. Düğmeler Enter ile etkinleştirilir; onay kutuları Boşluk çubuğu ile seçilir."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Alt+Sekme tuşlarıyla pratik penceresine geçin. 'Ekran okuyucu ipuçlarını etkinleştir' veya 'Alıştırma ipuçlarını göster' etiketli onay kutularından birine dokunun ve ardından işaretlemek veya işaretini kaldırmak için Boşluk çubuğuna basın. NVDA kutunun işaretli mi yoksa işaretsiz mi olduğunu seslendirecek. İşiniz bittiğinde buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+                    "hint": "Boşluk çubuğu klavyenizin alt orta kısmındaki uzun tuştur. Öncelikle bir onay kutusuna Sekme tuşu ile geldiğinizden emin olun.",
+                    "hints": [
+                        "Boşluk çubuğu, klavyenin en alt orta kısmında bulunan uzun düz tuştur. Basmadan önce bir onay kutusuna Sekme tuşu ile geldiğinizden emin olun.",
+                        "Aralık tuşuna bastıktan sonra NVDA, onay kutusu açıksa 'işaretli', kapattıysanız 'İşaretli değil' diyor. Bu, eylemin işe yaradığını doğrular.",
+                        "Aralık ayrıca bazı düğme türlerini de etkinleştirir, ancak Enter, düğmeler için daha güvenilir seçimdir. Özellikle onay kutuları ve geçiş kontrolleri için boşluk çubuğunu kullanın."
+                    ],
+                    "expectedGestures": [
+                        ""
+                    ],
+                    "successMessage": "Boşluk çubuğuna basıldı. Boşluk, onay kutularını işaretlemek veya işaretlerini kaldırmak ve bazı düğmeleri etkinleştirmek için kullanılır.",
+                    "allowExecution": false,
+                    "feedbackDelay": 500
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi pratik penceresinde 'Bip sesi çal', 'Merhaba de' veya 'Klavye ipucunu göster' düğmelerinden birine gidin ve etkinleştirmek için Enter tuşuna basın. NVDA olanları açıklayacak. İşiniz bittiğinde buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+                    "hint": "Enter, ana klavye alanının sağ tarafındaki büyük tuştur. Öncelikle bir düğmeye Sekme tuşu ile geldiğinizden emin olun.",
+                    "hints": [
+                        "Enter, ana klavye alanının sağ tarafındaki büyük tuştur. Bazı klavyelerin sayısal tuş takımında ikinci bir Enter tuşu da bulunur; her ikisi de işe yarar.",
+                        "Önce bir düğmeye dokunun, ardından etkinleştirmek için Enter'a basın. Hiçbir şey olmuyorsa, sekmeye bastığınızda NVDA'nın 'düğmeyi' duyurduğundan emin olun.",
+                        "Sekme, Boşluk ve Enter tuşları arasında herhangi bir Windows uygulaması veya iletişim kutusundaki hemen hemen her denetimde gezinebilir ve bunları etkinleştirebilirsiniz."
+                    ],
+                    "expectedGestures": [
+                        "kb:Enter",
+                        "kb:Enter",
+                        "kb:numpadenter"
+                    ],
+                    "successMessage": "Enter tuşuna basıldı. Enter, düğmeleri etkinleştirir ve bağlantıları takip eder. Sekme, Boşluk ve Enter tuşları arasında hemen hemen her iletişim kutusunda gezinebilirsiniz.",
+                    "allowExecution": false,
+                    "feedbackDelay": 500
+                }
+            ]
+        },
+        {
+            "id": "read_current_line",
+            "title": "Geçerli Satırı Oku",
+            "order": 9,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bir belge veya metin alanında olduğunuzda, NVDA'nın imlecinizin bulunduğu satırı okumasını sağlayabilirsiniz. NVDA+Yukarı Ok geçerli satırı okur; bir belgede tam olarak nerede olduğunuzu doğrulamak istediğinizde kullanışlıdır. Bir sonraki adımda bir alıştırma metni alanı bulunur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA artı Yukarı Ok, imlecinizi hareket ettirmeden geçerli satırı okur. Belgedeki konumunuz tam olarak olduğu yerde kalır.",
+                        "Yukarı Ok tuşu, klavyenin sağ alt kısmındaki ok tuşu kümesindedir. NVDA tuşunu basılı tutun ve yukarıyı gösteren oka basın.",
+                        "Bir belgede nerede olduğunuzu kaybettiğinizde NVDA ve Yukarı Ok'u kullanın; hiçbir şeyi değiştirmeden imlecinizin üzerinde bulunduğu satırı yeniden okur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "İmlecinizi satırlar arasında hareket ettirmek için aşağıdaki alıştırma metni alanına okla gidin. Daha sonra NVDA'nın geçerli satırı yüksek sesle okuması için NVDA+Yukarı Ok tuşlarına basın. Yukarı veya Aşağı Ok ile farklı bir satıra gidin ve her birini duymak için tekrar NVDA+Yukarı Ok tuşlarına basın. Bu, herhangi bir belge, e-posta veya metin alanında çalışır. İşiniz bittiğinde devam etmek için Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+yukarı ok"
+                    ],
+                    "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşma alışkanlığını geliştirir.\nOk tuşları metinde adım adım ilerlemenizi sağlar.\nKontrol artı oklar aynı anda tüm kelimelerin yanından atlar.\nHome ve End bir satır başı ve sonuna taşınır.\nKontrol artı Home veya End, Belge başı ve sonuna atlar.\nBurası alıştırma alanının son satırıdır.",
+                    "hints": [
+                        "NVDA tuşunu basılı tutun (Insert veya Caps Lock) ve Yukarı Ok tuşuna basın. Yukarı Ok, klavyenin sağ alt kısmındaki ok grubundaki yukarıyı gösteren tuştur.",
+                        "Önce Aşağı Ok tuşuyla imlecinizi farklı satırlara getirin, ardından NVDA artı Yukarı Ok tuşlarına basarak hangi satırda olduğunuzu onaylayın.",
+                        "NVDA bir satırı okuduğu halde tamamını yakalayamadıysanız, NVDA artı Yukarı Ok tuşuna tekrar basmanız yeterlidir. Aynı satırı yeniden okumak için gerektiği kadar basabilirsiniz."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "input_help",
+            "title": "Girdi Yardımıyla Tuşları Keşfedin",
+            "order": 10,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA+1 Girdi Yardımı moduna geçiş yapar. Açıkken herhangi bir tuşa basmak, aslında hiçbir şey yapmadan, o tuşun NVDA'da ne yaptığını size bildirir. Klavyenizi keşfetmenin tamamen güvenli bir yoludur ve NVDA'ya özeldir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA artı 1, klavyenin en üst sırasındaki 1 sayısını (harf tuşlarının üzerindeki sayı sırası) kullanır. Sayısal tuş takımı 1'i kullanmayın.",
+                        "Girdi Yardımı modunda herhangi bir tuşa basmak tamamen güvenlidir. Aslında uygulamada hiçbir şey olmuyor; NVDA yalnızca tuşun ne yapacağını açıklıyor.",
+                        "Girdi Yardımı, NVDA'nın sahip olduğu en kullanışlı öğrenme araçlarından biridir. Alışılmadık bir tuş kombinasyonuyla karşılaştığınızda ve ne işe yaradığını öğrenmek istediğinizde bunu kullanın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve klavyenizin üst sırasındaki 1 rakamına basın; sayısal tuş takımına değil, harf tuşlarının hemen üzerindeki sayı satırına. NVDA'nın 'Girdi yardımı açık' dediğini duymalısınız. Girdi Yardımı etkinken herhangi bir tuşa basabilirsiniz; NVDA, eylemi gerçekleştirmeden o tuşun ne yaptığını açıklayacaktır. Devam etmek için burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+1"
+                    ],
+                    "hints": [
+                        "NVDA tuşunu basılı tutun ve klavyenin üst sırasındaki 1 rakamına basın. 1 rakamı, sayı satırının en solunda, Q tuşunun hemen üstündedir.",
+                        "Girdi Yardımı açıldığında herhangi bir tuşa basmayı deneyin; örneğin F12'ye bastığınızda NVDA size aslında saati okumadan saati okuduğunu söyleyecektir.",
+                        "NVDA, aktif olduğunu onaylamak için 'Girdi Yardımı açık' diyor. Açıkken, her tuş basımı açıklanır ancak hiçbir şey yürütülmez."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi Girdi Yardımını kapatmak için NVDA+1 tuşuna tekrar basın. NVDA tuşunu basılı tutun ve 1 rakamına basın. NVDA'nın 'Girdi yardımı kapalı' dediğini duymalısınız. Gelecekte bir tuşun ne işe yaradığını unutduğunuzda, Girdi Yardımı'nı açın, açıklamasını dinlemek için tuşa basın ve ardından Girdi Yardımı'nı tekrar kapatın. Bu, her zaman kullanabileceğiniz yerleşik bir kopya kağıdına sahip olmak gibidir. Devam etmek için burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+1"
+                    ],
+                    "hints": [
+                        "NVDA artı 1'e tekrar basın; Girdi Yardımını açan aynı kombinasyon onu kapatacaktır. NVDA onaylamak için 'Giriş yardımı kapalı' diyor.",
+                        "Kapattıktan sonra tüm tuşlar hemen normal davranışlarına devam eder.",
+                        "Bu kısayolu hayatınız boyunca unutmayın: Bilmediğiniz bir tuş birleşimiyle karşılaştığınızda, Girdi Yardımı'nı açın, açıklamayı duymak için ona basın ve ardından tekrar kapatın."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "getting_help",
+            "title": "Kullanım Kılavuzunu açın",
+            "order": 11,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA, istediğiniz zaman açabileceğiniz eksiksiz bir kullanım kılavuzuyla birlikte gelir. Kullanım kılavuzu NVDA menüsünde Yardım altında bulunur. Kendi başınıza daha fazlasını öğrenmek istediğinizde harika bir referanstır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kullanım kılavuzu varsayılan web tarayıcınızda yerel bir HTML dosyası olarak açılır. NVDA ile birlikte yüklendiğinden internet bağlantısı olmadan da okuyabilirsiniz.",
+                        "Kullanım kılavuzunu açmak için: NVDA menüsünü açmak için NVDA artı N tuşuna basın, Yardım için A tuşuna basın, ardından Kullanım Kılavuzu için K tuşuna basın. Tarayıcınız otomatik olarak açılacaktır.",
+                        "Kullanım kılavuzunda her NVDA komutu ve özelliği ayrıntılı olarak anlatılmaktadır. Başlıklar arasında hızlı bir şekilde dolaşmak için bu kursun ilerleyen bölümlerinde ele alınan Tarama Kipini kullanabilirsiniz."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve NVDA menüsünü açmak için N tuşuna basın. NVDA'nın menüyü ve öğelerini seslendirdiğini duymalısınız. Buradan, gerçek kullanımda, öğeler arasında gezinmek için Aşağı Ok'a basabilir, Yardım'a gidebilir ve ardından istediğiniz zaman tüm belgeleri okumak için Kullanıcı Kılavuzu'nu seçebilirsiniz. Şimdilik sadece menü açılışını dinleyin, ardından Escape tuşuna basarak menüyü kapatın ve buraya geri dönün. Devam etmek için Enter'a basın.",
+                    "monitorGestures": [
+                        "kb:nvda+n"
+                    ],
+                    "hints": [
+                        "Menüyü açmak için NVDA Tuşunu basılı tutun ve N tuşuna basın. Açıldığında, Yardım alt menüsünü açmak için A tuşuna basın, ardından Kullanım Kılavuzu için K tuşuna basın.",
+                        "Menüde beklenmedik bir yere gelirseniz Escape tuşuna basarak menüyü kapatıp tekrar deneyin. Menü her seferinde en üstte açılır.",
+                        "NVDA menüsü Tercihler, Araçlar, Yardım ve diğer birkaç öğe halinde düzenlenmiştir. Ok tuşları onun içinde hareket eder; Enter bir alt menüyü açar veya bir öğeyi etkinleştirir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Mükemmel iş — Başlarken bölümünü tamamladınız! Artık üç komut kategorisini nasıl tanımlayacağınızı biliyorsunuz ve sizi günlük kullanımda yönlendirecek temel NVDA komutlarının alıştırmasını yaptınız: NVDA Tuşunu, başlık çubuğunu ve zamanı okuma, konuşmayı durdurma, odak noktanızı bulma, Sekme ile dolaşma, kontrolleri etkinleştirme, satırları okuma, Girdi Yardımını kullanma ve kullanım kılavuzunu açma. Her gün biraz pratik yapın ve bu komutlar otomatik hale gelecektir. Daha fazlasına hazır olduğunuzda ders seçiciyi açmak ve bir sonraki bölüme başlamak için NVDA+Shift+C tuşlarına basın: Okuma ve Metin İçinde Hareket Etme. Bitirmek için Enter'a basın.",
+                    "chapterComplete": true,
+                    "hints": [
+                        "Başlarken bölümünü tamamladınız. Bir sonraki bölüm Metin Okuma ve Metin İçinde Dolaşmak'tır; ders seçiciyi açmak için NVDA artı Shift artı C tuşlarına basın.",
+                        "Bu bölümdeki tüm komutlar birlikte çalışır: NVDA artı T size nerede olduğunuzu söyler, NVDA artı Sekme hangi kontrolde olduğunuzu söyler ve Sekme artı Enter dolaşmanızı ve harekete geçmenizi sağlar.",
+                        "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamladığınız dersler işaretlenecek ve böylece kaldığınız yerden devam edebileceksiniz."
+                    ]
+                }
+            ]
+        }
+    ]
+}

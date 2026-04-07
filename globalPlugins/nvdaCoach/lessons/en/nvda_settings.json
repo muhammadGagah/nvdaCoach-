@@ -20,16 +20,16 @@
 				},
 				{
 					"type": "info",
-					"instruction": "To open NVDA settings, press NVDA+N to open the NVDA menu. Then press P for Preferences, then S for Settings. You will hear NVDA announce the Settings dialog opening. The first category you land on may vary. Press Tab to move between settings categories or use the arrow keys in the category list. Navigate to the Keyboard category to find the layout setting. Press Enter to continue.",
+					"instruction": "To open NVDA settings, press NVDA+N (NVDA command) to open the NVDA menu. Then press P for Preferences, then S for Settings. You will hear NVDA announce the Settings dialog opening. The first category you land on may vary. Press Tab (Windows command) to move between settings categories or use the Arrow keys in the category list. Navigate to the Keyboard category to find the layout setting. Press Enter to continue.",
 					"hints": [
-						"Press NVDA plus N to open the NVDA menu, then press P for Preferences, then S for Settings. This three-step sequence opens the main NVDA Settings dialog.",
+						"NVDA plus N is an NVDA command — it opens the NVDA menu. P for Preferences, then S for Settings opens the main NVDA Settings dialog.",
 						"Once the Settings dialog is open, you will be in a category list on the left. Use the Up and Down Arrow keys to move through categories, or press the first letter of a category name to jump to it.",
 						"You can also use first-letter navigation — press K to jump straight to the Keyboard category, or S to jump to Speech."
 					]
 				},
 				{
 					"type": "info",
-					"instruction": "Inside the Keyboard settings, you will find a combo box labeled 'Keyboard layout' with two options: Desktop and Laptop. Use the Up and Down Arrow keys to choose the layout that matches your keyboard. Use Tab to move to the OK button and press Enter to save — the same Tab navigation you practiced in the Moving Between Controls lesson in the Getting Started chapter. Your new layout takes effect immediately without restarting NVDA. Press Enter to continue.",
+					"instruction": "Inside the Keyboard settings, you will find a combo box labeled 'Keyboard layout' with two options: Desktop and Laptop. Use the Up and Down Arrow keys (Windows commands) to choose the layout that matches your keyboard. Use Tab (Windows command) to move to the OK button and press Enter to save — the same Tab navigation you practiced in the Moving Between Controls lesson in the Getting Started chapter. Your new layout takes effect immediately without restarting NVDA. Press Enter to continue.",
 					"hints": [
 						"Once in the Keyboard category, press Tab to move to the Keyboard layout combo box. Use Up and Down Arrow to choose Desktop or Laptop.",
 						"After choosing your layout, press Tab to reach the OK button and press Enter to save. This is the same Tab navigation from the Getting Started chapter.",
@@ -72,7 +72,7 @@
 				},
 				{
 					"type": "info",
-					"instruction": "To move to the next setting in the ring, press NVDA+Control+Right Arrow on desktop layout, or NVDA+Shift+Control+Right Arrow on laptop layout. To move to the previous setting, press NVDA+Control+Left Arrow on desktop, or NVDA+Shift+Control+Left Arrow on laptop. NVDA will announce the name of the setting you land on, such as 'Rate' or 'Pitch'. Press Enter to continue.",
+					"instruction": "All synth settings ring commands are NVDA commands — they require your NVDA key and only work while NVDA is running. To move to the next setting in the ring, press NVDA+Control+Right Arrow on desktop layout, or NVDA+Shift+Control+Right Arrow on laptop layout. To move to the previous setting, press NVDA+Control+Left Arrow on desktop, or NVDA+Shift+Control+Left Arrow on laptop. NVDA will announce the name of the setting you land on, such as 'Rate' or 'Pitch'. Press Enter to continue.",
 					"monitorGestures": [
 						"kb:nvda+control+rightArrow",
 						"kb:nvda+shift+control+rightArrow"

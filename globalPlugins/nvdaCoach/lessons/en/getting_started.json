@@ -439,11 +439,112 @@
 				},
 				{
 					"type": "info",
-					"instruction": "Excellent work — you have completed the Getting Started chapter! You now know how to identify the three categories of commands, and you have practiced the essential NVDA commands that will carry you through daily use: your NVDA key, reading the title bar and time, stopping speech, finding your focus, navigating with Tab, activating controls, reading lines, using Input Help, and opening the user guide. Practice a little every day and these commands will become automatic. When you are ready for more, press NVDA+Shift+C to open the lesson picker and start the next chapter: Reading and Moving Through Text. Press Enter to finish.",
-					"chapterComplete": true,
+					"instruction": "Well done. You have now learned the essential NVDA commands that carry you through daily use. Two more lessons remain in the Getting Started chapter: Understanding Your Keyboard — which covers the physical keys you will use constantly — and Switching Windows with Alt+Tab. When you are ready, press Enter to continue to the next lesson.",
 					"hints": [
-						"You have finished the Getting Started chapter. The next chapter is Reading and Moving Through Text — press NVDA plus Shift plus C to open the lesson picker.",
-						"All the commands from this chapter work together: NVDA plus T tells you where you are, NVDA plus Tab tells you what control you are on, and Tab plus Enter let you navigate and act.",
+						"Two more lessons remain in this chapter: Understanding Your Keyboard and Switching Windows with Alt+Tab. Continue through them before moving to the Reading Text chapter.",
+						"All the commands from this lesson work together: NVDA plus T tells you where you are, NVDA plus Tab tells you what control you are on, and Tab plus Enter let you navigate and act.",
+						"NVDA Coach saves your progress automatically. When you return, your completed lessons will be marked so you can pick up right where you left off."
+					]
+				}
+			]
+		}
+		,
+		{
+			"id": "keyboard_orientation",
+			"title": "Understanding Your Keyboard",
+			"order": 12,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Before going further, let's look at some keys that often cause confusion — especially on laptop keyboards. The first is the Control key. On most keyboards, the Control key sits in the bottom-left corner. But on some laptops, the Fn key occupies the bottom-left corner instead, with the Control key immediately to its right. If you are pressing what you think is Control and nothing happens, check whether your bottom-left corner key says Fn or Ctrl — it matters. Press Enter to continue.",
+					"hints": [
+						"Look at the bottom-left corner of your keyboard. If the key says Fn, the Control key is one key to the right of it. If it says Ctrl, you are already on the right key.",
+						"Both Fn and Control are typically in the same row, but which one is in the very corner varies by laptop model and manufacturer.",
+						"If you are not sure which key is which, press NVDA plus 1 to turn on Input Help, then press the bottom-left key. NVDA will tell you what it is. Press NVDA plus 1 again to turn off Input Help."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Many laptops do not have dedicated Home, End, Page Up, and Page Down keys. Instead, the Fn key combines with the Arrow keys to produce them. On most keyboards with this design: Fn plus Left Arrow equals Home; Fn plus Right Arrow equals End; Fn plus Up Arrow equals Page Up; Fn plus Down Arrow equals Page Down. Your keyboard may vary — check the small labels printed on the Arrow keys for symbols like a home icon or up-arrow-page symbol. If your keyboard has dedicated Home, End, Page Up, and Page Down keys above the arrow keys, you do not need Fn at all for those functions. Press Enter to continue.",
+					"hints": [
+						"Look at your Arrow keys. If they have small secondary labels — a home icon, a page icon, or arrow-with-line symbols — those indicate Fn combinations.",
+						"Fn plus Left Arrow is typically Home. Fn plus Right Arrow is End. Fn plus Up Arrow is Page Up. Fn plus Down Arrow is Page Down. But always check your specific keyboard.",
+						"If your keyboard has a full key cluster above the arrow keys — including dedicated Page Up, Page Down, Home, and End keys — you do not need Fn for those functions at all."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The top row of many laptops has function keys labeled F1 through F12. On some laptop models, these keys default to multimedia controls — adjusting volume, brightness, and media playback — rather than F1 through F12. To use F1 through F12 on those keyboards, you hold the Fn key and press the corresponding function key. Other laptops are the opposite: the F keys are primary and multimedia controls require Fn. Many keyboards have an Fn Lock key — often Fn plus Escape or Fn plus Caps Lock — that permanently swaps the behavior so you do not have to hold Fn each time. Check your laptop's manual or the key labels to find out how your keyboard is set up. Press Enter to continue.",
+					"hints": [
+						"If pressing F2 for a Coach hint changes your screen brightness instead, your laptop defaults to multimedia mode. Hold Fn and press F2 to get the actual F2 function.",
+						"Look for an Fn Lock key — often labeled FnLk or shown as a padlock icon combined with Fn. Pressing it toggles between multimedia-primary and F-key-primary modes.",
+						"Some laptops show whether multimedia or F-key mode is active through an indicator light. Others announce it via sound. Check your specific model if you are unsure."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "A quick review of the modifier key locations most important for NVDA: Ctrl is bottom-left (or one key right of Fn on some laptops). Shift is the wide key above Ctrl on both sides of the keyboard. Alt is next to the Space bar on both sides. The Windows key — a key with the Windows logo — is between Ctrl and Alt on the left side. And of course your NVDA key: Insert is in the cluster above the arrow keys, and Caps Lock is on the far left above Shift. Knowing where these keys live without looking is one of the most valuable keyboard skills you can build. Press Enter to continue.",
+					"hints": [
+						"From left to right along the bottom row of most keyboards: Ctrl (or Fn), Windows key, Alt, Space bar, Alt, menu key (sometimes), Ctrl.",
+						"Shift is the wide key above Ctrl on both sides. It is one of the widest keys on the keyboard — easy to find by feel.",
+						"Caps Lock is on the far left, just above Shift. On many NVDA users' keyboards, Caps Lock serves as the NVDA key — one of the most important keys you will ever press."
+					]
+				}
+			]
+		},
+		{
+			"id": "alt_tab",
+			"title": "Switching Windows with Alt+Tab",
+			"order": 13,
+			"chapterComplete": true,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Alt+Tab is a Windows command that switches between open programs and windows. Sighted users can see all open windows on the taskbar at a glance. Alt+Tab is the keyboard equivalent — it lets you cycle through open windows without needing a mouse. This is one of the most important Windows commands you will ever learn, and it works in every version of Windows. You have already used it briefly to switch between the Coach window and practice forms. This lesson teaches both ways to use it. Press Enter to continue.",
+					"hints": [
+						"Alt plus Tab is a Windows command — it is built into Windows itself and works whether NVDA is running or not.",
+						"The Alt key is on either side of the Space bar. The Tab key is on the far left of the keyboard above Caps Lock.",
+						"This command works in every version of Windows and in virtually every scenario. It is one of the most universal keyboard shortcuts you will ever use."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The first way: a single Alt+Tab press. Hold Alt and tap Tab once, then release both keys immediately. This switches you to the most recently used window — the one you were in before the current one. If you are in your browser and you press Alt+Tab, you jump to the program you were in before the browser. Press Alt+Tab again and you go back to the browser. This is the fastest way to toggle between two programs you are using together. NVDA announces the name of the window you switch to. Press Enter to continue.",
+					"hints": [
+						"Hold Alt, tap Tab once, then release both. You land in the most recently used window. NVDA announces what you landed in.",
+						"Press Alt+Tab a second time to go back to where you started. Two presses toggle you between two windows quickly.",
+						"This is the version most people use the most — a quick Alt+Tab to check another window, then Alt+Tab again to return."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "The second way: hold Alt and keep tapping Tab. If you have three or more windows open, you can cycle through them all. Hold Alt down and tap Tab once — NVDA announces the first window. Keep holding Alt and tap Tab again — NVDA announces the second window. Each tap moves to the next open window in the list. When you hear the window you want, release the Alt key and you land there. If you go too far, you can hold Alt and press Shift+Tab to cycle backward. Press Enter to continue.",
+					"hints": [
+						"Hold the Alt key down the entire time. Each Tab press cycles to the next window. Do not release Alt until you hear the window you want.",
+						"NVDA announces each window name as you cycle through. Listen for the program name or the document title.",
+						"Holding Alt and pressing Shift plus Tab cycles backward through the window list — useful if you overshoot the window you want."
+					]
+				},
+				{
+					"type": "gesture",
+					"instruction": "Try single Alt+Tab now. Hold Alt and press Tab once, then release both keys. NVDA will announce which window you switched to. Then press Alt+Tab again to come back here. When you are back in the Coach window, press Enter to continue.",
+					"hint": "Hold the Alt key, press Tab once, then release both. Alt is next to the Space bar; Tab is above Caps Lock on the far left.",
+					"hints": [
+						"Hold Alt — the key to the left of the Space bar — and tap Tab once. Release both keys immediately after tapping Tab.",
+						"NVDA announces the name of the window you land in. You may land in the previous application or another Coach practice window.",
+						"To come back, press Alt plus Tab once more. This toggles you back to the Coach window."
+					],
+					"expectedGestures": ["kb:alt+tab"],
+					"successMessage": "You switched windows with Alt+Tab. Alt+Tab is how you move between open programs without a mouse.",
+					"allowExecution": true,
+					"feedbackDelay": 1500
+				},
+				{
+					"type": "info",
+					"instruction": "Excellent work — you have completed the Getting Started chapter! You now know how to identify the three categories of commands; use essential NVDA commands; understand your keyboard layout; and switch between programs with Alt+Tab. These skills work together every time you use NVDA. Practice a little every day and they will become automatic. When you are ready, press NVDA+Shift+C to open the lesson picker and start the next chapter: Reading and Moving Through Text. Press Enter to finish.",
+					"hints": [
+						"The next chapter is Reading and Moving Through Text. It covers navigating through documents by character, word, line, paragraph, and page.",
+						"Alt+Tab summary: single press toggles to the last window. Hold Alt and keep pressing Tab to cycle through all open windows. Release Alt to land.",
 						"NVDA Coach saves your progress automatically. When you return, your completed lessons will be marked so you can pick up right where you left off."
 					]
 				}
