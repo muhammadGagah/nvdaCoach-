@@ -23,11 +23,26 @@ def _playSound(filename):
 		nvwave.playWaveFile(path)
 
 
+def personalizeText(text):
+	"""Replace {name} token in lesson content with the configured user name.
+
+	Infrastructure for lesson JSON files that include {name} placeholders.
+	No lesson files use it today, but the substitution is ready when needed.
+	When userName is not configured the token is silently removed.
+	"""
+	name = config.conf["nvdaCoach"].get("userName", "").strip()
+	if "{name}" in text:
+		text = text.replace("{name}", name) if name else text.replace("{name}", "")
+	return text
+
+
 class LessonRunner:
 	"""Runs an interactive lesson, advancing through steps when the student confirms."""
 
 	# Show full controls reminder only on first lesson per NVDA session.
 	_controlsIntroShown = False
+	# Show name/instructor greeting only on first lesson per NVDA session.
+	_instructorGreetingShown = False
 
 	def __init__(self, progressTracker):
 		self._progressTracker = progressTracker
@@ -41,6 +56,7 @@ class LessonRunner:
 		self.onOpenPracticePage = None  # Callback: fired when a step with openPracticePageAfter is advanced past.
 		self.onOpenPracticeFrame = None  # Callback: fired when a step with openPracticeFrameAfter is advanced past.
 		self.onChapterComplete = None   # Callback: fired when a lesson with chapterComplete: true finishes.
+		self.onLessonComplete = None    # Callback(categoryId, lessonId): fired at end of every lesson.
 		self._hintIndex = 0  # Tracks which hint in a hints array to show next.
 
 	# ------------------------------------------------------------------
@@ -61,11 +77,25 @@ class LessonRunner:
 		_playSound("lesson_start.wav")
 
 		lessonTitle = self._lesson.get("title", "Lesson")
+
+		# One-time personalized greeting at the very first lesson of the session.
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		instructor = config.conf["nvdaCoach"].get("instructorName", "").strip()
+		greeting = ""
+		if not LessonRunner._instructorGreetingShown:
+			if name:
+				greeting += _("Hello, {name}! ").format(name=name)
+			if instructor:
+				greeting += _("Your instructor today is {instructor}. ").format(instructor=instructor)
+			if greeting:
+				LessonRunner._instructorGreetingShown = True
+
 		if LessonRunner._controlsIntroShown:
-			introMsg = _("Starting lesson: {title}.").format(title=lessonTitle)
+			introMsg = greeting + _("Starting lesson: {title}.").format(title=lessonTitle)
 		else:
 			introMsg = (
-				_("Starting lesson: {title}.").format(title=lessonTitle) + " "
+				greeting
+				+ _("Starting lesson: {title}.").format(title=lessonTitle) + " "
 				+ _(
 					"Press Enter or the Next Step button to advance. "
 					"F1 repeats the instruction, F2 gives a hint, "
@@ -115,7 +145,7 @@ class LessonRunner:
 			return
 		step = self._currentStep()
 		if step:
-			ui.message(step.get("instruction", ""))
+			ui.message(personalizeText(step.get("instruction", "")))
 
 	def speakHint(self):
 		"""Read the hint for the current step. Called by F2. Cycles through hints array."""
@@ -126,7 +156,7 @@ class LessonRunner:
 			return
 		hints = step.get("hints")
 		if hints and isinstance(hints, list) and len(hints) > 0:
-			hint = hints[self._hintIndex % len(hints)]
+			hint = personalizeText(hints[self._hintIndex % len(hints)])
 			self._hintIndex += 1
 			idx = (self._hintIndex - 1) % len(hints) + 1
 			if len(hints) > 1:
@@ -138,7 +168,7 @@ class LessonRunner:
 			ui.message(label)
 		else:
 			# Fall back to legacy single hint string.
-			hint = step.get("hint", _("No additional hint is available for this step."))
+			hint = personalizeText(step.get("hint", _("No additional hint is available for this step.")))
 			_playSound("hint.wav")
 			ui.message(_("Hint: {hint}").format(hint=hint))
 
@@ -170,7 +200,7 @@ class LessonRunner:
 			self._completeLesson()
 			return
 
-		instruction = step.get("instruction", "")
+		instruction = personalizeText(step.get("instruction", ""))
 		stepType = step.get("type", "info")
 		stepNum = self._stepIndex + 1
 		totalSteps = len(self._lesson.get("steps", []))
@@ -250,31 +280,47 @@ class LessonRunner:
 		_playSound("lesson_complete.wav")
 
 		lessonTitle = self._lesson.get("title", _("Lesson"))
-		msg = (
-			_("Lesson complete: {title}! Well done. "
-			"Press NVDA+Shift+C to open the lesson picker and choose your next lesson "
-			"or continue to the next chapter. "
-			"Ctrl+N moves to the next lesson in this category, "
-			"or Ctrl+R repeats this one.").format(title=lessonTitle)
-		)
-		wx.CallLater(600, ui.message, msg)
-		if self.coachWindow:
-			idleMsg = (
-				_("Lesson complete: {title}!").format(title=lessonTitle) + "\n\n"
-				+ _("Well done.") + "\n\n"
-				"--- " + _("WHAT TO DO NEXT") + " ---\n"
-				"  " + _("Press NVDA+Shift+C to open the lesson picker.") + "\n"
-				"  " + _("Choose the next lesson in this chapter, or start the next chapter.") + "\n\n"
-				"--- " + _("STAY IN THIS CHAPTER") + " ---\n"
-				"  Ctrl+N  —  " + _("Next lesson in this category.") + "\n"
-				"  Ctrl+R  —  " + _("Repeat this lesson.") + "\n"
-				"  Ctrl+B  —  " + _("Go back to the previous lesson.")
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		well_done = _("Well done, {name}!").format(name=name) if name else _("Well done.")
+		# Check for full-course completion synchronously before scheduling any UI.
+		# onLessonComplete returns True when every lesson in the course is now done.
+		is_final = False
+		if self.onLessonComplete:
+			is_final = bool(self.onLessonComplete(self._categoryId, self._lesson.get("id", "")))
+
+		if is_final:
+			# Final lesson of the entire course: speak only a brief "well done" —
+			# the full heartfelt congratulations screen fires 2500 ms later from GlobalPlugin.
+			msg = _("Lesson complete: {title}! ").format(title=lessonTitle) + well_done
+			wx.CallLater(600, ui.message, msg)
+		else:
+			msg = (
+				_("Lesson complete: {title}! ").format(title=lessonTitle)
+				+ well_done + " "
+				+ _(
+					"Press NVDA+Shift+C to open the lesson picker and choose your next lesson "
+					"or continue to the next chapter. "
+					"Ctrl+N moves to the next lesson in this category, "
+					"or Ctrl+R repeats this one."
+				)
 			)
-			wx.CallLater(600, self.coachWindow.showIdle, idleMsg)
-		# If this lesson marks the end of a chapter, fire the chapter-complete callback
-		# after the normal completion screen has been shown.
-		if self._lesson.get("chapterComplete") and self.onChapterComplete:
-			wx.CallLater(3000, self.onChapterComplete)
+			wx.CallLater(600, ui.message, msg)
+			if self.coachWindow:
+				idleMsg = (
+					_("Lesson complete: {title}!").format(title=lessonTitle) + "\n\n"
+					+ well_done + "\n\n"
+					"--- " + _("WHAT TO DO NEXT") + " ---\n"
+					"  " + _("Press NVDA+Shift+C to open the lesson picker.") + "\n"
+					"  " + _("Choose the next lesson in this chapter, or start the next chapter.") + "\n\n"
+					"--- " + _("STAY IN THIS CHAPTER") + " ---\n"
+					"  Ctrl+N  —  " + _("Next lesson in this category.") + "\n"
+					"  Ctrl+R  —  " + _("Repeat this lesson.") + "\n"
+					"  Ctrl+B  —  " + _("Go back to the previous lesson.")
+				)
+				wx.CallLater(600, self.coachWindow.showIdle, idleMsg)
+			# If this lesson marks the end of a chapter, fire the chapter-complete callback.
+			if self._lesson.get("chapterComplete") and self.onChapterComplete:
+				wx.CallLater(3000, self.onChapterComplete)
 
 	# ------------------------------------------------------------------
 	# Utility helpers

@@ -25,7 +25,12 @@ from .lessonRunner import LessonRunner
 from .progressTracker import ProgressTracker
 
 # Register NVDA Coach config spec so settings persist across sessions.
-config.conf.spec["nvdaCoach"] = {"playSounds": "boolean(default=True)"}
+config.conf.spec["nvdaCoach"] = {
+	"playSounds": "boolean(default=True)",
+	"userName": "string(default='')",
+	"instructorName": "string(default='')",
+	"trainingCenter": "string(default='')",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -47,6 +52,135 @@ class NvdaCoachSettingsPanel(gui.settingsDialogs.SettingsPanel):
 
 	def onSave(self):
 		config.conf["nvdaCoach"]["playSounds"] = self._playSoundsCheckbox.GetValue()
+
+
+# ---------------------------------------------------------------------------
+# PersonalizationDialog — set user and instructor names (F7)
+# ---------------------------------------------------------------------------
+
+class PersonalizationDialog(wx.Dialog):
+	"""Dialog for entering the student's name and instructor's name."""
+
+	def __init__(self, parent):
+		super().__init__(
+			parent,
+			title=_("NVDA Coach — Your Profile"),
+			size=(460, 250),
+		)
+		panel = wx.Panel(self)
+		sizer = wx.BoxSizer(wx.VERTICAL)
+
+		fgs = wx.FlexGridSizer(rows=3, cols=2, hgap=10, vgap=8)
+		fgs.AddGrowableCol(1)
+		fgs.Add(
+			wx.StaticText(panel, label=_("Your name (optional):")),
+			0, wx.ALIGN_CENTER_VERTICAL,
+		)
+		self._nameField = wx.TextCtrl(
+			panel,
+			value=config.conf["nvdaCoach"].get("userName", ""),
+		)
+		fgs.Add(self._nameField, 1, wx.EXPAND)
+		fgs.Add(
+			wx.StaticText(panel, label=_("Your instructor's name (optional):")),
+			0, wx.ALIGN_CENTER_VERTICAL,
+		)
+		self._instrField = wx.TextCtrl(
+			panel,
+			value=config.conf["nvdaCoach"].get("instructorName", ""),
+		)
+		fgs.Add(self._instrField, 1, wx.EXPAND)
+		fgs.Add(
+			wx.StaticText(panel, label=_("Training center or program (optional):")),
+			0, wx.ALIGN_CENTER_VERTICAL,
+		)
+		self._centerField = wx.TextCtrl(
+			panel,
+			value=config.conf["nvdaCoach"].get("trainingCenter", ""),
+		)
+		fgs.Add(self._centerField, 1, wx.EXPAND)
+		sizer.Add(fgs, 0, wx.ALL | wx.EXPAND, 12)
+
+		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
+		saveBtn = wx.Button(panel, wx.ID_OK, label=_("&Save"))
+		saveBtn.SetDefault()
+		cancelBtn = wx.Button(panel, wx.ID_CANCEL, label=_("&Cancel"))
+		btnSizer.Add(saveBtn, flag=wx.RIGHT, border=5)
+		btnSizer.Add(cancelBtn)
+		sizer.Add(btnSizer, 0, wx.ALL | wx.ALIGN_RIGHT, 10)
+
+		panel.SetSizer(sizer)
+		saveBtn.Bind(wx.EVT_BUTTON, self._onSave)
+		cancelBtn.Bind(wx.EVT_BUTTON, lambda e: self.EndModal(wx.ID_CANCEL))
+		self.Bind(wx.EVT_CHAR_HOOK, self._onKey)
+		self._nameField.SetFocus()
+
+	def _onSave(self, evt):
+		name = self._nameField.GetValue().strip()
+		instructor = self._instrField.GetValue().strip()
+		center = self._centerField.GetValue().strip()
+		config.conf["nvdaCoach"]["userName"] = name
+		config.conf["nvdaCoach"]["instructorName"] = instructor
+		config.conf["nvdaCoach"]["trainingCenter"] = center
+		self.EndModal(wx.ID_OK)
+		if name:
+			ui.message(_("Hello, {name}!").format(name=name))
+		else:
+			ui.message(_("Profile saved."))
+
+	def _onKey(self, evt):
+		if evt.GetKeyCode() == wx.WXK_ESCAPE:
+			self.EndModal(wx.ID_CANCEL)
+			return
+		evt.Skip()
+
+
+# ---------------------------------------------------------------------------
+# CertificateDialog — shown after all lessons are complete
+# ---------------------------------------------------------------------------
+
+class CertificateDialog(wx.Dialog):
+	"""Congratulations dialog shown when the student finishes every lesson."""
+
+	def __init__(self, parent, name=""):
+		super().__init__(
+			parent,
+			title=_("NVDA Coach — Certificate of Completion"),
+			size=(520, 220),
+		)
+		panel = wx.Panel(self)
+		sizer = wx.BoxSizer(wx.VERTICAL)
+
+		if name:
+			msg = _(
+				"Congratulations, {name}! You have completed every lesson in NVDA Coach. "
+				"Your certificate of completion has been saved to your Downloads folder "
+				"and opened in your web browser."
+			).format(name=name)
+		else:
+			msg = _(
+				"Congratulations! You have completed every lesson in NVDA Coach. "
+				"Your certificate of completion has been saved to your Downloads folder "
+				"and opened in your web browser."
+			)
+
+		lbl = wx.StaticText(panel, label=msg)
+		lbl.Wrap(480)
+		sizer.Add(lbl, 0, wx.ALL, 16)
+
+		okBtn = wx.Button(panel, wx.ID_OK, label=_("&OK"))
+		okBtn.SetDefault()
+		sizer.Add(okBtn, 0, wx.ALL | wx.ALIGN_CENTER, 10)
+
+		panel.SetSizer(sizer)
+		okBtn.Bind(wx.EVT_BUTTON, lambda e: self.EndModal(wx.ID_OK))
+		self.Bind(wx.EVT_CHAR_HOOK, self._onKey)
+
+	def _onKey(self, evt):
+		if evt.GetKeyCode() in (wx.WXK_ESCAPE, wx.WXK_RETURN, wx.WXK_NUMPAD_ENTER):
+			self.EndModal(wx.ID_OK)
+			return
+		evt.Skip()
 
 
 def _loadLessonCategories():
@@ -120,6 +254,121 @@ def _localizedDocPath(filename):
 	return candidates[-1]  # Return fallback path even if not present.
 
 
+def _generateCertificate():
+	"""Generate a completion certificate HTML file, save to Downloads, and open it.
+
+	Returns the path to the saved file.
+	"""
+	import datetime
+	name = config.conf["nvdaCoach"].get("userName", "").strip() or _("Student")
+	instructor = config.conf["nvdaCoach"].get("instructorName", "").strip()
+	center = config.conf["nvdaCoach"].get("trainingCenter", "").strip()
+	date_str = datetime.date.today().strftime("%B %d, %Y")
+	lang = languageHandler.getLanguage() or "en"
+
+	instructor_html = (
+		"<p class='instructor'><strong>{label}</strong> {instructor}</p>".format(
+			label=_("Instructor:"),
+			instructor=instructor,
+		)
+		if instructor else ""
+	)
+	center_html = (
+		"<p class='center'><strong>{label}</strong> {center}</p>".format(
+			label=_("Training Center / Program:"),
+			center=center,
+		)
+		if center else ""
+	)
+
+	# Translators: heartfelt closing message on the completion certificate
+	heartfelt = _(
+		"Your dedication and persistence have brought you to this moment. "
+		"The skills you have learned in NVDA Coach will serve you every day — "
+		"at work, at home, and everywhere in between. "
+		"Every expert was once a beginner, and you have proven that with patience "
+		"and practice, anything is possible. "
+		"Well done, and welcome to a world of greater independence."
+	)
+
+	# Translators: title of the completion certificate document
+	title_text = _("Certificate of Completion")
+	# Translators: opening line of certificate, followed by the student's name
+	certifies = _("This certifies that")
+	# Translators: line below student name on certificate
+	completed = _("has successfully completed all lessons in")
+	# Translators: label for the completion date on the certificate
+	date_label = _("Date of Completion")
+	# Translators: label for the signer's title on the certificate
+	author_title = _("Assistive Technology Instructor")
+
+	html = """<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="utf-8">
+  <title>{title} \u2014 NVDA Coach</title>
+  <style>
+    body {{ font-family: Georgia, serif; background: #f5f0e8; margin: 0; padding: 40px; }}
+    .certificate {{
+      background: white; border: 8px double #4a6741; max-width: 760px;
+      margin: 0 auto; padding: 60px; text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    }}
+    h1 {{ font-size: 2.2em; color: #4a6741; margin-bottom: .3em; letter-spacing: 2px; }}
+    .certifies {{ font-size: 1.1em; color: #555; margin: .8em 0 .3em; }}
+    .student-name {{ font-size: 2.4em; color: #222; font-style: italic; margin: .2em 0 .6em; }}
+    .completed {{ font-size: 1.1em; color: #555; margin-bottom: .3em; }}
+    .program {{ font-size: 1.5em; color: #4a6741; font-weight: bold; margin-bottom: 1.2em; }}
+    hr {{ border: none; border-top: 1px solid #ccc; margin: 1.5em 0; }}
+    .date, .instructor, .center {{ font-size: 1em; color: #444; margin: .4em 0; }}
+    .heartfelt {{ font-size: 1em; color: #333; line-height: 1.8; margin: 1.5em 0; font-style: italic; }}
+    .sig-name {{ font-size: 1.2em; font-weight: bold; color: #222; margin-top: 1.5em; }}
+    .sig-title {{ font-size: 1em; color: #444; margin: .2em 0; }}
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>{title}</h1>
+    <p class="certifies">{certifies}</p>
+    <p class="student-name">{name}</p>
+    <p class="completed">{completed}</p>
+    <p class="program">NVDA Coach</p>
+    <hr>
+    <p class="date"><strong>{date_label}:</strong> {date_str}</p>
+    {instructor_html}
+    {center_html}
+    <p class="heartfelt">{heartfelt}</p>
+    <hr>
+    <p class="sig-name">Tony Gebhard</p>
+    <p class="sig-title">{author_title}</p>
+  </div>
+</body>
+</html>""".format(
+		lang=lang,
+		title=title_text,
+		certifies=certifies,
+		name=name,
+		completed=completed,
+		date_label=date_label,
+		date_str=date_str,
+		instructor_html=instructor_html,
+		center_html=center_html,
+		heartfelt=heartfelt,
+		author_title=author_title,
+	)
+
+	safe_name = "".join(
+		c for c in name if c.isalnum() or c in (" ", "-", "_")
+	).strip() or "Student"
+	filename = "NVDA Coach - {} certification of completion.html".format(safe_name)
+	downloads = os.path.join(os.path.expanduser("~"), "Downloads")
+	filepath = os.path.join(downloads, filename)
+	with open(filepath, "w", encoding="utf-8") as f:
+		f.write(html)
+	os.startfile(filepath)
+	return filepath
+
+
 # ---------------------------------------------------------------------------
 # CoachWindow — the persistent lesson display window
 # ---------------------------------------------------------------------------
@@ -141,6 +390,10 @@ class CoachWindow(wx.Frame):
 		self._plugin = plugin
 		self._escapeCount = 0
 		self._escapeTimer = None
+		self._f4Armed = False
+		self._f4Timer = None
+		self._f5Armed = False
+		self._f5Timer = None
 		self._buildUI()
 		self.Centre()
 		# Hidden on startup; shown when NVDA+Shift+C is pressed.
@@ -200,20 +453,27 @@ class CoachWindow(wx.Frame):
 
 		sizer.Add(wx.StaticLine(panel), 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 8)
 
-		# During-lesson shortcut reminder (compact, single line).
+		# During-lesson shortcut reminder (two compact lines).
+		smallFont = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
 		lessonBar = wx.StaticText(
 			panel,
 			label=_(
 				"During a lesson:  "
 				"Enter — Next Step  ·  "
-				"F1 Repeat  ·  F2 Hint  ·  F3 Skip step  ·  "
-				"Esc Stop lesson"
+				"F1 Repeat  ·  F2 Hint  ·  F3 Skip  ·  "
+				"Esc Stop"
 			),
 		)
-		lessonBar.SetFont(
-			wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-		)
+		lessonBar.SetFont(smallFont)
 		sizer.Add(lessonBar, 0, wx.LEFT | wx.RIGHT | wx.TOP, 8)
+		fKeyBar = wx.StaticText(
+			panel,
+			label=_(
+				"F4 Help  ·  F5 Feedback  ·  F6 Sounds  ·  F7 Profile"
+			),
+		)
+		fKeyBar.SetFont(smallFont)
+		sizer.Add(fKeyBar, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM, 8)
 
 		# Primary action button: advance the current lesson step.
 		self._nextStepBtn = wx.Button(panel, label=_("Next Step  (Enter)"))
@@ -254,6 +514,22 @@ class CoachWindow(wx.Frame):
 		btnSizer.Add(self._nextBtn, 1, wx.LEFT, 4)
 		sizer.Add(btnSizer, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM | wx.EXPAND, 8)
 
+		# Certificate button — hidden until all lessons are complete.
+		self._certBtn = wx.Button(
+			panel,
+			label=_("Export Certificate of Completion"),
+		)
+		self._certBtn.SetToolTip(_(
+			"You have completed every lesson in NVDA Coach. "
+			"Click to save your certificate of completion to your Downloads folder."
+		))
+		self._certBtn.Bind(
+			wx.EVT_BUTTON,
+			lambda e: self._plugin._showCompletionCertificate(),
+		)
+		self._certBtn.Hide()
+		sizer.Add(self._certBtn, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM | wx.EXPAND, 8)
+
 		panel.SetSizer(sizer)
 		self.Bind(wx.EVT_CHAR_HOOK, self._onKey)
 		self.Bind(wx.EVT_CLOSE, self._onClose)
@@ -289,46 +565,82 @@ class CoachWindow(wx.Frame):
 		if not self.IsShown():
 			self.Show()
 
+	def showCertificateButton(self):
+		"""Reveal the certificate export button once all lessons are complete."""
+		if not self._certBtn.IsShown():
+			self._certBtn.Show()
+			self._panel.Layout()
+			ui.message(_(
+				"Congratulations — you have completed every lesson in NVDA Coach! "
+				"Tab to the Export Certificate of Completion button to save your certificate."
+			))
+
 	def showIntroduction(self):
 		"""Show the full introduction/welcome text and speak it."""
 		self._statusText.SetLabel(_("NVDA Coach — Introduction"))
 		self._statusText.GetParent().Layout()
-		introText = _(
-			"NVDA Coach\n"
-			"Created by Tony Gebhard, Assistive Technology Instructor\n"
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		instructor = config.conf["nvdaCoach"].get("instructorName", "").strip()
+		if name:
+			welcome_heading = _("Welcome, {name}, to NVDA Coach").format(name=name)
+			spoken_welcome = _(
+				"Welcome, {name}, to NVDA Coach. "
+				"Use your reading cursor or arrow keys to read this introduction. "
+				"When you are ready, press Tab to reach the Start Course button and press Enter to begin."
+			).format(name=name)
+		else:
+			welcome_heading = _("Welcome to NVDA Coach")
+			spoken_welcome = _(
+				"Welcome to NVDA Coach. "
+				"Use your reading cursor or arrow keys to read this introduction. "
+				"When you are ready, press Tab to reach the Start Course button and press Enter to begin."
+			)
+		if instructor:
+			instructor_line = _(
+				"Your instructor today is {instructor}. "
+				"Let them know you are starting — they can help you find keys, "
+				"adjust settings, or answer questions before you begin."
+			).format(instructor=instructor)
+		else:
+			instructor_line = _(
+				"If you have an assistive technology instructor nearby, let them know you are "
+				"starting NVDA Coach. They can help you find keys, adjust settings, or answer "
+				"questions before you begin. If you are working on your own, that is perfectly "
+				"fine too. NVDA Coach is built to guide you step by step, at your own pace."
+			)
+		introText = (
+			welcome_heading + "\n"
+			+ _("Created by Tony Gebhard, Assistive Technology Instructor") + "\n"
 			"github.com/tonygeb23/nvdacoach\n\n"
-			"Before you begin, there is one key you should know right now. "
-			"The Control key, labeled Ctrl, is in the bottom-left corner of your keyboard. "
-			"Press it once and NVDA stops talking immediately, no matter what it is reading. "
-			"This is the single most useful key you will ever learn as an NVDA user. "
-			"You will reach for it dozens of times every day, in every program, at any moment.\n\n"
-			"NVDA Coach teaches screen reader commands through short, hands-on practice sessions. "
-			"Each lesson guides you through one command at a time and waits for you to try it "
-			"before moving on. The program is designed for beginners who already have a basic "
-			"feel for their keyboard, including letters, numbers, arrow keys, Enter, Escape, and Tab.\n\n"
-			"If you are not yet confident with your keyboard, that is completely fine. "
-			"NVDA has a built-in tool called Input Help. Press NVDA and the number 1 together "
-			"to turn it on. While Input Help is active, pressing any key tells you what that "
-			"key does without actually doing it. Press NVDA+1 again to turn it off. "
-			"You can use Input Help at any time, even during a lesson.\n\n"
-			"If you have an assistive technology instructor nearby, let them know you are "
-			"starting NVDA Coach. They can help you find keys, adjust settings, or answer "
-			"questions before you begin. If you are working on your own, that is perfectly "
-			"fine too. NVDA Coach is built to guide you step by step, at your own pace.\n\n"
-			"When you are ready to begin, press Tab to find the Start Course button below "
-			"and press Enter or Space to start the first lesson. "
-			"You can also press NVDA+Shift+C to open the lesson picker and choose any lesson directly."
+			+ _(
+				"Before you begin, there is one key you should know right now. "
+				"The Control key, labeled Ctrl, is in the bottom-left corner of your keyboard. "
+				"Press it once and NVDA stops talking immediately, no matter what it is reading. "
+				"This is the single most useful key you will ever learn as an NVDA user. "
+				"You will reach for it dozens of times every day, in every program, at any moment.\n\n"
+				"NVDA Coach teaches screen reader commands through short, hands-on practice sessions. "
+				"Each lesson guides you through one command at a time and waits for you to try it "
+				"before moving on. The program is designed for beginners who already have a basic "
+				"feel for their keyboard, including letters, numbers, arrow keys, Enter, Escape, and Tab.\n\n"
+				"If you are not yet confident with your keyboard, that is completely fine. "
+				"NVDA has a built-in tool called Input Help. Press NVDA and the number 1 together "
+				"to turn it on. While Input Help is active, pressing any key tells you what that "
+				"key does without actually doing it. Press NVDA+1 again to turn it off. "
+				"You can use Input Help at any time, even during a lesson.\n\n"
+			)
+			+ instructor_line + "\n\n"
+			+ _(
+				"When you are ready to begin, press Tab to find the Start Course button below "
+				"and press Enter or Space to start the first lesson. "
+				"You can also press NVDA+Shift+C to open the lesson picker and choose any lesson directly."
+			)
 		)
 		self._instructionText.SetValue(introText)
 		self._startCourseBtn.Show()
 		self._nextStepBtn.Hide()
 		self._panel.Layout()
 		self._clearEscapeCount()
-		ui.message(_(
-			"Welcome to NVDA Coach. "
-			"Use your reading cursor or arrow keys to read this introduction. "
-			"When you are ready, press Tab to reach the Start Course button and press Enter to begin."
-		))
+		ui.message(spoken_welcome)
 
 	def showDrillProgress(self, current, total, message):
 		"""Update the window during a multi-press practice drill.
@@ -347,13 +659,15 @@ class CoachWindow(wx.Frame):
 
 	def showIdle(self, message=None):
 		"""Show the idle/between-lesson state in the window."""
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		default_msg = _("Ready, {name}.").format(name=name) if name else _("Ready.")
 		self._statusText.SetLabel(_("NVDA Coach — ready"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Show()
 		self._panel.Layout()
 		self._instructionText.SetValue(
-			(message or _("Ready.")) + "\n\n"
+			(message or default_msg) + "\n\n"
 			+ _(
 				"--- WHAT TO DO NEXT ---\n"
 				"  Press NVDA+Shift+C to open the lesson picker and choose a lesson.\n\n"
@@ -368,43 +682,141 @@ class CoachWindow(wx.Frame):
 				"--- A NOTE FOR INSTRUCTORS AND STUDENTS ---\n"
 				"If an instructor is present, this is a great time to ask any questions "
 				"before the next lesson. If you are working independently, keep going "
-				"at your own pace. Every step forward counts."
+				"at your own pace. Every step forward counts.\n\n"
+				"--- QUICK KEYS (available any time in this window) ---\n"
+				"  F4 — Open help documentation\n"
+				"  F5 — Send feedback to the developer\n"
+				"  F6 — Toggle lesson sounds on or off\n"
+				"  F7 — Set your name and instructor's name"
 			)
 		)
 
 	def showBrowseModeCompletion(self):
 		"""Show the chapter-completion congratulations screen for Browse Mode."""
-		self._statusText.SetLabel(_("NVDA Coach — Chapter 3 Complete!"))
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		congrats_heading = (
+			_("Congratulations, {name} — Browse Mode and Web Navigation Complete!").format(name=name)
+			if name else
+			_("Congratulations — Browse Mode and Web Navigation Complete!")
+		)
+		congrats_spoken = (
+			_("Congratulations, {name}! You have completed Browse Mode and Web Navigation, "
+			"Chapter 4 of NVDA Coach. "
+			"The practice page in your browser can now be closed. "
+			"Press NVDA+Shift+C to continue to additional training resources.").format(name=name)
+			if name else
+			_("Congratulations! You have completed Browse Mode and Web Navigation, "
+			"Chapter 4 of NVDA Coach. "
+			"The practice page in your browser can now be closed. "
+			"Press NVDA+Shift+C to continue to additional training resources.")
+		)
+		self._statusText.SetLabel(_("NVDA Coach — Chapter 4 Complete!"))
 		self._statusText.GetParent().Layout()
 		self._startCourseBtn.Hide()
 		self._nextStepBtn.Hide()
 		self._panel.Layout()
-		self._instructionText.SetValue(_(
-			"Congratulations — Browse Mode and Web Navigation Complete!\n\n"
-			"You have finished all eight lessons in Chapter 3. "
-			"You now know how to navigate any web page using NVDA's browse mode.\n\n"
-			"Commands you have mastered:\n"
-			"  H — Jump between headings\n"
-			"  1 through 6 — Jump to heading levels\n"
-			"  K — Jump between links\n"
-			"  F, E, B — Navigate form fields and buttons\n"
-			"  D — Jump between landmarks\n"
-			"  L — Jump between lists\n"
-			"  NVDA+Space — Toggle browse mode and focus mode\n"
-			"  NVDA+F7 — Open the Elements List\n\n"
-			"The practice page in your browser can now be closed.\n\n"
-			"What to do next:\n"
-			"  Press NVDA+Shift+C to open the lesson picker.\n"
-			"  Choose Additional Training and Help for more resources.\n"
-			"  Or press Ctrl+R to repeat any lesson in this chapter."
-		))
+		self._instructionText.SetValue(
+			congrats_heading + "\n\n"
+			+ _(
+				"You have finished all lessons in Chapter 4. "
+				"You now know how to navigate any web page using NVDA's browse mode.\n\n"
+				"Commands you have mastered:\n"
+				"  H — Jump between headings\n"
+				"  1 through 6 — Jump to heading levels\n"
+				"  K — Jump between links\n"
+				"  F, E, B — Navigate form fields and buttons\n"
+				"  D — Jump between landmarks\n"
+				"  L — Jump between lists\n"
+				"  NVDA+Space — Toggle browse mode and focus mode\n"
+				"  NVDA+F7 — Open the Elements List\n\n"
+				"The practice page in your browser can now be closed.\n\n"
+				"What to do next:\n"
+				"  Press NVDA+Shift+C to open the lesson picker.\n"
+				"  Choose Additional Training and Help for more resources.\n"
+				"  Or press Ctrl+R to repeat any lesson in this chapter."
+			)
+		)
 		self._clearEscapeCount()
-		ui.message(_(
-			"Congratulations! You have completed Browse Mode and Web Navigation, "
-			"Chapter 3 of NVDA Coach. "
-			"The practice page in your browser can now be closed. "
-			"Press NVDA+Shift+C to continue to additional training resources."
-		))
+		ui.message(congrats_spoken)
+
+	def showFinalCompletion(self):
+		"""Show the full-course heartfelt congratulations screen when every lesson is done."""
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		instructor = config.conf["nvdaCoach"].get("instructorName", "").strip()
+		trainingCenter = config.conf["nvdaCoach"].get("trainingCenter", "").strip()
+
+		heading = (
+			_("Congratulations, {name} — You Have Completed NVDA Coach!").format(name=name)
+			if name else
+			_("Congratulations — You Have Completed NVDA Coach!")
+		)
+		spoken = (
+			_("Congratulations, {name}! You have finished every lesson in NVDA Coach. "
+			  "This is a tremendous achievement. "
+			  "Tab to the Export Certificate of Completion button to save your certificate.").format(name=name)
+			if name else
+			_("Congratulations! You have finished every lesson in NVDA Coach. "
+			  "This is a tremendous achievement. "
+			  "Tab to the Export Certificate of Completion button to save your certificate.")
+		)
+
+		instructor_line = (
+			"\n" + _("Instructor: {instructor}").format(instructor=instructor)
+			if instructor else ""
+		)
+		center_line = (
+			"\n" + _("Training Program: {center}").format(center=trainingCenter)
+			if trainingCenter else ""
+		)
+
+		heartfelt = _(
+			"Your dedication and persistence have brought you to this moment. "
+			"The skills you have learned in NVDA Coach will serve you every day — "
+			"at work, at home, and everywhere in between. "
+			"Every expert was once a beginner, and you have proven that with patience "
+			"and practice, anything is possible. "
+			"Well done, and welcome to a world of greater independence."
+		)
+
+		body = (
+			heading
+			+ instructor_line
+			+ center_line
+			+ "\n\n"
+			+ heartfelt
+			+ "\n\n"
+			+ _(
+				"--- WHAT YOU HAVE LEARNED ---\n"
+				"  Chapter 1: Getting Started with NVDA\n"
+				"  Chapter 2: Your Keyboard\n"
+				"  Chapter 3: Reading Text\n"
+				"  Chapter 4: Browse Mode and Web Navigation\n"
+				"  Chapter 5: Object Navigation\n"
+				"  Chapter 6: Customizing NVDA\n\n"
+			)
+			+ _(
+				"--- YOUR CERTIFICATE OF COMPLETION ---\n"
+				"Tab to the Export Certificate button below and press Enter.\n"
+				"Your certificate will open in your web browser.\n\n"
+				"To save or print your certificate:\n"
+				"  1. In your browser, press Ctrl+S to save the page, "
+				"or press Ctrl+P to print it.\n"
+				"  2. To print to PDF, choose 'Save as PDF' or 'Microsoft Print to PDF' "
+				"as your printer.\n"
+				"  3. A copy is also saved automatically to your Downloads folder."
+			)
+		)
+
+		self._statusText.SetLabel(_("NVDA Coach — Course Complete!"))
+		self._statusText.GetParent().Layout()
+		self._startCourseBtn.Hide()
+		self._nextStepBtn.Hide()
+		if not self._certBtn.IsShown():
+			self._certBtn.Show()
+		self._panel.Layout()
+		self._instructionText.SetValue(body)
+		self._clearEscapeCount()
+		ui.message(spoken)
 
 	def beginEscapeSequence(self):
 		"""Arm the 3-Escape-to-close sequence after a lesson is stopped by Escape.
@@ -421,6 +833,76 @@ class CoachWindow(wx.Frame):
 		self._resetEscapeTimer()
 
 	# ------------------------------------------------------------------
+	# F4 / F5 / F6 / F7 — quick keys (available at all times in the window)
+	# ------------------------------------------------------------------
+
+	_HELP_URL = "https://tonygebhard.me/NVDACoach"
+	_FEEDBACK_URL = "mailto:info@tonygebhard.me?subject=Feedback%20for%20NVDA%20Coach"
+
+	def _handleF4(self):
+		"""First press: confirm prompt. Second press within 5 s: open help site."""
+		if self._f4Armed:
+			self._f4Armed = False
+			if self._f4Timer:
+				try:
+					self._f4Timer.Stop()
+				except Exception:
+					pass
+				self._f4Timer = None
+			webbrowser.open(self._HELP_URL)
+			ui.message(_("Opening NVDA Coach help documentation in your web browser."))
+		else:
+			self._f4Armed = True
+			ui.message(_(
+				"If you wish to view the NVDA Coach help documentation, press F4 once more."
+			))
+			self._f4Timer = wx.CallLater(5000, self._resetF4)
+
+	def _resetF4(self):
+		self._f4Armed = False
+		self._f4Timer = None
+
+	def _handleF5(self):
+		"""First press: confirm prompt. Second press within 5 s: open feedback email."""
+		if self._f5Armed:
+			self._f5Armed = False
+			if self._f5Timer:
+				try:
+					self._f5Timer.Stop()
+				except Exception:
+					pass
+				self._f5Timer = None
+			webbrowser.open(self._FEEDBACK_URL)
+			ui.message(_("Opening a feedback email to the developer."))
+		else:
+			self._f5Armed = True
+			ui.message(_(
+				"Press F5 once more to open a feedback email to the developer."
+			))
+			self._f5Timer = wx.CallLater(5000, self._resetF5)
+
+	def _resetF5(self):
+		self._f5Armed = False
+		self._f5Timer = None
+
+	def _handleF6(self):
+		"""Toggle lesson sounds on/off and announce the new state."""
+		current = config.conf["nvdaCoach"]["playSounds"]
+		config.conf["nvdaCoach"]["playSounds"] = not current
+		if config.conf["nvdaCoach"]["playSounds"]:
+			ui.message(_("Sounds enabled."))
+		else:
+			ui.message(_("Sounds disabled."))
+
+	def _handleF7(self):
+		"""Open the personalization dialog to set user and instructor names."""
+		gui.mainFrame.prePopup()
+		dlg = PersonalizationDialog(self)
+		dlg.ShowModal()
+		dlg.Destroy()
+		gui.mainFrame.postPopup()
+
+	# ------------------------------------------------------------------
 	# Key handling
 	# ------------------------------------------------------------------
 
@@ -435,6 +917,20 @@ class CoachWindow(wx.Frame):
 		key = evt.GetKeyCode()
 		mods = evt.GetModifiers()
 		runner = self._plugin._lessonRunner
+
+		# F4–F7 work at all times (during a lesson or idle).
+		if key == wx.WXK_F4:
+			self._handleF4()
+			return
+		if key == wx.WXK_F5:
+			self._handleF5()
+			return
+		if key == wx.WXK_F6:
+			self._handleF6()
+			return
+		if key == wx.WXK_F7:
+			self._handleF7()
+			return
 
 		# ----- DURING A LESSON --------------------------------------------
 		if runner.isActive:
@@ -865,7 +1361,7 @@ class LessonPickerDialog(wx.Dialog):
 	selected item.
 	"""
 
-	def __init__(self, parent, categories, progressTracker, onLessonSelected):
+	def __init__(self, parent, categories, progressTracker, onLessonSelected, coachWindow=None):
 		super().__init__(
 			parent,
 			title=_("NVDA Coach — Choose a Lesson"),
@@ -874,6 +1370,7 @@ class LessonPickerDialog(wx.Dialog):
 		self._categories = categories
 		self._progress = progressTracker
 		self._onLessonSelected = onLessonSelected
+		self._coachWindow = coachWindow
 		# Addon root — three directories above this file.
 		self._addonRoot = os.path.dirname(
 			os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1029,9 +1526,24 @@ class LessonPickerDialog(wx.Dialog):
 		self.Destroy()
 
 	def _onKeyPress(self, event):
-		if event.GetKeyCode() == wx.WXK_ESCAPE:
+		key = event.GetKeyCode()
+		if key == wx.WXK_ESCAPE:
 			self.Destroy()
 			return
+		# F4–F7 delegate to CoachWindow handlers so they work here too.
+		if self._coachWindow:
+			if key == wx.WXK_F4:
+				self._coachWindow._handleF4()
+				return
+			if key == wx.WXK_F5:
+				self._coachWindow._handleF5()
+				return
+			if key == wx.WXK_F6:
+				self._coachWindow._handleF6()
+				return
+			if key == wx.WXK_F7:
+				self._coachWindow._handleF7()
+				return
 		event.Skip()
 
 
@@ -1055,6 +1567,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Create the persistent display window (hidden until first use).
 		self._coachWindow = CoachWindow(gui.mainFrame, self)
 		self._lessonRunner.coachWindow = self._coachWindow
+		self._lessonRunner.onLessonComplete = self._onLessonComplete
 		# Create the practice window (hidden; shown automatically per lesson).
 		self._practiceFrame = PracticeFrame(gui.mainFrame, self)
 		# Register NVDA settings panel.
@@ -1062,13 +1575,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Add NVDA Coach item to NVDA Help menu.
 		self._helpMenuItem = gui.mainFrame.sysTrayIcon.helpMenu.Append(
 			wx.ID_ANY,
-			_("NVDA Coach &Help"),
-			_("Open the NVDA Coach user guide"),
+			_("&NVDA Coach"),
+			_("Open NVDA Coach lesson picker"),
 		)
 		gui.mainFrame.sysTrayIcon.helpMenu.Bind(
 			wx.EVT_MENU, self._onHelpMenuActivated, self._helpMenuItem
 		)
 		log.info(f"NVDA Coach loaded. {len(self._categories)} lesson categories found.")
+		# If the student has already completed the final chapter in a prior session,
+		# quietly show the certificate button when the add-on loads (no fanfare).
+		if self._categories and self._nvdaSettingsComplete():
+			self._coachWindow.showCertificateButton()
 
 	def terminate(self):
 		self._lessonRunner.cleanup()
@@ -1089,33 +1606,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				pass
 
 	def _onHelpMenuActivated(self, evt):
-		"""Open the NVDA Coach user guide from the NVDA Help menu."""
-		docPath = _localizedDocPath("readme.html")
-		if os.path.isfile(docPath):
-			os.startfile(docPath)
-		else:
-			webbrowser.open("https://tonygebhard.me/NVDACoach")
+		"""Open the NVDA Coach lesson picker from the NVDA Help menu."""
+		self._activateCoach()
 
-	@script(
-		description=_("Show NVDA Coach window, or open the lesson picker"),
-		gesture="kb:NVDA+shift+c",
-		category="NVDA Coach",
-	)
-	def script_toggleCoach(self, gesture):
-		"""Show and focus the CoachWindow.
-
-		During a lesson: brings CoachWindow to the foreground so the student
-		can press Enter to advance after trying a command in another window.
-		Between lessons: opens the lesson picker.
-		"""
+	def _activateCoach(self):
+		"""Open the lesson picker, or refocus the coach window if a lesson is active."""
 		if self._lessonRunner.isActive:
-			# Bring CoachWindow to focus — student tried the command and is
-			# coming back here to confirm and advance.
 			if not self._coachWindow.IsShown():
 				self._coachWindow.Show()
-			# Raise the window, then use wx.CallAfter to focus a specific child
-			# control once the raise is fully processed.  Calling SetFocus() on
-			# the wx.Frame itself leaves NVDA with no readable control target.
 			self._coachWindow.Raise()
 			wx.CallAfter(self._coachWindow.focusInstructionText)
 			ui.message(_(
@@ -1130,11 +1628,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				"Please check that the lessons folder is in the add-on directory."
 			))
 			return
-		# Ensure the coach window is visible before showing the picker.
 		if not self._coachWindow.IsShown():
 			self._coachWindow.Show()
 		self._coachWindow.Raise()
 		self._showLessonPicker()
+
+	@script(
+		description=_("Show NVDA Coach window, or open the lesson picker"),
+		gesture="kb:NVDA+shift+c",
+		category="NVDA Coach",
+	)
+	def script_toggleCoach(self, gesture):
+		"""Show and focus the CoachWindow.
+
+		During a lesson: brings CoachWindow to the foreground so the student
+		can press Enter to advance after trying a command in another window.
+		Between lessons: opens the lesson picker.
+		"""
+		self._activateCoach()
 
 	def _showLessonPicker(self):
 		"""Show the lesson selection dialog and wire up the selection callback."""
@@ -1142,6 +1653,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._progressTracker = ProgressTracker()
 		self._lessonRunner = LessonRunner(self._progressTracker)
 		self._lessonRunner.coachWindow = self._coachWindow
+		self._lessonRunner.onLessonComplete = self._onLessonComplete
 		# practiceFrame is managed by GlobalPlugin; no need to set on runner.
 
 		def onLessonSelected(categoryId, lesson):
@@ -1213,6 +1725,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._categories,
 			self._progressTracker,
 			onLessonSelected,
+			coachWindow=self._coachWindow,
 		)
 		dialog.Show()
 		gui.mainFrame.postPopup()
@@ -1363,3 +1876,63 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ctypes.windll.user32.PostMessageW(hwnd, 0x0010, 0, 0)  # WM_CLOSE
 		except Exception as e:
 			log.warning(f"NVDA Coach: Could not close practice browser window: {e}")
+
+	# ------------------------------------------------------------------
+	# Course completion certificate
+	# ------------------------------------------------------------------
+
+	def _nvdaSettingsComplete(self):
+		"""Return True when every lesson in the final chapter (nvda_settings) is marked complete."""
+		for category in self._categories:
+			if category.get("id") == "nvda_settings":
+				return all(
+					self._progressTracker.isLessonComplete("nvda_settings", l.get("id", ""))
+					for l in category.get("lessons", [])
+				)
+		return False
+
+	def _allLessonsComplete(self):
+		"""Return True only when every lesson in every category is marked complete."""
+		for category in self._categories:
+			catId = category.get("id", "")
+			for lesson in category.get("lessons", []):
+				if not self._progressTracker.isLessonComplete(catId, lesson.get("id", "")):
+					return False
+		return True
+
+	def _onLessonComplete(self, categoryId, lessonId):
+		"""Called by LessonRunner after every lesson finishes.
+
+		Returns True when the final chapter (nvda_settings) is fully complete,
+		so lessonRunner skips the standard idle/navigation screen for the last lesson.
+		"""
+		# Trigger final completion when the Customizing NVDA chapter is all done.
+		if categoryId == "nvda_settings":
+			for category in self._categories:
+				if category.get("id") == "nvda_settings":
+					all_done = all(
+						self._progressTracker.isLessonComplete("nvda_settings", l.get("id", ""))
+						for l in category.get("lessons", [])
+					)
+					if all_done:
+						wx.CallLater(2500, self._coachWindow.showFinalCompletion)
+						return True
+		return False
+
+	def _showCompletionCertificate(self):
+		"""Generate and present the certificate of completion."""
+		try:
+			_generateCertificate()
+		except Exception as e:
+			log.error(f"NVDA Coach: Could not generate certificate: {e}")
+			ui.message(_(
+				"Could not save the certificate. "
+				"Please check that your Downloads folder is accessible."
+			))
+			return
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+		gui.mainFrame.prePopup()
+		dlg = CertificateDialog(gui.mainFrame, name)
+		dlg.ShowModal()
+		dlg.Destroy()
+		gui.mainFrame.postPopup()

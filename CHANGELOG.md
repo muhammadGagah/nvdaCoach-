@@ -1,5 +1,20 @@
 # NVDA Coach — Changelog
 
+## v1.5 (2026-04-10)
+
+### New Features
+
+- **Personalization (F7):** A new profile dialog (F7 in the Coach window or lesson picker) lets students enter their name, instructor's name, and training program or center. NVDA Coach uses these throughout the session: a one-time personalized greeting on first lesson start ("Hello, Tony! Your instructor today is Sarah."), personalized lesson completions ("Well done, Tony!"), a named welcome on the introduction screen, and a personalized "Ready, Tony." on the idle screen. All fields are optional — generic text is used when left blank.
+- **F4–F7 quick keys:** Four function keys are now available at all times inside the Coach window and the lesson picker. F4 opens the NVDA Coach help documentation in the browser (two presses required, with a 5-second confirmation window). F5 opens a pre-addressed feedback email to the developer (two presses required). F6 immediately toggles lesson sounds on or off and announces the new state. F7 opens the personalization dialog. The shortcut bar in the Coach window now displays both rows.
+- **Certificate of Completion:** Finishing all lessons in the Customizing NVDA chapter (Chapter 6) triggers a dedicated congratulations screen with a tabbable Export Certificate button. Activating the button generates a styled HTML certificate, saves it to the user's Downloads folder with a personalized filename, and opens it in the browser. The certificate includes the student's name, date of completion, instructor, training program (if set), a heartfelt message, and Tony Gebhard's signature as Assistive Technology Instructor. Returning users who have already completed the course see the cert button appear automatically when the add-on loads. The completion screen includes step-by-step instructions for printing or saving as PDF.
+- **Final course completion screen:** Completing the last lesson of Chapter 6 now replaces the standard idle screen with a full-page heartfelt congratulations message. It lists all six chapters mastered, displays personalized instructor and training program information if set, and guides the student to the certificate export button.
+
+### Content
+
+- **Chapter reordering:** "Your Keyboard" (previously Chapter 6) is now Chapter 2, immediately following Getting Started. This gives students physical keyboard orientation — modifier keys, function keys, Fn behavior, layout selection — before any command learning begins. "Customizing NVDA" (previously Chapter 5) is now the final chapter (Chapter 6), serving as the natural course conclusion that triggers the certificate.
+
+---
+
 ## v1.4 (2026-04-07)
 
 ### Bug Fixes

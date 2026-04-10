@@ -1,555 +1,555 @@
 {
-    "id": "browse_mode",
-    "title": "Tarama Kipi ve Web Dolaşımı",
-    "description": "NVDA'nın tarama Kipini kullanarak web sayfalarında ve HTML belgelerinde nasıl dolaşabileceğinizi öğrenin. Bir derse başladığınızda otomatik olarak bir pratik web sayfası açılacaktır.",
-    "order": 3,
-    "practicePage": true,
-    "lessons": [
+  "id": "browse_mode",
+  "title": "Tarama Kipi ve Web Dolaşımı",
+  "description": "NVDA'nın tarama Kipini kullanarak web sayfalarında ve HTML belgelerinde nasıl dolaşabileceğinizi öğrenin. Bir derse başladığınızda otomatik olarak bir pratik web sayfası açılacaktır.",
+  "order": 4,
+  "practicePage": true,
+  "lessons": [
+    {
+      "id": "intro_browse_mode",
+      "title": "Tarama Kipi Hakkında",
+      "order": 1,
+      "steps": [
         {
-            "id": "intro_browse_mode",
-            "title": "Tarama Kipi Hakkında",
-            "order": 1,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Tarama Kipi, NVDA'nın web sayfalarını okumanıza nasıl yardımcı olduğunu gösterir. Görebilen kullanıcılar görsel olarak düzenlenmiş bir web sayfasını görebilir. NVDA, sanki bir belgeymiş gibi, ok tuşları ve tek harfli kısayollarla dolaşabileceğiniz sayfanın sanal bir metin kopyasını oluşturur. Enter tuşuna bastığınızda tarayıcınızda ayrı bir pencerede pratik web sayfası açılacaktır. Burada kalın ve önce bu talimatları okumayı bitirin. NVDA Eğitmeni bir sonraki adımı okuyabilmeniz için odaklanmaya devam edecektir. Hazır olduğunuzda tarayıcınıza geçmek için Alt+Sekme tuşlarına basın. Uygulama sayfasını açmak ve devam etmek için Enter tuşuna basın.",
-                    "openPracticePageAfter": true,
-                    "hints": [
-                        "Tarama Kipi, web sayfasının sanal bir kopyasını metin belgesi olarak oluşturur. Ok tuşları normal bir belge gibi üzerinde hareket eder.",
-                        "Başlık için H ve bağlantı için K gibi tek harfli kısayollar, yazmanız gereken formlarda veya metin alanlarında değil, yalnızca Tarama Kipinde çalışır.",
-                        "Bir web sayfasını açtığınızda NVDA otomatik olarak tarama Kipine geçer. Etkinleştiğinde 'Tarama Kipinin' duyurusunu duyacaksınız."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Uygulama sayfası artık tarayıcınızda açık. Geçiş yapmak için Alt+Sekme tuşlarına basın. Oraya vardığınızda sayfayı okumaya başlamak için Aşağı Ok tuşuna basın. Buraya geri dönüp dersinize devam etmek için istediğiniz zaman NVDA+Shift+C tuşlarına basın. Hazır olduğunuzda Enter'a basın.",
-                    "hints": [
-                        "Tarayıcınıza geçmek için Alt artı Sekme tuşlarına basın. Bir sonraki açık pencereye geçmek için Alt tuşunu basılı tutun ve Sekme tuşuna bir kez basın.",
-                        "Tarayıcıya girdikten sonra, tıpkı bir belgeyi okuduğunuz gibi sayfayı satır satır okumaya başlamak için Aşağı Ok tuşuna basmanız yeterlidir.",
-                        "Eğitmen penceresine dönmek ve dersinize devam etmek için istediğiniz zaman NVDA artı Shift artı C tuşlarına basın."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Tarayıcınıza geçmek için Alt+Sekme tuşlarına basın.",
-                    "hint": "Alt tuşunu basılı tutun ve Sekme tuşuna basın. Bu, açık pencereleriniz arasında geçiş yapar. Tarayıcınız duyurulduğunda her iki tuşu da bırakın.",
-                    "hints": [
-                        "Boşluk çubuğunun solundaki Alt tuşunu basılı tutun ve Sekme tuşuna bir kez basın. Tarayıcınızın anonsunu duyduğunuzda her iki tuşu da bırakın.",
-                        "Tarayıcıyı geçerseniz açık pencereler arasında dolaşmaya devam etmek için Alt tuşunu basılı tutun ve Sekme tuşuna tekrar basın.",
-                        "Tarayıcıya girdiğinizde NVDA, bir web sayfasında olduğunuzu size bildirmek için sayfa başlığını ve 'Tarama Kipini' duyurmalıdır."
-                    ],
-                    "expectedGestures": [
-                        "kb:alt+sekme"
-                    ],
-                    "successMessage": "Pencereleri değiştirdiniz. Artık tarayıcınızda pratik sayfasında olmalısınız.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Tarayıcıdasınız. Sayfayı satır satır okumaya başlamak için Aşağı Ok tuşuna basın.",
-                    "hint": "Aşağı Ok tuşuna basmanız yeterlidir. Tarama Kipinde, NVDA siz aşağı doğru ilerledikçe her satırı okur.",
-                    "hints": [
-                        "Ok kümesindeki aşağıyı gösteren Aşağı Ok tuşuna basın. Tarama Kipinde sayfada her defasında bir satır hareket eder.",
-                        "NVDA, tıpkı bir belgeyi okurken olduğu gibi aşağı indikçe her satırı okur. Sayfa içeriği yukarıdan aşağıya doğru akar.",
-                        "NVDA sessizse tarayıcı penceresine odaklandığınızdan emin olun. Hangi pencerenin etkin olduğunu doğrulamak için NVDA artı T tuşuna basmayı deneyin."
-                    ],
-                    "expectedGestures": [
-                        "kb:aşağı Ok"
-                    ],
-                    "successMessage": "Uygulama sayfasında Tarama Kipinde dolaşıyorsunuz. Ok tuşları tıpkı bir metin belgesini okumak gibi çalışır. Tebrikler.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1000
-                }
-            ]
+          "type": "info",
+          "instruction": "Tarama Kipi, NVDA'nın web sayfalarını okumanıza nasıl yardımcı olduğunu gösterir. Görebilen kullanıcılar görsel olarak düzenlenmiş bir web sayfasını görebilir. NVDA, sanki bir belgeymiş gibi, ok tuşları ve tek harfli kısayollarla dolaşabileceğiniz sayfanın sanal bir metin kopyasını oluşturur. Enter tuşuna bastığınızda tarayıcınızda ayrı bir pencerede pratik web sayfası açılacaktır. Burada kalın ve önce bu talimatları okumayı bitirin. NVDA Eğitmeni bir sonraki adımı okuyabilmeniz için odaklanmaya devam edecektir. Hazır olduğunuzda tarayıcınıza geçmek için Alt+Sekme tuşlarına basın. Uygulama sayfasını açmak ve devam etmek için Enter tuşuna basın.",
+          "openPracticePageAfter": true,
+          "hints": [
+            "Tarama Kipi, web sayfasının sanal bir kopyasını metin belgesi olarak oluşturur. Ok tuşları normal bir belge gibi üzerinde hareket eder.",
+            "Başlık için H ve bağlantı için K gibi tek harfli kısayollar, yazmanız gereken formlarda veya metin alanlarında değil, yalnızca Tarama Kipinde çalışır.",
+            "Bir web sayfasını açtığınızda NVDA otomatik olarak tarama Kipine geçer. Etkinleştiğinde 'Tarama Kipinin' duyurusunu duyacaksınız."
+          ]
         },
         {
-            "id": "browse_headings",
-            "title": "Başlığa Göre Dolaşın",
-            "order": 2,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Web sayfaları, bir kitaptaki bölümler gibi başlıklarla yapılandırılmıştır. Görebilen kullanıcılar başlıkları görsel olarak görür; bunlar daha büyük veya kalındır. NVDA başlık metnini ve seviyesini duyurur. Tarama Kipinde bir sonraki başlığa atlamak için H tuşuna basın. Shift artı H önceki başlığa geri döner. Uygulama sayfasında tarayıcınızda olduğunuzdan emin olun. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "Tek başına H'ye basın; değiştirici tuş olmadan yalnızca H harfine basın. Tarama Kipinde, tek harfler klavyeyle yazılan metin değil, kısayollardır.",
-                        "NVDA başlık metnini ve seviyeini duyurur; örneğin '2. seviye başlık: Başlarken'. seviye size sayfa yapısında nerede bulunduğunu söyler.",
-                        "Shift artı H önceki başlığa geri gider. İleri gitmek için bir tuşa ve geri gitmek için Shift artı o tuşa basma düzeni çoğu Tarama Kipi kısayolu için geçerlidir."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki başlığa atlamak için H tuşuna basın.",
-                    "hint": "Tek başına H harfine basmanız yeterli. Tarama Kipinde, tek harfler, yazılan karakterler değil, dolaşım kısayollarıdır.",
-                    "hints": [
-                        "Tek başına H'ye basın; yalnızca harf tuşuna basın, değiştirici yok. Tarama Kipinde, harf tuşları yazı karakterlerine değil sayfa öğelerine atlar.",
-                        "NVDA başlık metnini ve seviye numarasını duyurur. Seviye 1 ana başlıktır; 2. seviye bir bölümdür; seviye 3 bir alt bölümdür.",
-                        "Hiçbir şey olmazsa tarayıcıda Tarama Kipinde olduğunuzdan emin olun. Gerekirse Eğitmen'e dönmek için NVDA artı Shift artı C tuşlarına basın."
-                    ],
-                    "expectedGestures": [
-                        "kb:h"
-                    ],
-                    "successMessage": "Bir sonraki başlığa atladınız. NVDA başlık metnini ve seviyeini açıkladı.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Bir sonraki başlığa geçmek için tekrar H tuşuna basın.",
-                    "hint": "Sayfadaki başlıklar arasında ilerlemek için H tuşuna basmaya devam edin.",
-                    "hints": [
-                        "Sayfadaki tüm başlıklar arasında ilerlemek için H tuşuna basmaya devam edin. Her basışta bir sonrakine atlanır.",
-                        "Başlıkları H ile taramak, bir web sayfasının yapısına ilişkin genel bakış elde etmenin en hızlı yoludur; tıpkı içindekiler tablosunu okumak gibi.",
-                        "NVDA 'sonraki başlık yok' diyorsa sayfadaki son başlığa ulaştınız demektir."
-                    ],
-                    "expectedGestures": [
-                        "kb:h"
-                    ],
-                    "successMessage": "İyi. Bir sayfadaki tüm başlıkları çok hızlı bir şekilde taramak için H tuşuna art arda basabilirsiniz.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Şimdi önceki başlığa dönmek için Shift+H tuşlarına basın.",
-                    "hint": "Başlıklar arasında geriye doğru gitmek için Shift tuşunu basılı tutun ve H tuşuna basın.",
-                    "hints": [
-                        "Shift tuşunu basılı tutun ve H tuşuna basın. Bu, H kısayolunun geriye dönük versiyonudur; aynı model çoğu Tarama Kipi dolaşım tuşu için geçerlidir.",
-                        "NVDA, seviyesi ve metni de dahil olmak üzere geri döneceğiniz başlığı duyurur.",
-                        "Shift artı bir dolaşım harfi, Tarama Kipinde her zaman geriye doğru hareket eder. H ve Shift artı H, herhangi bir sayfanın başlığını her iki yönde de taramanıza olanak tanır."
-                    ],
-                    "expectedGestures": [
-                        "kb:shift+h"
-                    ],
-                    "successMessage": "Bir başlık geriye atladınız. Shift artı bir dolaşım tuşu her zaman geriye doğru hareket eder. H ve Shift+H herhangi bir sayfanın yapısını saniyeler içinde taramanızı sağlar.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                }
-            ]
+          "type": "info",
+          "instruction": "Uygulama sayfası artık tarayıcınızda açık. Geçiş yapmak için Alt+Sekme tuşlarına basın. Oraya vardığınızda sayfayı okumaya başlamak için Aşağı Ok tuşuna basın. Buraya geri dönüp dersinize devam etmek için istediğiniz zaman NVDA+Shift+C tuşlarına basın. Hazır olduğunuzda Enter'a basın.",
+          "hints": [
+            "Tarayıcınıza geçmek için Alt artı Sekme tuşlarına basın. Bir sonraki açık pencereye geçmek için Alt tuşunu basılı tutun ve Sekme tuşuna bir kez basın.",
+            "Tarayıcıya girdikten sonra, tıpkı bir belgeyi okuduğunuz gibi sayfayı satır satır okumaya başlamak için Aşağı Ok tuşuna basmanız yeterlidir.",
+            "Eğitmen penceresine dönmek ve dersinize devam etmek için istediğiniz zaman NVDA artı Shift artı C tuşlarına basın."
+          ]
         },
         {
-            "id": "heading_levels",
-            "title": "Başlık Seviyelerine Atlayın",
-            "order": 3,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Web sayfaları yapı için farklı başlık seviyeleri kullanır; seviye 1 ana başlık, seviye 2 ana bölüm, seviye 3 ise alt bölümdür. Görebilen kullanıcılar bu hiyerarşiyi metnin boyutuna göre görebilirler. Tarama Kipinde, doğrudan o seviyedeki bir başlığa atlamak için 1'den 6'ya kadar bir sayıya basabilirsiniz. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "1. seviye başlıklara atlamak için 1'e, 2. seviye başlıklar için 2'ye ve 6'ya kadar bu şekilde devam edin. Sayısal tuş takımını değil, klavyenin üst kısmındaki sayı satırını kullanın.",
-                        "Shift artı bir sayı, o seviyein önceki başlığına geri atlar; diğer Tarama Kipi tuşlarıyla aynı ileri ve geri düzeni.",
-                        "İyi yapılandırılmış sayfaların çoğunda bir adet 1. seviye başlık (ana başlık) ve birkaç adet 2. seviye başlık (ana bölümler) bulunur. seviye 3 başlıkları bunların içindeki alt bölümlerdir."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki seviye 1 başlığına atlamak için 1'e basın.",
-                    "hint": "Sayısal tuş takımına değil, klavyenizin üst satırındaki 1 rakamına basın.",
-                    "hints": [
-                        "Klavyenin en üst satırındaki (harf tuşlarının üzerindeki satır) 1 rakamına basın. Sayısal tuş takımını kullanmayın.",
-                        "NVDA 1. seviye başlık metnini duyurdu. seviye 1 genellikle sayfanın ana başlığıdır.",
-                        "NVDA '1. seviyede bir sonraki başlık yok' diyorsa, sayfada yalnızca bir adet 1. seviye başlık vardır veya hiç yoktur."
-                    ],
-                    "expectedGestures": [
-                        "kb:1"
-                    ],
-                    "successMessage": "1. seviye başlığa atladınız. Bu genellikle sayfanın ana başlığıdır.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sonraki 2. seviye başlığa atlamak için 2'ye basın.",
-                    "hint": "Klavyenizin üst sırasındaki 2 rakamına basın.",
-                    "hints": [
-                        "Klavyenin üst sırasındaki 2 rakamına basın. seviye 2 başlıkları bir sayfanın ana bölümleridir.",
-                        "NVDA 2. seviye başlık metnini duyurdu. Tüm 2. seviye başlıklar arasında sırayla ilerlemek için 2'ye basmaya devam edin.",
-                        "Bir haber sitesindeki 2. seviye başlıklar makale başlıkları olabilir. Bir yardım sayfasında konu adları olabilirler."
-                    ],
-                    "expectedGestures": [
-                        "kb:2"
-                    ],
-                    "successMessage": "2. seviye başlığına atladınız. Bunlar ana bölüm başlıklarıdır.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sonraki 3. seviye başlığına atlamak için 3'e basın.",
-                    "hint": "Üst sıradaki 3 rakamına basın.",
-                    "hints": [
-                        "Üst sıradaki 3 rakamına basın. 3. seviye başlıklar 2. seviye bölümün alt bölümleridir.",
-                        "NVDA 3. seviye başlık metnini duyurdu. Seviye 3 başlıkları ana bölümler içerisinde daha ayrıntılı bir yapı sağlar.",
-                        "Başlık Seviyelerinde Dolaşma, bir web sayfasını hızlı bir şekilde taramak için en güçlü araçlardan biridir. Tüm başlıklar için H'yi belirli seviyelere yönelik sayılarla birleştirin."
-                    ],
-                    "expectedGestures": [
-                        "kb:3"
-                    ],
-                    "successMessage": "3. seviye başlığına atladınız. Başlık Seviyelerinde Dolaşma, bir web sayfasını hızlı bir şekilde taramak için en güçlü araçlardan biridir.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                }
-            ]
+          "type": "gesture",
+          "instruction": "Tarayıcınıza geçmek için Alt+Sekme tuşlarına basın.",
+          "hint": "Alt tuşunu basılı tutun ve Sekme tuşuna basın. Bu, açık pencereleriniz arasında geçiş yapar. Tarayıcınız duyurulduğunda her iki tuşu da bırakın.",
+          "hints": [
+            "Boşluk çubuğunun solundaki Alt tuşunu basılı tutun ve Sekme tuşuna bir kez basın. Tarayıcınızın anonsunu duyduğunuzda her iki tuşu da bırakın.",
+            "Tarayıcıyı geçerseniz açık pencereler arasında dolaşmaya devam etmek için Alt tuşunu basılı tutun ve Sekme tuşuna tekrar basın.",
+            "Tarayıcıya girdiğinizde NVDA, bir web sayfasında olduğunuzu size bildirmek için sayfa başlığını ve 'Tarama Kipini' duyurmalıdır."
+          ],
+          "expectedGestures": [
+            "kb:alt+sekme"
+          ],
+          "successMessage": "Pencereleri değiştirdiniz. Artık tarayıcınızda pratik sayfasında olmalısınız.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
         },
         {
-            "id": "navigate_links",
-            "title": "Bağlantılar Arasında Dolaşma",
-            "order": 4,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Bağlantılar, web sayfaları arasında geçiş yapmak için etkinleştirdiğiniz köprülerdir. Görebilen kullanıcılar bağlantıları altı çizili veya renkli metin olarak görebilir. Tarama Kipinde bir sonraki bağlantıya geçmek için K tuşuna basın; NVDA bağlantı metnini duyurur, böylece nereye gideceğini bilirsiniz. Shift artı K önceki bağlantıya gider. Sekme ayrıca sizi bağlantılar ve diğer etkileşimli öğeler arasında ilerletir. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "Bir sonraki bağlantıya atlamak için tek başına K tuşuna basın. NVDA bağlantı metnini duyurur; bu, siz onu takip etmeden önce bağlantının nereye gittiğini size söyler.",
-                        "Shift artı K önceki bağlantıya gider. İleri ve geri düzeni burada da başlıklarda olduğu gibi geçerlidir.",
-                        "Sekme aynı zamanda bağlantılar ve etkileşimli öğeler arasında da hareket eder ancak düz metni atlar. K yalnızca bağlantılar arasında hareket eder, Sekme tuşu ise düğmeleri ve form alanlarını da içerir."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki bağlantıya atlamak için K tuşuna basın.",
-                    "hint": "K harfine tek başına basın. NVDA bağlantı metnini duyuracaktır.",
-                    "hints": [
-                        "K'ye tek başına basın; hiçbir değiştirici olmadan yalnızca harf tuşuna basın. NVDA bağlantı metnini duyurur, böylece nereye gittiğini bilirsiniz.",
-                        "Bağlantı metni, bağlantının açıklayıcı adıdır. İyi bağlantı metni size hedefi söyler; 'Buraya tıklayın' gibi belirsiz metinler bunu yapmaz.",
-                        "Bir bağlantıyı takip etmek için Enter tuşuna basın. Takip etmeden taramaya devam etmek için bir sonraki bağlantıya geçmek üzere tekrar K tuşuna basmanız yeterlidir."
-                    ],
-                    "expectedGestures": [
-                        "kb:k"
-                    ],
-                    "successMessage": "Bir bağlantıya atladınız. NVDA bağlantı metnini duyurdu. Tarama Kipinde bir bağlantıyı takip etmek için Enter tuşuna basın.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Bir sonraki bağlantıya atlamak için tekrar K tuşuna basın.",
-                    "hint": "Sayfadaki tüm bağlantılar arasında dolaşmak için K tuşuna basmaya devam edin.",
-                    "hints": [
-                        "Bir sonraki bağlantıya atlamak için tekrar K tuşuna basın. Sayfadaki tüm bağlantıları sırayla taramak için K tuşuna basmaya devam edin.",
-                        "NVDA, her bağlantının metnini siz o bağlantıya geldiğinizde duyurur. Bu, bir sayfadaki tüm dolaşım seçeneklerini hızlı bir şekilde taramanıza olanak tanır.",
-                        "NVDA 'sonraki bağlantı yok' diyorsa sayfadaki son bağlantıya ulaştınız demektir."
-                    ],
-                    "expectedGestures": [
-                        "kb:k"
-                    ],
-                    "successMessage": "İyi. K ile bir sayfadaki tüm bağlantıları çok hızlı bir şekilde tarayabilirsiniz.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Şimdi önceki bağlantıya dönmek için Shift+K tuşlarına basın.",
-                    "hint": "Bağlantılar arasında geriye doğru gitmek için Shift tuşunu basılı tutun ve K tuşuna basın.",
-                    "hints": [
-                        "Geri gitmek için Shift tuşunu basılı tutun ve K tuşuna basın. Bu, başlıklar için Shift artı H ile aynı modeli izler.",
-                        "NVDA, siz geri döndüğünüzde önceki bağlantının metnini duyurur.",
-                        "K ve Shift artı K birlikte, bir sayfadaki tüm bağlantıları her iki yönde de serbestçe taramanıza olanak tanır."
-                    ],
-                    "expectedGestures": [
-                        "kb:shift+k"
-                    ],
-                    "successMessage": "Bir bağlantıyı geri taşıdınız. K ve Shift+K, bir sayfadaki tüm bağlantıları hızlı bir şekilde gözden geçirmenizi sağlar.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki etkileşimli öğeye geçmek için Sekme tuşuna basın.",
-                    "hint": "Sekme sizi bağlantılar, düğmeler ve form alanları arasında taşır. Düz metni değil, yalnızca etkileşimli öğeleri ziyaret eder.",
-                    "hints": [
-                        "Sekme, düz metin içeriğini atlayarak tüm etkileşimli öğeler (bağlantılar, düğmeler ve form alanları) arasında hareket eder.",
-                        "Sekme, çevredeki içeriği okumadan bir sayfanın yalnızca işlem yapılabilir kısımlarında dolaşmak istediğinizde kullanışlıdır.",
-                        "Sekme tuşu klavyenin en solunda, Caps Lock'un üzerindedir. Kendi başına basın; hiçbir değiştiriciye gerek yoktur."
-                    ],
-                    "expectedGestures": [
-                        "kb:sekme"
-                    ],
-                    "successMessage": "Sekme sizi bir sonraki etkileşimli öğeye taşıdı. Sekme, formlardaki kontroller arasında geçiş yapmak ve menülerde dolaşmak için mükemmeldir.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                }
-            ]
-        },
-        {
-            "id": "navigate_forms",
-            "title": "Formlarla Etkileşim",
-            "order": 5,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Web sayfalarında genellikle metin kutuları, düğmeler ve onay kutuları içeren formlar bulunur. Görme yeteneği olan kullanıcılar bunları görsel olarak görebilir; NVDA ne tür bir alana indiğinizi duyurur. Tarama Kipinde sonraki form alanına atlamak için F tuşuna basın. Yazabileceğiniz bir metin kutusu olan sonraki düzenleme alanına atlamak için E tuşuna basın. Sonraki düğmeye atlamak için B tuşuna basın. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "F herhangi bir türden sonraki form alanına atlar. E özellikle metin giriş alanlarına atlar. B düğmelere atlar. Hepsi aynı ileri ve geri düzeni kullanır - Shift artı harf geriye gider.",
-                        "NVDA, üzerine geldiğinizde alan türünü ve etiketini duyurur; örneğin, 'Düzenleme ara' veya 'Gönder düğmesi'.",
-                        "Bir düzenleme alanına yazmak için öncelikle Odak Kipine geçmeniz gerekir. NVDA bunu sıklıkla otomatik olarak yapar veya manuel olarak geçiş yapmak için Enter veya NVDA artı Aralık tuşlarına basabilirsiniz."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki form alanına atlamak için F tuşuna basın.",
-                    "hint": "F harfine tek başına basın. Buna metin kutuları, onay kutuları, radyo düğmeleri ve daha fazlası dahildir.",
-                    "hints": [
-                        "Tek başına F tuşuna basın; yalnızca harf tuşuna basın. Bu, sayfadaki herhangi bir türdeki sonraki form alanına atlar.",
-                        "NVDA alan türünü duyurdu - 'düzenle', 'onay kutusu', 'radyo düğmesi', 'birleşik giriş kutusu' - böylece bunun ne tür bir kontrol olduğunu bilirsiniz.",
-                        "Shift artı F önceki form alanına gider. Aynı ileri ve geri desen burada da geçerlidir."
-                    ],
-                    "expectedGestures": [
-                        "kb:f"
-                    ],
-                    "successMessage": "Bir form alanına atladınız. NVDA ne tür bir alan olduğunu açıkladı.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sonraki metin giriş alanına atlamak için E tuşuna basın.",
-                    "hint": "E harfine basın. Düzenleme alanları, bilgileri yazdığınız metin kutularıdır.",
-                    "hints": [
-                        "Bir sonraki düzenleme alanına (yazabileceğiniz bir metin kutusu) atlamak için tek başına E tuşuna basın.",
-                        "NVDA, alan etiketini ve bunu bir metin girişi olarak tanımlamak için 'düzenle' kelimesini duyurur.",
-                        "Bir düzenleme alanına yazmak için Enter tuşuna basarak Odak Kipine geçin, metninizi yazın ve ardından Tarama Kipine dönmek için Escape tuşuna basın."
-                    ],
-                    "expectedGestures": [
-                        "kb:e"
-                    ],
-                    "successMessage": "Bir düzenleme alanına geldiniz. Bunu yazmak için önce Enter'a veya NVDA+Aralık tuşuna basarak Odak Kipine geçmeniz gerekir.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Bir sonraki düğmeye atlamak için B'ye basın.",
-                    "hint": "B harfine basın. Düğmeler, Enter veya Aralık tuşuyla etkinleştirdiğiniz kontrollerdir.",
-                    "hints": [
-                        "Sayfadaki bir sonraki düğmeye atlamak için B'ye tek başına basın.",
-                        "NVDA düğmenin etiketini duyurdu. Odaklanmışken Enter veya Aralık tuşuna basarak herhangi bir düğmeyi etkinleştirin.",
-                        "B, herhangi bir web sayfasında Gönder, Ara veya Oturum Aç gibi işlem düğmelerini bulmanın en hızlı yoludur."
-                    ],
-                    "expectedGestures": [
-                        "kb:b"
-                    ],
-                    "successMessage": "Bir düğme buldunuz. Düğmeler Enter veya Aralık tuşuna basılarak etkinleştirilir. B, herhangi bir sayfada düğmeleri bulmanın en hızlı yoludur.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                }
-            ]
-        },
-        {
-            "id": "focus_mode",
-            "title": "Odak Kipi ve Tarama Kipi",
-            "order": 6,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Tarama Kipi sayfaları okumanızı ve dolaşmanızı sağlar. Ancak bir metin kutusuna yazmanız gerektiğinde Odak Kipine geçmeniz gerekir. Odak Kipinde tuşlara basmanız, dolaşım kısayolları olarak kullanılmak yerine doğrudan uygulamaya gider. NVDA genellikle bir metin alanına Sekme tuşuyla girdiğinizde otomatik olarak geçiş yapar. Ayrıca NVDA+Aralık ile manuel olarak da geçiş yapabilirsiniz. Kipler arasındaki bu geçiş ekran okuyuculara özeldir; NVDA size aynı tarayıcıda hem güçlü dolaşım hem de tam klavye kontrolü sağlar. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "Tarama Kipi: harf tuşları dolaşım kısayollarıdır. Odak Kipi: harf tuşları karakterleri bir alana yazar. NVDA artı Aralık bunlar arasında geçiş yapar.",
-                        "NVDA genellikle bir metin alanına girdiğinizde otomatik olarak Odak Kipine geçer. Bu gerçekleştiğinde 'Odak Kipinin' seslendirildiğini duyacaksınız.",
-                        "Yazmaya çalışıyorsanız ve harfler bir alanda görünmek yerine sayfada atlıyorsa, Tarama Kipindesiniz demektir. Odak Kipine geçmek için NVDA artı Aralık tuşuna basın."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve Boşluk çubuğuna basın. NVDA, hangisine geçiş yaptığınızı size bildirmek için 'Odak Kipi' veya 'Tarama Kipini anons edecektir. Odak Kipinde, harf tuşları sayfada dolaşmak yerine karakterleri bir alana yazar. Tarama Kipinde harf tuşları dolaşım kısayollarıdır. Bir metin alanına Sekme tuşuyla girdiğinizde NVDA genellikle otomatik olarak geçiş yapar, ancak NVDA+Aralık ile manuel olarak nasıl geçiş yapacağınızı bilmek size istediğiniz zaman tam kontrol sağlar. Devam etmek için burada Enter tuşuna basın.",
-                    "monitorGestures": [
-                        "kb:nvda+aralık"
-                    ],
-                    "hints": [
-                        "NVDA tuşunuzu (Insert veya Caps Lock) basılı tutun ve Boşluk çubuğuna basın. Boşluk çubuğu klavyenin alt orta kısmındaki uzun düz tuştur.",
-                        "NVDA, hangi kipe geçtiğinizi onaylamak için 'Odak Kipi' veya 'Tarama Kipini duyurur. Hissetmek için birkaç kez ileri geri geçiş yapın.",
-                        "Dolaşmayı beklerken harfler yazılıyorsa, Tarama Kipine geçmek için NVDA artı Boşluk tuşuna basın. Yazmayı beklediğiniz sırada dolaşım gerçekleşiyorsa, Odak Kipine geçmek için NVDA artı Boşluk tuşuna basın."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Diğer Kipe geri dönmek için NVDA+Aralık tuşuna bir kez daha basın. NVDA tuşunu basılı tutun ve Aralık tuşuna basın ve NVDA'nın Kip adını duyurmasını dinleyin. Bu kısayolu hatırlamak, klavyenizin herhangi bir web sayfasında nasıl davranacağını her zaman kontrol edebileceğiniz anlamına gelir. Devam etmek için burada Enter tuşuna basın.",
-                    "monitorGestures": [
-                        "kb:nvda+aralık"
-                    ],
-                    "hints": [
-                        "Geriye dönmek için NVDA tuşunu basılı tutun ve Boşluk çubuğuna tekrar basın. NVDA, her geçiş yaptığınızda Kipin adını duyurur.",
-                        "Boşluk çubuğu klavyenin en altında bulunan uzun düz tuştur. NVDA tuşunu basılı tutun ve ardından Aralık tuşuna dokunun.",
-                        "NVDA artı aralık, web'de dolaşmanın en önemli kısayollarından biridir. Bu bir refleks haline geldiğinde, asla yanlış Kipte sıkışıp kaldığınızı hissetmezsiniz."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "landmarks_and_lists",
-            "title": "Yer İşaretleri ve Listeler",
-            "order": 7,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "İyi tasarlanmış web sayfaları, dolaşma, ana içerik ve alt bilgi gibi adlandırılmış bölgeler olan yer işaretlerini kullanır. Görebilen kullanıcılar bu bölümleri bir bakışta görebilir. Tarama Kipinde, bir sonraki yer işaretine atlamak ve sayfanın ihtiyacınız olan kısmına doğrudan atlamak için D tuşuna basın. Shift artı D geriye gider. Sayfalarda ayrıca öğe listeleri bulunur. Sonraki listeye geçmek için L tuşuna basın. Bu kısayollar, her şeyi okumanıza gerek kalmadan sayfanın sağ kısmına geçmenize yardımcı olur. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "D bir sonraki sınır imi bölgesine atlar. Yaygın yer işaretleri şunları içerir: banner (sayfa başlığı), dolaşım, ana (ana içerik) ve içerik bilgisi (alt bilgi).",
-                        "L sayfadaki bir sonraki listeye atlar. Bir listeye girdikten sonra, tek tek liste öğeleri arasında geçiş yapmak için I tuşuna basın.",
-                        "Ana yer işaretine atlamak için D'yi kullanmak, sayfanın üst kısmında tekrarlanan dolaşım bağlantılarını atlar; bu, ziyaret ettiğiniz her sitede büyük bir zaman tasarrufu sağlar."
-                    ]
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Sayfadaki bir sonraki sınır imine atlamak için D tuşuna basın.",
-                    "hint": "D harfine basın. NVDA, dolaşım, ana bilgi veya içerik bilgisi gibi yer işareti türünü duyuracaktır.",
-                    "hints": [
-                        "Tek başına D'ye basın. NVDA yer işareti türünü duyurur; örneğin 'dolaşım yer işareti' veya 'ana yer işareti'.",
-                        "Ana yer işareti sayfanın birincil içeriğini içerir. D ile ona atlamak tekrarlanan başlıkları ve dolaşım menülerini atlar.",
-                        "Shift artı D önceki yer işaretine geri gider."
-                    ],
-                    "expectedGestures": [
-                        "kb:d"
-                    ],
-                    "successMessage": "Bir sınır imine atladınız. Yer işaretleri, ana içerik alanına ulaşmanın ve tekrarlanan dolaşım bağlantılarını atlamanın hızlı bir yoludur.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Bir sonraki yer işaretine geçmek için tekrar D tuşuna basın.",
-                    "hint": "Sayfadaki tüm yer işaretleri arasında geçiş yapmak için D tuşuna basmaya devam edin.",
-                    "hints": [
-                        "Bir sonraki yer işaretine atlamak için tekrar D tuşuna basın. Sayfadaki tüm önemli bölgeler arasında geçiş yapmak için basmaya devam edin.",
-                        "NVDA, siz üzerine indiğinizde her bir yer işareti türünü duyurur.",
-                        "NVDA 'sonraki yer işareti yok' diyorsa sayfada ya başka yer işareti yoktur ya da ARIA rolleri iyi yapılandırılmamıştır."
-                    ],
-                    "expectedGestures": [
-                        "kb:d"
-                    ],
-                    "successMessage": "İyi. Bir sayfanın tüm önemli bölümleri arasında geçiş yapmak için D tuşuna art arda basabilirsiniz.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                },
-                {
-                    "type": "gesture",
-                    "instruction": "Şimdi sayfadaki bir sonraki listeye geçmek için L tuşuna basın.",
-                    "hint": "L harfine basın. Listeler dolaşım menüleri, ürün listeleri veya madde işaretleri gibi gruplandırılmış öğeleri içerir.",
-                    "hints": [
-                        "Bir sonraki listeye atlamak için tek başına L tuşuna basın. Listeler; dolaşım menüleri, madde işaretleri, ürün listeleri ve daha fazlası gibi gruplandırılmış öğeleri içerir.",
-                        "Bir listeye girdikten sonra, tek tek liste öğeleri arasında birer birer geçiş yapmak için I tuşuna basın.",
-                        "NVDA, bir listeye geldiğinizde 'X öğeli liste'yi duyurur, böylece okumaya başlamadan önce listenin kaç öğe içerdiğini bilirsiniz."
-                    ],
-                    "expectedGestures": [
-                        "kb:l"
-                    ],
-                    "successMessage": "Bir liste buldunuz. Bir listeye girdikten sonra liste öğeleri arasında geçiş yapmak için I tuşuna basın. L ve D birlikte herhangi bir sayfada ihtiyacınız olan yapısal dolaşımın çoğunu kapsar.",
-                    "allowExecution": true,
-                    "feedbackDelay": 1500
-                }
-            ]
-        },
-        {
-            "id": "elements_list",
-            "title": "Elementler Listesi",
-            "order": 8,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "NVDA'nın, geçerli sayfadaki tüm başlıkları, bağlantıları, form alanlarını veya yer işaretlerini tek bir yerde gösteren, Öğeler Listesi adı verilen güçlü bir iletişim kutusu vardır. Listeyi filtreleyebilir ve doğrudan herhangi bir öğeye geçebilirsiniz. Görme yeteneği olan kullanıcılar bir sayfayı görsel olarak tarayabilir ve neye ihtiyaç duyduklarını tespit edebilir; Öğe Listesi size aynı genel bakışı erişilebilir tek bir iletişim kutusunda sunar. Tüm sayfanın içindekiler tablosu gibidir. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "Öğe Listesi NVDA artı F7 ile açılır. Bulunduğunuz sekmeye bağlı olarak başlıkları, bağlantıları, form alanlarını veya yer işaretlerini gösterir.",
-                        "Öğe Listesinin içinde Sekme, üstteki kategori düğmeleri arasında hareket eder. Ok tuşları öğe listesinde hareket eder. Enter, sayfada seçilen öğeye atlar.",
-                        "Öğe Listesi, uzun bir sayfadaki belirli bir bağlantıyı veya başlığı her şeyi okumadan bulmanın en hızlı yollarından biridir."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve klavyenizin üst kısmındaki F7 tuşuna basın. Öğe Listesi iletişim kutusu açılacak ve NVDA bunu duyuracaktır. Geçerli sayfadaki başlıkları, bağlantıları, form alanlarını ve yer işaretlerini görüntülemek arasında geçiş yapmak için iletişim kutusunun içinde Sekme tuşuna basın. Listede dolaşmak için ok tuşlarını kullanın ve sayfadaki herhangi bir öğeye doğrudan atlamak için Enter tuşuna basın. Tüm sayfanın anlık içindekiler tablosu gibidir; NVDA'nın web dolaşımı için size sunduğu en güçlü araçlardan biridir. Keşfetmeyi tamamladığınızda iletişim kutusunu kapatmak için Escape tuşuna basın, ardından devam etmek için Buraya Enter tuşuna basın.",
-                    "monitorGestures": [
-                        "kb:nvda+f7"
-                    ],
-                    "hints": [
-                        "NVDA tuşunu basılı tutun ve üst sıradaki yedinci işlev tuşu olan F7'ye basın. Öğe Listesi iletişim kutusu hemen açılır.",
-                        "İletişim kutusunda Sekme tuşu kategori düğmeleri arasında hareket eder: başlıklar, bağlantılar, form alanları, düğmeler ve yer işaretleri. Ok tuşları daha sonra seçilen kategorideki öğeler arasında hareket eder.",
-                        "Listeyi o metni içeren öğelerle daraltmak için filtre kutusuna birkaç harf yazın. Bu, çok sayıda bağlantı içeren sayfalarda çok kullanışlıdır."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Tebrikler. Öğe Listesi, herhangi bir sayfaya ilişkin genel bakış elde etmenin en hızlı yollarından biridir. Bir sonraki derse devam etmek için Enter tuşuna basın.",
-                    "hints": [
-                        "Bilmediğiniz bir sayfaya geldiğinizde ve okumadan önce yapısını hızlı bir şekilde anlamak istediğinizde Öğeler Listesini kullanın.",
-                        "Öğeler Listesi'ndeki filtre kutusu, listeyi daraltmak için bir sözcük yazmanıza olanak tanır; örneğin, herhangi bir sayfada bir kişi bağlantısını bulmak için 'kişi' yazın.",
-                        "Unutmayın: NVDA artı F7, Öğe Listesini herhangi bir web sayfasından açar. Chrome, Firefox ve Edge dahil çoğu tarayıcıda çalışır."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "nvda_find",
-            "title": "Sayfada Metin Bulma",
-            "order": 9,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "NVDA+Ctrl+F, geçerli web sayfasında herhangi bir metni aramanıza olanak tanıyan NVDA Bul iletişim kutusunu açar. Görebilen kullanıcılar, ekrandaki metni bulmak için tarayıcılarında Ctrl+F tuşlarına basabilir. NVDA'nın Bul iletişim kutusu aynı şekilde çalışır ancak sonucu konuşma yoluyla duyurur. Tarama Kipinde ve birçok belgede çalışır. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "NVDA artı Kontrol artı F, NVDA'nın kendi Bul iletişim kutusunu açar. NVDA'yı basılı tutun, Kontrol'ü basılı tutun ve ardından F tuşuna basın.",
-                        "Bulmak istediğiniz metni yazın ve Enter tuşuna basın. NVDA ilk eşleşmeye atlar ve etrafındaki metni okur.",
-                        "NVDA artı F3 ilkinden sonraki sonucu bulur. NVDA artı Shift artı F3 önceki eşleşmeyi bulur."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun, ardından Kontrol tuşunu basılı tutun, ardından F tuşuna basın. Bul iletişim kutusu açılacaktır. Alıştırma sayfasında görünen 'başlık' veya 'bağlantı' gibi bir kelimeyi yazın ve ardından ilk eşleşmeye atlamak için Enter tuşuna basın. NVDA sonuçla ilgili metni duyuracaktır. Arama yapmadan iletişim kutusunu kapatmak için Escape tuşuna basın. İşiniz bittiğinde buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
-                    "monitorGestures": [
-                        "kb:nvda+kontrol+f"
-                    ],
-                    "hints": [
-                        "NVDA'yı basılı tutun, Kontrol'ü basılı tutun ve F'ye basın; üçü de aynı anda. Kontrol tuşu sol alt köşededir; F harflerin orta satırındadır.",
-                        "Sayfada olduğunu bildiğiniz bir kelimeyi yazın ve Enter tuşuna basın. NVDA ilk geçtiği yere atlar ve çevresindeki metni okur.",
-                        "Eşleşme bulunamazsa NVDA 'bulunamadı' diyor. Farklı bir arama terimi deneyin veya yazımınızı kontrol edin."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Ayrıca iletişim kutusunu yeniden açmadan sonraki veya önceki oluşumu da bulabilirsiniz. Sonraki eşleşmeyi bulmak için NVDA+F3 tuşlarına, önceki eşleşmeyi bulmak için NVDA+Shift+F3 tuşlarına basın. Bunlar, diğer uygulamalardaki Sonrakini Bul işleviyle aynı şekilde çalışır. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "NVDA artı F3 bir sonraki sonucu bulur. NVDA artı Shift artı F3 önceki eşleşmeyi bulur. F3, üst sıradaki üçüncü işlev tuşudur.",
-                        "Bul'u açıp ilk sonuca atladıktan sonra, Escape ile iletişim kutusunu kapatın ve sonraki eşleşmelerde ilerlemeye devam etmek için NVDA artı F3'ü kullanın.",
-                        "Bu kısayol, web sayfalarında ve birçok belge görüntüleyicide Tarama Kipinde çalışır; belirli bir kelimeyi veya ifadeyi aradığınızda kullanışlıdır."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "toggle_single_letter_nav",
-            "title": "Tek Harfli Dolaşımı Değiştirme",
-            "order": 10,
-            "chapterComplete": true,
-            "steps": [
-                {
-                    "type": "info",
-                    "instruction": "Tarama Kipinde H, K ve D gibi tek harfli tuşlar başlıklara, bağlantılara ve yer işaretlerine atlamak için kullanılan kısayollardır. Ancak bir formu doldururken, aynı harf tuşlarının sayfada dolaşmak için değil, karakterleri bir metin alanına yazması gerekir. NVDA+Shift+Aralık tek harfli dolaşımı açar ve kapatır. Bu, NVDA'ya özeldir ve klavyenizin herhangi bir web sayfasında nasıl davranacağı konusunda size hassas kontrol sağlar. Devam etmek için Enter'a basın.",
-                    "hints": [
-                        "NVDA artı Shift artı Aralık tek harfli dolaşımı değiştirir. Kapalıyken harf tuşları normal şekilde yazar. Açıkken, harf tuşları dolaşım kısayollarıdır.",
-                        "NVDA bunu genellikle otomatik olarak gerçekleştirir; bir metin alanına girdiğinizde tek harfli dolaşımı kapatır. Bu geçiş, manuel kontrole ihtiyaç duyduğunuz durumlar içindir.",
-                        "Yazmaya çalıştığınızda harfler sayfanın etrafında atlıyorsa, tek harfli dolaşımı kapatmak için NVDA artı Shift artı Aralık tuşlarına basın."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun, Shift tuşunu basılı tutun ve Aralık tuşuna basın. NVDA 'tek harfli dolaşım açık' veya 'tek harfli dolaşım kapalı' şeklinde duyuru yapacaktır. Kapalıyken harfler bulunduğunuz alana normal şekilde yazılır. Açıkken ise tek harfler yine kısayoldur. Devam etmeden önce tekrar açın. Devam etmek için burada Enter tuşuna basın.",
-                    "monitorGestures": [
-                        "kb:nvda+shift+aralık"
-                    ],
-                    "hints": [
-                        "NVDA'yı basılı tutun, Shift'i basılı tutun ve Aralık tuşuna basın. Boşluk çubuğu klavyenin altındaki uzun düz tuştur.",
-                        "NVDA, geçişi onaylamak için 'tek harfli dolaşım Kipinin açık veya kapalı olduğunu duyurur.",
-                        "Devam etmeden önce tekrar açın; ileri gitmek için Enter'a basmadan önce NVDA'nın 'tek harfli Dolaşım açık'ı duyurduğundan emin olun."
-                    ]
-                },
-                {
-                    "type": "info",
-                    "instruction": "Mükemmel iş — Tarama Kipi ve Web'de dolaşma bölümünü tamamladınız! Artık başlıkları, bağlantıları, form alanlarını, yer işaretlerini, listeleri, Öğeler Listesini, NVDA Bul'u kullanarak web sayfalarında nasıl dolaşabileceğinizi ve Tarama Kipi, Odak Kipi ve tek harfli dolaşım arasında nasıl geçiş yapacağınızı biliyorsunuz. Bu beceriler herhangi bir web sayfasında hızlı ve bağımsız bir şekilde dolaşabilmenizi sağlar. Hazır olduğunuzda ders seçiciyi açmak için NVDA+Shift+C tuşlarına basın ve bir sonraki bölüme geçin: Nesne dolaşımı — burada Sekme tuşunun ulaşamadığı kontroller de dahil olmak üzere ekrandaki herhangi bir kontrole erişmeyi öğreneceksiniz. Bitirmek için Enter'a basın.",
-                    "hints": [
-                        "Bir sonraki bölüm Nesne Dolaşımı'dır. Size ekrandaki herhangi bir öğeye erişmeyi öğretir; hatta Sekme ve Tarama Kipinin erişemediği kontrolleri bile yapar.",
-                        "Burada öğrendiğiniz Tarama Kipi kısayollarının (H, K, D, F, B, L) tümü daha büyük bir grubun parçasıdır. NVDA kullanım kılavuzu bunların hepsini listeliyor. NVDA artı N, Yardım için A, Kullanım Kılavuzu için K ile açın.",
-                        "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamlanan tüm dersler işaretlenir."
-                    ]
-                }
-            ]
+          "type": "gesture",
+          "instruction": "Tarayıcıdasınız. Sayfayı satır satır okumaya başlamak için Aşağı Ok tuşuna basın.",
+          "hint": "Aşağı Ok tuşuna basmanız yeterlidir. Tarama Kipinde, NVDA siz aşağı doğru ilerledikçe her satırı okur.",
+          "hints": [
+            "Ok kümesindeki aşağıyı gösteren Aşağı Ok tuşuna basın. Tarama Kipinde sayfada her defasında bir satır hareket eder.",
+            "NVDA, tıpkı bir belgeyi okurken olduğu gibi aşağı indikçe her satırı okur. Sayfa içeriği yukarıdan aşağıya doğru akar.",
+            "NVDA sessizse tarayıcı penceresine odaklandığınızdan emin olun. Hangi pencerenin etkin olduğunu doğrulamak için NVDA artı T tuşuna basmayı deneyin."
+          ],
+          "expectedGestures": [
+            "kb:aşağı Ok"
+          ],
+          "successMessage": "Uygulama sayfasında Tarama Kipinde dolaşıyorsunuz. Ok tuşları tıpkı bir metin belgesini okumak gibi çalışır. Tebrikler.",
+          "allowExecution": true,
+          "feedbackDelay": 1000
         }
-    ]
+      ]
+    },
+    {
+      "id": "browse_headings",
+      "title": "Başlığa Göre Dolaşın",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Web sayfaları, bir kitaptaki bölümler gibi başlıklarla yapılandırılmıştır. Görebilen kullanıcılar başlıkları görsel olarak görür; bunlar daha büyük veya kalındır. NVDA başlık metnini ve seviyesini duyurur. Tarama Kipinde bir sonraki başlığa atlamak için H tuşuna basın. Shift artı H önceki başlığa geri döner. Uygulama sayfasında tarayıcınızda olduğunuzdan emin olun. Devam etmek için Enter'a basın.",
+          "hints": [
+            "Tek başına H'ye basın; değiştirici tuş olmadan yalnızca H harfine basın. Tarama Kipinde, tek harfler klavyeyle yazılan metin değil, kısayollardır.",
+            "NVDA başlık metnini ve seviyeini duyurur; örneğin '2. seviye başlık: Başlarken'. seviye size sayfa yapısında nerede bulunduğunu söyler.",
+            "Shift artı H önceki başlığa geri gider. İleri gitmek için bir tuşa ve geri gitmek için Shift artı o tuşa basma düzeni çoğu Tarama Kipi kısayolu için geçerlidir."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki başlığa atlamak için H tuşuna basın.",
+          "hint": "Tek başına H harfine basmanız yeterli. Tarama Kipinde, tek harfler, yazılan karakterler değil, dolaşım kısayollarıdır.",
+          "hints": [
+            "Tek başına H'ye basın; yalnızca harf tuşuna basın, değiştirici yok. Tarama Kipinde, harf tuşları yazı karakterlerine değil sayfa öğelerine atlar.",
+            "NVDA başlık metnini ve seviye numarasını duyurur. Seviye 1 ana başlıktır; 2. seviye bir bölümdür; seviye 3 bir alt bölümdür.",
+            "Hiçbir şey olmazsa tarayıcıda Tarama Kipinde olduğunuzdan emin olun. Gerekirse Eğitmen'e dönmek için NVDA artı Shift artı C tuşlarına basın."
+          ],
+          "expectedGestures": [
+            "kb:h"
+          ],
+          "successMessage": "Bir sonraki başlığa atladınız. NVDA başlık metnini ve seviyeini açıkladı.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Bir sonraki başlığa geçmek için tekrar H tuşuna basın.",
+          "hint": "Sayfadaki başlıklar arasında ilerlemek için H tuşuna basmaya devam edin.",
+          "hints": [
+            "Sayfadaki tüm başlıklar arasında ilerlemek için H tuşuna basmaya devam edin. Her basışta bir sonrakine atlanır.",
+            "Başlıkları H ile taramak, bir web sayfasının yapısına ilişkin genel bakış elde etmenin en hızlı yoludur; tıpkı içindekiler tablosunu okumak gibi.",
+            "NVDA 'sonraki başlık yok' diyorsa sayfadaki son başlığa ulaştınız demektir."
+          ],
+          "expectedGestures": [
+            "kb:h"
+          ],
+          "successMessage": "İyi. Bir sayfadaki tüm başlıkları çok hızlı bir şekilde taramak için H tuşuna art arda basabilirsiniz.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Şimdi önceki başlığa dönmek için Shift+H tuşlarına basın.",
+          "hint": "Başlıklar arasında geriye doğru gitmek için Shift tuşunu basılı tutun ve H tuşuna basın.",
+          "hints": [
+            "Shift tuşunu basılı tutun ve H tuşuna basın. Bu, H kısayolunun geriye dönük versiyonudur; aynı model çoğu Tarama Kipi dolaşım tuşu için geçerlidir.",
+            "NVDA, seviyesi ve metni de dahil olmak üzere geri döneceğiniz başlığı duyurur.",
+            "Shift artı bir dolaşım harfi, Tarama Kipinde her zaman geriye doğru hareket eder. H ve Shift artı H, herhangi bir sayfanın başlığını her iki yönde de taramanıza olanak tanır."
+          ],
+          "expectedGestures": [
+            "kb:shift+h"
+          ],
+          "successMessage": "Bir başlık geriye atladınız. Shift artı bir dolaşım tuşu her zaman geriye doğru hareket eder. H ve Shift+H herhangi bir sayfanın yapısını saniyeler içinde taramanızı sağlar.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "heading_levels",
+      "title": "Başlık Seviyelerine Atlayın",
+      "order": 3,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Web sayfaları yapı için farklı başlık seviyeleri kullanır; seviye 1 ana başlık, seviye 2 ana bölüm, seviye 3 ise alt bölümdür. Görebilen kullanıcılar bu hiyerarşiyi metnin boyutuna göre görebilirler. Tarama Kipinde, doğrudan o seviyedeki bir başlığa atlamak için 1'den 6'ya kadar bir sayıya basabilirsiniz. Devam etmek için Enter'a basın.",
+          "hints": [
+            "1. seviye başlıklara atlamak için 1'e, 2. seviye başlıklar için 2'ye ve 6'ya kadar bu şekilde devam edin. Sayısal tuş takımını değil, klavyenin üst kısmındaki sayı satırını kullanın.",
+            "Shift artı bir sayı, o seviyein önceki başlığına geri atlar; diğer Tarama Kipi tuşlarıyla aynı ileri ve geri düzeni.",
+            "İyi yapılandırılmış sayfaların çoğunda bir adet 1. seviye başlık (ana başlık) ve birkaç adet 2. seviye başlık (ana bölümler) bulunur. seviye 3 başlıkları bunların içindeki alt bölümlerdir."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki seviye 1 başlığına atlamak için 1'e basın.",
+          "hint": "Sayısal tuş takımına değil, klavyenizin üst satırındaki 1 rakamına basın.",
+          "hints": [
+            "Klavyenin en üst satırındaki (harf tuşlarının üzerindeki satır) 1 rakamına basın. Sayısal tuş takımını kullanmayın.",
+            "NVDA 1. seviye başlık metnini duyurdu. seviye 1 genellikle sayfanın ana başlığıdır.",
+            "NVDA '1. seviyede bir sonraki başlık yok' diyorsa, sayfada yalnızca bir adet 1. seviye başlık vardır veya hiç yoktur."
+          ],
+          "expectedGestures": [
+            "kb:1"
+          ],
+          "successMessage": "1. seviye başlığa atladınız. Bu genellikle sayfanın ana başlığıdır.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sonraki 2. seviye başlığa atlamak için 2'ye basın.",
+          "hint": "Klavyenizin üst sırasındaki 2 rakamına basın.",
+          "hints": [
+            "Klavyenin üst sırasındaki 2 rakamına basın. seviye 2 başlıkları bir sayfanın ana bölümleridir.",
+            "NVDA 2. seviye başlık metnini duyurdu. Tüm 2. seviye başlıklar arasında sırayla ilerlemek için 2'ye basmaya devam edin.",
+            "Bir haber sitesindeki 2. seviye başlıklar makale başlıkları olabilir. Bir yardım sayfasında konu adları olabilirler."
+          ],
+          "expectedGestures": [
+            "kb:2"
+          ],
+          "successMessage": "2. seviye başlığına atladınız. Bunlar ana bölüm başlıklarıdır.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sonraki 3. seviye başlığına atlamak için 3'e basın.",
+          "hint": "Üst sıradaki 3 rakamına basın.",
+          "hints": [
+            "Üst sıradaki 3 rakamına basın. 3. seviye başlıklar 2. seviye bölümün alt bölümleridir.",
+            "NVDA 3. seviye başlık metnini duyurdu. Seviye 3 başlıkları ana bölümler içerisinde daha ayrıntılı bir yapı sağlar.",
+            "Başlık Seviyelerinde Dolaşma, bir web sayfasını hızlı bir şekilde taramak için en güçlü araçlardan biridir. Tüm başlıklar için H'yi belirli seviyelere yönelik sayılarla birleştirin."
+          ],
+          "expectedGestures": [
+            "kb:3"
+          ],
+          "successMessage": "3. seviye başlığına atladınız. Başlık Seviyelerinde Dolaşma, bir web sayfasını hızlı bir şekilde taramak için en güçlü araçlardan biridir.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "navigate_links",
+      "title": "Bağlantılar Arasında Dolaşma",
+      "order": 4,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Bağlantılar, web sayfaları arasında geçiş yapmak için etkinleştirdiğiniz köprülerdir. Görebilen kullanıcılar bağlantıları altı çizili veya renkli metin olarak görebilir. Tarama Kipinde bir sonraki bağlantıya geçmek için K tuşuna basın; NVDA bağlantı metnini duyurur, böylece nereye gideceğini bilirsiniz. Shift artı K önceki bağlantıya gider. Sekme ayrıca sizi bağlantılar ve diğer etkileşimli öğeler arasında ilerletir. Devam etmek için Enter'a basın.",
+          "hints": [
+            "Bir sonraki bağlantıya atlamak için tek başına K tuşuna basın. NVDA bağlantı metnini duyurur; bu, siz onu takip etmeden önce bağlantının nereye gittiğini size söyler.",
+            "Shift artı K önceki bağlantıya gider. İleri ve geri düzeni burada da başlıklarda olduğu gibi geçerlidir.",
+            "Sekme aynı zamanda bağlantılar ve etkileşimli öğeler arasında da hareket eder ancak düz metni atlar. K yalnızca bağlantılar arasında hareket eder, Sekme tuşu ise düğmeleri ve form alanlarını da içerir."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki bağlantıya atlamak için K tuşuna basın.",
+          "hint": "K harfine tek başına basın. NVDA bağlantı metnini duyuracaktır.",
+          "hints": [
+            "K'ye tek başına basın; hiçbir değiştirici olmadan yalnızca harf tuşuna basın. NVDA bağlantı metnini duyurur, böylece nereye gittiğini bilirsiniz.",
+            "Bağlantı metni, bağlantının açıklayıcı adıdır. İyi bağlantı metni size hedefi söyler; 'Buraya tıklayın' gibi belirsiz metinler bunu yapmaz.",
+            "Bir bağlantıyı takip etmek için Enter tuşuna basın. Takip etmeden taramaya devam etmek için bir sonraki bağlantıya geçmek üzere tekrar K tuşuna basmanız yeterlidir."
+          ],
+          "expectedGestures": [
+            "kb:k"
+          ],
+          "successMessage": "Bir bağlantıya atladınız. NVDA bağlantı metnini duyurdu. Tarama Kipinde bir bağlantıyı takip etmek için Enter tuşuna basın.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Bir sonraki bağlantıya atlamak için tekrar K tuşuna basın.",
+          "hint": "Sayfadaki tüm bağlantılar arasında dolaşmak için K tuşuna basmaya devam edin.",
+          "hints": [
+            "Bir sonraki bağlantıya atlamak için tekrar K tuşuna basın. Sayfadaki tüm bağlantıları sırayla taramak için K tuşuna basmaya devam edin.",
+            "NVDA, her bağlantının metnini siz o bağlantıya geldiğinizde duyurur. Bu, bir sayfadaki tüm dolaşım seçeneklerini hızlı bir şekilde taramanıza olanak tanır.",
+            "NVDA 'sonraki bağlantı yok' diyorsa sayfadaki son bağlantıya ulaştınız demektir."
+          ],
+          "expectedGestures": [
+            "kb:k"
+          ],
+          "successMessage": "İyi. K ile bir sayfadaki tüm bağlantıları çok hızlı bir şekilde tarayabilirsiniz.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Şimdi önceki bağlantıya dönmek için Shift+K tuşlarına basın.",
+          "hint": "Bağlantılar arasında geriye doğru gitmek için Shift tuşunu basılı tutun ve K tuşuna basın.",
+          "hints": [
+            "Geri gitmek için Shift tuşunu basılı tutun ve K tuşuna basın. Bu, başlıklar için Shift artı H ile aynı modeli izler.",
+            "NVDA, siz geri döndüğünüzde önceki bağlantının metnini duyurur.",
+            "K ve Shift artı K birlikte, bir sayfadaki tüm bağlantıları her iki yönde de serbestçe taramanıza olanak tanır."
+          ],
+          "expectedGestures": [
+            "kb:shift+k"
+          ],
+          "successMessage": "Bir bağlantıyı geri taşıdınız. K ve Shift+K, bir sayfadaki tüm bağlantıları hızlı bir şekilde gözden geçirmenizi sağlar.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki etkileşimli öğeye geçmek için Sekme tuşuna basın.",
+          "hint": "Sekme sizi bağlantılar, düğmeler ve form alanları arasında taşır. Düz metni değil, yalnızca etkileşimli öğeleri ziyaret eder.",
+          "hints": [
+            "Sekme, düz metin içeriğini atlayarak tüm etkileşimli öğeler (bağlantılar, düğmeler ve form alanları) arasında hareket eder.",
+            "Sekme, çevredeki içeriği okumadan bir sayfanın yalnızca işlem yapılabilir kısımlarında dolaşmak istediğinizde kullanışlıdır.",
+            "Sekme tuşu klavyenin en solunda, Caps Lock'un üzerindedir. Kendi başına basın; hiçbir değiştiriciye gerek yoktur."
+          ],
+          "expectedGestures": [
+            "kb:sekme"
+          ],
+          "successMessage": "Sekme sizi bir sonraki etkileşimli öğeye taşıdı. Sekme, formlardaki kontroller arasında geçiş yapmak ve menülerde dolaşmak için mükemmeldir.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "navigate_forms",
+      "title": "Formlarla Etkileşim",
+      "order": 5,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Web sayfalarında genellikle metin kutuları, düğmeler ve onay kutuları içeren formlar bulunur. Görme yeteneği olan kullanıcılar bunları görsel olarak görebilir; NVDA ne tür bir alana indiğinizi duyurur. Tarama Kipinde sonraki form alanına atlamak için F tuşuna basın. Yazabileceğiniz bir metin kutusu olan sonraki düzenleme alanına atlamak için E tuşuna basın. Sonraki düğmeye atlamak için B tuşuna basın. Devam etmek için Enter'a basın.",
+          "hints": [
+            "F herhangi bir türden sonraki form alanına atlar. E özellikle metin giriş alanlarına atlar. B düğmelere atlar. Hepsi aynı ileri ve geri düzeni kullanır - Shift artı harf geriye gider.",
+            "NVDA, üzerine geldiğinizde alan türünü ve etiketini duyurur; örneğin, 'Düzenleme ara' veya 'Gönder düğmesi'.",
+            "Bir düzenleme alanına yazmak için öncelikle Odak Kipine geçmeniz gerekir. NVDA bunu sıklıkla otomatik olarak yapar veya manuel olarak geçiş yapmak için Enter veya NVDA artı Aralık tuşlarına basabilirsiniz."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki form alanına atlamak için F tuşuna basın.",
+          "hint": "F harfine tek başına basın. Buna metin kutuları, onay kutuları, radyo düğmeleri ve daha fazlası dahildir.",
+          "hints": [
+            "Tek başına F tuşuna basın; yalnızca harf tuşuna basın. Bu, sayfadaki herhangi bir türdeki sonraki form alanına atlar.",
+            "NVDA alan türünü duyurdu - 'düzenle', 'onay kutusu', 'radyo düğmesi', 'birleşik giriş kutusu' - böylece bunun ne tür bir kontrol olduğunu bilirsiniz.",
+            "Shift artı F önceki form alanına gider. Aynı ileri ve geri desen burada da geçerlidir."
+          ],
+          "expectedGestures": [
+            "kb:f"
+          ],
+          "successMessage": "Bir form alanına atladınız. NVDA ne tür bir alan olduğunu açıkladı.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sonraki metin giriş alanına atlamak için E tuşuna basın.",
+          "hint": "E harfine basın. Düzenleme alanları, bilgileri yazdığınız metin kutularıdır.",
+          "hints": [
+            "Bir sonraki düzenleme alanına (yazabileceğiniz bir metin kutusu) atlamak için tek başına E tuşuna basın.",
+            "NVDA, alan etiketini ve bunu bir metin girişi olarak tanımlamak için 'düzenle' kelimesini duyurur.",
+            "Bir düzenleme alanına yazmak için Enter tuşuna basarak Odak Kipine geçin, metninizi yazın ve ardından Tarama Kipine dönmek için Escape tuşuna basın."
+          ],
+          "expectedGestures": [
+            "kb:e"
+          ],
+          "successMessage": "Bir düzenleme alanına geldiniz. Bunu yazmak için önce Enter'a veya NVDA+Aralık tuşuna basarak Odak Kipine geçmeniz gerekir.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Bir sonraki düğmeye atlamak için B'ye basın.",
+          "hint": "B harfine basın. Düğmeler, Enter veya Aralık tuşuyla etkinleştirdiğiniz kontrollerdir.",
+          "hints": [
+            "Sayfadaki bir sonraki düğmeye atlamak için B'ye tek başına basın.",
+            "NVDA düğmenin etiketini duyurdu. Odaklanmışken Enter veya Aralık tuşuna basarak herhangi bir düğmeyi etkinleştirin.",
+            "B, herhangi bir web sayfasında Gönder, Ara veya Oturum Aç gibi işlem düğmelerini bulmanın en hızlı yoludur."
+          ],
+          "expectedGestures": [
+            "kb:b"
+          ],
+          "successMessage": "Bir düğme buldunuz. Düğmeler Enter veya Aralık tuşuna basılarak etkinleştirilir. B, herhangi bir sayfada düğmeleri bulmanın en hızlı yoludur.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "focus_mode",
+      "title": "Odak Kipi ve Tarama Kipi",
+      "order": 6,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Tarama Kipi sayfaları okumanızı ve dolaşmanızı sağlar. Ancak bir metin kutusuna yazmanız gerektiğinde Odak Kipine geçmeniz gerekir. Odak Kipinde tuşlara basmanız, dolaşım kısayolları olarak kullanılmak yerine doğrudan uygulamaya gider. NVDA genellikle bir metin alanına Sekme tuşuyla girdiğinizde otomatik olarak geçiş yapar. Ayrıca NVDA+Aralık ile manuel olarak da geçiş yapabilirsiniz. Kipler arasındaki bu geçiş ekran okuyuculara özeldir; NVDA size aynı tarayıcıda hem güçlü dolaşım hem de tam klavye kontrolü sağlar. Devam etmek için Enter'a basın.",
+          "hints": [
+            "Tarama Kipi: harf tuşları dolaşım kısayollarıdır. Odak Kipi: harf tuşları karakterleri bir alana yazar. NVDA artı Aralık bunlar arasında geçiş yapar.",
+            "NVDA genellikle bir metin alanına girdiğinizde otomatik olarak Odak Kipine geçer. Bu gerçekleştiğinde 'Odak Kipinin' seslendirildiğini duyacaksınız.",
+            "Yazmaya çalışıyorsanız ve harfler bir alanda görünmek yerine sayfada atlıyorsa, Tarama Kipindesiniz demektir. Odak Kipine geçmek için NVDA artı Aralık tuşuna basın."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve Boşluk çubuğuna basın. NVDA, hangisine geçiş yaptığınızı size bildirmek için 'Odak Kipi' veya 'Tarama Kipini anons edecektir. Odak Kipinde, harf tuşları sayfada dolaşmak yerine karakterleri bir alana yazar. Tarama Kipinde harf tuşları dolaşım kısayollarıdır. Bir metin alanına Sekme tuşuyla girdiğinizde NVDA genellikle otomatik olarak geçiş yapar, ancak NVDA+Aralık ile manuel olarak nasıl geçiş yapacağınızı bilmek size istediğiniz zaman tam kontrol sağlar. Devam etmek için burada Enter tuşuna basın.",
+          "monitorGestures": [
+            "kb:nvda+aralık"
+          ],
+          "hints": [
+            "NVDA tuşunuzu (Insert veya Caps Lock) basılı tutun ve Boşluk çubuğuna basın. Boşluk çubuğu klavyenin alt orta kısmındaki uzun düz tuştur.",
+            "NVDA, hangi kipe geçtiğinizi onaylamak için 'Odak Kipi' veya 'Tarama Kipini duyurur. Hissetmek için birkaç kez ileri geri geçiş yapın.",
+            "Dolaşmayı beklerken harfler yazılıyorsa, Tarama Kipine geçmek için NVDA artı Boşluk tuşuna basın. Yazmayı beklediğiniz sırada dolaşım gerçekleşiyorsa, Odak Kipine geçmek için NVDA artı Boşluk tuşuna basın."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Diğer Kipe geri dönmek için NVDA+Aralık tuşuna bir kez daha basın. NVDA tuşunu basılı tutun ve Aralık tuşuna basın ve NVDA'nın Kip adını duyurmasını dinleyin. Bu kısayolu hatırlamak, klavyenizin herhangi bir web sayfasında nasıl davranacağını her zaman kontrol edebileceğiniz anlamına gelir. Devam etmek için burada Enter tuşuna basın.",
+          "monitorGestures": [
+            "kb:nvda+aralık"
+          ],
+          "hints": [
+            "Geriye dönmek için NVDA tuşunu basılı tutun ve Boşluk çubuğuna tekrar basın. NVDA, her geçiş yaptığınızda Kipin adını duyurur.",
+            "Boşluk çubuğu klavyenin en altında bulunan uzun düz tuştur. NVDA tuşunu basılı tutun ve ardından Aralık tuşuna dokunun.",
+            "NVDA artı aralık, web'de dolaşmanın en önemli kısayollarından biridir. Bu bir refleks haline geldiğinde, asla yanlış Kipte sıkışıp kaldığınızı hissetmezsiniz."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmarks_and_lists",
+      "title": "Yer İşaretleri ve Listeler",
+      "order": 7,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "İyi tasarlanmış web sayfaları, dolaşma, ana içerik ve alt bilgi gibi adlandırılmış bölgeler olan yer işaretlerini kullanır. Görebilen kullanıcılar bu bölümleri bir bakışta görebilir. Tarama Kipinde, bir sonraki yer işaretine atlamak ve sayfanın ihtiyacınız olan kısmına doğrudan atlamak için D tuşuna basın. Shift artı D geriye gider. Sayfalarda ayrıca öğe listeleri bulunur. Sonraki listeye geçmek için L tuşuna basın. Bu kısayollar, her şeyi okumanıza gerek kalmadan sayfanın sağ kısmına geçmenize yardımcı olur. Devam etmek için Enter'a basın.",
+          "hints": [
+            "D bir sonraki sınır imi bölgesine atlar. Yaygın yer işaretleri şunları içerir: banner (sayfa başlığı), dolaşım, ana (ana içerik) ve içerik bilgisi (alt bilgi).",
+            "L sayfadaki bir sonraki listeye atlar. Bir listeye girdikten sonra, tek tek liste öğeleri arasında geçiş yapmak için I tuşuna basın.",
+            "Ana yer işaretine atlamak için D'yi kullanmak, sayfanın üst kısmında tekrarlanan dolaşım bağlantılarını atlar; bu, ziyaret ettiğiniz her sitede büyük bir zaman tasarrufu sağlar."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Sayfadaki bir sonraki sınır imine atlamak için D tuşuna basın.",
+          "hint": "D harfine basın. NVDA, dolaşım, ana bilgi veya içerik bilgisi gibi yer işareti türünü duyuracaktır.",
+          "hints": [
+            "Tek başına D'ye basın. NVDA yer işareti türünü duyurur; örneğin 'dolaşım yer işareti' veya 'ana yer işareti'.",
+            "Ana yer işareti sayfanın birincil içeriğini içerir. D ile ona atlamak tekrarlanan başlıkları ve dolaşım menülerini atlar.",
+            "Shift artı D önceki yer işaretine geri gider."
+          ],
+          "expectedGestures": [
+            "kb:d"
+          ],
+          "successMessage": "Bir sınır imine atladınız. Yer işaretleri, ana içerik alanına ulaşmanın ve tekrarlanan dolaşım bağlantılarını atlamanın hızlı bir yoludur.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Bir sonraki yer işaretine geçmek için tekrar D tuşuna basın.",
+          "hint": "Sayfadaki tüm yer işaretleri arasında geçiş yapmak için D tuşuna basmaya devam edin.",
+          "hints": [
+            "Bir sonraki yer işaretine atlamak için tekrar D tuşuna basın. Sayfadaki tüm önemli bölgeler arasında geçiş yapmak için basmaya devam edin.",
+            "NVDA, siz üzerine indiğinizde her bir yer işareti türünü duyurur.",
+            "NVDA 'sonraki yer işareti yok' diyorsa sayfada ya başka yer işareti yoktur ya da ARIA rolleri iyi yapılandırılmamıştır."
+          ],
+          "expectedGestures": [
+            "kb:d"
+          ],
+          "successMessage": "İyi. Bir sayfanın tüm önemli bölümleri arasında geçiş yapmak için D tuşuna art arda basabilirsiniz.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Şimdi sayfadaki bir sonraki listeye geçmek için L tuşuna basın.",
+          "hint": "L harfine basın. Listeler dolaşım menüleri, ürün listeleri veya madde işaretleri gibi gruplandırılmış öğeleri içerir.",
+          "hints": [
+            "Bir sonraki listeye atlamak için tek başına L tuşuna basın. Listeler; dolaşım menüleri, madde işaretleri, ürün listeleri ve daha fazlası gibi gruplandırılmış öğeleri içerir.",
+            "Bir listeye girdikten sonra, tek tek liste öğeleri arasında birer birer geçiş yapmak için I tuşuna basın.",
+            "NVDA, bir listeye geldiğinizde 'X öğeli liste'yi duyurur, böylece okumaya başlamadan önce listenin kaç öğe içerdiğini bilirsiniz."
+          ],
+          "expectedGestures": [
+            "kb:l"
+          ],
+          "successMessage": "Bir liste buldunuz. Bir listeye girdikten sonra liste öğeleri arasında geçiş yapmak için I tuşuna basın. L ve D birlikte herhangi bir sayfada ihtiyacınız olan yapısal dolaşımın çoğunu kapsar.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "elements_list",
+      "title": "Elementler Listesi",
+      "order": 8,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA'nın, geçerli sayfadaki tüm başlıkları, bağlantıları, form alanlarını veya yer işaretlerini tek bir yerde gösteren, Öğeler Listesi adı verilen güçlü bir iletişim kutusu vardır. Listeyi filtreleyebilir ve doğrudan herhangi bir öğeye geçebilirsiniz. Görme yeteneği olan kullanıcılar bir sayfayı görsel olarak tarayabilir ve neye ihtiyaç duyduklarını tespit edebilir; Öğe Listesi size aynı genel bakışı erişilebilir tek bir iletişim kutusunda sunar. Tüm sayfanın içindekiler tablosu gibidir. Devam etmek için Enter'a basın.",
+          "hints": [
+            "Öğe Listesi NVDA artı F7 ile açılır. Bulunduğunuz sekmeye bağlı olarak başlıkları, bağlantıları, form alanlarını veya yer işaretlerini gösterir.",
+            "Öğe Listesinin içinde Sekme, üstteki kategori düğmeleri arasında hareket eder. Ok tuşları öğe listesinde hareket eder. Enter, sayfada seçilen öğeye atlar.",
+            "Öğe Listesi, uzun bir sayfadaki belirli bir bağlantıyı veya başlığı her şeyi okumadan bulmanın en hızlı yollarından biridir."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve klavyenizin üst kısmındaki F7 tuşuna basın. Öğe Listesi iletişim kutusu açılacak ve NVDA bunu duyuracaktır. Geçerli sayfadaki başlıkları, bağlantıları, form alanlarını ve yer işaretlerini görüntülemek arasında geçiş yapmak için iletişim kutusunun içinde Sekme tuşuna basın. Listede dolaşmak için ok tuşlarını kullanın ve sayfadaki herhangi bir öğeye doğrudan atlamak için Enter tuşuna basın. Tüm sayfanın anlık içindekiler tablosu gibidir; NVDA'nın web dolaşımı için size sunduğu en güçlü araçlardan biridir. Keşfetmeyi tamamladığınızda iletişim kutusunu kapatmak için Escape tuşuna basın, ardından devam etmek için Buraya Enter tuşuna basın.",
+          "monitorGestures": [
+            "kb:nvda+f7"
+          ],
+          "hints": [
+            "NVDA tuşunu basılı tutun ve üst sıradaki yedinci işlev tuşu olan F7'ye basın. Öğe Listesi iletişim kutusu hemen açılır.",
+            "İletişim kutusunda Sekme tuşu kategori düğmeleri arasında hareket eder: başlıklar, bağlantılar, form alanları, düğmeler ve yer işaretleri. Ok tuşları daha sonra seçilen kategorideki öğeler arasında hareket eder.",
+            "Listeyi o metni içeren öğelerle daraltmak için filtre kutusuna birkaç harf yazın. Bu, çok sayıda bağlantı içeren sayfalarda çok kullanışlıdır."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Tebrikler. Öğe Listesi, herhangi bir sayfaya ilişkin genel bakış elde etmenin en hızlı yollarından biridir. Bir sonraki derse devam etmek için Enter tuşuna basın.",
+          "hints": [
+            "Bilmediğiniz bir sayfaya geldiğinizde ve okumadan önce yapısını hızlı bir şekilde anlamak istediğinizde Öğeler Listesini kullanın.",
+            "Öğeler Listesi'ndeki filtre kutusu, listeyi daraltmak için bir sözcük yazmanıza olanak tanır; örneğin, herhangi bir sayfada bir kişi bağlantısını bulmak için 'kişi' yazın.",
+            "Unutmayın: NVDA artı F7, Öğe Listesini herhangi bir web sayfasından açar. Chrome, Firefox ve Edge dahil çoğu tarayıcıda çalışır."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nvda_find",
+      "title": "Sayfada Metin Bulma",
+      "order": 9,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA+Ctrl+F, geçerli web sayfasında herhangi bir metni aramanıza olanak tanıyan NVDA Bul iletişim kutusunu açar. Görebilen kullanıcılar, ekrandaki metni bulmak için tarayıcılarında Ctrl+F tuşlarına basabilir. NVDA'nın Bul iletişim kutusu aynı şekilde çalışır ancak sonucu konuşma yoluyla duyurur. Tarama Kipinde ve birçok belgede çalışır. Devam etmek için Enter'a basın.",
+          "hints": [
+            "NVDA artı Kontrol artı F, NVDA'nın kendi Bul iletişim kutusunu açar. NVDA'yı basılı tutun, Kontrol'ü basılı tutun ve ardından F tuşuna basın.",
+            "Bulmak istediğiniz metni yazın ve Enter tuşuna basın. NVDA ilk eşleşmeye atlar ve etrafındaki metni okur.",
+            "NVDA artı F3 ilkinden sonraki sonucu bulur. NVDA artı Shift artı F3 önceki eşleşmeyi bulur."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun, ardından Kontrol tuşunu basılı tutun, ardından F tuşuna basın. Bul iletişim kutusu açılacaktır. Alıştırma sayfasında görünen 'başlık' veya 'bağlantı' gibi bir kelimeyi yazın ve ardından ilk eşleşmeye atlamak için Enter tuşuna basın. NVDA sonuçla ilgili metni duyuracaktır. Arama yapmadan iletişim kutusunu kapatmak için Escape tuşuna basın. İşiniz bittiğinde buraya dönmek için NVDA+Shift+C tuşlarına basın, ardından devam etmek için Enter tuşuna basın.",
+          "monitorGestures": [
+            "kb:nvda+kontrol+f"
+          ],
+          "hints": [
+            "NVDA'yı basılı tutun, Kontrol'ü basılı tutun ve F'ye basın; üçü de aynı anda. Kontrol tuşu sol alt köşededir; F harflerin orta satırındadır.",
+            "Sayfada olduğunu bildiğiniz bir kelimeyi yazın ve Enter tuşuna basın. NVDA ilk geçtiği yere atlar ve çevresindeki metni okur.",
+            "Eşleşme bulunamazsa NVDA 'bulunamadı' diyor. Farklı bir arama terimi deneyin veya yazımınızı kontrol edin."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Ayrıca iletişim kutusunu yeniden açmadan sonraki veya önceki oluşumu da bulabilirsiniz. Sonraki eşleşmeyi bulmak için NVDA+F3 tuşlarına, önceki eşleşmeyi bulmak için NVDA+Shift+F3 tuşlarına basın. Bunlar, diğer uygulamalardaki Sonrakini Bul işleviyle aynı şekilde çalışır. Devam etmek için Enter'a basın.",
+          "hints": [
+            "NVDA artı F3 bir sonraki sonucu bulur. NVDA artı Shift artı F3 önceki eşleşmeyi bulur. F3, üst sıradaki üçüncü işlev tuşudur.",
+            "Bul'u açıp ilk sonuca atladıktan sonra, Escape ile iletişim kutusunu kapatın ve sonraki eşleşmelerde ilerlemeye devam etmek için NVDA artı F3'ü kullanın.",
+            "Bu kısayol, web sayfalarında ve birçok belge görüntüleyicide Tarama Kipinde çalışır; belirli bir kelimeyi veya ifadeyi aradığınızda kullanışlıdır."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toggle_single_letter_nav",
+      "title": "Tek Harfli Dolaşımı Değiştirme",
+      "order": 10,
+      "chapterComplete": true,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Tarama Kipinde H, K ve D gibi tek harfli tuşlar başlıklara, bağlantılara ve yer işaretlerine atlamak için kullanılan kısayollardır. Ancak bir formu doldururken, aynı harf tuşlarının sayfada dolaşmak için değil, karakterleri bir metin alanına yazması gerekir. NVDA+Shift+Aralık tek harfli dolaşımı açar ve kapatır. Bu, NVDA'ya özeldir ve klavyenizin herhangi bir web sayfasında nasıl davranacağı konusunda size hassas kontrol sağlar. Devam etmek için Enter'a basın.",
+          "hints": [
+            "NVDA artı Shift artı Aralık tek harfli dolaşımı değiştirir. Kapalıyken harf tuşları normal şekilde yazar. Açıkken, harf tuşları dolaşım kısayollarıdır.",
+            "NVDA bunu genellikle otomatik olarak gerçekleştirir; bir metin alanına girdiğinizde tek harfli dolaşımı kapatır. Bu geçiş, manuel kontrole ihtiyaç duyduğunuz durumlar içindir.",
+            "Yazmaya çalıştığınızda harfler sayfanın etrafında atlıyorsa, tek harfli dolaşımı kapatmak için NVDA artı Shift artı Aralık tuşlarına basın."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun, Shift tuşunu basılı tutun ve Aralık tuşuna basın. NVDA 'tek harfli dolaşım açık' veya 'tek harfli dolaşım kapalı' şeklinde duyuru yapacaktır. Kapalıyken harfler bulunduğunuz alana normal şekilde yazılır. Açıkken ise tek harfler yine kısayoldur. Devam etmeden önce tekrar açın. Devam etmek için burada Enter tuşuna basın.",
+          "monitorGestures": [
+            "kb:nvda+shift+aralık"
+          ],
+          "hints": [
+            "NVDA'yı basılı tutun, Shift'i basılı tutun ve Aralık tuşuna basın. Boşluk çubuğu klavyenin altındaki uzun düz tuştur.",
+            "NVDA, geçişi onaylamak için 'tek harfli dolaşım Kipinin açık veya kapalı olduğunu duyurur.",
+            "Devam etmeden önce tekrar açın; ileri gitmek için Enter'a basmadan önce NVDA'nın 'tek harfli Dolaşım açık'ı duyurduğundan emin olun."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Mükemmel iş — Tarama Kipi ve Web'de dolaşma bölümünü tamamladınız! Artık başlıkları, bağlantıları, form alanlarını, yer işaretlerini, listeleri, Öğeler Listesini, NVDA Bul'u kullanarak web sayfalarında nasıl dolaşabileceğinizi ve Tarama Kipi, Odak Kipi ve tek harfli dolaşım arasında nasıl geçiş yapacağınızı biliyorsunuz. Bu beceriler herhangi bir web sayfasında hızlı ve bağımsız bir şekilde dolaşabilmenizi sağlar. Hazır olduğunuzda ders seçiciyi açmak için NVDA+Shift+C tuşlarına basın ve bir sonraki bölüme geçin: Nesne dolaşımı — burada Sekme tuşunun ulaşamadığı kontroller de dahil olmak üzere ekrandaki herhangi bir kontrole erişmeyi öğreneceksiniz. Bitirmek için Enter'a basın.",
+          "hints": [
+            "Bir sonraki bölüm Nesne Dolaşımı'dır. Size ekrandaki herhangi bir öğeye erişmeyi öğretir; hatta Sekme ve Tarama Kipinin erişemediği kontrolleri bile yapar.",
+            "Burada öğrendiğiniz Tarama Kipi kısayollarının (H, K, D, F, B, L) tümü daha büyük bir grubun parçasıdır. NVDA kullanım kılavuzu bunların hepsini listeliyor. NVDA artı N, Yardım için A, Kullanım Kılavuzu için K ile açın.",
+            "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamlanan tüm dersler işaretlenir."
+          ]
+        }
+      ]
+    }
+  ]
 }
