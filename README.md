@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.5
+**Current version:** 1.5.1
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,13 +12,20 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.5](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.5/nvdaCoach-1.5.nvda-addon)**
+**[Download NVDA Coach v1.5.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.5.1/nvdaCoach-1.5.1.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
 3. Press **NVDA+Shift+C** — the Coach window opens and you're ready to begin
 
 NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add-on Store).
+
+---
+
+## What's New in v1.5.1
+
+- **Bug fix — User Guide shortcut corrected:** Two hints in the Getting Started chapter incorrectly stated "press G for User Guide." The correct accelerator is U. Fixed in the English lesson content.
+- **Russian localization fully restored:** Valentin Kupriyanov's full v1.5 Russian translation is now integrated — all 6 chapters, updated documentation, updated locale strings, and the compiled `nvda.mo` binary that NVDA requires to load Russian. Russian users were receiving English content in v1.5 due to the missing binary.
 
 ---
 

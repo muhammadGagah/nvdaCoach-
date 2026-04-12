@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NvdaCoach\n"
-"POT-Creation-Date: 2026-03-29 20:38+0300\n"
-"PO-Revision-Date: 2026-03-29 20:38+0300\n"
+"POT-Creation-Date: 2026-04-11 14:09+0300\n"
+"PO-Revision-Date: 2026-04-11 14:09+0300\n"
 "Last-Translator: nvda.ru\n"
 "Language-Team: nvda.ru\n"
 "Language: ru_RU\n"
@@ -16,17 +16,123 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: nvdaCoach/__init__.py:43
+#: nvdaCoach/__init__.py:48
 msgid "Play sounds during lessons (correct/incorrect/completion chimes)"
 msgstr ""
 "Воспроизводить звуки во время уроков (сигналы правильности, ошибки и "
 "завершения)"
 
-#: nvdaCoach/__init__.py:154 nvdaCoach/__init__.py:350
+#: nvdaCoach/__init__.py:67
+msgid "NVDA Coach — Your Profile"
+msgstr "NVDA Coach — Ваш профиль"
+
+#: nvdaCoach/__init__.py:76
+msgid "Your name (optional):"
+msgstr "Ваше имя (необязательно):"
+
+#: nvdaCoach/__init__.py:85
+msgid "Your instructor's name (optional):"
+msgstr "Имя вашего инструктора (необязательно):"
+
+#: nvdaCoach/__init__.py:94
+msgid "Training center or program (optional):"
+msgstr "Учебный центр или программа (необязательно):"
+
+#: nvdaCoach/__init__.py:105
+msgid "&Save"
+msgstr "&Сохранить"
+
+#: nvdaCoach/__init__.py:107 nvdaCoach/__init__.py:1449
+msgid "&Cancel"
+msgstr "&Отмена"
+
+#: nvdaCoach/__init__.py:127
+#, python-brace-format
+msgid "Hello, {name}!"
+msgstr "Здравствуйте, {name}!"
+
+#: nvdaCoach/__init__.py:129
+msgid "Profile saved."
+msgstr "Профиль сохранён."
+
+#: nvdaCoach/__init__.py:148
+msgid "NVDA Coach — Certificate of Completion"
+msgstr "NVDA Coach — Сертификат о завершении"
+
+#: nvdaCoach/__init__.py:156
+#, python-brace-format
+msgid ""
+"Congratulations, {name}! You have completed every lesson in NVDA Coach. Your "
+"certificate of completion has been saved to your Downloads folder and opened "
+"in your web browser."
+msgstr ""
+"Поздравляем, {name}! Вы завершили все уроки NVDA Coach. Ваш сертификат о "
+"завершении сохранён в папке «Загрузки» и открыт в вашем веб-браузере."
+
+#: nvdaCoach/__init__.py:162
+msgid ""
+"Congratulations! You have completed every lesson in NVDA Coach. Your "
+"certificate of completion has been saved to your Downloads folder and opened "
+"in your web browser."
+msgstr ""
+"Поздравляем! Вы завершили все уроки NVDA Coach. Ваш сертификат о завершении "
+"сохранён в папке «Загрузки» и открыт в вашем веб-браузере."
+
+#: nvdaCoach/__init__.py:171
+msgid "&OK"
+msgstr "&OK"
+
+#: nvdaCoach/__init__.py:263
+msgid "Student"
+msgstr "Ученик"
+
+#: nvdaCoach/__init__.py:271
+msgid "Instructor:"
+msgstr "Инструктор:"
+
+#: nvdaCoach/__init__.py:278
+msgid "Training Center / Program:"
+msgstr "Учебный центр / Программа:"
+
+#: nvdaCoach/__init__.py:286 nvdaCoach/__init__.py:773
+msgid ""
+"Your dedication and persistence have brought you to this moment. The skills "
+"you have learned in NVDA Coach will serve you every day — at work, at home, "
+"and everywhere in between. Every expert was once a beginner, and you have "
+"proven that with patience and practice, anything is possible. Well done, and "
+"welcome to a world of greater independence."
+msgstr ""
+"Ваша целеустремлённость и настойчивость привели вас к этому моменту. Навыки, "
+"которые вы приобрели в NVDA Coach, будут служить вам каждый день — на "
+"работе, дома и везде, где бы вы ни находились. Каждый эксперт когда-то был "
+"новичком, и вы доказали, что с терпением и практикой возможно всё. Отличная "
+"работа, и добро пожаловать в мир большей независимости."
+
+#: nvdaCoach/__init__.py:295
+msgid "Certificate of Completion"
+msgstr "Сертификат о завершении"
+
+#: nvdaCoach/__init__.py:297
+msgid "This certifies that"
+msgstr "Настоящим удостоверяется, что"
+
+#: nvdaCoach/__init__.py:299
+msgid "has successfully completed all lessons in"
+msgstr "успешно завершил(а) все уроки курса"
+
+#: nvdaCoach/__init__.py:301
+msgid "Date of Completion"
+msgstr "Дата завершения"
+
+#: nvdaCoach/__init__.py:303
+msgid "Assistive Technology Instructor"
+msgstr "Инструктор по ассистивным технологиям"
+
+#: nvdaCoach/__init__.py:407 nvdaCoach/__init__.py:664
 msgid "NVDA Coach — ready"
 msgstr "NVDA Coach — готов"
 
-#: nvdaCoach/__init__.py:172
+#: nvdaCoach/__init__.py:425
 msgid ""
 "Welcome to NVDA Coach\n"
 "Created by Tony Gebhard, Assistive Technology Instructor\n"
@@ -101,69 +207,149 @@ msgstr ""
 "следующему уроку, Ctrl+B, чтобы вернуться к предыдущему, Ctrl+R, чтобы "
 "перезапустить урок, или нажмите Escape три раза, чтобы закрыть это окно."
 
-#: nvdaCoach/__init__.py:207
+#: nvdaCoach/__init__.py:461
 msgid ""
-"During a lesson:  Enter — Next Step  ·  F1 Repeat  ·  F2 Hint  ·  F3 Skip "
-"step  ·  Esc Stop lesson"
+"During a lesson:  Enter — Next Step  ·  F1 Repeat  ·  F2 Hint  ·  F3 Skip  "
+"·  Esc Stop"
 msgstr ""
-"Во время урока: Enter — следующий шаг  \·  F1 — повторить  \·  F2 "
-"— подсказка  \·  F3 — пропустить шаг  \·  Esc — остановить урок"
+"Во время урока: Enter — следующий шаг  ·  F1 — повторить  ·  F2 — подсказка  "
+"·  F3 — пропустить шаг  ·  Esc — остановить урок"
 
-#: nvdaCoach/__init__.py:219
+#: nvdaCoach/__init__.py:472
+msgid "F4 Help  ·  F5 Feedback  ·  F6 Sounds  ·  F7 Profile"
+msgstr "F4 — справка  ·  F5 — отзыв  ·  F6 — звуки  ·  F7 — профиль"
+
+#: nvdaCoach/__init__.py:479
 msgid "Next Step  (Enter)"
 msgstr "Следующий шаг (Enter)"
 
-#: nvdaCoach/__init__.py:221
+#: nvdaCoach/__init__.py:481
 msgid "Confirm you have tried the current step and move to the next one."
 msgstr "Подтвердите, что вы выполнили текущий шаг, и перейдите к следующему."
 
-#: nvdaCoach/__init__.py:230
+#: nvdaCoach/__init__.py:490
 msgid "Start Course  (Enter)"
 msgstr "Начать курс (Enter)"
 
-#: nvdaCoach/__init__.py:232
+#: nvdaCoach/__init__.py:492
 msgid "Begin the first lesson of the Getting Started chapter."
 msgstr "Начать первый урок главы «Начало работы»."
 
-#: nvdaCoach/__init__.py:243
+#: nvdaCoach/__init__.py:503
 msgid "◄ Back  (Ctrl+B)"
 msgstr "◄ Назад (Ctrl+B)"
 
-#: nvdaCoach/__init__.py:244
+#: nvdaCoach/__init__.py:504
 msgid "↺ Restart  (Ctrl+R)"
 msgstr "↺ Перезапустить (Ctrl+R)"
 
-#: nvdaCoach/__init__.py:245
+#: nvdaCoach/__init__.py:505
 msgid "Next Lesson ►  (Ctrl+N)"
 msgstr "Следующий урок ► (Ctrl+N)"
 
-#: nvdaCoach/__init__.py:246
+#: nvdaCoach/__init__.py:506
 msgid "Go to the previous lesson in this category."
 msgstr "Перейти к предыдущему уроку в этой категории."
 
-#: nvdaCoach/__init__.py:247
+#: nvdaCoach/__init__.py:507
 msgid "Restart the current lesson from the beginning."
 msgstr "Перезапустить текущий урок с начала."
 
-#: nvdaCoach/__init__.py:248
+#: nvdaCoach/__init__.py:508
 msgid "Go to the next lesson in this category."
 msgstr "Перейти к следующему уроку в этой категории."
 
-#: nvdaCoach/__init__.py:279
+#: nvdaCoach/__init__.py:520
+msgid "Export Certificate of Completion"
+msgstr "Экспортировать сертификат о завершении"
+
+#: nvdaCoach/__init__.py:523
+msgid ""
+"You have completed every lesson in NVDA Coach. Click to save your "
+"certificate of completion to your Downloads folder."
+msgstr ""
+"Вы завершили все уроки NVDA Coach. Нажмите, чтобы сохранить ваш сертификат о "
+"завершении в папку «Загрузки»."
+
+#: nvdaCoach/__init__.py:555
 #, python-brace-format
 msgid "Step {stepNum} of {stepTotal}"
 msgstr "Шаг {stepNum} из {stepTotal}"
 
-#: nvdaCoach/__init__.py:294
+#: nvdaCoach/__init__.py:574
+msgid ""
+"Congratulations — you have completed every lesson in NVDA Coach! Tab to the "
+"Export Certificate of Completion button to save your certificate."
+msgstr ""
+"Поздравляем — вы завершили все уроки NVDA Coach! Нажмите Tab, чтобы перейти "
+"к кнопке «Экспортировать сертификат о завершении» и сохранить ваш сертификат."
+
+#: nvdaCoach/__init__.py:580
 msgid "NVDA Coach — Introduction"
 msgstr "NVDA Coach — Введение"
 
-#: nvdaCoach/__init__.py:297
+#: nvdaCoach/__init__.py:585
+#, python-brace-format
+msgid "Welcome, {name}, to NVDA Coach"
+msgstr "Добро пожаловать, {name}, в NVDA Coach"
+
+#: nvdaCoach/__init__.py:587
+#, python-brace-format
 msgid ""
-"NVDA Coach\n"
-"Created by Tony Gebhard, Assistive Technology Instructor\n"
-"github.com/tonygeb23/nvdacoach\n"
-"\n"
+"Welcome, {name}, to NVDA Coach. Use your reading cursor or arrow keys to "
+"read this introduction. When you are ready, press Tab to reach the Start "
+"Course button and press Enter to begin."
+msgstr ""
+"Добро пожаловать, {name}, в NVDA Coach. Используйте курсор чтения или "
+"клавиши со стрелками, чтобы прочитать это введение. Когда будете готовы, "
+"нажмите Tab, чтобы перейти к кнопке «Начать курс», и нажмите Enter для "
+"начала."
+
+#: nvdaCoach/__init__.py:592
+msgid "Welcome to NVDA Coach"
+msgstr "Добро пожаловать в NVDA Coach"
+
+#: nvdaCoach/__init__.py:594
+msgid ""
+"Welcome to NVDA Coach. Use your reading cursor or arrow keys to read this "
+"introduction. When you are ready, press Tab to reach the Start Course button "
+"and press Enter to begin."
+msgstr ""
+"Добро пожаловать в NVDA Coach. Используйте курсор чтения или клавиши со "
+"стрелками, чтобы прочитать это введение. Когда будете готовы, нажмите Tab, "
+"чтобы перейти к кнопке «Начать курс», и нажмите Enter для начала."
+
+#: nvdaCoach/__init__.py:600
+#, python-brace-format
+msgid ""
+"Your instructor today is {instructor}. Let them know you are starting — they "
+"can help you find keys, adjust settings, or answer questions before you "
+"begin."
+msgstr ""
+"Ваш инструктор сегодня — {instructor}. Сообщите ему, что вы начинаете, — он "
+"сможет помочь вам найти клавиши, настроить параметры или ответить на вопросы "
+"до начала занятий."
+
+#: nvdaCoach/__init__.py:606
+msgid ""
+"If you have an assistive technology instructor nearby, let them know you are "
+"starting NVDA Coach. They can help you find keys, adjust settings, or answer "
+"questions before you begin. If you are working on your own, that is "
+"perfectly fine too. NVDA Coach is built to guide you step by step, at your "
+"own pace."
+msgstr ""
+"Если рядом с вами есть инструктор по ассистивным технологиям, сообщите ему, "
+"что вы начинаете работу с NVDA Coach. Он может помочь вам найти клавиши, "
+"настроить параметры или ответить на вопросы, прежде чем вы начнёте. Если вы "
+"работаете самостоятельно, это тоже совершенно нормально. NVDA Coach создан, "
+"чтобы шаг за шагом направлять вас в вашем собственном темпе."
+
+#: nvdaCoach/__init__.py:613
+msgid "Created by Tony Gebhard, Assistive Technology Instructor"
+msgstr "Создано Тони Гебхардом, инструктором по ассистивным технологиям"
+
+#: nvdaCoach/__init__.py:616
+msgid ""
 "Before you begin, there is one key you should know right now. The Control "
 "key, labeled Ctrl, is in the bottom-left corner of your keyboard. Press it "
 "once and NVDA stops talking immediately, no matter what it is reading. This "
@@ -182,20 +368,7 @@ msgid ""
 "you what that key does without actually doing it. Press NVDA+1 again to turn "
 "it off. You can use Input Help at any time, even during a lesson.\n"
 "\n"
-"If you have an assistive technology instructor nearby, let them know you are "
-"starting NVDA Coach. They can help you find keys, adjust settings, or answer "
-"questions before you begin. If you are working on your own, that is "
-"perfectly fine too. NVDA Coach is built to guide you step by step, at your "
-"own pace.\n"
-"\n"
-"When you are ready to begin, press Tab to find the Start Course button below "
-"and press Enter or Space to start the first lesson. You can also press NVDA"
-"+Shift+C to open the lesson picker and choose any lesson directly."
 msgstr ""
-"NVDA Coach\n"
-"Создано Тони Гебхардом, инструктором по ассистивным технологиям\n"
-"github.com/tonygeb23/nvdacoach\n"
-"\n"
 "Прежде чем начать, есть одна клавиша, которую вам следует знать прямо "
 "сейчас. Клавиша Control (Ctrl) находится в нижнем левом углу клавиатуры. "
 "Нажмите её один раз, и NVDA немедленно перестанет говорить, независимо от "
@@ -218,32 +391,28 @@ msgstr ""
 "снова, чтобы выключить его. Вы можете использовать режим помощи при вводе в "
 "любое время, даже во время урока.\n"
 "\n"
-"Если рядом с вами есть инструктор по ассистивным технологиям, сообщите ему, "
-"что вы начинаете работу с NVDA Coach. Он может помочь вам найти клавиши, "
-"настроить параметры или ответить на вопросы, прежде чем вы начнёте. Если вы "
-"работаете самостоятельно, это тоже совершенно нормально. NVDA Coach создан, "
-"чтобы шаг за шагом направлять вас в вашем собственном темпе.\n"
-"\n"
+
+#: nvdaCoach/__init__.py:633
+msgid ""
+"When you are ready to begin, press Tab to find the Start Course button below "
+"and press Enter or Space to start the first lesson. You can also press NVDA"
+"+Shift+C to open the lesson picker and choose any lesson directly."
+msgstr ""
 "Когда будете готовы начать, нажмите Tab, чтобы найти кнопку «Начать курс» "
 "ниже, и нажмите Enter или Пробел, чтобы начать первый урок. Вы также можете "
 "нажать NVDA+Shift+C, чтобы открыть выбор уроков и выбрать любой урок "
 "напрямую."
 
-#: nvdaCoach/__init__.py:328
-msgid ""
-"Welcome to NVDA Coach. Use your reading cursor or arrow keys to read this "
-"introduction. When you are ready, press Tab to reach the Start Course button "
-"and press Enter to begin."
-msgstr ""
-"Добро пожаловать в NVDA Coach. Используйте курсор чтения или клавиши со "
-"стрелками, чтобы прочитать это введение. Когда будете готовы, нажмите Tab, "
-"чтобы перейти к кнопке «Начать курс», и нажмите Enter для начала."
+#: nvdaCoach/__init__.py:663
+#, python-brace-format
+msgid "Ready, {name}."
+msgstr "Готово, {name}."
 
-#: nvdaCoach/__init__.py:356
+#: nvdaCoach/__init__.py:663
 msgid "Ready."
 msgstr "Готово."
 
-#: nvdaCoach/__init__.py:358
+#: nvdaCoach/__init__.py:672
 msgid ""
 "--- WHAT TO DO NEXT ---\n"
 "  Press NVDA+Shift+C to open the lesson picker and choose a lesson.\n"
@@ -262,15 +431,21 @@ msgid ""
 "--- A NOTE FOR INSTRUCTORS AND STUDENTS ---\n"
 "If an instructor is present, this is a great time to ask any questions "
 "before the next lesson. If you are working independently, keep going at your "
-"own pace. Every step forward counts."
+"own pace. Every step forward counts.\n"
+"\n"
+"--- QUICK KEYS (available any time in this window) ---\n"
+"  F4 — Open help documentation\n"
+"  F5 — Send feedback to the developer\n"
+"  F6 — Toggle lesson sounds on or off\n"
+"  F7 — Set your name and instructor's name"
 msgstr ""
 "--- ЧТО ДЕЛАТЬ ДАЛЬШЕ ---\n"
 "  Нажмите NVDA+Shift+C, чтобы открыть выбор уроков и выбрать урок.\n"
 "\n"
 "--- НАВИГАЦИЯ ПО УРОКАМ ---\n"
-"  Ctrl+N  \—  Перейти к следующему уроку в этой категории.\n"
-"  Ctrl+B  \—  Вернуться к предыдущему уроку.\n"
-"  Ctrl+R  \—  Перезапустить этот урок с начала.\n"
+"  Ctrl+N  —  Перейти к следующему уроку в этой категории.\n"
+"  Ctrl+B  —  Вернуться к предыдущему уроку.\n"
+"  Ctrl+R  —  Перезапустить этот урок с начала.\n"
 "\n"
 "Клавиша Control (Ctrl) находится в нижнем левом углу клавиатуры.\n"
 "\n"
@@ -282,18 +457,52 @@ msgstr ""
 "--- ЗАМЕТКА ДЛЯ ИНСТРУКТОРОВ И УЧЕНИКОВ ---\n"
 "Если рядом есть инструктор, сейчас самое время задать любые вопросы перед "
 "следующим уроком. Если вы работаете самостоятельно, продолжайте в своём "
-"темпе. Каждый шаг вперёд имеет значение."
-
-#: nvdaCoach/__init__.py:377
-msgid "NVDA Coach — Chapter 3 Complete!"
-msgstr "NVDA Coach — Глава 3 завершена!"
-
-#: nvdaCoach/__init__.py:383
-msgid ""
-"Congratulations — Browse Mode and Web Navigation Complete!\n"
+"темпе. Каждый шаг вперёд имеет значение.\n"
 "\n"
-"You have finished all eight lessons in Chapter 3. You now know how to "
-"navigate any web page using NVDA's browse mode.\n"
+"--- БЫСТРЫЕ КЛАВИШИ (доступны в любое время в этом окне) ---\n"
+"  F4 — Открыть справочную документацию\n"
+"  F5 — Отправить отзыв разработчику\n"
+"  F6 — Включить или выключить звуки урока\n"
+"  F7 — Установить ваше имя и имя инструктора"
+
+#: nvdaCoach/__init__.py:698
+#, python-brace-format
+msgid "Congratulations, {name} — Browse Mode and Web Navigation Complete!"
+msgstr "Поздравляем, {name} — режим обзора и веб-навигация завершены!"
+
+#: nvdaCoach/__init__.py:700
+msgid "Congratulations — Browse Mode and Web Navigation Complete!"
+msgstr "Поздравляем — режим обзора и веб-навигация завершены!"
+
+#: nvdaCoach/__init__.py:703
+#, python-brace-format
+msgid ""
+"Congratulations, {name}! You have completed Browse Mode and Web Navigation, "
+"Chapter 4 of NVDA Coach. The practice page in your browser can now be "
+"closed. Press NVDA+Shift+C to continue to additional training resources."
+msgstr ""
+"Поздравляем, {name}! Вы завершили главу 4 NVDA Coach «Режим обзора и веб-"
+"навигация». Практическую страницу в браузере теперь можно закрыть. Нажмите "
+"NVDA+Shift+C, чтобы перейти к дополнительным учебным материалам."
+
+#: nvdaCoach/__init__.py:708
+msgid ""
+"Congratulations! You have completed Browse Mode and Web Navigation, Chapter "
+"4 of NVDA Coach. The practice page in your browser can now be closed. Press "
+"NVDA+Shift+C to continue to additional training resources."
+msgstr ""
+"Поздравляем! Вы завершили главу 4 NVDA Coach «Режим обзора и веб-навигация». "
+"Практическую страницу в браузере теперь можно закрыть. Нажмите NVDA+Shift+C, "
+"чтобы перейти к дополнительным учебным материалам."
+
+#: nvdaCoach/__init__.py:713
+msgid "NVDA Coach — Chapter 4 Complete!"
+msgstr "NVDA Coach — Глава 4 завершена!"
+
+#: nvdaCoach/__init__.py:721
+msgid ""
+"You have finished all lessons in Chapter 4. You now know how to navigate any "
+"web page using NVDA's browse mode.\n"
 "\n"
 "Commands you have mastered:\n"
 "  H — Jump between headings\n"
@@ -312,20 +521,18 @@ msgid ""
 "  Choose Additional Training and Help for more resources.\n"
 "  Or press Ctrl+R to repeat any lesson in this chapter."
 msgstr ""
-"Поздравляем — режим обзора и навигация по веб-страницам завершены!\n"
-"\n"
-"Вы прошли все восемь уроков в главе 3. Теперь вы умеете перемещаться по "
-"любой веб-странице с помощью режима обзора NVDA.\n"
+"Вы завершили все уроки главы 4. Теперь вы знаете, как перемещаться по любой "
+"веб-странице с помощью режима обзора NVDA.\n"
 "\n"
 "Освоенные команды:\n"
-"  H \— Перемещение между заголовками\n"
-"  1–6 \— Переход к заголовкам соответствующих уровней\n"
-"  K \— Перемещение между ссылками\n"
-"  F, E, B \— Навигация по полям форм и кнопкам\n"
-"  D \— Перемещение между ориентирами (landmarks)\n"
-"  L \— Перемещение между списками\n"
-"  NVDA+Пробел \— Переключение между режимом обзора и режимом фокуса\n"
-"  NVDA+F7 \— Открытие списка элементов\n"
+"  H — Перемещение между заголовками\n"
+"  1–6 — Переход к заголовкам соответствующих уровней\n"
+"  K — Перемещение между ссылками\n"
+"  F, E, B — Навигация по полям форм и кнопкам\n"
+"  D — Перемещение между ориентирами (landmarks)\n"
+"  L — Перемещение между списками\n"
+"  NVDA+Пробел — Переключение между режимом обзора и режимом фокуса\n"
+"  NVDA+F7 — Открытие списка элементов\n"
 "\n"
 "Практическую страницу в браузере теперь можно закрыть.\n"
 "\n"
@@ -335,17 +542,96 @@ msgstr ""
 "материалов.\n"
 "  Или нажмите Ctrl+R, чтобы повторить любой урок из этой главы."
 
-#: nvdaCoach/__init__.py:403
-msgid ""
-"Congratulations! You have completed Browse Mode and Web Navigation, Chapter "
-"3 of NVDA Coach. The practice page in your browser can now be closed. Press "
-"NVDA+Shift+C to continue to additional training resources."
-msgstr ""
-"Поздравляем! Вы завершили главу 3 NVDA Coach «Режим обзора и навигация по "
-"веб-страницам». Практическую страницу в браузере теперь можно закрыть. "
-"Нажмите NVDA+Shift+C, чтобы перейти к дополнительным учебным материалам."
+#: nvdaCoach/__init__.py:749
+#, python-brace-format
+msgid "Congratulations, {name} — You Have Completed NVDA Coach!"
+msgstr "Поздравляем, {name} — вы завершили NVDA Coach!"
 
-#: nvdaCoach/__init__.py:417
+#: nvdaCoach/__init__.py:751
+msgid "Congratulations — You Have Completed NVDA Coach!"
+msgstr "Поздравляем — вы завершили NVDA Coach!"
+
+#: nvdaCoach/__init__.py:754
+#, python-brace-format
+msgid ""
+"Congratulations, {name}! You have finished every lesson in NVDA Coach. This "
+"is a tremendous achievement. Tab to the Export Certificate of Completion "
+"button to save your certificate."
+msgstr ""
+"Поздравляем, {name}! Вы завершили все уроки NVDA Coach. Это огромное "
+"достижение. Нажмите Tab, чтобы перейти к кнопке «Экспортировать сертификат о "
+"завершении» и сохранить ваш сертификат."
+
+#: nvdaCoach/__init__.py:758
+msgid ""
+"Congratulations! You have finished every lesson in NVDA Coach. This is a "
+"tremendous achievement. Tab to the Export Certificate of Completion button "
+"to save your certificate."
+msgstr ""
+"Поздравляем! Вы завершили все уроки NVDA Coach. Это огромное достижение. "
+"Нажмите Tab, чтобы перейти к кнопке «Экспортировать сертификат о завершении» "
+"и сохранить ваш сертификат."
+
+#: nvdaCoach/__init__.py:764
+#, python-brace-format
+msgid "Instructor: {instructor}"
+msgstr "Инструктор: {instructor}"
+
+#: nvdaCoach/__init__.py:768
+#, python-brace-format
+msgid "Training Program: {center}"
+msgstr "Программа обучения: {center}"
+
+#: nvdaCoach/__init__.py:789
+msgid ""
+"--- WHAT YOU HAVE LEARNED ---\n"
+"  Chapter 1: Getting Started with NVDA\n"
+"  Chapter 2: Your Keyboard\n"
+"  Chapter 3: Reading Text\n"
+"  Chapter 4: Browse Mode and Web Navigation\n"
+"  Chapter 5: Object Navigation\n"
+"  Chapter 6: Customizing NVDA\n"
+"\n"
+msgstr ""
+"--- ЧТО ВЫ ИЗУЧИЛИ ---\n"
+"  Глава 1: Начало работы с NVDA\n"
+"  Глава 2: Ваша клавиатура\n"
+"  Глава 3: Чтение текста\n"
+"  Глава 4: Режим обзора и веб-навигация\n"
+"  Глава 5: Навигация по объектам\n"
+"  Глава 6: Настройка NVDA\n"
+"\n"
+
+#: nvdaCoach/__init__.py:798
+msgid ""
+"--- YOUR CERTIFICATE OF COMPLETION ---\n"
+"Tab to the Export Certificate button below and press Enter.\n"
+"Your certificate will open in your web browser.\n"
+"\n"
+"To save or print your certificate:\n"
+"  1. In your browser, press Ctrl+S to save the page, or press Ctrl+P to "
+"print it.\n"
+"  2. To print to PDF, choose 'Save as PDF' or 'Microsoft Print to PDF' as "
+"your printer.\n"
+"  3. A copy is also saved automatically to your Downloads folder."
+msgstr ""
+"--- ВАШ СЕРТИФИКАТ О ЗАВЕРШЕНИИ ---\n"
+"Нажмите Tab, чтобы перейти к кнопке «Экспортировать сертификат» ниже, и "
+"нажмите Enter.\n"
+"Ваш сертификат откроется в вашем веб-браузере.\n"
+"\n"
+"Чтобы сохранить или распечатать сертификат:\n"
+"  1. В браузере нажмите Ctrl+S, чтобы сохранить страницу, или Ctrl+P, чтобы "
+"распечатать её.\n"
+"  2. Для печати в PDF выберите «Сохранить как PDF» или «Microsoft Print to "
+"PDF» в качестве принтера.\n"
+"  3. Копия также автоматически сохраняется в вашей папке «Загрузки»."
+
+#: nvdaCoach/__init__.py:810
+msgid "NVDA Coach — Course Complete!"
+msgstr "NVDA Coach — Курс завершён!"
+
+#: nvdaCoach/__init__.py:829
 msgid ""
 "Lesson stopped.\n"
 "\n"
@@ -357,60 +643,87 @@ msgstr ""
 "Нажмите Escape ещё два раза, чтобы закрыть NVDA Coach.\n"
 "Или нажмите NVDA+Shift+C, чтобы начать другой урок."
 
-#: nvdaCoach/__init__.py:531
+#: nvdaCoach/__init__.py:853
+msgid "Opening NVDA Coach help documentation in your web browser."
+msgstr "Открытие справочной документации NVDA Coach в вашем веб-браузере."
+
+#: nvdaCoach/__init__.py:857
+msgid ""
+"If you wish to view the NVDA Coach help documentation, press F4 once more."
+msgstr ""
+"Если вы хотите просмотреть справочную документацию NVDA Coach, нажмите F4 "
+"ещё раз."
+
+#: nvdaCoach/__init__.py:876
+msgid "Opening a feedback email to the developer."
+msgstr "Открытие письма с отзывом разработчику."
+
+#: nvdaCoach/__init__.py:880
+msgid "Press F5 once more to open a feedback email to the developer."
+msgstr "Нажмите F5 ещё раз, чтобы открыть письмо с отзывом разработчику."
+
+#: nvdaCoach/__init__.py:893
+msgid "Sounds enabled."
+msgstr "Звуки включены."
+
+#: nvdaCoach/__init__.py:895
+msgid "Sounds disabled."
+msgstr "Звуки отключены."
+
+#: nvdaCoach/__init__.py:1027
 msgid "Press Escape two more times to close NVDA Coach."
 msgstr "Нажмите Escape ещё два раза, чтобы закрыть NVDA Coach."
 
-#: nvdaCoach/__init__.py:534
+#: nvdaCoach/__init__.py:1030
 msgid "Or press NVDA+Shift+C to start a lesson."
 msgstr "Или нажмите NVDA+Shift+C, чтобы начать урок."
 
-#: nvdaCoach/__init__.py:538
+#: nvdaCoach/__init__.py:1034
 msgid "Press Escape one more time to close NVDA Coach."
 msgstr "Нажмите Escape ещё раз, чтобы закрыть NVDA Coach."
 
-#: nvdaCoach/__init__.py:678
+#: nvdaCoach/__init__.py:1174
 msgid ""
 "When you are done, press NVDA+Shift+C to return to the Coach window, then "
 "press Enter or Next Step to continue."
 msgstr ""
-"Когда закончите, нажмите NVDA+Shift+C, чтобы вернуться в окно Coach, затем "
+"Когда закончите, нажмите NVDA+Shift+C, чтобы вернуться в окно тренера, затем "
 "нажмите Enter или «Следующий шаг», чтобы продолжить."
 
-#: nvdaCoach/__init__.py:691
+#: nvdaCoach/__init__.py:1187
 msgid "Tab Navigation Practice Form"
 msgstr "Практическая форма для навигации с помощью Tab"
 
-#: nvdaCoach/__init__.py:693
+#: nvdaCoach/__init__.py:1189
 msgid ""
 "Press Tab to move forward through these controls. Press Shift+Tab to move "
 "backward. NVDA announces each control as you land on it."
 msgstr ""
 "Нажимайте Tab для перемещения вперёд по элементам управления. Нажимайте Shift"
-"+Tab для перемещения назад. NVDA будет объявлять каждый элемент при "
-"попадании на него."
+"+Tab для перемещения назад. NVDA объявляет каждый элемент при попадании на "
+"него."
 
-#: nvdaCoach/__init__.py:747
+#: nvdaCoach/__init__.py:1243
 msgid "Form submitted. In a real form, this would send your information."
 msgstr "Форма отправлена. В реальной форме это отправило бы ваши данные."
 
-#: nvdaCoach/__init__.py:750
+#: nvdaCoach/__init__.py:1246
 msgid "Cancelled. The form was not submitted."
 msgstr "Отмена. Форма не была отправлена."
 
-#: nvdaCoach/__init__.py:753
+#: nvdaCoach/__init__.py:1249
 msgid "Subscribed to newsletter."
 msgstr "Подписка на рассылку оформлена."
 
-#: nvdaCoach/__init__.py:753
+#: nvdaCoach/__init__.py:1249
 msgid "Unsubscribed."
 msgstr "Подписка отменена."
 
-#: nvdaCoach/__init__.py:759
+#: nvdaCoach/__init__.py:1255
 msgid "Activating Controls Practice"
 msgstr "Практика активации элементов управления"
 
-#: nvdaCoach/__init__.py:761
+#: nvdaCoach/__init__.py:1257
 msgid ""
 "Tab to a control and activate it. Press Space to check or uncheck a "
 "checkbox. Press Enter to activate a button."
@@ -419,39 +732,39 @@ msgstr ""
 "Пробел, чтобы установить или снять флажок. Нажмите Enter, чтобы активировать "
 "кнопку."
 
-#: nvdaCoach/__init__.py:789
+#: nvdaCoach/__init__.py:1285
 msgid "Screen reader tips enabled."
 msgstr "Советы по скринридеру включены."
 
-#: nvdaCoach/__init__.py:790
+#: nvdaCoach/__init__.py:1286
 msgid "Screen reader tips disabled."
 msgstr "Советы по скринридеру отключены."
 
-#: nvdaCoach/__init__.py:793
+#: nvdaCoach/__init__.py:1289
 msgid "Practice hints on."
 msgstr "Подсказки для практики включены."
 
-#: nvdaCoach/__init__.py:793
+#: nvdaCoach/__init__.py:1289
 msgid "Practice hints off."
 msgstr "Подсказки для практики отключены."
 
-#: nvdaCoach/__init__.py:796
+#: nvdaCoach/__init__.py:1292
 msgid "Auto-start enabled."
 msgstr "Автозапуск включён."
 
-#: nvdaCoach/__init__.py:796
+#: nvdaCoach/__init__.py:1292
 msgid "Auto-start disabled."
 msgstr "Автозапуск отключён."
 
-#: nvdaCoach/__init__.py:801
+#: nvdaCoach/__init__.py:1297
 msgid "Beep! You activated the button."
 msgstr "Сигнал! Вы активировали кнопку."
 
-#: nvdaCoach/__init__.py:805
+#: nvdaCoach/__init__.py:1301
 msgid "Hello! You just activated a button. Great work."
 msgstr "Здравствуйте! Вы только что активировали кнопку. Отличная работа."
 
-#: nvdaCoach/__init__.py:808
+#: nvdaCoach/__init__.py:1304
 msgid ""
 "Tip: Tab moves between controls. Enter activates buttons. Space checks or "
 "unchecks checkboxes."
@@ -459,11 +772,11 @@ msgstr ""
 "Совет: Tab перемещается между элементами управления. Enter активирует "
 "кнопки. Пробел устанавливает или снимает флажки."
 
-#: nvdaCoach/__init__.py:815
+#: nvdaCoach/__init__.py:1311
 msgid "Find Your Focus — Practice Login Form"
 msgstr "Найти фокус — практическая форма входа"
 
-#: nvdaCoach/__init__.py:817
+#: nvdaCoach/__init__.py:1313
 msgid ""
 "Tab around this form. When you land on a control, press NVDA+Tab to hear its "
 "name, type, and current state."
@@ -472,38 +785,38 @@ msgstr ""
 "управления, нажмите NVDA+Tab, чтобы услышать его название, тип и текущее "
 "состояние."
 
-#: nvdaCoach/__init__.py:838
+#: nvdaCoach/__init__.py:1334
 msgid "Sign in"
 msgstr "Войти"
 
-#: nvdaCoach/__init__.py:838
+#: nvdaCoach/__init__.py:1334
 msgid "Sign in activated. In a real application, this would log you in."
 msgstr ""
 "Кнопка «Войти» активирована. В реальном приложении это выполнило бы вход."
 
-#: nvdaCoach/__init__.py:839
+#: nvdaCoach/__init__.py:1335
 msgid "Create account"
 msgstr "Создать учётную запись"
 
-#: nvdaCoach/__init__.py:839
+#: nvdaCoach/__init__.py:1335
 msgid "Create account activated. This would open a registration form."
 msgstr ""
 "Кнопка «Создать учётную запись» активирована. Это открыло бы форму "
 "регистрации."
 
-#: nvdaCoach/__init__.py:840
+#: nvdaCoach/__init__.py:1336
 msgid "Forgot your password?"
 msgstr "Забыли пароль?"
 
-#: nvdaCoach/__init__.py:840
+#: nvdaCoach/__init__.py:1336
 msgid "Password reset activated. A reset link would be sent."
 msgstr "Сброс пароля активирован. Была бы отправлена ссылка для сброса."
 
-#: nvdaCoach/__init__.py:871
+#: nvdaCoach/__init__.py:1367
 msgid "NVDA Coach — Choose a Lesson"
 msgstr "NVDA Coach — Выбор урока"
 
-#: nvdaCoach/__init__.py:890
+#: nvdaCoach/__init__.py:1387
 msgid ""
 "Browse lessons and resources below. Right arrow expands a section, Left "
 "arrow collapses it. Press Enter or the Open / Start button to activate the "
@@ -513,49 +826,45 @@ msgstr ""
 "стрелка влево сворачивает его. Нажмите Enter или кнопку «Открыть / Начать», "
 "чтобы активировать выбранный элемент."
 
-#: nvdaCoach/__init__.py:910
+#: nvdaCoach/__init__.py:1407
 msgid "Introduction / About NVDA Coach"
 msgstr "Введение / О NVDA Coach"
 
-#: nvdaCoach/__init__.py:916
+#: nvdaCoach/__init__.py:1413
 msgid "Unknown Category"
 msgstr "Неизвестная категория"
 
-#: nvdaCoach/__init__.py:920
+#: nvdaCoach/__init__.py:1417
 #, python-brace-format
 msgid "{completed} of {total} complete"
 msgstr "выполнено {completed} из {total}"
 
-#: nvdaCoach/__init__.py:925
+#: nvdaCoach/__init__.py:1422
 msgid "Untitled"
 msgstr "Без названия"
 
-#: nvdaCoach/__init__.py:928
+#: nvdaCoach/__init__.py:1425
 msgid "[Done]"
 msgstr "[Выполнено]"
 
-#: nvdaCoach/__init__.py:938 nvdaCoach/__init__.py:941
+#: nvdaCoach/__init__.py:1435 nvdaCoach/__init__.py:1438
 msgid "Additional Training and Help"
 msgstr "Дополнительное обучение и справка"
 
-#: nvdaCoach/__init__.py:950
+#: nvdaCoach/__init__.py:1447
 msgid "&Open / Start"
 msgstr "&Открыть / Начать"
 
-#: nvdaCoach/__init__.py:952
-msgid "&Cancel"
-msgstr "&Отмена"
-
-#: nvdaCoach/__init__.py:968
+#: nvdaCoach/__init__.py:1465
 msgid "Please select an item first."
 msgstr "Пожалуйста, сначала выберите элемент."
 
-#: nvdaCoach/__init__.py:989
+#: nvdaCoach/__init__.py:1486
 #, python-brace-format
 msgid "Section collapsed. {count} items hidden."
 msgstr "Раздел свёрнут. Скрыто {count} элементов."
 
-#: nvdaCoach/__init__.py:994
+#: nvdaCoach/__init__.py:1491
 #, python-brace-format
 msgid ""
 "Section expanded. {count} items available. Use the Down arrow to browse them."
@@ -563,21 +872,21 @@ msgstr ""
 "Раздел развёрнут. Доступно {count} элементов. Используйте стрелку вниз для "
 "просмотра."
 
-#: nvdaCoach/__init__.py:1000
+#: nvdaCoach/__init__.py:1497
 msgid "File"
 msgstr "Файл"
 
-#: nvdaCoach/__init__.py:1003
+#: nvdaCoach/__init__.py:1500
 #, python-brace-format
 msgid "{label} is not available in this version of NVDA Coach."
 msgstr "{label} недоступен в этой версии NVDA Coach."
 
-#: nvdaCoach/__init__.py:1008
+#: nvdaCoach/__init__.py:1505
 #, python-brace-format
 msgid "Opening {label}."
 msgstr "Открытие {label}."
 
-#: nvdaCoach/__init__.py:1012
+#: nvdaCoach/__init__.py:1509
 #, python-brace-format
 msgid ""
 "Could not open {label}. Please check that the add-on is installed correctly."
@@ -585,29 +894,25 @@ msgstr ""
 "Не удалось открыть {label}. Пожалуйста, проверьте, правильно ли установлено "
 "дополнение."
 
-#: nvdaCoach/__init__.py:1020
+#: nvdaCoach/__init__.py:1517
 #, python-brace-format
 msgid "Opening {url} in your web browser."
 msgstr "Открытие {url} в вашем веб-браузере."
 
-#: nvdaCoach/__init__.py:1024
+#: nvdaCoach/__init__.py:1521
 msgid "Could not open the website. Please check your internet connection."
 msgstr ""
 "Не удалось открыть веб-сайт. Пожалуйста, проверьте подключение к Интернету."
 
-#: nvdaCoach/__init__.py:1065
-msgid "NVDA Coach &Help"
-msgstr "Справка NVDA &Coach"
+#: nvdaCoach/__init__.py:1578
+msgid "&NVDA Coach"
+msgstr "&NVDA Coach"
 
-#: nvdaCoach/__init__.py:1066
-msgid "Open the NVDA Coach user guide"
-msgstr "Открыть руководство пользователя NVDA Coach"
+#: nvdaCoach/__init__.py:1579
+msgid "Open NVDA Coach lesson picker"
+msgstr "Открыть выбор уроков NVDA Coach"
 
-#: nvdaCoach/__init__.py:1100
-msgid "Show NVDA Coach window, or open the lesson picker"
-msgstr "Показать окно NVDA Coach или открыть выбор уроков"
-
-#: nvdaCoach/__init__.py:1122
+#: nvdaCoach/__init__.py:1620
 msgid ""
 "NVDA Coach. Press Enter or Next Step to continue, or Escape to stop the "
 "lesson."
@@ -615,7 +920,7 @@ msgstr ""
 "NVDA Coach. Нажмите Enter или «Следующий шаг», чтобы продолжить, или Escape, "
 "чтобы остановить урок."
 
-#: nvdaCoach/__init__.py:1129
+#: nvdaCoach/__init__.py:1627
 msgid ""
 "NVDA Coach: No lesson files found. Please check that the lessons folder is "
 "in the add-on directory."
@@ -623,12 +928,16 @@ msgstr ""
 "NVDA Coach: файлы уроков не найдены. Пожалуйста, проверьте, что папка "
 "lessons находится в каталоге дополнения."
 
-#: nvdaCoach/__init__.py:1236 nvdaCoach/__init__.py:1263
-#: nvdaCoach/__init__.py:1286
+#: nvdaCoach/__init__.py:1637
+msgid "Show NVDA Coach window, or open the lesson picker"
+msgstr "Показать окно NVDA Coach или открыть выбор уроков"
+
+#: nvdaCoach/__init__.py:1749 nvdaCoach/__init__.py:1776
+#: nvdaCoach/__init__.py:1799
 msgid "No active category. Press NVDA+Shift+C to choose a lesson."
 msgstr "Нет активной категории. Нажмите NVDA+Shift+C, чтобы выбрать урок."
 
-#: nvdaCoach/__init__.py:1240
+#: nvdaCoach/__init__.py:1753
 msgid ""
 "You are on the last lesson in this category. Press NVDA+Shift+C to open the "
 "lesson picker and continue to the next chapter."
@@ -636,42 +945,60 @@ msgstr ""
 "Вы находитесь на последнем уроке в этой категории. Нажмите NVDA+Shift+C, "
 "чтобы открыть выбор уроков и перейти к следующей главе."
 
-#: nvdaCoach/__init__.py:1251
+#: nvdaCoach/__init__.py:1764
 #, python-brace-format
 msgid "Moving to: {title}."
 msgstr "Переход к: {title}."
 
-#: nvdaCoach/__init__.py:1251
+#: nvdaCoach/__init__.py:1764
 msgid "next lesson"
 msgstr "следующий урок"
 
-#: nvdaCoach/__init__.py:1266
+#: nvdaCoach/__init__.py:1779
 msgid "You are on the first lesson in this category."
 msgstr "Вы находитесь на первом уроке в этой категории."
 
-#: nvdaCoach/__init__.py:1274
+#: nvdaCoach/__init__.py:1787
 #, python-brace-format
 msgid "Going back to: {title}."
 msgstr "Возврат к: {title}."
 
-#: nvdaCoach/__init__.py:1274
+#: nvdaCoach/__init__.py:1787
 msgid "previous lesson"
 msgstr "предыдущий урок"
 
-#: nvdaCoach/__init__.py:1293
+#: nvdaCoach/__init__.py:1806
 msgid "Restarting lesson."
 msgstr "Перезапуск урока."
 
-#: nvdaCoach/__init__.py:1308
+#: nvdaCoach/__init__.py:1821
 msgid "Could not find the Getting Started chapter."
 msgstr "Не удалось найти главу «Начало работы»."
 
-#: nvdaCoach/lessonRunner.py:65 nvdaCoach/lessonRunner.py:68
+#: nvdaCoach/__init__.py:1929
+msgid ""
+"Could not save the certificate. Please check that your Downloads folder is "
+"accessible."
+msgstr ""
+"Не удалось сохранить сертификат. Пожалуйста, проверьте, что папка «Загрузки» "
+"доступна."
+
+#: nvdaCoach/lessonRunner.py:87
+#, python-brace-format
+msgid "Hello, {name}! "
+msgstr "Здравствуйте, {name}! "
+
+#: nvdaCoach/lessonRunner.py:89
+#, python-brace-format
+msgid "Your instructor today is {instructor}. "
+msgstr "Ваш инструктор сегодня — {instructor}. "
+
+#: nvdaCoach/lessonRunner.py:94 nvdaCoach/lessonRunner.py:98
 #, python-brace-format
 msgid "Starting lesson: {title}."
 msgstr "Запуск урока: {title}."
 
-#: nvdaCoach/lessonRunner.py:70
+#: nvdaCoach/lessonRunner.py:100
 msgid ""
 "Press Enter or the Next Step button to advance. F1 repeats the instruction, "
 "F2 gives a hint, Escape stops the lesson."
@@ -679,7 +1006,7 @@ msgstr ""
 "Нажмите Enter или кнопку «Следующий шаг», чтобы продолжить. F1 повторяет "
 "инструкцию, F2 даёт подсказку, Escape останавливает урок."
 
-#: nvdaCoach/lessonRunner.py:89
+#: nvdaCoach/lessonRunner.py:119
 msgid ""
 "Lesson stopped. Press NVDA+Shift+C to choose another lesson, or Ctrl+R to "
 "restart this one."
@@ -687,92 +1014,101 @@ msgstr ""
 "Урок остановлен. Нажмите NVDA+Shift+C, чтобы выбрать другой урок, или Ctrl"
 "+R, чтобы перезапустить этот."
 
-#: nvdaCoach/lessonRunner.py:94
+#: nvdaCoach/lessonRunner.py:124
 msgid "Lesson stopped."
 msgstr "Урок остановлен."
 
-#: nvdaCoach/lessonRunner.py:134
+#: nvdaCoach/lessonRunner.py:164
 #, python-brace-format
 msgid "Hint {idx} of {total}: {hint}"
 msgstr "Подсказка {idx} из {total}: {hint}"
 
-#: nvdaCoach/lessonRunner.py:136 nvdaCoach/lessonRunner.py:143
+#: nvdaCoach/lessonRunner.py:166 nvdaCoach/lessonRunner.py:173
 #, python-brace-format
 msgid "Hint: {hint}"
 msgstr "Подсказка: {hint}"
 
-#: nvdaCoach/lessonRunner.py:141
+#: nvdaCoach/lessonRunner.py:171
 msgid "No additional hint is available for this step."
 msgstr "Для этого шага нет дополнительной подсказки."
 
-#: nvdaCoach/lessonRunner.py:149
+#: nvdaCoach/lessonRunner.py:179
 msgid "Step skipped."
 msgstr "Шаг пропущен."
 
-#: nvdaCoach/lessonRunner.py:178
+#: nvdaCoach/lessonRunner.py:208
 #, python-brace-format
 msgid "Step {stepNum} of {totalSteps}. "
 msgstr "Шаг {stepNum} из {totalSteps}. "
 
-#: nvdaCoach/lessonRunner.py:184 nvdaCoach/lessonRunner.py:215
+#: nvdaCoach/lessonRunner.py:214 nvdaCoach/lessonRunner.py:245
 msgid ""
 "Try it now. When you are ready to continue, press Enter or click Next Step."
 msgstr ""
 "Попробуйте сейчас. Когда будете готовы продолжить, нажмите Enter или нажмите "
 "«Следующий шаг»."
 
-#: nvdaCoach/lessonRunner.py:199
+#: nvdaCoach/lessonRunner.py:229
 msgid "PRACTICE AREA — NAVIGATE WITH ARROW KEYS:"
-msgstr "ОБЛАСТЬ ПРАКТИКИ \— НАВИГАЦИЯ С ПОМОЩЬЮ КЛАВИШ СО СТРЕЛКАМИ:"
+msgstr "ОБЛАСТЬ ПРАКТИКИ — НАВИГАЦИЯ С ПОМОЩЬЮ КЛАВИШ СО СТРЕЛКАМИ:"
 
-#: nvdaCoach/lessonRunner.py:252
+#: nvdaCoach/lessonRunner.py:282
 msgid "Lesson"
 msgstr "Урок"
 
-#: nvdaCoach/lessonRunner.py:254
+#: nvdaCoach/lessonRunner.py:284
 #, python-brace-format
-msgid ""
-"Lesson complete: {title}! Well done. Press NVDA+Shift+C to open the lesson "
-"picker and choose your next lesson or continue to the next chapter. Ctrl+N "
-"moves to the next lesson in this category, or Ctrl+R repeats this one."
-msgstr ""
-"Урок завершён: {title}! Отлично. Нажмите NVDA+Shift+C, чтобы открыть выбор "
-"уроков и выбрать следующий урок или перейти к следующей главе. Ctrl+N "
-"переходит к следующему уроку в этой категории, Ctrl+R повторяет этот урок."
+msgid "Well done, {name}!"
+msgstr "Отлично, {name}!"
 
-#: nvdaCoach/lessonRunner.py:263
+#: nvdaCoach/lessonRunner.py:284
+msgid "Well done."
+msgstr "Отлично."
+
+#: nvdaCoach/lessonRunner.py:294 nvdaCoach/lessonRunner.py:298
+#, python-brace-format
+msgid "Lesson complete: {title}! "
+msgstr "Урок завершён: {title}! "
+
+#: nvdaCoach/lessonRunner.py:301
+msgid ""
+"Press NVDA+Shift+C to open the lesson picker and choose your next lesson or "
+"continue to the next chapter. Ctrl+N moves to the next lesson in this "
+"category, or Ctrl+R repeats this one."
+msgstr ""
+"Нажмите NVDA+Shift+C, чтобы открыть выбор уроков и выбрать следующий урок "
+"или перейти к следующей главе. Ctrl+N переходит к следующему уроку в этой "
+"категории, Ctrl+R повторяет этот урок."
+
+#: nvdaCoach/lessonRunner.py:310
 #, python-brace-format
 msgid "Lesson complete: {title}!"
 msgstr "Урок завершён: {title}!"
 
-#: nvdaCoach/lessonRunner.py:264
-msgid "Well done."
-msgstr "Отлично."
-
-#: nvdaCoach/lessonRunner.py:265
+#: nvdaCoach/lessonRunner.py:312
 msgid "WHAT TO DO NEXT"
 msgstr "ЧТО ДЕЛАТЬ ДАЛЬШЕ"
 
-#: nvdaCoach/lessonRunner.py:266
+#: nvdaCoach/lessonRunner.py:313
 msgid "Press NVDA+Shift+C to open the lesson picker."
 msgstr "Нажмите NVDA+Shift+C, чтобы открыть выбор уроков."
 
-#: nvdaCoach/lessonRunner.py:267
+#: nvdaCoach/lessonRunner.py:314
 msgid "Choose the next lesson in this chapter, or start the next chapter."
 msgstr "Выберите следующий урок в этой главе или начните следующую главу."
 
-#: nvdaCoach/lessonRunner.py:268
+#: nvdaCoach/lessonRunner.py:315
 msgid "STAY IN THIS CHAPTER"
 msgstr "ОСТАТЬСЯ В ЭТОЙ ГЛАВЕ"
 
-#: nvdaCoach/lessonRunner.py:269
+#: nvdaCoach/lessonRunner.py:316
 msgid "Next lesson in this category."
 msgstr "Следующий урок в этой категории."
 
-#: nvdaCoach/lessonRunner.py:270
+#: nvdaCoach/lessonRunner.py:317
 msgid "Repeat this lesson."
 msgstr "Повторить этот урок."
 
-#: nvdaCoach/lessonRunner.py:271
+#: nvdaCoach/lessonRunner.py:318
 msgid "Go back to the previous lesson."
 msgstr "Вернуться к предыдущему уроку."

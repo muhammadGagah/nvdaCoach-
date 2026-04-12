@@ -1,5 +1,15 @@
 # NVDA Coach — Changelog
 
+## v1.5.1 (2026-04-11)
+
+### Bug Fixes
+- **User Guide shortcut corrected:** Two hint strings in the Getting Started chapter incorrectly told users to press G to open the User Guide from the NVDA Help menu. The correct accelerator is U (User Guide). Fixed in English lesson content (`getting_started.json`).
+
+### Localization
+- **Russian translation fully integrated (Valentin Kupriyanov):** All 6 lesson chapters in Russian are now included, along with updated `doc/ru` documentation, updated `locale/ru` PO/MO files (163 strings covering all v1.5 content), and the compiled `nvda.mo` binary that NVDA requires to activate the translation. Russian-speaking users received English content in v1.5 due to the missing binary — this release restores full Russian localization.
+
+---
+
 ## v1.5 (2026-04-10)
 
 ### New Features

@@ -421,7 +421,7 @@
 					"instruction": "NVDA comes with a complete user guide that you can open at any time. The user guide is found in the NVDA menu under Help. It is a great reference when you want to learn more on your own. Press Enter to continue.",
 					"hints": [
 						"The user guide opens in your default web browser as a local HTML file. It is installed with NVDA so you can read it without an internet connection.",
-						"To open the user guide: press NVDA plus N to open the NVDA menu, press H for Help, then press G for User Guide. Your browser will open automatically.",
+						"To open the user guide: press NVDA plus N to open the NVDA menu, press H for Help, then press U for User Guide. Your browser will open automatically.",
 						"The user guide covers every NVDA command and feature in detail. You can use browse mode — covered later in this course — to navigate it quickly with headings."
 					]
 				},
@@ -432,7 +432,7 @@
 						"kb:nvda+n"
 					],
 					"hints": [
-						"Hold NVDA and press N to open the menu. Once open, press H to open the Help submenu, then press G for User Guide.",
+						"Hold NVDA and press N to open the menu. Once open, press H to open the Help submenu, then press U for User Guide.",
 						"If you land somewhere unexpected in the menu, press Escape to close it and try again. The menu opens at the top each time.",
 						"The NVDA menu is organized into Preferences, Tools, Help, and a few other items. Arrow keys move through it; Enter opens a submenu or activates an item."
 					]
