@@ -128,7 +128,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.5.nvda-addon'
+output = 'nvdaCoach-1.5.1.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -147,6 +147,7 @@ with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
 
 ## Planned for Future Versions
 
+- **Spanish translation** — coming soon, to bring NVDA Coach to the Spanish-speaking blind and low-vision community
 - Working with email and Microsoft Office chapters
 - Braille display interaction module
 - Lesson difficulty and pace settings
@@ -165,7 +166,7 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **Rui Fontes** (NVDA Portuguese translation team)
 - **John Hess**, Adaptive Technology Specialist, State Services for the Blind — detailed correction of laptop keyboard layout gestures in the Object Navigation chapter
 - **Brandon Patterson** — correction of synth settings ring keystrokes in the Customizing NVDA chapter
-- **Valentin Kupriyanov**, Head of the Russian-speaking NVDA user community — internationalization and localization proposal, first complete Russian localization, and detailed localization bug report
+- **Valentin Kupriyanov** and the **[NVDA.ru community](https://nvda.ru)** — Valentin's work goes far beyond translation. As head of the Russian-speaking NVDA user community, he identified the broken localization architecture that had been silently failing from the start, proposed the full internationalization overhaul that made NVDA Coach a globally accessible tool, contributed the complete Russian translation across all six chapters, and personally caught the missing `nvda.mo` binary in v1.5 that left Russian speakers receiving English content. His dedication to making screen reader training available in Russian — and his detailed, actionable feedback at every stage — has been extraordinary. NVDA.ru is a testament to what community-led accessibility looks like.
 - **Umut KORKMAZ** (Turkey) — Turkish translation
 - **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — assistive technology specialists with Pacific Northwest state agencies, hands-on feedback from April 2026 training sessions
 - **Nash** — feature and lesson requests
