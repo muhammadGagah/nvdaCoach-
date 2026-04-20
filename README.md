@@ -171,6 +171,7 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **Valentin Kupriyanov** and the **[NVDA.ru community](https://nvda.ru)** — Valentin's work goes far beyond translation. As head of the Russian-speaking NVDA user community, he identified the broken localization architecture that had been silently failing from the start, proposed the full internationalization overhaul that made NVDA Coach a globally accessible tool, contributed the complete Russian translation across all six chapters, and personally caught the missing `nvda.mo` binary in v1.5 that left Russian speakers receiving English content. His dedication to making screen reader training available in Russian — and his detailed, actionable feedback at every stage — has been extraordinary. NVDA.ru is a testament to what community-led accessibility looks like.
 - **Umut KORKMAZ** (Turkey) — Turkish translation
 - **Edson Miranda** (Brazil) — Brazilian Portuguese translation (in progress)
+- **Mateo Quintela** (Spain) — Spanish localization testing and practice text
 - **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — assistive technology specialists with Pacific Northwest state agencies, hands-on feedback from April 2026 training sessions
 - **Nash** — feature and lesson requests
 - **Brian**

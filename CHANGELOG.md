@@ -1,5 +1,25 @@
 # NVDA Coach — Changelog
 
+## v1.5.2 (2026-04-14)
+
+### Bug Fixes
+- **Completion notification no longer fires on every restart:** A bug caused NVDA Coach to announce "Congratulations — you have completed every lesson!" and make a sound through NVDA's speech output each time NVDA restarted (or the computer was rebooted), if the student had previously completed the course. The startup check now silently restores the certificate button without speaking — the announcement only plays during the actual completion event in the current session.
+
+### New Features
+- **Profile button in lesson picker:** A new "Profile (F7)" button appears in the lesson picker dialog alongside Open/Start and Cancel. This provides an easily discoverable way to set your name, instructor name, and training center — the same action as pressing F7. The button includes a tooltip describing its purpose.
+- **Post-completion return screen:** When a student who has already finished all lessons opens NVDA Coach in a later session, the Coach window now shows a quiet "Welcome back — Course Complete!" screen with instructions for accessing the certificate and revisiting lessons. No completion sound plays — only a brief spoken welcome.
+- **F1–F7 key reference in the introduction:** The introduction screen and the initial Coach window text now include a full quick-reference section for all available function keys: Enter (next step), F1 (repeat instruction), F2 (hint), F3 (skip step), Escape (stop lesson), F4 (help docs), F5 (feedback email), F6 (toggle sounds), and F7 (profile). Navigation shortcuts (Ctrl+N, Ctrl+B, Ctrl+R) are also listed. This gives new students a complete overview before their first lesson begins.
+- **Lesson picker hint text updated:** The hint at the top of the lesson picker dialog now mentions the F4–F7 keys and the Profile button so students know they have access to these functions while browsing lessons.
+
+### Localization
+- **Spanish (es) translation:** All six lesson chapters, all three HTML documentation files, and all UI strings are now available in Spanish. Spanish-speaking users who set their NVDA language to Spanish will receive fully localized lesson content, documentation, and interface strings.
+- **Spanish practice text corrected (Mateo Quintela):** The practice text used throughout the Reading and Moving Through Text chapter has been updated to Mateo Quintela's Spanish-idiomatic version — a natural-sounding opening line using the well-known Spanish pangram, clearer phrasing throughout the short block, and a revised paragraph block for the paragraph navigation lesson.
+
+### Acknowledgments
+- **Mateo Quintela** (Spain) — Spanish localization testing and practice text.
+
+---
+
 ## v1.5.1 (2026-04-11)
 
 ### Bug Fixes

@@ -13,7 +13,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
 <body>
 
 <h1>NVDA Coach</h1>
-<p><strong>Version 1.5.1</strong></p>
+<p><strong>Version 1.5.2</strong></p>
 <p>Created by <strong>Tony Gebhard</strong>, Assistive Technology Instructor</p>
 <ul>
   <li>Email: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
@@ -164,11 +164,23 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-siz
   <li><strong>Brandon Patterson</strong> — correction of synth settings ring keystrokes in the Customizing NVDA chapter.</li>
   <li><strong>Valentin Kupriyanov</strong>, Head of the Russian-speaking NVDA user community — internationalization and localization proposal, first complete Russian localization, and detailed localization bug report.</li>
   <li><strong>Umut KORKMAZ</strong> (Turkey) — Turkish translation.</li>
+  <li><strong>Rui Fontes</strong> (NVDA Portuguese translation team).</li>
+  <li><strong>Edson Miranda</strong> (Brazil) — Brazilian Portuguese translation (in progress).</li>
+  <li><strong>Mateo Quintela</strong> (Spain) — Spanish localization testing and practice text.</li>
   <li><strong>Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler</strong> — assistive technology specialists with Pacific Northwest state agencies, whose hands-on feedback from April 2026 training sessions shaped the content of this release.</li>
   <li>Anonymous participants and community members who have taken the time to write in with corrections and encouragement.</li>
 </ul>
 
 <h2>What's New</h2>
+
+<h3>Version 1.5.2</h3>
+<ul>
+  <li><strong>Bug fix — startup completion announcement removed:</strong> NVDA Coach was incorrectly announcing "Congratulations — you have completed every lesson!" (with sound) each time NVDA restarted, if the student had previously completed the course. The certificate button now restores silently on startup. The full announcement only plays during the actual completion event in the current session.</li>
+  <li><strong>Profile button in lesson picker:</strong> A new "Profile (F7)" button appears in the lesson picker dialog alongside Open/Start and Cancel. This gives students a clearly labeled, discoverable way to set their name, instructor, and training center without needing to remember the F7 shortcut.</li>
+  <li><strong>Post-completion return screen:</strong> Students who have already completed all lessons now see a quiet "Welcome back — Course Complete!" screen when they open NVDA Coach in a later session. The screen includes certificate access instructions and a review of navigation shortcuts. No completion sound plays on return.</li>
+  <li><strong>F1–F7 reference in introduction:</strong> The introduction screen and initial Coach window text now include a complete listing of all function keys and what each one does — Enter, F1 through F7, Escape, and navigation shortcuts — so new students understand all available controls before their first lesson begins.</li>
+  <li><strong>Spanish (es) translation:</strong> All six lesson chapters, all three documentation pages, and all UI strings are now available in Spanish. Users who set their NVDA language to Spanish receive a fully localized experience.</li>
+</ul>
 
 <h3>Version 1.5.1</h3>
 <ul>

@@ -1,0 +1,434 @@
+{
+  "id": "reading_text",
+  "title": "Leer y moverse por el texto",
+  "description": "Aprende a moverte por documentos y a hacer que NVDA te lea el texto en voz alta. Cada paso de práctica incluye un área de texto directamente en la ventana del Coach, sin necesidad de abrir ninguna ventana adicional.",
+  "order": 3,
+  "lessons": [
+    {
+      "id": "move_by_character",
+      "title": "Moverse carácter por carácter",
+      "order": 1,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Cuando el cursor está en un texto, la tecla Flecha Derecha avanza un carácter a la vez y la Flecha Izquierda retrocede. NVDA anuncia cada carácter en el que te detienes. Los usuarios videntes pueden ver cada carácter; NVDA te lo anuncia mientras te mueves. A continuación, cada paso de práctica incluye un área de texto. Pulsa Enter para continuar.",
+          "hints": [
+            "Las teclas Flecha Derecha e Izquierda se encuentran en el grupo de teclas de flecha, en la zona inferior derecha del teclado. Derecha avanza un carácter; Izquierda retrocede uno.",
+            "NVDA anuncia cada carácter en el que se coloca el cursor. Para los signos de puntuación, NVDA dice el nombre del signo; por ejemplo, dice 'punto' en lugar de emitir simplemente un sonido.",
+            "Moverse carácter a carácter es útil para comprobar la ortografía, leer una palabra desconocida letra a letra o confirmar lo que acabas de escribir."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha hasta el área de texto de práctica y pulsa Flecha Derecha para avanzar un carácter. NVDA anunciará el carácter en el que te detengas. Pruébalo varias veces.",
+          "hint": "La tecla Flecha Derecha está en el grupo de teclas de flecha, en la zona inferior derecha del teclado.",
+          "hints": [
+            "La tecla Flecha Derecha está en el grupo de teclas de flecha, en la parte inferior derecha del teclado. Púlsala una vez para avanzar un carácter.",
+            "NVDA anuncia el carácter en el que se coloca el cursor. Para las letras dice la letra; para los espacios dice 'espacio'; para la puntuación dice el nombre del signo.",
+            "Primero haz clic en el área de texto de práctica o pulsa Tab para mover el foco hacia ella, y luego empieza a pulsar Flecha Derecha."
+          ],
+          "expectedGestures": [
+            "kb:rightArrow"
+          ],
+          "successMessage": "Avanzaste un carácter. NVDA anunció el carácter en el que se colocó el cursor.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Flecha Izquierda para retroceder un carácter. NVDA lo anunciará.",
+          "hint": "La tecla Flecha Izquierda está a la izquierda de la tecla Flecha Abajo.",
+          "hints": [
+            "La tecla Flecha Izquierda está a la izquierda de la Flecha Abajo en el grupo de teclas de flecha. Púlsala una vez para retroceder un carácter.",
+            "NVDA pronuncia el carácter al que retrocede el cursor, es decir, el que estaba a la izquierda de tu posición anterior.",
+            "Flecha Derecha e Izquierda te dan control total para leer cualquier palabra o línea carácter a carácter; son muy útiles para revisar la ortografía o confirmar lo que escribiste."
+          ],
+          "expectedGestures": [
+            "kb:leftArrow"
+          ],
+          "successMessage": "Retrocediste un carácter. Flecha Derecha e Izquierda te permiten leer cualquier texto carácter a carácter.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        }
+      ]
+    },
+    {
+      "id": "jump_by_word",
+      "title": "Saltar palabra por palabra",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Moverse carácter a carácter es lento cuando necesitas recorrer un texto. Control+Flecha Derecha salta al inicio de la siguiente palabra. Control+Flecha Izquierda salta a la palabra anterior. NVDA pronuncia la palabra en la que te detienes. Este atajo funciona igual en Word, Bloc de notas, correo electrónico y la mayoría de los programas, con o sin lector de pantalla. Pulsa Enter para continuar.",
+          "hints": [
+            "Control+Flecha Derecha avanza una palabra a la vez. Mantén pulsada la tecla Control (en la esquina inferior izquierda del teclado) y pulsa Flecha Derecha.",
+            "Control+Flecha Izquierda retrocede una palabra. NVDA pronuncia cada palabra en la que se detiene el cursor.",
+            "Navegar palabra a palabra es mucho más rápido que carácter a carácter cuando quieres recorrer una frase o encontrar una palabra específica en un párrafo."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha al texto de práctica y pulsa Control+Flecha Derecha para saltar a la siguiente palabra. NVDA anunciará la palabra en la que te detengas.",
+          "hint": "Mantén pulsada la tecla Control (en la esquina inferior izquierda del teclado) y pulsa Flecha Derecha al mismo tiempo.",
+          "hints": [
+            "Mantén pulsada la tecla Control, en la esquina inferior izquierda del teclado, y pulsa Flecha Derecha. Ambas teclas deben pulsarse al mismo tiempo.",
+            "NVDA anuncia la palabra a la que salta el cursor. Cada pulsación avanza una palabra completa.",
+            "Si mantienes pulsadas Control y Flecha Derecha, el cursor seguirá saltando de palabra en palabra rápidamente. Suelta para detenerlo."
+          ],
+          "expectedGestures": [
+            "kb:control+rightArrow"
+          ],
+          "successMessage": "Saltaste una palabra hacia adelante. NVDA anunció la palabra en la que se colocó el cursor.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Control+Flecha Izquierda para retroceder a la palabra anterior. NVDA la anunciará.",
+          "hint": "Mantén pulsada Control y pulsa Flecha Izquierda.",
+          "hints": [
+            "Mantén pulsada Control y pulsa Flecha Izquierda. Esto mueve el cursor al inicio de la palabra anterior.",
+            "NVDA anuncia la palabra en la que te detienes cada vez. Úsalo para revisar palabras que acabas de pasar.",
+            "Control+Flecha Izquierda y Control+Flecha Derecha juntas te permiten recorrer rápidamente cualquier documento, mucho más rápido que moverse carácter a carácter."
+          ],
+          "expectedGestures": [
+            "kb:control+leftArrow"
+          ],
+          "successMessage": "Retrocediste una palabra. Control más flechas te permiten navegar palabra a palabra por cualquier documento.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        }
+      ]
+    },
+    {
+      "id": "move_by_line",
+      "title": "Moverse línea por línea",
+      "order": 3,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Flecha Abajo avanza a la siguiente línea de un documento. Flecha Arriba retrocede a la línea anterior. NVDA lee la línea completa cada vez que te mueves a ella. Los usuarios videntes pueden recorrer las líneas visualmente; tú te mueves a cada una y NVDA la lee en voz alta. Este es uno de los métodos de navegación más importantes para documentos y páginas web. Pulsa Enter para continuar.",
+          "hints": [
+            "Flecha Abajo avanza a la siguiente línea y NVDA lee la línea completa en voz alta. Flecha Arriba retrocede a la línea anterior.",
+            "Las teclas Flecha Abajo y Flecha Arriba están en el grupo de teclas de flecha, en la zona inferior derecha del teclado.",
+            "Navegar línea a línea es la forma más común de leer un documento, correo electrónico o página web; la usarás constantemente."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha al texto de práctica y pulsa Flecha Abajo para pasar a la siguiente línea. NVDA leerá la línea completa.",
+          "hint": "La tecla Flecha Abajo está en el grupo de teclas de flecha. Púlsala una vez para bajar una línea.",
+          "hints": [
+            "La tecla Flecha Abajo está en el grupo de teclas de flecha, en la parte inferior derecha del teclado. Púlsala una vez para bajar una línea.",
+            "NVDA lee la línea completa en la que te detienes. Si quieres volver a escucharla, usa NVDA+Flecha Arriba para repetir la línea actual.",
+            "Baja varias líneas y luego intenta subir con Flecha Arriba. NVDA lee cada línea a medida que te mueves en cualquier dirección."
+          ],
+          "expectedGestures": [
+            "kb:downArrow"
+          ],
+          "successMessage": "Bajaste una línea. NVDA leyó la línea completa.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Flecha Arriba para volver a la línea anterior. NVDA la leerá.",
+          "hint": "La tecla Flecha Arriba está directamente encima de la Flecha Abajo.",
+          "hints": [
+            "La tecla Flecha Arriba está directamente encima de la Flecha Abajo en el grupo de flechas. Púlsala una vez para subir una línea.",
+            "NVDA lee la línea completa al subir, igual que cuando bajas.",
+            "Flecha Arriba y Flecha Abajo juntas son tus principales herramientas de lectura en cualquier documento. La mayoría de los usuarios de lector de pantalla pasan la mayor parte del tiempo usando solo estas dos teclas."
+          ],
+          "expectedGestures": [
+            "kb:upArrow"
+          ],
+          "successMessage": "Subiste una línea. Flecha Arriba y Flecha Abajo son tus principales herramientas para leer cualquier documento línea a línea.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        }
+      ]
+    },
+    {
+      "id": "jump_to_ends",
+      "title": "Saltar al inicio y al final",
+      "order": 4,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Control+Inicio salta inmediatamente al principio de un documento, lista o página web. Control+Fin salta al final. Son muy útiles para orientarte cuando abres un nuevo documento. Los usuarios videntes pueden desplazarse rápidamente para hacerse una idea general; estas teclas hacen lo equivalente al instante para los usuarios de teclado. Pulsa Enter para continuar.",
+          "hints": [
+            "Control más Inicio salta al principio del documento. Control más Fin salta al final.",
+            "La tecla Inicio suele estar cerca de las teclas Insert, Supr y Re Pág, por encima de las teclas de flecha en la mayoría de los teclados.",
+            "Estos dos atajos son útiles cuando abres un nuevo documento y quieres comenzar a leer desde el principio, o saltar al final para ver su extensión."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha al texto de práctica y pulsa Control+Inicio para saltar al principio. NVDA leerá la primera línea.",
+          "hint": "Mantén pulsada Control y pulsa la tecla Inicio. Inicio suele estar cerca de las teclas Insert, Supr y Re Pág.",
+          "hints": [
+            "Mantén pulsada Control y pulsa la tecla Inicio. Inicio está en el grupo de teclas por encima de las flechas, cerca de Insert y Supr.",
+            "NVDA lee la primera línea del documento al saltar allí. Ahora estás al principio.",
+            "Control más Inicio funciona en documentos, páginas web, listas y la mayoría de las áreas de texto. Siempre te lleva al principio."
+          ],
+          "expectedGestures": [
+            "kb:control+home"
+          ],
+          "successMessage": "Saltaste al inicio. NVDA leyó la primera línea.",
+          "allowExecution": true,
+          "feedbackDelay": 1500,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Control+Fin para saltar a la última línea. NVDA la leerá.",
+          "hint": "Mantén pulsada Control y pulsa la tecla Fin, que está cerca de la tecla Inicio.",
+          "hints": [
+            "Mantén pulsada Control y pulsa la tecla Fin. Fin está cerca de Inicio, en el grupo de teclas por encima de las flechas.",
+            "NVDA lee la última línea del documento al saltar con Control más Fin.",
+            "Control más Inicio y Control más Fin juntos te permiten ver rápidamente el alcance de cualquier documento: salta al inicio para empezar y al final para ver dónde termina."
+          ],
+          "expectedGestures": [
+            "kb:control+end"
+          ],
+          "successMessage": "Saltaste al final. Control más Inicio o Fin te mueve instantáneamente a cualquier extremo del documento.",
+          "allowExecution": true,
+          "feedbackDelay": 1500,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        }
+      ]
+    },
+    {
+      "id": "say_all",
+      "title": "Leer todo desde aquí",
+      "order": 5,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Leer todo le indica a NVDA que empiece a leer desde la posición actual hasta el final del documento sin detenerse. La combinación de teclas depende de tu distribución de teclado. Si usas la distribución de escritorio, pulsa NVDA+Flecha Abajo. Si usas la distribución portátil, pulsa NVDA+A. NVDA seguirá leyendo hasta llegar al final o hasta que lo detengas. Los usuarios videntes pueden hojear una página entera de un vistazo; Leer todo es su equivalente: deja que NVDA lea todo mientras escuchas. Puedes pulsar Control en cualquier momento para detenerlo. Pulsa Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: mantén pulsada la tecla NVDA y pulsa Flecha Abajo. Distribución portátil: mantén pulsada la tecla NVDA y pulsa la letra A. ¿No sabes qué distribución usas? Compruébalo en el capítulo Personalizar NVDA.",
+            "Pulsa Control en cualquier momento para detener Leer todo inmediatamente. Pulsa Shift para pausarlo; vuelve a pulsar Shift para reanudarlo desde donde se detuvo.",
+            "Leer todo es más útil para leer documentos largos, correos electrónicos o artículos web sin tener que pulsar Flecha Abajo repetidamente."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Baja con la flecha al área de texto de práctica y coloca el cursor en algún punto intermedio. Luego inicia Leer todo: los usuarios con distribución de escritorio pulsan NVDA+Flecha Abajo; los usuarios con distribución portátil pulsan NVDA+A. NVDA comenzará a leer todo desde tu cursor hasta el final sin parar. Pulsa Control para detenerlo en cualquier momento. Cuando termines, pulsa Enter para continuar.",
+          "monitorGestures": [
+            "kb:nvda+downArrow",
+            "kb:nvda+a"
+          ],
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica.",
+          "hints": [
+            "Distribución de escritorio: mantén pulsada la tecla NVDA (Insert o Bloq Mayús) y pulsa la Flecha Abajo. Distribución portátil: mantén pulsada la tecla NVDA y pulsa la letra A.",
+            "Una vez que Leer todo se inicia, no necesitas hacer nada más; solo escucha. Pulsa Control para detenerlo en cualquier momento.",
+            "Prueba a iniciar Leer todo desde distintas posiciones en el texto de práctica. Siempre lee desde la posición del cursor hasta el final."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "select_text",
+      "title": "Seleccionar y resaltar texto",
+      "order": 6,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Puedes seleccionar texto manteniendo pulsada la tecla Shift mientras presionas las teclas de flecha. Estos son comandos de Windows; funcionan igual con o sin NVDA, en cualquier aplicación. A medida que seleccionas, NVDA lee los caracteres, palabras o líneas que se añaden a la selección. Los usuarios videntes pueden ver el texto resaltado en pantalla; NVDA anuncia cada parte que seleccionas para que siempre sepas exactamente qué está incluido. El texto seleccionado se puede copiar con Control+C y pegar con Control+V en cualquier lugar donde puedas escribir; ambos también son comandos de Windows. Este capítulo combina comandos de Windows y comandos de NVDA, así que presta atención a cuál es cuál. Pulsa Enter para continuar.",
+          "hints": [
+            "Mantén pulsada Shift y presiona cualquier tecla de flecha para extender la selección. Shift+Flecha Derecha selecciona un carácter; Shift+Flecha Abajo selecciona una línea; Control+Shift+Flecha Derecha selecciona una palabra. Todos son comandos de Windows.",
+            "NVDA anuncia cada carácter, palabra o línea a medida que la añades a la selección. Pulsa cualquier tecla de flecha sin Shift para deseleccionar.",
+            "Una vez seleccionado el texto, Control+C lo copia y Control+V lo pega. Estos son comandos de Windows que funcionan en todas las aplicaciones, esté o no NVDA en ejecución."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha al texto de práctica. Mantén pulsada Shift y pulsa Flecha Derecha para seleccionar un carácter hacia adelante. NVDA lo anunciará. Sigue pulsando Shift+Flecha Derecha para extender la selección carácter a carácter.",
+          "hint": "Mantén pulsada Shift primero y luego pulsa Flecha Derecha. Mantén Shift pulsada para seguir extendiendo la selección.",
+          "hints": [
+            "Mantén pulsada la tecla Shift primero y luego pulsa Flecha Derecha sin soltar Shift. La tecla Shift es la tecla ancha que está encima de la tecla Control izquierda.",
+            "NVDA anuncia cada carácter a medida que lo añades a la selección. Deberías escuchar el nombre del carácter seguido de 'seleccionado'.",
+            "Mantén pulsada Shift y sigue pulsando Flecha Derecha para seleccionar más caracteres uno a uno. Suelta Shift cuando hayas terminado de seleccionar."
+          ],
+          "expectedGestures": [
+            "kb:shift+rightArrow"
+          ],
+          "successMessage": "Seleccionaste un carácter. NVDA lo anunció como seleccionado.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora intenta seleccionar una palabra completa. Pulsa Control+Shift+Flecha Derecha para seleccionar la siguiente palabra de una vez. NVDA leerá la palabra seleccionada.",
+          "hint": "Mantén pulsadas Control y Shift a la vez y luego pulsa Flecha Derecha. Las tres teclas juntas seleccionan una palabra completa.",
+          "hints": [
+            "Mantén pulsadas Control y Shift al mismo tiempo y luego pulsa Flecha Derecha. Control+Shift+Flecha Derecha selecciona una palabra completa de una vez.",
+            "NVDA anuncia la palabra seleccionada. Puedes seguir pulsando Control+Shift+Flecha Derecha para seleccionar palabras adicionales una a una.",
+            "Esta combinación, Control+Shift+Flecha Derecha, es una de las formas más rápidas de seleccionar texto. Puedes construir una selección de varias palabras rápidamente."
+          ],
+          "expectedGestures": [
+            "kb:control+shift+rightArrow"
+          ],
+          "successMessage": "Seleccionaste una palabra completa. Mantener Shift con cualquier tecla de navegación extiende la selección en esa cantidad.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora mantén pulsada Shift y pulsa Flecha Abajo para seleccionar la línea actual completa y una más hacia abajo. NVDA leerá el bloque seleccionado.",
+          "hint": "Mantén pulsada Shift y pulsa Flecha Abajo una vez para seleccionar hasta la línea siguiente.",
+          "hints": [
+            "Mantén pulsada Shift y pulsa Flecha Abajo una vez. Esto extiende la selección hacia abajo una línea completa.",
+            "NVDA lee el contenido de la línea recién seleccionada a medida que la añades a la selección.",
+            "Shift+Flecha Abajo es la forma más rápida de seleccionar líneas completas. Cada pulsación adicional añade otra línea a la selección."
+          ],
+          "expectedGestures": [
+            "kb:shift+downArrow"
+          ],
+          "successMessage": "Seleccionaste una línea. Shift+Flecha Abajo es ideal para seleccionar líneas completas rápidamente.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "El veloz murciélago hindú comía feliz cardillo y kiwi.\nLos lectores de pantalla abren el mundo digital para todos.\nNVDA es software libre y de código abierto.\nLa práctica desarrolla el hábito de navegación con el lector de pantalla.\nLas teclas de flecha se mueven por el texto paso a paso.\nControl más flechas salta palabras completas de una vez.\nInicio y Fin se mueven a los límites de una línea.\nControl más Inicio o Fin salta a los extremos del documento.\nEsta es la última línea del área de práctica."
+        },
+        {
+          "type": "info",
+          "instruction": "Para deseleccionar, pulsa cualquier tecla de flecha sin Shift. Para copiar la selección, pulsa Control+C (comando de Windows). Para pegarla en otro lugar, pulsa Control+V (comando de Windows). Control+A selecciona todo el texto del documento actual de una vez; también es un comando de Windows. La selección con Shift más flechas funciona igual en Word, Bloc de notas, correo electrónico, formularios web y la mayoría de las áreas de texto. Pulsa Enter para continuar.",
+          "hints": [
+            "Pulsa cualquier tecla de flecha sin Shift para deseleccionar. Control+C copia la selección; Control+V la pega en cualquier lugar donde puedas escribir. Ambos son comandos de Windows.",
+            "Control+A selecciona todo el texto del documento o área de texto actual de una vez; es una forma rápida de seleccionarlo todo. Este es un comando de Windows.",
+            "La selección con Shift más flechas funciona igual en Word, Bloc de notas, correo electrónico, formularios web y la mayoría de las áreas de texto, con o sin NVDA en ejecución."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Tras seleccionar texto, puedes pedirle a NVDA que lea en voz alta exactamente lo que tienes seleccionado. Este es un comando de NVDA; solo funciona cuando NVDA está en ejecución. En la distribución de escritorio, pulsa NVDA+Shift+Flecha Arriba. En la distribución portátil, pulsa NVDA+Shift+S. NVDA leerá todo el texto seleccionado en voz alta. Es un buen hábito: selecciona el texto y luego verifica la selección antes de copiar o hacer cualquier otra cosa con ella. Pulsa Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: mantén pulsadas NVDA y Shift, luego pulsa la Flecha Arriba para escuchar tu selección actual.",
+            "Distribución portátil: mantén pulsadas NVDA y Shift, luego pulsa la letra S para escuchar tu selección actual.",
+            "Usa este comando de NVDA antes de pulsar Control+C para copiar. Confirma exactamente qué está seleccionado para no copiar el texto equivocado por accidente."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Muy bien. Has terminado la lección Seleccionar y resaltar texto. A continuación viene la última lección de este capítulo: Navegar por párrafos y páginas, donde aprenderás a saltar por documentos largos en pasos más grandes usando Ctrl+Flecha Arriba/Abajo para párrafos y Re Pág/Av Pág para secciones más amplias. Pulsa Enter para continuar.",
+          "hints": [
+            "La siguiente lección es Navegar por párrafos y páginas. La navegación por párrafos y páginas son comandos de Windows; funcionan en la mayoría de los editores de texto y procesadores de texto.",
+            "Resumen de los comandos de selección: Shift+Flecha selecciona según el movimiento; Ctrl+C copia; Ctrl+V pega. Todos son comandos de Windows. NVDA+Shift+Flecha Arriba o NVDA+Shift+S informa de tu selección; este es un comando de NVDA.",
+            "Pulsa Enter para pasar a la lección Navegar por párrafos y páginas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigate_paragraph_page",
+      "title": "Navegar por párrafos y páginas",
+      "order": 7,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Cuando un documento tiene muchos párrafos, moverse línea a línea es lento. Control+Flecha Abajo salta hacia adelante al inicio del siguiente párrafo. Control+Flecha Arriba salta al párrafo anterior. Estos son comandos de Windows; funcionan en Word, Bloc de notas, clientes de correo y la mayoría de las aplicaciones de edición de texto, con o sin NVDA. NVDA lee el texto del párrafo en el que te detienes. Pulsa Enter para continuar.",
+          "hints": [
+            "Mantén pulsada la tecla Control en la esquina inferior izquierda del teclado y pulsa Flecha Abajo para saltar al siguiente párrafo. Control+Flecha Arriba salta al párrafo anterior.",
+            "Estos son comandos de Windows; funcionan en Word, Outlook, Bloc de notas y la mayoría de las aplicaciones de texto incluso sin lector de pantalla.",
+            "Navegar por párrafos es más rápido que línea a línea cuando estás recorriendo un documento largo y quieres llegar a la sección correcta rápidamente."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Baja con la flecha al texto de práctica y pulsa Control+Flecha Abajo para saltar al siguiente párrafo. NVDA leerá la primera línea del párrafo en el que te detengas.",
+          "hint": "Mantén pulsada Control y pulsa la Flecha Abajo. Ambas deben pulsarse al mismo tiempo.",
+          "hints": [
+            "Mantén pulsada Control, en la esquina inferior izquierda del teclado, y pulsa Flecha Abajo al mismo tiempo. El cursor salta al inicio del siguiente párrafo.",
+            "NVDA lee el texto al inicio del párrafo al que saltas. Sigue pulsando Control+Flecha Abajo para moverte por los párrafos siguientes.",
+            "En algunas aplicaciones, Ctrl+Flecha Abajo puede saltar al final del párrafo actual antes de pasar al siguiente. El comportamiento varía ligeramente según el programa."
+          ],
+          "expectedGestures": [
+            "kb:control+downArrow"
+          ],
+          "successMessage": "Saltaste al siguiente párrafo. NVDA leyó el texto donde se colocó el cursor.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "Primer párrafo: El veloz murciélago hindú comía feliz cardillo y kiwi. Esta oración se usa comúnmente para probar teclados y fuentes porque contiene todas las letras del alfabeto.\n\nSegundo párrafo: Los lectores de pantalla abren el mundo digital para todos. NVDA es gratuito, de código abierto y está disponible para cualquier persona que lo necesite. Aprender a usar un lector de pantalla requiere práctica y paciencia.\n\nTercer párrafo: Control más Flecha Abajo se mueve al siguiente párrafo. Control más Flecha Arriba regresa. Estos son comandos de Windows que funcionan en la mayoría de aplicaciones de texto, haya o no un lector de pantalla en ejecución.\n\nCuarto párrafo: Retroceso de página y Avance de página permiten moverse en saltos más grandes dentro de un documento. Úsalos cuando los párrafos no sean la unidad adecuada de navegación, por ejemplo en un artículo web largo o un documento de varias páginas.\n\nQuinto párrafo: Este es el último párrafo del área de práctica. Has llegado al final del texto."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Control+Flecha Arriba para saltar de vuelta al párrafo anterior. NVDA lo leerá.",
+          "hint": "Mantén pulsada Control y pulsa la Flecha Arriba.",
+          "hints": [
+            "Mantén pulsada Control y pulsa Flecha Arriba para saltar de vuelta al inicio del párrafo anterior.",
+            "NVDA lee el texto del párrafo en el que te detienes. Úsalo para releer un párrafo que acabas de pasar.",
+            "Control+Flecha Arriba y Control+Flecha Abajo juntas te permiten recorrer rápidamente cualquier documento largo a nivel de párrafo."
+          ],
+          "expectedGestures": [
+            "kb:control+upArrow"
+          ],
+          "successMessage": "Saltaste al párrafo anterior. Control más Flecha Arriba y Abajo son ideales para recorrer documentos largos rápidamente.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "Primer párrafo: El veloz murciélago hindú comía feliz cardillo y kiwi. Esta oración se usa comúnmente para probar teclados y fuentes porque contiene todas las letras del alfabeto.\n\nSegundo párrafo: Los lectores de pantalla abren el mundo digital para todos. NVDA es gratuito, de código abierto y está disponible para cualquier persona que lo necesite. Aprender a usar un lector de pantalla requiere práctica y paciencia.\n\nTercer párrafo: Control más Flecha Abajo se mueve al siguiente párrafo. Control más Flecha Arriba regresa. Estos son comandos de Windows que funcionan en la mayoría de aplicaciones de texto, haya o no un lector de pantalla en ejecución.\n\nCuarto párrafo: Retroceso de página y Avance de página permiten moverse en saltos más grandes dentro de un documento. Úsalos cuando los párrafos no sean la unidad adecuada de navegación, por ejemplo en un artículo web largo o un documento de varias páginas.\n\nQuinto párrafo: Este es el último párrafo del área de práctica. Has llegado al final del texto."
+        },
+        {
+          "type": "info",
+          "instruction": "Re Pág y Av Pág se mueven en saltos más grandes: normalmente el equivalente a una pantalla de contenido a la vez. Estos son comandos de Windows que funcionan en la mayoría de las aplicaciones. En un procesador de texto, Av Pág avanza aproximadamente una página completa. En un navegador web en modo exploración, desplaza una pantalla hacia abajo. En algunos programas, Re Pág y Av Pág también mueven el cursor. NVDA lee la línea en la que se detiene el cursor tras cada salto. Pulsa Enter para continuar.",
+          "hints": [
+            "Las teclas Re Pág y Av Pág suelen estar en el grupo de teclas por encima de las flechas, cerca de Inicio y Fin.",
+            "Estos son comandos de Windows; funcionan en Word, navegadores, visores de PDF y la mayoría de las aplicaciones con o sin NVDA.",
+            "Re Pág y Av Pág son más útiles en documentos largos o páginas web cuando quieres moverte rápidamente sin saltar al principio o al final."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa Av Pág para avanzar aproximadamente una pantalla de contenido. NVDA leerá el texto donde se detenga el cursor.",
+          "hint": "La tecla Av Pág suele estar por encima de las teclas de flecha, cerca de Inicio y Fin.",
+          "hints": [
+            "La tecla Av Pág está en el grupo de teclas por encima de las flechas en la mayoría de los teclados, cerca de Inicio, Fin y Re Pág.",
+            "NVDA lee la línea donde se detiene el cursor tras pulsar Av Pág. En un área de texto de práctica, esto puede saltar al final si el texto es más corto que una pantalla.",
+            "En un artículo web largo o documento de varias páginas, Av Pág es mucho más rápido que pulsar Flecha Abajo repetidamente."
+          ],
+          "expectedGestures": [
+            "kb:pageDown"
+          ],
+          "successMessage": "Pulsaste Av Pág. En documentos más largos esto te mueve hacia adelante aproximadamente una pantalla a la vez.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "Primer párrafo: El veloz murciélago hindú comía feliz cardillo y kiwi. Esta oración se usa comúnmente para probar teclados y fuentes porque contiene todas las letras del alfabeto.\n\nSegundo párrafo: Los lectores de pantalla abren el mundo digital para todos. NVDA es gratuito, de código abierto y está disponible para cualquier persona que lo necesite. Aprender a usar un lector de pantalla requiere práctica y paciencia.\n\nTercer párrafo: Control más Flecha Abajo se mueve al siguiente párrafo. Control más Flecha Arriba regresa. Estos son comandos de Windows que funcionan en la mayoría de aplicaciones de texto, haya o no un lector de pantalla en ejecución.\n\nCuarto párrafo: Retroceso de página y Avance de página permiten moverse en saltos más grandes dentro de un documento. Úsalos cuando los párrafos no sean la unidad adecuada de navegación, por ejemplo en un artículo web largo o un documento de varias páginas.\n\nQuinto párrafo: Este es el último párrafo del área de práctica. Has llegado al final del texto."
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Re Pág para retroceder aproximadamente una pantalla. NVDA leerá la línea donde te detengas.",
+          "hint": "Re Pág está junto a Av Pág, normalmente por encima de las teclas de flecha.",
+          "hints": [
+            "La tecla Re Pág está junto a Av Pág en el grupo de teclas por encima de las flechas.",
+            "NVDA lee la línea donde se detiene el cursor tras pulsar Re Pág.",
+            "Re Pág y Av Pág juntas te permiten moverte rápidamente por documentos largos en saltos grandes; úsalas junto con Control+Inicio y Fin para navegar a distintas velocidades."
+          ],
+          "expectedGestures": [
+            "kb:pageUp"
+          ],
+          "successMessage": "Pulsaste Re Pág. Re Pág y Av Pág juntas te permiten moverte por documentos largos en grandes saltos.",
+          "allowExecution": true,
+          "feedbackDelay": 1000,
+          "practiceText": "Primer párrafo: El veloz murciélago hindú comía feliz cardillo y kiwi. Esta oración se usa comúnmente para probar teclados y fuentes porque contiene todas las letras del alfabeto.\n\nSegundo párrafo: Los lectores de pantalla abren el mundo digital para todos. NVDA es gratuito, de código abierto y está disponible para cualquier persona que lo necesite. Aprender a usar un lector de pantalla requiere práctica y paciencia.\n\nTercer párrafo: Control más Flecha Abajo se mueve al siguiente párrafo. Control más Flecha Arriba regresa. Estos son comandos de Windows que funcionan en la mayoría de aplicaciones de texto, haya o no un lector de pantalla en ejecución.\n\nCuarto párrafo: Retroceso de página y Avance de página permiten moverse en saltos más grandes dentro de un documento. Úsalos cuando los párrafos no sean la unidad adecuada de navegación, por ejemplo en un artículo web largo o un documento de varias páginas.\n\nQuinto párrafo: Este es el último párrafo del área de práctica. Has llegado al final del texto."
+        },
+        {
+          "type": "info",
+          "instruction": "Excelente trabajo; has completado el capítulo Leer y moverse por el texto. Ahora sabes cómo navegar por carácter, palabra, línea, párrafo y página; saltar a los extremos del documento; usar Leer todo; seleccionar texto con Shift más flechas; verificar selecciones con NVDA+Shift+Flecha Arriba o NVDA+Shift+S; y copiar y pegar con comandos de Windows. Estas habilidades funcionan en cualquier lugar donde NVDA esté activo. Consejo rápido: si NVDA lee demasiado rápido o demasiado lento mientras practicas, puedes ajustar la velocidad del habla con el anillo de configuración del sintetizador; esto se cubre en el capítulo Personalizar NVDA. Cuando estés listo, pulsa NVDA+Shift+C para abrir el selector de lecciones y comenzar el siguiente capítulo: Modo exploración y navegación web. Pulsa Enter para terminar.",
+          "hints": [
+            "El siguiente capítulo es Modo exploración y navegación web. Cubre cómo leer e interactuar con páginas web usando los atajos de navegación de NVDA.",
+            "Si la velocidad de lectura de NVDA te parece demasiado rápida o lenta, puedes ajustarla en el capítulo Personalizar NVDA usando el anillo de configuración del sintetizador.",
+            "NVDA Coach guarda tu progreso. Cuando regreses, tus lecciones completadas estarán marcadas para que puedas continuar justo donde lo dejaste."
+          ]
+        }
+      ]
+    }
+  ]
+}
