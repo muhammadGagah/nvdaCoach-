@@ -4,7 +4,7 @@
 
 NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) that teaches commands through guided, step-by-step practice sessions — from inside NVDA itself. No videos, no PDFs, no switching between windows. Press one key combination and the Coach walks you through what to do and why, one step at a time.
 
-**Current version:** 1.5.1
+**Current version:** 1.5.2
 **Author:** Tony Gebhard, Assistive Technology Instructor
 **License:** GPL v2
 
@@ -12,7 +12,7 @@ NVDA Coach is a free add-on for the [NVDA screen reader](https://nvaccess.org) t
 
 ## Download and Install
 
-**[Download NVDA Coach v1.5.1](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.5.1/nvdaCoach-1.5.1.nvda-addon)**
+**[Download NVDA Coach v1.5.2](https://github.com/tonygeb23/nvdaCoach-/releases/download/v1.5.2/nvdaCoach-1.5.2.nvda-addon)**
 
 1. Download the `.nvda-addon` file above
 2. Open the file — NVDA handles the installation automatically and asks you to confirm
@@ -22,10 +22,13 @@ NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add
 
 ---
 
-## What's New in v1.5.1
+## What's New in v1.5.2
 
-- **Bug fix — User Guide shortcut corrected:** Two hints in the Getting Started chapter incorrectly stated "press G for User Guide." The correct accelerator is U. Fixed in the English lesson content.
-- **Russian localization fully restored:** Valentin Kupriyanov's full v1.5 Russian translation is now integrated — all 6 chapters, updated documentation, updated locale strings, and the compiled `nvda.mo` binary that NVDA requires to load Russian. Russian users were receiving English content in v1.5 due to the missing binary.
+- **Bug fix — startup completion announcement removed:** NVDA Coach was incorrectly announcing "Congratulations — you have completed every lesson!" (with sound) each time NVDA restarted if the student had previously completed the course. The certificate button now restores silently on startup. The full announcement only plays during the actual completion event.
+- **Profile button in the lesson picker:** A new "Profile (F7)" button in the lesson picker dialog makes it easy to set your name, instructor, and training center without having to remember the F7 shortcut.
+- **Post-completion return screen:** Returning students who have completed all lessons now see a quiet "Welcome back — Course Complete!" screen with certificate access instructions and a review of navigation shortcuts. No completion sound plays on return.
+- **F1–F7 reference in introduction:** The introduction screen and initial Coach window text now include a complete listing of all function keys (F1 through F7) and what each one does, so new students understand all available controls before their first lesson.
+- **Spanish (es) translation:** All six lesson chapters, all three documentation pages, and all UI strings are now available in Spanish. Spanish-speaking users who set their NVDA language to Spanish receive a fully localized experience.
 
 ---
 
@@ -128,7 +131,7 @@ Get in touch at [info@tonygebhard.me](mailto:info@tonygebhard.me) to discuss cus
 cd nvdaCoach-source
 python -c "
 import zipfile, os
-output = 'nvdaCoach-1.5.1.nvda-addon'
+output = 'nvdaCoach-1.5.2.nvda-addon'
 if os.path.exists(output): os.remove(output)
 with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
     zf.write('manifest.ini', 'manifest.ini')
@@ -147,7 +150,6 @@ with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
 
 ## Planned for Future Versions
 
-- **Spanish translation** — coming soon, to bring NVDA Coach to the Spanish-speaking blind and low-vision community
 - Working with email and Microsoft Office chapters
 - Braille display interaction module
 - Lesson difficulty and pace settings
@@ -168,22 +170,13 @@ Thank you to the testers and community members who have shaped NVDA Coach throug
 - **Brandon Patterson** — correction of synth settings ring keystrokes in the Customizing NVDA chapter
 - **Valentin Kupriyanov** and the **[NVDA.ru community](https://nvda.ru)** — Valentin's work goes far beyond translation. As head of the Russian-speaking NVDA user community, he identified the broken localization architecture that had been silently failing from the start, proposed the full internationalization overhaul that made NVDA Coach a globally accessible tool, contributed the complete Russian translation across all six chapters, and personally caught the missing `nvda.mo` binary in v1.5 that left Russian speakers receiving English content. His dedication to making screen reader training available in Russian — and his detailed, actionable feedback at every stage — has been extraordinary. NVDA.ru is a testament to what community-led accessibility looks like.
 - **Umut KORKMAZ** (Turkey) — Turkish translation
+- **Edson Miranda** (Brazil) — Brazilian Portuguese translation (in progress)
 - **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — assistive technology specialists with Pacific Northwest state agencies, hands-on feedback from April 2026 training sessions
 - **Nash** — feature and lesson requests
 - **Brian**
 - **Gene**
 - **Joseph**
 - Anonymous community members who have written in with corrections and encouragement
-
----
-
-## Support This Project
-
-NVDA Coach is free and will always remain free. If it has been useful to you, your students, or someone you care about, a contribution helps keep it going — covering development time, testing, and continued expansion of lessons and language support.
-
-**[Contribute via PayPal](https://paypal.me/tonygebhard)**
-
-Contributors are recognized by name in the project's acknowledgments with their permission. If you'd prefer to remain anonymous, just note that when you contribute and your name will not be listed. Every contribution, at any amount, is genuinely appreciated.
 
 ---
 
