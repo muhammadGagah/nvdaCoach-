@@ -31,36 +31,6 @@ NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add
 - **4 new lessons (45 total):** Check Your Battery Status (Getting Started, Ch. 1) — NVDA+Shift+B announces battery level and charging state on laptops; Check Font and Formatting (Reading Text, Ch. 3) — NVDA+F reports font name, size, bold/italic/underline, double-press opens a full formatting dialog; Change the Audio Output Device (Customizing NVDA, Ch. 6) — NVDA+Ctrl+U opens the audio output device picker for headphones, speakers, or HDMI; Control Audio Ducking (Customizing NVDA, Ch. 6) — NVDA+Shift+D cycles through ducking modes so NVDA lowers other audio while speaking.
 - **Spanish (es) translation:** All six lesson chapters, all three documentation pages, and all UI strings are now available in Spanish. Spanish-speaking users who set their NVDA language to Spanish receive a fully localized experience.
 
----
-
-## What's New in v1.5
-
-- **Personalization (F7):** Press F7 to open a profile dialog and enter your name, instructor's name, and training program. NVDA Coach uses these throughout: a one-time greeting when you start your first lesson ("Hello, Tony! Your instructor today is Sarah."), personalized lesson completions ("Well done, Tony!"), and a named congratulations screen at the end of the course.
-- **F4–F7 quick keys:** Available at all times in the Coach window and the lesson picker. F4 opens the NVDA Coach help page (press twice to confirm). F5 opens a feedback email to the developer (press twice to confirm). F6 immediately toggles lesson sounds on or off and announces the new state. F7 opens the personalization profile dialog.
-- **Certificate of Completion:** Finishing all lessons in the Customizing NVDA chapter triggers a heartfelt congratulations screen with a button to export your Certificate of Completion. The certificate is an HTML file saved automatically to your Downloads folder and opened in your browser — ready to print or save as PDF. Includes your name, date, instructor, and training program if set.
-- **Chapter reordering:** "Your Keyboard" is now Chapter 2 — immediately after Getting Started — so students get physical keyboard orientation before command learning begins. "Customizing NVDA" is now the final chapter (Chapter 6), serving as the natural course conclusion that triggers the certificate.
-- **Heartfelt final completion screen:** Completing Chapter 6 replaces the standard lesson-complete screen with a dedicated congratulations message listing all six chapters mastered and step-by-step instructions for printing or saving the certificate.
-
-## What's New in v1.4
-
-- **6 new lessons** across all chapters (now 41 lessons, 6 chapters): Understanding Your Keyboard, Switching Windows with Alt+Tab, Navigate by Paragraph and Page, Navigate Tables, and a brand-new Chapter 6 (Your Keyboard) with 3 lessons on modifier keys, function keys, and NVDA layout selection.
-- **Bug fix — practice frame button feedback:** Button now correctly says "You activated the button" instead of "with Enter" when Space is used to activate it.
-- **Object Navigation — new terminology:** Parent/child language replaced with levels/pyramid metaphor ("one level above/below") throughout. Maximize window tip added. NVDA+Tab distinction clarified.
-- **Browse Mode — table navigation:** New lesson covers Ctrl+Alt+Arrow keys for navigating table cells in browse mode.
-- **Browse Mode — Toggle Single-Letter Navigation lesson removed:** Per instructor feedback — students discover this through practice.
-- **Focus Mode enhanced:** Added explicit statement that focus mode "puts the cursor in the edit box."
-- **Report highlighted text:** New step in the selection lesson — NVDA+Shift+Up Arrow (desktop) / NVDA+Shift+S (laptop) reads back selected text before copying.
-- **Command category labels:** [NVDA command] / [Windows command] labels added throughout all five chapters where commands are introduced.
-- **Turkish localization:** First Turkish translation contributed by Umut KORKMAZ (pending integration).
-- Thank you to **Chris, Mike, Kevin, Julie, Larry, Jim, McKayla, and Skyler** — AT specialists with Pacific Northwest state agencies — for hands-on feedback from April 2026 training sessions that drove this release.
-
-## What's New in v1.3.2
-
-- **Localization fully activated:** `addonHandler.initTranslation()` was missing from both plugin modules — meaning all `_()` wrapped strings silently fell back to English for every user. This is now fixed. Identified by Valentin Kupriyanov.
-- **Language-aware doc file resolution:** The resources page, browse mode practice page, and user guide now open from the user's language folder (e.g. `doc/ru/`) when a translation exists, falling back to `doc/en/`. Previously hardcoded to English.
-- **Additional strings wrapped for translation:** Dialog title, introduction text, welcome screen, and several display text blocks were bare string literals not accessible to translators. All wrapped.
-- **First complete Russian localization:** All UI strings, all five lesson chapters, the user guide, practice page, and resources page are now available in Russian. Contributed by Valentin Kupriyanov, Head of the Russian-speaking NVDA user community (nvda.ru).
-
 See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ---
