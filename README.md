@@ -28,6 +28,7 @@ NVDA 2024.1 or later required. Available in the NVDA Add-on Store (Tools → Add
 - **Profile button in the lesson picker:** A new "Profile (F7)" button in the lesson picker dialog makes it easy to set your name, instructor, and training center without having to remember the F7 shortcut.
 - **Post-completion return screen:** Returning students who have completed all lessons now see a quiet "Welcome back — Course Complete!" screen with certificate access instructions and a review of navigation shortcuts. No completion sound plays on return.
 - **F1–F7 reference in introduction:** The introduction screen and initial Coach window text now include a complete listing of all function keys (F1 through F7) and what each one does, so new students understand all available controls before their first lesson.
+- **4 new lessons (45 total):** Check Your Battery Status (Getting Started, Ch. 1) — NVDA+Shift+B announces battery level and charging state on laptops; Check Font and Formatting (Reading Text, Ch. 3) — NVDA+F reports font name, size, bold/italic/underline, double-press opens a full formatting dialog; Change the Audio Output Device (Customizing NVDA, Ch. 6) — NVDA+Ctrl+U opens the audio output device picker for headphones, speakers, or HDMI; Control Audio Ducking (Customizing NVDA, Ch. 6) — NVDA+Shift+D cycles through ducking modes so NVDA lowers other audio while speaking.
 - **Spanish (es) translation:** All six lesson chapters, all three documentation pages, and all UI strings are now available in Spanish. Spanish-speaking users who set their NVDA language to Spanish receive a fully localized experience.
 
 ---
@@ -64,16 +65,16 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ---
 
-## What's Included — 41 Lessons Across Six Chapters
+## What's Included — 45 Lessons Across Six Chapters
 
-### Chapter 1: Getting Started with NVDA — 13 lessons
-An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, opening the user guide, keyboard physical orientation, and switching windows with Alt+Tab. Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
+### Chapter 1: Getting Started with NVDA — 14 lessons
+An orientation to the three categories of keyboard commands (Windows, program, and screen reader), followed by the essential NVDA commands every new user needs: the NVDA modifier key, reading the title bar, checking the time, silencing speech, identifying current focus, Tab navigation, activating buttons and checkboxes, reading the current line, Input Help mode, opening the user guide, keyboard physical orientation, switching windows with Alt+Tab, and checking battery status (NVDA+Shift+B). Several lessons include a live accessible practice form with real buttons, checkboxes, and text fields.
 
 ### Chapter 2: Your Keyboard — 3 lessons
 Where modifier keys live on standard and laptop keyboards (Ctrl, Shift, Alt, Windows key, NVDA key), how function keys and the Fn key work (Fn+arrows for Home/End/Page Up/Page Down, Fn Lock, multimedia vs F-key mode), and how to select and switch your NVDA keyboard layout setting. Placed early so students have physical keyboard confidence before command learning begins.
 
-### Chapter 3: Reading and Moving Through Text — 7 lessons
-Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (desktop: NVDA+Down Arrow, laptop: NVDA+A); text selection with Shift+arrows including NVDA's report-selection command; and navigating by paragraph (Ctrl+Up/Down) and page (Page Up/Down). Every lesson embeds a practice text area directly in the Coach window — no switching to another application required.
+### Chapter 3: Reading and Moving Through Text — 8 lessons
+Character-by-character, word-by-word, and line-by-line navigation; jumping to document start and end; Say All (desktop: NVDA+Down Arrow, laptop: NVDA+A); text selection with Shift+arrows including NVDA's report-selection command; navigating by paragraph (Ctrl+Up/Down) and page (Page Up/Down); and checking font and formatting (NVDA+F reports font name, size, and bold/italic/underline — double-press opens a full formatting dialog). Every lesson embeds a practice text area directly in the Coach window — no switching to another application required.
 
 ### Chapter 4: Browse Mode and Web Navigation — 10 lessons
 What browse mode is and how it works, heading navigation, heading level shortcuts, link navigation, form field navigation, toggling between browse mode and focus mode, landmark and list navigation, the Elements List dialog, finding text with NVDA Find, and navigating table cells with Ctrl+Alt+Arrow keys. A fully accessible practice web page opens automatically when you start any lesson in this chapter.
@@ -81,8 +82,8 @@ What browse mode is and how it works, heading navigation, heading level shortcut
 ### Chapter 5: Object Navigation — 6 lessons
 How NVDA's object pyramid works, moving across objects at the same level, climbing up and descending through levels, reading the current navigator object, routing keyboard focus to any control on screen, and when object navigation is the right tool. Uses levels/pyramid terminology throughout. Desktop and laptop layouts documented.
 
-### Chapter 6: Customizing NVDA — 2 lessons
-Changing your keyboard layout between desktop (numpad) and laptop (letter keys), and adjusting speech rate, voice, and synthesizer settings — including on-the-fly speed shortcuts with the synth settings ring. Completing this chapter triggers the Certificate of Completion.
+### Chapter 6: Customizing NVDA — 4 lessons
+Changing your keyboard layout between desktop (numpad) and laptop (letter keys); adjusting speech rate, voice, and synthesizer settings including on-the-fly speed shortcuts with the synth settings ring; changing the audio output device (NVDA+Ctrl+U for headphones, speakers, or HDMI); and controlling audio ducking (NVDA+Shift+D to set whether NVDA lowers other audio while speaking). Completing this chapter triggers the Certificate of Completion.
 
 ---
 
