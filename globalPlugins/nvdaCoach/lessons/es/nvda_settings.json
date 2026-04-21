@@ -1,0 +1,154 @@
+{
+  "id": "nvda_settings",
+  "title": "Personalización de NVDA",
+  "description": "Aprende a ajustar la distribución del teclado, la velocidad de voz y la voz de NVDA según tus preferencias.",
+  "order": 6,
+  "lessons": [
+    {
+      "id": "keyboard_layout",
+      "title": "Cambiar la Distribución del Teclado",
+      "order": 1,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA soporta dos distribuciones de teclado: escritorio y portátil. La distribución de escritorio usa el teclado numérico en el lado derecho de un teclado completo para muchos comandos de NVDA. La distribución portátil usa NVDA más teclas de letras en su lugar, para que no necesites un teclado numérico. La mayoría de las computadoras de escritorio usan la distribución de escritorio de forma predeterminada. La mayoría de las laptops usan la distribución portátil. Puedes cambiarla en cualquier momento en la configuración de NVDA. Presiona Enter para continuar.",
+          "hints": [
+            "La distribución de escritorio depende del teclado numérico — el bloque de teclas numéricas en el lado derecho de un teclado completo. Si tu teclado no tiene teclado numérico, usa la distribución portátil.",
+            "La distribución portátil reemplaza los comandos del teclado numérico con combinaciones de NVDA más tecla de letra. La mayoría de los usuarios de laptop encuentran esto más natural ya que no tienen teclado numérico.",
+            "Puedes cambiar entre distribuciones en cualquier momento sin reiniciar NVDA. El cambio surte efecto de inmediato después de guardar en la Configuración."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Para abrir la configuración de NVDA, presiona NVDA+N (comando de NVDA) para abrir el menú de NVDA. Luego presiona P de Preferencias, luego C de Configuración. Escucharás que NVDA anuncia la apertura del cuadro de diálogo de Configuración. La primera categoría en la que aterrizas puede variar. Presiona Tab (comando de Windows) para moverte entre las categorías de configuración o usa las teclas de flecha en la lista de categorías. Ve a la categoría Teclado para encontrar la configuración de distribución. Presiona Enter para continuar.",
+          "hints": [
+            "NVDA más N es un comando de NVDA — abre el menú de NVDA. P de Preferencias, luego C de Configuración abre el cuadro de diálogo de Configuración principal de NVDA.",
+            "Una vez que el cuadro de diálogo de Configuración esté abierto, estarás en una lista de categorías a la izquierda. Usa las teclas de Flecha Arriba y Abajo para moverte entre categorías, o presiona la primera letra del nombre de una categoría para ir directamente a ella.",
+            "También puedes usar la navegación por primera letra — presiona T para ir directamente a la categoría Teclado, o V para ir a Voz."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Dentro de la configuración de Teclado, encontrarás un cuadro combinado etiquetado 'Distribución del teclado' con dos opciones: Escritorio y Portátil. Usa las teclas de Flecha Arriba y Abajo (comandos de Windows) para elegir la distribución que coincida con tu teclado. Usa Tab (comando de Windows) para moverte al botón Aceptar y presiona Enter para guardar — la misma navegación con Tab que practicaste en la lección Moverse entre controles del capítulo Introducción a NVDA. Tu nueva distribución entra en efecto de inmediato sin reiniciar NVDA. Presiona Enter para continuar.",
+          "hints": [
+            "Una vez en la categoría Teclado, presiona Tab para moverte al cuadro combinado de distribución. Usa las flechas Arriba y Abajo para elegir Escritorio o Portátil.",
+            "Después de elegir tu distribución, presiona Tab para llegar al botón Aceptar y presiona Enter para guardar. Esta es la misma navegación con Tab del capítulo Introducción a NVDA.",
+            "Si presionas Escape en lugar de Aceptar, tus cambios serán descartados y la distribución permanecerá sin cambios."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Una nota sobre las lecciones de NVDA Coach: las instrucciones en este curso mencionan las alternativas de teclado tanto para escritorio como para portátil cuando difieren. Si has cambiado tu distribución a portátil, usa las combinaciones de teclas portátil mostradas. Si no estás seguro de qué distribución está activa, abre la Configuración de NVDA y verifica la categoría Teclado. Presiona Enter para finalizar esta lección.",
+          "hints": [
+            "A lo largo de NVDA Coach, los comandos de distribución de escritorio aparecen primero, seguidos por los comandos de distribución portátil entre paréntesis. Usa el que coincida con tu teclado.",
+            "Si un comando no parece funcionar, verifica tu configuración de distribución del teclado. Presionar teclas de distribución de escritorio cuando NVDA está configurado para portátil — o viceversa — no producirá el resultado esperado.",
+            "¿No estás seguro de qué distribución estás usando? Presiona NVDA más 1 para activar la Ayuda de entrada, presiona una tecla del teclado numérico y escucha lo que dice NVDA. Luego presiona NVDA más 1 de nuevo para desactivar la Ayuda de entrada."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speech_settings",
+      "title": "El Anillo de Configuración del Sintetizador",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA incluye un potente sistema de control de voz sobre la marcha llamado el anillo de configuración del sintetizador. Te permite ajustar propiedades de voz — como velocidad, tono, volumen, voz y variante — sin abrir nunca un cuadro de diálogo de configuración. Piensa en él como un dial que puedes girar por diferentes configuraciones y luego subir o bajar. Presiona Enter para continuar.",
+          "hints": [
+            "El anillo de configuración del sintetizador te permite ajustar la voz sobre la marcha — mientras estás en medio de cualquier actividad — sin abrir ningún cuadro de diálogo.",
+            "Las configuraciones disponibles en el anillo incluyen: velocidad, tono, volumen, voz y variante. Navegas entre ellas y luego ajustas cada una.",
+            "Piénsalo como un proceso de dos pasos: primero elige la configuración que quieres (como velocidad), luego súbela o bájala."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "El anillo de configuración del sintetizador tiene dos tipos de movimiento. Primero, te mueves entre configuraciones para elegir qué propiedad quieres ajustar — por ejemplo, moverte de velocidad a tono a volumen. Segundo, una vez que estás en la configuración que quieres, aumentas o disminuyes su valor. Estos son dos conjuntos de teclas separados. Presiona Enter para continuar.",
+          "hints": [
+            "Paso uno: navega entre configuraciones usando los comandos izquierdo y derecho. Paso dos: ajusta el valor usando los comandos arriba y abajo. Dos conjuntos de teclas separados.",
+            "NVDA anuncia el nombre de la configuración cuando navegas a ella — por ejemplo 'Velocidad' o 'Tono'. Luego anuncia el valor mientras ajustas — por ejemplo 'Velocidad 60'.",
+            "Debes estar en la configuración correcta antes de poder ajustarla. Si presionas el comando arriba o abajo pero escuchas que cambia la configuración incorrecta, navega primero izquierda o derecha para llegar a la configuración que quieres."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Todos los comandos del anillo de configuración del sintetizador son comandos de NVDA — requieren tu tecla NVDA y solo funcionan mientras NVDA está en ejecución. Para pasar a la siguiente configuración del anillo, presiona NVDA+Control+Flecha Derecha en la distribución de escritorio, o NVDA+Shift+Control+Flecha Derecha en la distribución portátil. Para pasar a la configuración anterior, presiona NVDA+Control+Flecha Izquierda en escritorio, o NVDA+Shift+Control+Flecha Izquierda en portátil. NVDA anunciará el nombre de la configuración en la que aterrizas, como 'Velocidad' o 'Tono'. Presiona Enter para continuar.",
+          "monitorGestures": [
+            "kb:nvda+control+rightArrow",
+            "kb:nvda+shift+control+rightArrow"
+          ],
+          "hints": [
+            "Distribución de escritorio: mantén NVDA y Control juntos, luego presiona Flecha Derecha para pasar a la siguiente configuración. Flecha Izquierda pasa a la configuración anterior.",
+            "Distribución portátil: mantén NVDA, Shift y Control juntos, luego presiona Flecha Derecha para la siguiente configuración o Flecha Izquierda para la anterior.",
+            "NVDA anuncia el nombre de la configuración cuando aterrizas en ella — por ejemplo 'Velocidad', 'Tono', 'Volumen', 'Voz' o 'Variante'. Detente cuando escuches la que quieres ajustar."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Una vez que estés en la configuración que quieres cambiar, presiona NVDA+Control+Flecha Arriba (escritorio) o NVDA+Shift+Control+Flecha Arriba (portátil) para aumentar el valor. Presiona NVDA+Control+Flecha Abajo (escritorio) o NVDA+Shift+Control+Flecha Abajo (portátil) para disminuirlo. NVDA anuncia el nuevo valor mientras ajustas. Por ejemplo, si estás en Velocidad y presionas la tecla de aumento, escucharás algo como 'Velocidad 60'. Presiona Enter para continuar.",
+          "monitorGestures": [
+            "kb:nvda+control+upArrow",
+            "kb:nvda+shift+control+upArrow",
+            "kb:nvda+control+downArrow",
+            "kb:nvda+shift+control+downArrow"
+          ],
+          "hints": [
+            "Distribución de escritorio: mantén NVDA y Control, luego presiona Flecha Arriba para aumentar el valor de la configuración actual. Flecha Abajo lo disminuye.",
+            "Distribución portátil: mantén NVDA, Shift y Control, luego presiona Flecha Arriba para aumentar o Flecha Abajo para disminuir.",
+            "NVDA anuncia el nuevo valor después de cada ajuste — por ejemplo 'Velocidad 75'. Sigue presionando para continuar ajustando en la misma dirección."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Si quieres hacer ajustes más grandes más rápidamente, usa NVDA+Control+Re Pág (escritorio) o NVDA+Shift+Control+Re Pág (portátil) para aumentar en pasos más grandes, y NVDA+Control+Av Pág (escritorio) o NVDA+Shift+Control+Av Pág (portátil) para disminuir en pasos más grandes. Esto es útil cuando quieres hacer un cambio dramático sin presionar la tecla de ajuste muchas veces seguidas. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: NVDA más Control más Re Pág aumenta en pasos más grandes. NVDA más Control más Av Pág disminuye en pasos más grandes.",
+            "Distribución portátil: NVDA más Shift más Control más Re Pág para aumento mayor. NVDA más Shift más Control más Av Pág para disminución mayor.",
+            "Re Pág y Av Pág suelen estar en el grupo de teclas sobre las teclas de flecha, cerca de Inicio y Fin."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Presiona NVDA+Control+Flecha Derecha (escritorio) o NVDA+Shift+Control+Flecha Derecha (portátil) varias veces para recorrer las configuraciones disponibles — escucharás Velocidad, Tono, Volumen, Voz y Variante anunciados mientras te mueves. Luego detente en Velocidad y presiona las teclas de aumento o disminución para cambiarla. Observa cómo NVDA habla en tiempo real a la nueva velocidad. Presiona Enter cuando estés listo para continuar.",
+          "monitorGestures": [
+            "kb:nvda+control+rightArrow",
+            "kb:nvda+shift+control+rightArrow"
+          ],
+          "hints": [
+            "Presiona el comando de navegar a la derecha varias veces para recorrer todas las configuraciones disponibles. Escucharás Velocidad, Tono, Volumen, Voz y Variante en orden.",
+            "Detente cuando escuches 'Velocidad'. Luego presiona el comando de aumento varias veces y observa que NVDA habla más rápido en tiempo real con cada pulsación.",
+            "Disminuye la velocidad de vuelta a un nivel cómodo cuando hayas terminado. NVDA anuncia cada nuevo valor para que puedas ajustarlo con precisión."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Para un control más preciso, puedes ajustar la configuración de voz dentro del cuadro de diálogo de Configuración de NVDA. Presiona NVDA+N para abrir el menú de NVDA, luego P de Preferencias, luego C de Configuración. El cuadro de diálogo de Configuración se abre con una lista de categorías a la izquierda. Puedes moverte entre categorías con las teclas de Flecha Arriba y Abajo, o usar la navegación por primera letra — simplemente presiona la primera letra del nombre de la categoría para saltar a ella. Por ejemplo, presiona V para ir directamente a Voz. Una vez en la categoría Voz, presiona Tab para moverte hacia adelante por los controles deslizantes y cuadros combinados de velocidad, tono, volumen, inflexión, voz y sintetizador. Presiona Shift+Tab para retroceder. Los cambios realizados aquí se guardan cuando presionas Aceptar o Aplicar. Presiona Enter para continuar.",
+          "hints": [
+            "Abre la Configuración con NVDA más N, P de Preferencias, C de Configuración. Luego presiona V en la lista de categorías para saltar directamente a la categoría Voz usando la navegación por primera letra.",
+            "Dentro de la categoría Voz, Tab avanza por los controles: control deslizante de velocidad, tono, volumen, cuadro combinado de voz y más. Shift más Tab retrocede.",
+            "Los controles deslizantes en la configuración de Voz responden a las teclas de Flecha Izquierda y Derecha para ajustar sus valores. NVDA anuncia el valor mientras mueves el control deslizante."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "NVDA incluye el sintetizador eSpeak NG de forma predeterminada, que soporta muchos idiomas y voces. Si has instalado sintetizadores adicionales — como las voces de Windows OneCore o opciones de terceros — puedes cambiar entre ellos en la configuración de Voz bajo el cuadro combinado Sintetizador. Cada sintetizador puede ofrecer diferentes opciones de voz y niveles de calidad. Presiona Enter para continuar.",
+          "hints": [
+            "eSpeak NG se instala con NVDA y funciona sin conexión. Las voces de Windows OneCore usan las voces integradas de Microsoft y ofrecen un habla de sonido más natural.",
+            "Para cambiar de sintetizador, abre la Configuración de NVDA, ve a la categoría Voz y busca el cuadro combinado Sintetizador. Usa las teclas de flecha para elegir un sintetizador diferente.",
+            "Después de cambiar de sintetizador, el cuadro combinado Voz se actualizará para mostrar las voces disponibles para el nuevo sintetizador. Prueba varias para encontrar la que prefieres."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Una vez que hayas encontrado la configuración de voz con la que estás satisfecho, NVDA las guarda automáticamente cuando cierras el cuadro de diálogo de configuración con Aceptar. Tu velocidad, voz y tono preferidos estarán activos cada vez que se inicie NVDA. Si alguna vez quieres experimentar y volver a un estado conocido, anota tu configuración antes de cambiarla, o usa el botón Restablecer valores predeterminados en el panel de configuración de Voz. Presiona Enter para finalizar esta lección.",
+          "hints": [
+            "NVDA guarda toda la configuración de voz cuando presionas Aceptar en el cuadro de diálogo de Configuración. Tus preferencias se restauran cada vez que se inicia NVDA.",
+            "El botón Restablecer valores predeterminados en la categoría Voz restaura toda la configuración de voz a sus valores de fábrica. Úsalo si has realizado cambios que quieres deshacer.",
+            "Puedes combinar el anillo de configuración del sintetizador para ajustes rápidos sobre la marcha con el cuadro de diálogo de Configuración para una sintonización precisa. Ambos métodos guardan tus preferencias."
+          ]
+        }
+      ],
+      "chapterComplete": true
+    }
+  ]
+}

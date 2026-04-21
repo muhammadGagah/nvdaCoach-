@@ -1,0 +1,553 @@
+{
+	"id": "getting_started",
+	"title": "Introducción a NVDA",
+	"description": "Aprende los comandos esenciales de NVDA que todo principiante necesita. Cada lección es un ejercicio corto que dura entre uno y tres minutos.",
+	"order": 1,
+	"lessons": [
+		{
+			"id": "command_categories",
+			"title": "Entender las Categorías de Comandos",
+			"order": 1,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Bienvenido a NVDA Coach. Antes de practicar cualquier comando, es útil entender algo que la mayoría de la documentación pasa por alto: cuando presionas una tecla en el teclado, ¿quién está haciendo el trabajo? Hay tres capas distintas que controlan los comandos de teclado en Windows, y saber a qué capa pertenece un comando te ayudará a aprender más rápido y cometer menos errores. Esta lección cubre las tres. Presiona Enter para continuar.",
+					"hints": [
+						"Las tres capas son: Windows mismo, la aplicación que estás usando y tu lector de pantalla. Cada una maneja comandos diferentes.",
+						"Los comandos de Windows funcionan igual en todos los programas. Los comandos de aplicación solo funcionan en el programa al que pertenecen. Los comandos de NVDA solo anuncian información — nunca cambian nada.",
+						"A medida que practiques este curso, intenta adivinar a qué categoría pertenece cada nuevo comando antes de que te lo digan. Este hábito desarrolla una intuición más rápida."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La primera capa es Windows mismo. Algunos comandos pertenecen completamente al sistema operativo. Cortar, Copiar y Pegar — Control+X, Control+C y Control+V — son comandos de Windows. Cuando cualquier aplicación te permite pegar texto, no es la aplicación la que pega; hace una solicitud a Windows para que lo haga. Abrir el menú Inicio, cambiar entre ventanas con Alt+Tab y cerrar una ventana con Alt+F4 también son comandos de Windows. Funcionan igual en todos los programas porque Windows mismo está a cargo. Presiona Enter para continuar.",
+					"hints": [
+						"Control más C copia, Control más V pega — funcionan en todos los programas de Windows porque el sistema operativo los maneja, no la aplicación.",
+						"Alt más Tab cambia entre ventanas abiertas. Alt más F4 cierra la ventana actual. Ambos son comandos de Windows que funcionan en todas partes.",
+						"Los comandos de Windows son las habilidades más transferibles que aprenderás — domínalos una vez y funcionarán en todos los programas que uses."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La segunda capa es la aplicación que estás usando. Cuando presionas Flecha Abajo en un procesador de texto, le estás diciendo al procesador que mueva el cursor a la siguiente línea. La aplicación mueve el cursor — eso es un comando del programa. Control+N en Microsoft Word abre un nuevo documento — ese es el comando de Word, no de Windows. Tu lector de pantalla no tiene nada que ver con mover ese cursor. Simplemente lee en voz alta lo que la aplicación ya hizo. Presiona Enter para continuar.",
+					"hints": [
+						"La Flecha Abajo en un procesador de texto mueve el cursor — la aplicación hace el trabajo, y NVDA solo lee en voz alta lo que ocurrió.",
+						"La misma tecla puede significar cosas diferentes en distintas aplicaciones. Control más N abre un nuevo documento en Word pero una nueva pestaña en un navegador — porque cada aplicación define sus propios comandos.",
+						"Cuando algo no funciona como se esperaba, recuerda: NVDA solo está leyendo lo que la aplicación muestra. Si la aplicación se comporta mal, es un problema de la aplicación, no de NVDA."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La tercera capa es tu lector de pantalla. Los comandos de NVDA son únicos: no realizan ninguna acción en la aplicación. Solo informan. Cuando presionas NVDA+T, nada cambia en tu documento. La barra de título no se mueve, no se abre ningún cuadro de diálogo, nada se activa. NVDA simplemente anuncia lo que ya está ahí — porque los usuarios videntes pueden ver la barra de título en cualquier momento, y tú necesitas una forma de escucharla. Esta distinción — no realizar ninguna acción, solo informar — es la esencia de lo que hace que los comandos del lector de pantalla sean diferentes de todos los demás. A medida que trabajes con NVDA Coach, comenzarás a reconocer a qué capa pertenece cada comando sin que te lo digan. Presiona Enter para comenzar tu primera lección.",
+					"hints": [
+						"Los comandos de NVDA siempre comienzan con la tecla modificadora NVDA — generalmente Insert o Bloq Mayús — y nunca cambian nada en la pantalla. Solo hablan información.",
+						"Si presionas NVDA más T y nada en la pantalla cambia, eso es el comportamiento correcto. NVDA leyó la barra de título en voz alta sin modificar nada.",
+						"Piensa en los comandos de NVDA como preguntas. NVDA más T pregunta '¿cuál es el título de esta ventana?' NVDA responde en voz, y nada cambia."
+					]
+				}
+			]
+		},
+		{
+			"id": "nvda_key",
+			"title": "Conoce tu Tecla NVDA",
+			"order": 2,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "¡Bienvenido a NVDA Coach! Si tienes un instructor de tecnología asistiva contigo ahora mismo, este es un buen momento para informarle que estás comenzando. Pueden sentarse contigo, ayudarte a encontrar las teclas y responder preguntas mientras avanzas. Si estás trabajando solo, está perfectamente bien. NVDA Coach está diseñado para guiarte de forma independiente, y puedes hacerlo. Si alguna vez te sientes atascado, presiona F2 para una pista, F1 para escuchar la instrucción nuevamente, o F3 para saltar un paso y volver a él más tarde. En esta primera lección, aprenderás sobre la tecla modificadora de NVDA. Esta es la tecla especial que mantienes presionada mientras presionas otras teclas para enviar comandos a NVDA. En la mayoría de los teclados es la tecla Insert. En muchas laptops es Bloq Mayús. Presiona Enter para continuar.",
+					"hints": [
+						"En la mayoría de los teclados de escritorio, la tecla NVDA es la tecla Insert. Está en el grupo de teclas sobre las teclas de flecha, cerca de Inicio, Supr y Re Pág.",
+						"En muchas laptops, Bloq Mayús sirve como tecla NVDA. Está en el lado izquierdo del teclado, justo encima de la tecla Mayús izquierda.",
+						"Puedes usar tanto Insert como Bloq Mayús como teclas NVDA al mismo tiempo. NVDA acepta cualquiera, así que nunca tienes que elegir entre ellas."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "NVDA+N abre el menú de NVDA — tu centro para todas las configuraciones y funciones de NVDA. Los usuarios videntes pueden hacer clic en un menú con el ratón; NVDA+N es tu equivalente. Pruébalo ahora. Mantén presionada tu tecla NVDA y presiona la letra N. Deberías escuchar que NVDA abre un menú y comienza a anunciar elementos como Preferencias, Herramientas y Ayuda. Una vez que escuches que el menú se abre, presiona Escape para cerrarlo y volver aquí, luego presiona Enter para continuar.",
+					"monitorGestures": [
+						"kb:nvda+n"
+					],
+					"hints": [
+						"Mantén presionada la tecla Insert o Bloq Mayús primero, mantenla presionada, luego presiona la letra N. Ambas teclas deben presionarse juntas — no una a la vez.",
+						"Si el menú no se abre, inténtalo de nuevo. Asegúrate de mantener presionada la tecla NVDA antes de presionar N. Un error común es soltar la tecla NVDA demasiado pronto.",
+						"Después de que el menú se abra, presiona Escape para cerrarlo y volver a donde estabas. Escape cancela menús y cuadros de diálogo en todo Windows."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "¡Muy bien! Ahora sabes cómo abrir y cerrar el menú de NVDA. NVDA+N abre el menú — es tu centro principal para preferencias, herramientas y ayuda. La tecla Escape cierra menús y cancela acciones, y la usarás constantemente. Estos dos atajos juntos te dan acceso completo a todo lo que NVDA puede hacer. Presiona Enter para finalizar esta lección.",
+					"hints": [
+						"NVDA más N es tu llave maestra para todo lo que NVDA puede hacer — configuraciones, herramientas, ayuda y más. Vale la pena que sea tu primer hábito.",
+						"La tecla Escape cierra menús y cancela cuadros de diálogo sin realizar ninguna acción. Nunca causará daño — cuando tengas dudas, presiona Escape.",
+						"Practica abrir y cerrar el menú de NVDA algunas veces más por tu cuenta. La memoria muscular se construirá rápidamente."
+					]
+				}
+			]
+		},
+		{
+			"id": "title_bar",
+			"title": "Leer la Barra de Título",
+			"order": 3,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Cada ventana tiene una barra de título en la parte superior que te dice en qué programa estás. Los usuarios videntes pueden ver la barra de título en cualquier momento. NVDA+T lee la barra de título en voz alta — tu equivalente de esa mirada. Presiona Enter para continuar.",
+					"hints": [
+						"La barra de título es la franja en la parte superior de cada ventana. Generalmente muestra el nombre del programa y a veces el título del documento o página actual.",
+						"NVDA más T es un comando de orientación rápida. Úsalo en cualquier momento en que no estés seguro de qué programa está activo actualmente.",
+						"Presionar NVDA más T dos veces rápidamente deletrea la barra de título carácter por carácter — útil cuando el título contiene una abreviatura que no reconoces."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Pruébalo ahora. Mantén presionada tu tecla NVDA y presiona la letra T. Deberías escuchar que NVDA lee la barra de título de la ventana actual — algo como el nombre del programa en el que estás ahora mismo. Siempre que no estés seguro de qué programa estás viendo, NVDA+T te lo dirá de inmediato. Es uno de los comandos más útiles que aprenderás. Presiona Enter aquí para continuar.",
+					"monitorGestures": [
+						"kb:nvda+t"
+					],
+					"hints": [
+						"Mantén presionada tu tecla NVDA — Insert o Bloq Mayús — y presiona la letra T. La tecla T está en la fila central de letras, entre R e Y.",
+						"Si NVDA lee algo como 'NVDA Coach — ventana de lección', eso es correcto. Está leyendo el título de la ventana activa actualmente.",
+						"Presiona NVDA más T dos veces rápidamente para que NVDA deletree el título carácter por carácter. Esto es útil cuando el título es una palabra o abreviatura desconocida."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Hagámoslo una vez más para construir el hábito. Mantén presionada tu tecla NVDA y presiona T nuevamente. Escucha cómo NVDA lee la barra de título en voz alta. La repetición es cómo los comandos de teclado se vuelven automáticos — cuanto más practiques, más rápido cada comando se convierte en algo natural. Presiona Enter aquí cuando estés listo para continuar.",
+					"monitorGestures": [
+						"kb:nvda+t"
+					],
+					"hints": [
+						"Esta vez, intenta cambiar primero a una ventana diferente con Alt más Tab, luego presiona NVDA más T para escuchar el título de esa ventana.",
+						"NVDA más T es especialmente útil después de cambiar ventanas con Alt más Tab, ya que no siempre puedes saber de oído en qué programa acabas de aterrizar.",
+						"Mantén presionado NVDA, presiona T, luego suelta ambos. Deberías escuchar el título hablado de inmediato."
+					]
+				}
+			]
+		},
+		{
+			"id": "read_time",
+			"title": "Leer la Hora",
+			"order": 4,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Los usuarios videntes pueden ver el reloj en la esquina de la pantalla. NVDA+F12 dice la hora actual sin que tengas que navegar a ningún lugar. NVDA puede decirte la hora y fecha actuales sin salir de lo que estás haciendo. Presiona Enter para continuar.",
+					"hints": [
+						"F12 es la última tecla de función en la fila superior del teclado, en el extremo derecho de la fila etiquetada F1 a F12.",
+						"Presionar NVDA más F12 dos veces rápidamente lee la fecha actual en lugar de la hora — una forma práctica de verificar ambas sin abrir ningún programa.",
+						"Las teclas de función van a lo largo de la parte superior del teclado. F12 está en el extremo derecho de esa fila, a menudo junto a una tecla de Imprimir Pantalla o Bloq Despl."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Pruébalo ahora. Mantén presionada tu tecla NVDA y presiona F12 — la última tecla de función en la fila superior del teclado, generalmente en el extremo derecho. Deberías escuchar que NVDA anuncia la hora actual. Consejo rápido: si presionas NVDA+F12 dos veces en rápida sucesión, NVDA lee la fecha en lugar de la hora. Prueba ambas si quieres, luego presiona Enter aquí para continuar.",
+					"monitorGestures": [
+						"kb:nvda+f12"
+					],
+					"hints": [
+						"F12 es la última tecla en la fila de teclas de función en la parte superior del teclado. Mantén presionada tu tecla NVDA y presiona F12.",
+						"Si no estás seguro de haber presionado la tecla correcta, usa la Ayuda de Entrada: presiona NVDA más 1 para activarla, presiona la tecla que quieres probar, escucha la descripción, luego presiona NVDA más 1 nuevamente para desactivarla.",
+						"Presiona NVDA más F12 dos veces en rápida sucesión para escuchar la fecha completa. La primera pulsación da la hora; la segunda pulsación rápida da la fecha."
+					]
+				}
+			]
+		},
+		{
+			"id": "stop_speech",
+			"title": "Detener a NVDA cuando Habla",
+			"order": 5,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "A veces NVDA habla demasiado o quieres que se detenga a mitad de una frase. La tecla Control por sí sola silencia inmediatamente el habla. Esto se llama detener el habla, y también funciona en Narrator, JAWS y VoiceOver — es una convención universal de los lectores de pantalla. Presiona Enter para continuar.",
+					"hints": [
+						"La tecla Control está en la esquina inferior izquierda del teclado. La mayoría de los teclados también tienen una segunda tecla Control en la esquina inferior derecha. Cualquiera de las dos silencia a NVDA.",
+						"Un solo toque de Control detiene el habla de NVDA al instante. No necesitas mantenerla presionada ni combinarla con ninguna otra tecla.",
+						"Control detiene el habla completamente y no puede reanudar. Mayús, que aprenderás a continuación, pausa y se puede presionar nuevamente para reanudar desde donde NVDA se detuvo."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "También hay una segunda opción: la tecla Mayús. Presionar Mayús pausa el habla de NVDA a mitad de frase. Presiona Mayús nuevamente y NVDA reanuda la lectura justo donde se detuvo. Este comportamiento de pausa y reanudación es específico de NVDA. Es útil cuando necesitas un breve momento para concentrarte — por ejemplo, leer un número de teléfono de un documento mientras lo marcas. Presiona Mayús una vez para pausar, luego presiona Mayús nuevamente para continuar. Control detiene completamente. Mayús pausa y reanuda. Ambos vale la pena conocerlos. Presiona Enter para continuar.",
+					"hints": [
+						"La tecla Mayús es la tecla ancha justo encima de la tecla Control en cualquier lado del teclado. Una sola pulsación pausa a NVDA; presionarla nuevamente reanuda exactamente desde donde se detuvo.",
+						"Usa Mayús para pausar cuando necesites un momento para actuar — por ejemplo, NVDA está leyendo un número de teléfono y necesitas marcarlo. Pausa con Mayús, marca, luego Mayús nuevamente para continuar.",
+						"Control detiene completamente sin posibilidad de reanudar. Mayús pausa y reanuda. Ambos son pulsaciones simples de tecla sin modificadores."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Una nota sobre practicar estas teclas: presionar Control o Mayús durante una lección activa interferiría con la lección misma, por lo que la práctica confiable dentro de la lección no es posible aquí. En cambio, construye el hábito de forma natural. La próxima vez que NVDA lea algo demasiado largo o demasiado rápido, usa Control para detenerlo. Cuando necesites un momento durante la lectura, prueba Mayús para pausar y reanudar. Descubrirás ambos reflejos rápidamente en el uso real. Presiona Enter para finalizar esta lección.",
+					"hints": [
+						"El mejor momento para practicar es durante Leer Todo — presiona NVDA más Flecha Abajo (distribución de escritorio) o NVDA más A (distribución portátil) para comenzar a leer, luego usa Control para detener o Mayús para pausar. Leer Todo se cubre en el capítulo de Lectura de Texto.",
+						"Estas teclas son completamente seguras de presionar en cualquier momento. Solo afectan la salida de voz de NVDA y no tienen efecto en la aplicación que estás usando.",
+						"Desarrollarás estos reflejos naturalmente a través del uso diario. La próxima vez que NVDA lea algo demasiado largo, usa Control — y se volverá automático."
+					]
+				}
+			]
+		},
+		{
+			"id": "where_am_i",
+			"title": "Averiguar Dónde Estás",
+			"order": 6,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Los usuarios videntes pueden ver qué control está resaltado en la pantalla. NVDA+Tab dice el nombre, tipo y estado del control en el que estás enfocado actualmente — tu equivalente de esa mirada visual. Presiona Enter para continuar.",
+					"hints": [
+						"NVDA más Tab lee el control enfocado actualmente — su nombre, tipo (botón, casilla de verificación, campo de edición) y estado (marcado, presionado, etc.).",
+						"Nota la diferencia: Tab solo te mueve al siguiente control. NVDA más Tab lee el control actual sin moverse a ningún lado.",
+						"Este comando es más útil cuando aterrizas en algún lugar inesperado y necesitas averiguar dónde estás antes de hacer cualquier otra cosa."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "A punto de abrirse una práctica de formulario de inicio de sesión en una ventana separada. Cuando aparezca, presiona Alt+Tab para cambiar a ella. Muévete por los diferentes controles con Tab y presiona NVDA+Tab en cada uno para escuchar cómo NVDA lo describe. Cuando hayas terminado, presiona Alt+Tab para volver aquí, luego presiona NVDA+Mayús+C para traer la ventana de Coach al frente y presiona Enter para continuar. ¿Listo? Presiona Enter ahora para abrir el formulario de práctica.",
+					"openPracticeFrameAfter": true,
+					"hints": [
+						"Presiona Alt más Tab para cambiar a la ventana de práctica después de que se abra. Mantén presionado Alt y presiona Tab una vez para pasar a la siguiente ventana abierta.",
+						"Si cambias a la ventana equivocada, sigue manteniendo presionado Alt y presiona Tab nuevamente para recorrer todas las ventanas abiertas hasta que escuches el formulario de práctica.",
+						"El formulario de práctica tiene un campo de nombre de usuario, un campo de contraseña, una casilla de verificación y botones. Muévete por cada uno con Tab y presiona NVDA más Tab para escuchar cómo NVDA describe cada tipo de control."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Ahora en la ventana de práctica, muévete con Tab a cualquier control del formulario de inicio de sesión y presiona NVDA+Tab. NVDA anunciará el nombre, tipo y estado del control en el que estás enfocado. Por ejemplo, podría decir 'Nombre de usuario editar' o 'Botón Iniciar sesión'. Pruébalo en varios controles diferentes — campos de texto, la casilla de verificación y cada botón — para escuchar cómo NVDA describe cada tipo. Cuando hayas terminado de explorar, presiona NVDA+Mayús+C para volver aquí, luego presiona Enter para continuar.",
+					"monitorGestures": [
+						"kb:nvda+tab"
+					],
+					"hints": [
+						"Mantén presionada tu tecla NVDA y presiona Tab. Esto es diferente a Tab solo — Tab solo mueve el foco, pero NVDA más Tab solo lee el control actual sin moverse.",
+						"Prueba NVDA más Tab en varios tipos de controles diferentes. Un campo de texto suena diferente a un botón, que suena diferente a una casilla de verificación.",
+						"Cuando hayas terminado, presiona NVDA más Mayús más C para traer la ventana de Coach al frente, luego presiona Enter para continuar."
+					]
+				}
+			]
+		},
+		{
+			"id": "tab_navigation",
+			"title": "Moverse entre Controles con Tab",
+			"order": 7,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "En cuadros de diálogo, ventanas de configuración y formularios, presionas la tecla Tab para moverte hacia adelante entre controles como botones, casillas de verificación y campos de texto. Mayús+Tab te mueve hacia atrás. Esto es igual en todos los programas de Windows — aprenderlo aquí significa que puedes usarlo en todas partes. Usarás Tab y Mayús+Tab a lo largo de este curso, incluso dentro del cuadro de diálogo de Configuración de NVDA en el capítulo Personalización de NVDA. Presiona Enter para continuar.",
+					"hints": [
+						"La tecla Tab está en el lado izquierdo del teclado, justo encima de Bloq Mayús. A menudo tiene un símbolo con dos flechas apuntando en direcciones opuestas.",
+						"Mayús más Tab se mueve hacia atrás por los controles — dirección opuesta a Tab solo. Juntos te permiten moverte libremente por cualquier formulario o cuadro de diálogo.",
+						"Tab y Mayús más Tab funcionan de forma idéntica en todos los cuadros de diálogo, formularios y ventanas de configuración de Windows. Domínalos aquí y puedes usarlos en cualquier programa."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Está a punto de abrirse un formulario de práctica en una ventana separada. Cuando aparezca, presiona Alt+Tab para cambiar a él. Presiona Tab para moverte hacia adelante por los controles. Cuando hayas terminado, presiona Alt+Tab para volver aquí, presiona NVDA+Mayús+C para traer la ventana de Coach al frente y presiona Enter para continuar. ¿Listo? Presiona Enter ahora para abrir el formulario de práctica.",
+					"openPracticeFrameAfter": true,
+					"hints": [
+						"Presiona Alt más Tab para cambiar al formulario de práctica después de que se abra. Mantén presionado Alt y toca Tab una vez.",
+						"Presiona NVDA más Mayús más C en cualquier momento para traer la ventana de Coach al frente.",
+						"El formulario de práctica tiene varios controles — campos de texto, casillas de verificación y botones. Muévete por todo el formulario con Tab antes de volver."
+					]
+				},
+				{
+					"type": "gesture",
+					"instruction": "Cambia al formulario de práctica presionando Alt+Tab. Una vez allí, presiona Tab para pasar al siguiente control. NVDA anunciará el nombre y tipo de cada control cuando te posiciones en él. Sigue presionando Tab para moverte por todo el formulario. Cuando estés listo, presiona NVDA+Mayús+C para volver aquí, luego presiona Enter para continuar.",
+					"hint": "La tecla Tab está en el lado izquierdo del teclado, encima de Bloq Mayús. Solo presiónala. Cada vez que presiones Tab, NVDA anuncia el control al que te moviste.",
+					"hints": [
+						"La tecla Tab está en el lado izquierdo del teclado, justo encima de Bloq Mayús. Presiónala sola — no se necesita tecla modificadora.",
+						"Cada pulsación de Tab pasa al siguiente control y NVDA anuncia su nombre y tipo. Escucha palabras como 'botón', 'editar' o 'casilla de verificación'.",
+						"Si pasas Tab más allá del último control del formulario, el foco vuelve al primer control. Esto es normal — puedes seguir presionando Tab para recorrer indefinidamente."
+					],
+					"expectedGestures": [
+						"kb:tab"
+					],
+					"successMessage": "Te moviste al siguiente control. NVDA anunció lo que encontraste.",
+					"allowExecution": true,
+					"feedbackDelay": 1500
+				},
+				{
+					"type": "gesture",
+					"instruction": "Ahora en el formulario de práctica, presiona Mayús+Tab para volver al control anterior. Mantén presionado Mayús y presiona Tab. NVDA anunciará el control al que vuelves. Tab avanza, Mayús+Tab retrocede. Presiona NVDA+Mayús+C para volver aquí cuando estés listo, luego presiona Enter para continuar.",
+					"hint": "Mantén presionada la tecla Mayús y presiona Tab. Mayús es la tecla ancha grande justo encima de Ctrl en cualquier lado del teclado.",
+					"hints": [
+						"Mantén presionada Mayús primero, luego presiona Tab mientras mantienes Mayús presionada. Mayús es la tecla ancha encima de la tecla Control izquierda.",
+						"Mayús más Tab siempre se mueve hacia atrás — exactamente lo contrario a Tab solo. Úsalo siempre que te pases de un control y necesites retroceder.",
+						"Nunca tienes que empezar de nuevo desde el principio de un formulario. Si vas demasiado lejos, Mayús más Tab te devuelve directamente."
+					],
+					"expectedGestures": [
+						"kb:shift+tab"
+					],
+					"successMessage": "Te moviste hacia atrás. Tab avanza, Mayús+Tab retrocede. Estas dos teclas te llevarán a través de la mayoría de los cuadros de diálogo y formularios.",
+					"allowExecution": true,
+					"feedbackDelay": 2000
+				}
+			]
+		},
+		{
+			"id": "activate_controls",
+			"title": "Activar Botones y Controles",
+			"order": 8,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Una vez que has usado Tab para llegar a un botón o control, necesitas activarlo. Enter activa botones y acciones predeterminadas. Espacio activa y desactiva casillas de verificación. Estas teclas funcionan igual en todos los programas de Windows. Presiona Enter para continuar.",
+					"hints": [
+						"Enter activa botones. Espacio activa y desactiva casillas de verificación. Estas dos teclas manejan casi todas las tareas de activación en los cuadros de diálogo de Windows.",
+						"Después de presionar Espacio en una casilla de verificación, NVDA anuncia 'marcado' o 'sin marcar' para confirmar el nuevo estado.",
+						"Para los botones de radio, usa las teclas de Flecha Arriba y Abajo para moverte entre opciones en lugar de Espacio o Enter."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Está a punto de abrirse una ventana de práctica con casillas de verificación y botones. Cuando aparezca, presiona Alt+Tab para cambiar a ella. Cuando hayas terminado, presiona Alt+Tab para volver aquí, presiona NVDA+Mayús+C para traer la ventana de Coach al frente y presiona Enter para continuar. ¿Listo? Presiona Enter ahora para abrir la ventana de práctica.",
+					"openPracticeFrameAfter": true,
+					"hints": [
+						"Presiona Alt más Tab para cambiar a la ventana de práctica después de que se abra.",
+						"La ventana de práctica tiene casillas de verificación y botones. Muévete a cada uno con Tab y escucha cómo NVDA anuncia el tipo de control para saber qué tecla usar.",
+						"NVDA anuncia los nombres de los botones y las etiquetas de las casillas de verificación cuando te mueves a ellos con Tab. Los botones reciben Enter; las casillas de verificación reciben Espacio."
+					]
+				},
+				{
+					"type": "gesture",
+					"instruction": "Cambia a la ventana de práctica con Alt+Tab. Muévete con Tab a una de las casillas de verificación 'Activar consejos de lector de pantalla' o 'Mostrar pistas de práctica', luego presiona la barra Espaciadora para marcarla o desmarcarla. NVDA anunciará si la casilla ahora está marcada o sin marcar. Cuando hayas terminado, presiona NVDA+Mayús+C para volver aquí, luego presiona Enter para continuar.",
+					"hint": "La barra Espaciadora es la tecla larga en el centro inferior del teclado. Asegúrate de haberte movido a una casilla de verificación con Tab primero.",
+					"hints": [
+						"La barra Espaciadora es la tecla plana larga en la parte inferior central del teclado. Asegúrate de haberte movido a una casilla de verificación con Tab antes de presionarla.",
+						"Después de presionar Espacio, NVDA dice 'marcado' si la casilla ahora está activada, o 'sin marcar' si la desactivaste. Esto confirma que la acción funcionó.",
+						"Espacio también activa algunos tipos de botones, pero Enter es la opción más confiable para los botones. Usa Espacio específicamente para casillas de verificación y controles de alternancia."
+					],
+					"expectedGestures": [
+						"kb:space"
+					],
+					"successMessage": "Barra Espaciadora presionada. Espacio se usa para marcar o desmarcar casillas de verificación y para activar algunos botones.",
+					"allowExecution": false,
+					"feedbackDelay": 500
+				},
+				{
+					"type": "gesture",
+					"instruction": "Ahora en la ventana de práctica, muévete con Tab a uno de los botones — 'Reproducir un sonido', 'Decir hola' o 'Mostrar consejo de teclado' — y presiona Enter para activarlo. NVDA anunciará lo que ocurrió. Cuando hayas terminado, presiona NVDA+Mayús+C para volver aquí, luego presiona Enter para continuar.",
+					"hint": "Enter es la tecla grande en el lado derecho del área principal del teclado. Asegúrate de haberte movido a un botón con Tab primero.",
+					"hints": [
+						"Enter es la tecla grande en el lado derecho del área principal del teclado. Algunos teclados también tienen una segunda tecla Enter en el teclado numérico — cualquiera funciona.",
+						"Muévete con Tab a un botón primero, luego presiona Enter para activarlo. Si no parece ocurrir nada, asegúrate de que NVDA haya anunciado 'botón' cuando usaste Tab.",
+						"Entre Tab, Espacio y Enter, puedes navegar y activar casi todos los controles en cualquier aplicación o cuadro de diálogo de Windows."
+					],
+					"expectedGestures": [
+						"kb:return",
+						"kb:enter",
+						"kb:numpadenter"
+					],
+					"successMessage": "Tecla Enter presionada. Enter activa botones y sigue enlaces. Entre Tab, Espacio y Enter, puedes navegar casi cualquier cuadro de diálogo.",
+					"allowExecution": false,
+					"feedbackDelay": 500
+				}
+			]
+		},
+		{
+			"id": "read_current_line",
+			"title": "Leer la Línea Actual",
+			"order": 9,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Cuando estás en un documento o área de texto, puedes hacer que NVDA lea la línea donde está tu cursor. NVDA+Flecha Arriba lee la línea actual — útil siempre que quieras confirmar exactamente dónde estás en un documento. Se incluye un área de texto de práctica en el siguiente paso. Presiona Enter para continuar.",
+					"hints": [
+						"NVDA más Flecha Arriba lee la línea actual sin mover el cursor. Tu posición en el documento permanece exactamente donde está.",
+						"La tecla Flecha Arriba está en el grupo de teclas de flecha en la parte inferior derecha del teclado. Mantén presionada tu tecla NVDA y presiona la flecha que apunta hacia arriba.",
+						"Usa NVDA más Flecha Arriba siempre que pierdas el rastro de dónde estás en un documento — vuelve a leer la línea en la que está tu cursor sin cambiar nada."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Presiona Flecha Abajo en el área de texto de práctica que aparece a continuación para mover el cursor por las líneas. Luego presiona NVDA+Flecha Arriba para que NVDA lea la línea actual en voz alta. Muévete a una línea diferente con Flecha Arriba o Flecha Abajo y presiona NVDA+Flecha Arriba nuevamente para escuchar cada una. Esto funciona en cualquier documento, correo electrónico o área de texto. Presiona Enter para continuar cuando hayas terminado.",
+					"monitorGestures": [
+						"kb:nvda+upArrow"
+					],
+					"practiceText": "The quick brown fox jumps over the lazy dog.\nScreen readers open the digital world to everyone.\nNVDA is free and open source software.\nPractice builds the habit of screen reader navigation.\nArrow keys move through text one step at a time.\nControl plus arrows jump by whole words at once.\nHome and End move to a line boundary.\nControl plus Home or End jumps to document extremes.\nThis is the last line of the practice area.",
+					"hints": [
+						"Mantén presionada tu tecla NVDA — Insert o Bloq Mayús — y presiona la tecla Flecha Arriba. La Flecha Arriba es la tecla que apunta hacia arriba en el grupo de flechas en la parte inferior derecha del teclado.",
+						"Mueve primero el cursor a diferentes líneas con la tecla Flecha Abajo, luego presiona NVDA más Flecha Arriba para confirmar en qué línea estás.",
+						"Si NVDA lee una línea pero no la captaste toda, simplemente presiona NVDA más Flecha Arriba nuevamente. Puedes presionarla tantas veces como necesites para volver a leer la misma línea."
+					]
+				}
+			]
+		},
+		{
+			"id": "input_help",
+			"title": "Explorar Teclas con la Ayuda de Entrada",
+			"order": 10,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "NVDA+1 activa y desactiva el modo de Ayuda de Entrada. Cuando está activado, presionar cualquier tecla te dice qué hace esa tecla en NVDA — sin realmente hacerlo. Es una forma completamente segura de explorar el teclado, y es exclusiva de NVDA. Presiona Enter para continuar.",
+					"hints": [
+						"NVDA más 1 usa el número 1 de la fila superior del teclado — la fila de números sobre las teclas de letras. No uses el 1 del teclado numérico.",
+						"En el modo de Ayuda de Entrada, presionar cualquier tecla es completamente seguro. Nada ocurre realmente en la aplicación — NVDA solo describe lo que la tecla haría.",
+						"La Ayuda de Entrada es una de las herramientas de aprendizaje más útiles que tiene NVDA. Úsala siempre que encuentres una combinación de teclas desconocida y quieras saber qué hace."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Pruébalo ahora. Mantén presionada tu tecla NVDA y presiona el número 1 de la fila superior del teclado — no el teclado numérico, sino la fila de números justo encima de las teclas de letras. Deberías escuchar que NVDA dice 'Ayuda de entrada activada'. Mientras la Ayuda de Entrada está activa, puedes presionar cualquier tecla y NVDA describirá lo que hace esa tecla sin realmente realizar la acción. Presiona Enter aquí para continuar.",
+					"monitorGestures": [
+						"kb:nvda+1"
+					],
+					"hints": [
+						"Mantén presionada tu tecla NVDA y presiona el número 1 de la fila superior del teclado. El número 1 está en el extremo izquierdo de la fila de números, justo encima de la tecla Q.",
+						"Cuando se activa la Ayuda de Entrada, intenta presionar cualquier tecla — por ejemplo, presiona F12 y NVDA te dirá que lee la hora, sin realmente leer la hora.",
+						"NVDA dice 'Ayuda de entrada activada' para confirmar que está activa. Mientras está activada, cada pulsación de tecla se describe pero nada se ejecuta."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Ahora presiona NVDA+1 nuevamente para desactivar la Ayuda de Entrada. Mantén presionada tu tecla NVDA y presiona el número 1. Deberías escuchar que NVDA dice 'Ayuda de entrada desactivada'. Siempre que en el futuro olvides lo que hace una tecla, activa la Ayuda de Entrada, presiona la tecla para escuchar su descripción, y luego desactiva la Ayuda de Entrada. Es como tener una hoja de referencia integrada que siempre está disponible. Presiona Enter aquí para continuar.",
+					"monitorGestures": [
+						"kb:nvda+1"
+					],
+					"hints": [
+						"Presiona NVDA más 1 nuevamente — la misma combinación que activó la Ayuda de Entrada la desactivará. NVDA dice 'Ayuda de entrada desactivada' para confirmar.",
+						"Después de desactivarla, todas las teclas reanudan su comportamiento normal de inmediato.",
+						"Recuerda este atajo para siempre: siempre que encuentres una combinación de teclas desconocida, activa la Ayuda de Entrada, presiónala para escuchar la descripción, luego desactívala."
+					]
+				}
+			]
+		},
+		{
+			"id": "getting_help",
+			"title": "Abrir la Guía del Usuario",
+			"order": 11,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "NVDA viene con una guía de usuario completa que puedes abrir en cualquier momento. La guía del usuario se encuentra en el menú de NVDA bajo Ayuda. Es una gran referencia cuando quieres aprender más por tu cuenta. Presiona Enter para continuar.",
+					"hints": [
+						"La guía del usuario se abre en tu navegador web predeterminado como un archivo HTML local. Se instala con NVDA para que puedas leerla sin conexión a internet.",
+						"Para abrir la guía del usuario: presiona NVDA más N para abrir el menú de NVDA, presiona A de Ayuda, luego U de Guía del Usuario. Tu navegador se abrirá automáticamente.",
+						"La guía del usuario cubre cada comando y función de NVDA en detalle. Puedes usar el modo exploración — que se cubre más adelante en este curso — para navegar rápidamente con encabezados."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Pruébalo ahora. Mantén presionada tu tecla NVDA y presiona N para abrir el menú de NVDA. Deberías escuchar que NVDA anuncia el menú y sus elementos. Desde aquí, en el uso real, presionarías la Flecha Abajo para moverte por los elementos, navegar a Ayuda y luego seleccionar Guía del Usuario para leer la documentación completa en cualquier momento. Por ahora, solo escucha cómo se abre el menú, luego presiona Escape para cerrarlo y volver aquí. Presiona Enter para continuar.",
+					"monitorGestures": [
+						"kb:nvda+n"
+					],
+					"hints": [
+						"Mantén presionado NVDA y presiona N para abrir el menú. Una vez abierto, presiona A para abrir el submenú de Ayuda, luego U para la Guía del Usuario.",
+						"Si aterrizas en un lugar inesperado en el menú, presiona Escape para cerrarlo e inténtalo de nuevo. El menú se abre en la parte superior cada vez.",
+						"El menú de NVDA está organizado en Preferencias, Herramientas, Ayuda y algunos otros elementos. Las teclas de flecha se mueven a través de él; Enter abre un submenú o activa un elemento."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Muy bien. Ahora has aprendido los comandos esenciales de NVDA que te acompañan en el uso diario. Quedan dos lecciones más en el capítulo de Introducción: Conoce tu Teclado — que cubre las teclas físicas que usarás constantemente — y Cambiar Ventanas con Alt+Tab. Cuando estés listo, presiona Enter para continuar a la siguiente lección.",
+					"hints": [
+						"Quedan dos lecciones más en este capítulo: Conoce tu Teclado y Cambiar Ventanas con Alt+Tab. Complétalas antes de pasar al capítulo de Lectura de Texto.",
+						"Todos los comandos de esta lección funcionan juntos: NVDA más T te dice dónde estás, NVDA más Tab te dice en qué control estás, y Tab más Enter te permiten navegar y actuar.",
+						"NVDA Coach guarda tu progreso automáticamente. Cuando vuelvas, tus lecciones completadas estarán marcadas para que puedas continuar justo donde lo dejaste."
+					]
+				}
+			]
+		},
+		{
+			"id": "keyboard_orientation",
+			"title": "Conoce tu Teclado",
+			"order": 12,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Antes de continuar, veamos algunas teclas que a menudo generan confusión — especialmente en los teclados de laptop. La primera es la tecla Control. En la mayoría de los teclados, la tecla Control está en la esquina inferior izquierda. Pero en algunas laptops, la tecla Fn ocupa la esquina inferior izquierda, con la tecla Control inmediatamente a su derecha. Si estás presionando lo que crees que es Control y nada sucede, verifica si tu tecla de la esquina inferior izquierda dice Fn o Ctrl — importa. Presiona Enter para continuar.",
+					"hints": [
+						"Mira la esquina inferior izquierda del teclado. Si la tecla dice Fn, la tecla Control está una tecla a su derecha. Si dice Ctrl, ya estás en la tecla correcta.",
+						"Tanto Fn como Control suelen estar en la misma fila, pero cuál está en la esquina varía según el modelo y fabricante de la laptop.",
+						"Si no estás seguro de qué tecla es cuál, presiona NVDA más 1 para activar la Ayuda de Entrada, luego presiona la tecla de la esquina inferior izquierda. NVDA te dirá qué es. Presiona NVDA más 1 nuevamente para desactivar la Ayuda de Entrada."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Muchas laptops no tienen teclas dedicadas de Inicio, Fin, Re Pág y Av Pág. En cambio, la tecla Fn se combina con las teclas de Flecha para producirlas. En la mayoría de los teclados con este diseño: Fn más Flecha Izquierda equivale a Inicio; Fn más Flecha Derecha equivale a Fin; Fn más Flecha Arriba equivale a Re Pág; Fn más Flecha Abajo equivale a Av Pág. Tu teclado puede variar — verifica las pequeñas etiquetas impresas en las teclas de Flecha para ver símbolos como un icono de casa o un símbolo de flecha de página. Si tu teclado tiene teclas dedicadas de Inicio, Fin, Re Pág y Av Pág sobre las teclas de flecha, no necesitas Fn para esas funciones. Presiona Enter para continuar.",
+					"hints": [
+						"Mira tus teclas de Flecha. Si tienen etiquetas secundarias pequeñas — un icono de casa, un icono de página, o símbolos de flecha con línea — esos indican combinaciones con Fn.",
+						"Fn más Flecha Izquierda es típicamente Inicio. Fn más Flecha Derecha es Fin. Fn más Flecha Arriba es Re Pág. Fn más Flecha Abajo es Av Pág. Pero siempre verifica tu teclado específico.",
+						"Si tu teclado tiene un grupo completo de teclas sobre las teclas de flecha — incluyendo Re Pág, Av Pág, Inicio y Fin dedicadas — no necesitas Fn para esas funciones en absoluto."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La fila superior de muchas laptops tiene teclas de función etiquetadas F1 a F12. En algunos modelos de laptop, estas teclas están predeterminadas para controles multimedia — ajustar volumen, brillo y reproducción de medios — en lugar de F1 a F12. Para usar F1 a F12 en esos teclados, mantén presionada la tecla Fn y presiona la tecla de función correspondiente. Otras laptops son lo contrario: las teclas F son primarias y los controles multimedia requieren Fn. Muchos teclados tienen una tecla Fn Lock — a menudo Fn más Escape o Fn más Bloq Mayús — que intercambia permanentemente el comportamiento para que no tengas que mantener presionada Fn cada vez. Consulta el manual de tu laptop o las etiquetas de las teclas para averiguar cómo está configurado tu teclado. Presiona Enter para continuar.",
+					"hints": [
+						"Si presionar F2 para una pista de Coach cambia el brillo de la pantalla, tu laptop está en modo multimedia predeterminado. Mantén presionado Fn y presiona F2 para obtener la función real F2.",
+						"Busca una tecla Fn Lock — a menudo etiquetada FnLk o mostrada como un icono de candado combinado con Fn. Presionarla alterna entre el modo multimedia primario y el modo de tecla F primario.",
+						"Algunas laptops muestran si el modo multimedia o el modo de tecla F está activo a través de una luz indicadora. Otras lo anuncian mediante sonido. Consulta tu modelo específico si no estás seguro."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "Una revisión rápida de las ubicaciones de las teclas modificadoras más importantes para NVDA: Ctrl está en la parte inferior izquierda (o una tecla a la derecha de Fn en algunas laptops). Mayús es la tecla ancha encima de Ctrl en ambos lados del teclado. Alt está junto a la barra Espaciadora en ambos lados. La tecla Windows — una tecla con el logotipo de Windows — está entre Ctrl y Alt en el lado izquierdo. Y por supuesto tu tecla NVDA: Insert está en el grupo sobre las teclas de flecha, y Bloq Mayús está en el extremo izquierdo encima de Mayús. Saber dónde están estas teclas sin mirar es una de las habilidades de teclado más valiosas que puedes desarrollar. Presiona Enter para continuar.",
+					"hints": [
+						"De izquierda a derecha en la fila inferior de la mayoría de los teclados: Ctrl (o Fn), tecla Windows, Alt, barra Espaciadora, Alt, tecla de menú (a veces), Ctrl.",
+						"Mayús es la tecla ancha encima de Ctrl en ambos lados. Es una de las teclas más anchas del teclado — fácil de encontrar por tacto.",
+						"Bloq Mayús está en el extremo izquierdo, justo encima de Mayús. En muchos teclados de usuarios de NVDA, Bloq Mayús sirve como tecla NVDA — una de las teclas más importantes que presionarás."
+					]
+				}
+			]
+		},
+		{
+			"id": "alt_tab",
+			"title": "Cambiar Ventanas con Alt+Tab",
+			"order": 13,
+			"chapterComplete": true,
+			"steps": [
+				{
+					"type": "info",
+					"instruction": "Alt+Tab es un comando de Windows que cambia entre programas y ventanas abiertas. Los usuarios videntes pueden ver todas las ventanas abiertas en la barra de tareas de un vistazo. Alt+Tab es el equivalente de teclado — te permite recorrer las ventanas abiertas sin necesitar un ratón. Este es uno de los comandos de Windows más importantes que aprenderás, y funciona en todas las versiones de Windows. Ya lo has usado brevemente para cambiar entre la ventana de Coach y los formularios de práctica. Esta lección enseña las dos formas de usarlo. Presiona Enter para continuar.",
+					"hints": [
+						"Alt más Tab es un comando de Windows — está integrado en Windows mismo y funciona independientemente de si NVDA está en ejecución.",
+						"La tecla Alt está en cualquier lado de la barra Espaciadora. La tecla Tab está en el lado izquierdo del teclado encima de Bloq Mayús.",
+						"Este comando funciona en todas las versiones de Windows y en prácticamente todos los escenarios. Es uno de los atajos de teclado más universales que usarás."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La primera forma: una sola pulsación de Alt+Tab. Mantén presionado Alt y toca Tab una vez, luego suelta ambas teclas de inmediato. Esto te cambia a la ventana usada más recientemente — la que estabas usando antes de la actual. Si estás en tu navegador y presionas Alt+Tab, saltas al programa en el que estabas antes del navegador. Presiona Alt+Tab nuevamente y vuelves al navegador. Esta es la forma más rápida de alternar entre dos programas que estás usando juntos. NVDA anuncia el nombre de la ventana a la que cambias. Presiona Enter para continuar.",
+					"hints": [
+						"Mantén presionado Alt, toca Tab una vez, luego suelta ambos. Aterrizas en la ventana usada más recientemente. NVDA anuncia lo que encontraste.",
+						"Presiona Alt+Tab una segunda vez para volver a donde empezaste. Dos pulsaciones te alternan rápidamente entre dos ventanas.",
+						"Esta es la versión que la mayoría de las personas usa con más frecuencia — un Alt+Tab rápido para verificar otra ventana, luego Alt+Tab nuevamente para volver."
+					]
+				},
+				{
+					"type": "info",
+					"instruction": "La segunda forma: mantén presionado Alt y sigue tocando Tab. Si tienes tres o más ventanas abiertas, puedes recorrerlas todas. Mantén presionado Alt y toca Tab una vez — NVDA anuncia la primera ventana. Mantén Alt presionado y toca Tab nuevamente — NVDA anuncia la segunda ventana. Cada toque pasa a la siguiente ventana abierta en la lista. Cuando escuches la ventana que quieres, suelta la tecla Alt y aterrizas allí. Si vas demasiado lejos, puedes mantener Alt y presionar Mayús+Tab para recorrer hacia atrás. Presiona Enter para continuar.",
+					"hints": [
+						"Mantén la tecla Alt presionada todo el tiempo. Cada pulsación de Tab pasa a la siguiente ventana. No sueltes Alt hasta que escuches la ventana que quieres.",
+						"NVDA anuncia cada nombre de ventana mientras recorres. Escucha el nombre del programa o el título del documento.",
+						"Mantener Alt y presionar Mayús más Tab recorre la lista de ventanas hacia atrás — útil si te pasas de la ventana que quieres."
+					]
+				},
+				{
+					"type": "gesture",
+					"instruction": "Prueba Alt+Tab simple ahora. Mantén presionado Alt y presiona Tab una vez, luego suelta ambas teclas. NVDA anunciará a qué ventana cambiaste. Luego presiona Alt+Tab nuevamente para volver aquí. Cuando estés de vuelta en la ventana de Coach, presiona Enter para continuar.",
+					"hint": "Mantén presionado Alt, presiona Tab una vez, luego suelta ambos. Alt está junto a la barra Espaciadora; Tab está encima de Bloq Mayús en el lado izquierdo.",
+					"hints": [
+						"Mantén presionado Alt — la tecla a la izquierda de la barra Espaciadora — y toca Tab una vez. Suelta ambas teclas de inmediato después de tocar Tab.",
+						"NVDA anuncia el nombre de la ventana en la que aterrizas. Puedes aterrizar en la aplicación anterior u otra ventana de práctica de Coach.",
+						"Para volver, presiona Alt más Tab una vez más. Esto te alterna de vuelta a la ventana de Coach."
+					],
+					"expectedGestures": ["kb:alt+tab"],
+					"successMessage": "Cambiaste ventanas con Alt+Tab. Alt+Tab es cómo te mueves entre programas abiertos sin ratón.",
+					"allowExecution": true,
+					"feedbackDelay": 1500
+				},
+				{
+					"type": "info",
+					"instruction": "¡Excelente trabajo — has completado el capítulo de Introducción a NVDA! Ahora sabes cómo identificar las tres categorías de comandos; usar los comandos esenciales de NVDA; entender la distribución del teclado; y cambiar entre programas con Alt+Tab. Estas habilidades funcionan juntas cada vez que usas NVDA. Practica un poco cada día y se volverán automáticas. Cuando estés listo, presiona NVDA+Mayús+C para abrir el selector de lecciones y comenzar el siguiente capítulo: Lectura y Movimiento a través del Texto. Presiona Enter para finalizar.",
+					"hints": [
+						"El siguiente capítulo es Lectura y Movimiento a través del Texto. Cubre la navegación por documentos por carácter, palabra, línea, párrafo y página.",
+						"Resumen de Alt+Tab: una sola pulsación alterna a la última ventana. Mantén Alt y sigue presionando Tab para recorrer todas las ventanas abiertas. Suelta Alt para aterrizar.",
+						"NVDA Coach guarda tu progreso automáticamente. Cuando vuelvas, tus lecciones completadas estarán marcadas para que puedas continuar justo donde lo dejaste."
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,165 @@
+{
+    "id": "keyboard_reference",
+    "title": "Klavyeniz",
+    "description": "Fiziksel klavyeyi anlayın — değiştirici tuşların konumları, işlev tuşları, Fn tuşu davranışı ve klavyenizi NVDA düzen ayarınızla nasıl eşleştireceğinizi görün.",
+    "order": 2,
+    "lessons": [
+        {
+            "id": "modifier_keys",
+            "title": "Değiştirici Tuşlar ve Konumları",
+            "order": 1,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Değiştirici tuşlar, anlamını değiştirmek için başka bir tuşa basarken basılı tuttuğunuz tuşlardır. Windows'taki dört ana değiştirici tuş şunlardır: Kontrol (Ctrl), Shift, Alt ve Windows tuşu. Bunların hiçbiri kendi başına bir şey yapmaz; diğer tuşları değiştirir. Klavyenizin neresinde olduklarını anlamak, hangi komutları kullanacağınızı bilmek kadar önemlidir. Bu ders her birinin nerede bulunacağını kapsar. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Başka bir tuşa bastığınızda değiştirici tuşlar her zaman basılı tutulur. Bunları önce serbest bırakmak veya yanlış sırayla basmak, bir komutun çalışmasını engelleyebilir.",
+                        "Çoğu klavyenin her iki tarafında da yinelenen değiştirici tuşlar bulunur: Solda ve sağda Ctrl, solda ve sağda Shift, solda ve sağda Alt. Çoğu komut için her iki taraf da işe yarar.",
+                        "Windows tuşu ve Menü tuşu (varsa) genellikle klavyenin yalnızca sol tarafında veya yalnızca bir tarafında bulunur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Kontrol tuşu (Ctrl) genellikle klavyenin sol alt köşesinde ve sağ alt köşesinde bulunur. Ancak bazı dizüstü bilgisayarlarda Fn tuşu sol alt köşeyi kaplar ve Ctrl tuşunu bir sağa doğru iter. Ctrl'nin tam köşede olmasını bekliyorsanız ve çalışmıyorsa, Fn tuşunun hemen sağında Ctrl etiketli tuşu arayın. Her iki Ctrl tuşu da (sol ve sağ) hemen hemen tüm komutlar için aynı şekilde çalışır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Standart yerleştirme: Ctrl en sol alttaki tuştur. Bazı dizüstü bilgisayarlar: Fn sol alttadır ve Ctrl bu satırda soldan ikinci tuştur.",
+                        "Sağ Ctrl tuşu, bu kurstaki tüm komutlar için soldakiyle aynı şekilde çalışır. El pozisyonunuza göre hangisi daha rahatsa onu kullanın.",
+                        "Hangisinin Ctrl olduğundan emin değil misiniz? Girdi Yardımını açmak için NVDA artı 1 tuşuna basın, Ctrl olduğunu düşündüğünüz tuşa basın; NVDA bunu Kontrol olarak tanıyıp tanımadığını doğrulayacaktır. Girdi Yardımını kapatmak için NVDA artı 1'e tekrar basın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Shift tuşu, klavyenin her iki yanında Kontrol'ün hemen üzerindeki geniş tuştur. Çoğu klavyedeki en geniş tuşlardan biridir ve dokunarak bulmayı kolaylaştırır. Sol Shift, sol Kontrolün üzerindedir; sağ Shift sağ Kontrolün üzerindedir. Her iki Shift tuşu da çoğu komut için çalışır. Shift, NVDA'da sürekli olarak kullanılır: Shift+Sekme, kontroller (Windows komutu) arasında geriye doğru hareket eder, Shift+H, Tarama Kipinde başlıklar arasında geriye doğru hareket eder ve NVDA+Shift+C, ders seçiciyi açar. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sol Shift, klavyenin sol tarafındaki sol Ctrl tuşunun üzerindedir. Sağ Shift, sağ taraftaki sağ Ctrl tuşunun üstündedir.",
+                        "Shift çoğu tuştan daha geniştir; genellikle bakmadan dokunarak bulabilirsiniz. Her iki tarafta Ctrl'nin hemen üzerindeki geniş tuştur.",
+                        "Her iki Shift tuşu da herhangi bir komut için çalışır. Aynı anda basmanız gereken diğer tuşlara hangi taraf daha yakınsa onu kullanın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Alt tuşu, Boşluk çubuğunun hemen solunda ve sağındadır. Boşluk çubuğu, klavyenin alt orta kısmındaki uzun düz tuştur; klavyedeki en uzun tuştur. Alt, her iki tarafta doğrudan ona bitişik olan tuştur. Sol Alt en sık kullanılır. Alt+Sekme (Windows komutu) sol Alt tuşunu kullanır. Alt+F4 (Windows komutu) bir pencereyi kapatır. Bazı programlar özel karakterler için sağ Alt tuşunu (bazı klavyelerde AltGr olarak da adlandırılır) kullanır, ancak NVDA ve Windows'ta dolaşma için neredeyse her zaman sol Alt tuşunu kullanırsınız. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Alt, Boşluk çubuğunun doğrudan solunda ve sağındadır. Boşluk çubuğunu bulmak kolaydır; klavyedeki en uzun tuştur.",
+                        "Alt+Sekme ve diğer Windows dolaşım komutları için sol Alt tuşunu kullanın. Sağ Alt (AltGr) genellikle bazı dillerde özel karakterler için kullanılır.",
+                        "Alt artı Sekme bir Windows komutudur. Alt artı F4 geçerli pencereyi kapatır. Her ikisi de sol Alt tuşunu kullanır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Windows tuşunun üzerinde Windows logosu basılıdır ve genellikle sol Ctrl tuşu ile sol Alt tuşu arasındadır. Bazı dizüstü bilgisayarlarda biraz farklı bir konumda olabilir, ancak her zaman alt sırada bir yerdedir. Windows tuşu tek başına basıldığında Başlat menüsünü açar. Windows+Yukarı Ok (Windows komutu) bir pencereyi büyütür. Windows+D (Windows komutu) masaüstünü gösterir. Windows+L (Windows komutu) ekranı kilitler. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Windows tuşu genellikle alt satırdaki sol Ctrl ve sol Alt tuşları arasındadır. Üzerinde Windows logosu (bir ızgara halinde düzenlenmiş dört renkli kare) bulunur.",
+                        "Windows artı Yukarı Ok geçerli pencereyi tam ekrana büyütür. Bu, nesne dolaşımını kullanmadan önce faydalıdır; büyütülmüş bir pencere tüm nesneleri gösterir.",
+                        "Windows tuşu tek başına Başlat menüsünü açar. Hiçbir şey seçmeden kapatmak için Escape tuşuna basın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA tuşu iki seçenekten biridir: Insert veya Caps Lock. Insert tuşu çoğu klavyede ok tuşlarının üzerinde, Home, Delete, Sayfa Yukarı ve Sayfa Aşağı yakınında bulunan tuş kümesindedir. Caps Lock, klavyenin en sol tarafında, sol Shift tuşunun hemen üstündedir. Her ikisi de aynı anda NVDA tuşu olarak görev yapabilir; NVDA ikisini de kabul eder. Birçok dizüstü bilgisayar kullanıcısı Caps Lock'u tercih ediyor çünkü Insert'e ulaşmak daha zor olabilir. Tercih ettiğiniz NVDA tuşunu NVDA Ayarlarında Klavye dalı altından seçebilirsiniz. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "Insert, Home, Delete, End, Sayfa Yukarı ve Sayfa Aşağı yakınındaki ok tuşlarının üzerindeki kümededir. Tek başına bir değiştirici değildir; yalnızca NVDA tuşu haline gelir çünkü NVDA ona bu rolü atar.",
+                        "Caps Lock en solda, Shift'in hemen üstündedir. Caps Lock'u NVDA tuşu olarak kullanmak, Caps Lock'un artık büyük harfe geçiş yapmaması anlamına gelir; gerektiğinde geçiş yapmak için NVDA artı F2'ye ve ardından Caps Lock'a basın.",
+                        "Hem Insert hem de Caps Lock aynı anda NVDA tuşu olarak çalışır. Seçim yapmanıza gerek yok; her komut için hangisinin daha uygun olduğuna bağlı olarak ikisinden birini kullanabilirsiniz."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "function_keys",
+            "title": "Fonksiyon Tuşları ve Fn Tuşu",
+            "order": 2,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Klavyenizin üst satırında F1'den F12'ye kadar etiketlenmiş tuşlar bulunur; bunlar fonksiyon tuşlarıdır. Her birine Windows, NVDA veya kullandığınız uygulama tarafından belirli bir eylem atanabilir. NVDA Eğitmeni'nde F1 geçerli adım talimatını tekrarlar, F2 bir ipucu verir ve F3 bir adımı atlar. F1 ayrıca çoğu Windows uygulamasında (uygulama komutu) Yardım'ı açar. F5 çoğu tarayıcıdaki web sayfalarını yeniler (uygulama komutu). NVDA, saati okumak için F12'yi kullanır (NVDA+F12). Bunlar sadece birkaç örnek; fonksiyon tuşları birçok amaca hizmet eder. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Fonksiyon tuşları üst sıradadır ve soldan sağa doğru F1'den F12'ye kadar etiketlenmiştir. F1 en solda; F12 en sağda.",
+                        "NVDA Eğitmeni'nde: F1 talimatı tekrarlar, F2 ipucu verir, F3 adımı atlar. Bunlar NVDA Eğitmeni'ne özel komutlardır.",
+                        "Çoğu Windows uygulamasında F1, Yardım'ı (uygulama komutu) açar. Çoğu tarayıcıda F5 sayfayı yeniler (uygulama komutu). NVDA+F12 saati okur (NVDA komutu)."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Birçok dizüstü bilgisayarda fonksiyon tuşu satırının iki modu vardır. Bir modda tuşlar, yazılım komutları için F1'den F12'ye kadar işlev görür. Diğer modda, aynı tuşlar donanım işlevlerini kontrol eder; ekran parlaklığını, hoparlör sesini, klavye arka ışığını ve medya oynatmayı ayarlar. Bu donanım işlevleri genellikle tuşların üzerine basılmış simgeler olarak gösterilir. Varsayılan olarak hangi modun etkin olduğu dizüstü bilgisayarınızın modeline bağlıdır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "F1'den F12'ye kadar olan tuşlarınıza bakın. Üzerinde küçük simgeler basılıysa (parlaklık için güneş, ses seviyesi için hoparlör, medya için müzik notası), bunlar donanım fonksiyon eylemleridir.",
+                        "Bazı dizüstü bilgisayarlarda donanım simgeleri (multimedya) birincildir ve F1'den F12'ye geçiş yapmak için Fn artı tuşuna basarsınız. Diğerlerinde F1 ile F12 arasındakiler birincildir ve donanım işlevleri için Fn tuşuna basarsınız.",
+                        "Fn tuşu standart bir Windows değiştiricisi değildir; Windows onu görmeden önce klavye ürün yazılımı tarafından işlenir. Bu, NVDA ve Windows'un Fn basışları hakkında bilgisi olmadığı anlamına gelir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Fn tuşu genellikle dizüstü bilgisayar klavyesinin sol alt köşesinde veya sol Ctrl tuşunun sağında bulunur. Fn tuşunu basılı tutup bir ok tuşuna bastığınızda çoğu dizüstü bilgisayar Home, End, Sayfa Yukarı veya Sayfa Aşağı tuşlarını üretir; çünkü kompakt klavyelerde genellikle bu tuşlar özel olarak bulunmaz. Fn artı Sol Ok genellikle Hom tuşudur. Fn artı Sağ Ok, End tuşudur. Fn artı Yukarı Ok, Sayfa Yukarıdır. Fn artı Aşağı Ok, Sayfa Aşağı'dır. Bu ikincil semboller için ok tuşlarınızdaki etiketleri kontrol edin. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Küçük ikincil etiketler için ok tuşlarınıza bakın; Home/End için ok içeren yatay bir çizgi veya Sayfa Yukarı/Aşağı için çubuklu yukarı ok.",
+                        "Fn artı Sol Ok çoğu kompakt dizüstü bilgisayarda Home tuşudur. Fn artı Sağ Ok, End tuşudur. Fn artı Yukarı Ok, Sayfa Yukarıdır. Fn artı Aşağı Ok, Sayfa Aşağı'dır.",
+                        "Bu Fn birleşimleri klavye donanım yazılımı işlevleridir; Windows ve NVDA tarafından görülmezler. Özel Home, End, Sayfa Yukarı ve Sayfa Aşağı tuşlarıyla aynı sonucu üretirler."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Çoğu dizüstü bilgisayar klavyesinde Fn Kilidi özelliği bulunur. Fn Kilidi etkin olduğunda Fn tuşunu basılı tutmanıza gerek yoktur; ikincil fonksiyonlar her zaman etkindir. Bu, sürekli olarak F1'den F12'ye ihtiyacınız varsa ve her seferinde Fn'yi basılı tutmak istemiyorsanız kullanışlıdır. Fn Kilidi genellikle Fn artı Escape, Fn artı Büyük Harf Kilidi veya asma kilit simgeli özel bir tuşa basılarak değiştirilir. Fn Kilidi tuşunu ve nasıl değiştirileceğini bulmak için dizüstü bilgisayarınızın belgelerine bakın. Farklı üreticiler bunu farklı şekilde yerleştirir ve farklı tuş kombinasyonları kullanabilir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Fn ile birleştirilmiş asma kilit simgesine sahip bir tuş arayın veya Fn Kilidi kombinasyonu için dizüstü bilgisayarınızın kullanım kılavuzuna bakın. Yaygın seçenekler Fn artı Escape veya Fn artı Caps Lock'tur.",	
+                        "Bazı dizüstü bilgisayarlar mevcut Fn Kilidi durumunu küçük bir gösterge ışığıyla gösterir. Diğerleri, geçiş yaptığınızda ses çıkarır veya ekranda bir görüntü gösterir.",
+                        "NVDA Eğitmeni'nde F2 tuşuna basmak size ekran parlaklığını değiştirmek yerine bir ipucu veriyorsa, ya Fn Kilidi etkindir ya da dizüstü bilgisayarınız varsayılan olarak F tuşu moduna geçmiştir."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA Eğitmeni'ni kullanmak için pratik bir ipucu: F2 tuşuna basmak size bir ipucu vermek yerine ekran parlaklığını veya ses seviyesini değiştiriyorsa klavyeniz multimedya modundadır. F1'i F12'ye kadar birincil yapmak için Fn'yi basılı tutun ve F2'ye basın veya Fn Kilidi'ni değiştirin. Fonksiyon tuşları F1'den F12'ye kadar çalıştığında, F1 ders talimatını tekrarlar, F2 size ipucu verir ve F3 adımı atlar. Bunlar NVDA Eğitmeni'ne özel komutlardır. Bu dersi bitirmek için Enter tuşuna basın.",
+                    "hints": [
+                        "Test: Ders sırasında F2 tuşuna basın. Bir ipucu duyarsanız fonksiyon tuşları yazılım modundadır. Ekranınızın parlaklığı değişirse multimedya modundasınız demektir; Fn tuşunu basılı tutun ve basılı tutarken F2 tuşuna basın.",
+                        "Fn Kilidi durumunu öğrendikten sonra Eğitmen kısayol tuşlarını sıkıntı yaşamadan kullanabilirsiniz. F1 talimatı tekrarlar, F2 ipucu verir, F3 atlar — Eğitmen'e özgü tüm komutlar.",
+                        "Fn Kilidi durumu genellikle çoğu dizüstü bilgisayarda yeniden başlatmalarda devam eder. Bir kez istediğiniz gibi ayarladığınızda bir daha değiştirmenize gerek kalmaz."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "nvda_keyboard_layout",
+            "title": "Masaüstü ve Dizüstü Bilgisayar Klavye Düzeni",
+            "order": 3,
+            "chapterComplete": true,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "NVDA'nın iki klavye düzeni ayarı vardır: masaüstü ve dizüstü bilgisayar. Bu, fiziksel klavye donanımınızla ilgili değildir; NVDA'nın hangi tuş kombinasyonlarını dinleyeceğini belirleyen, NVDA içindeki bir ayardır. Masaüstü düzeni, birçok NVDA komutu için sayısal tuş takımını kullanır. Dizüstü bilgisayar düzeni bunun yerine NVDA artı harf veya simge tuşlarını kullanır, böylece sayısal tuş takımı olmayan kullanıcılar tüm NVDA komutlarına erişebilir. NVDA Ayarlarında düzeninizi seçersiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni ve dizüstü bilgisayar düzeni NVDA yazılım ayarlarıdır; Windows'un veya uygulamalarınızın davranışını değiştirmez, yalnızca NVDA'nın tuşlara basıldığında nasıl tepki vereceğini değiştirir.",
+                        "Klavyenizin sağ tarafında sayısal tuş takımı varsa masaüstü düzeni doğal olabilir. Sayısal tuş takımı olmayan bir dizüstü bilgisayar kullanıyorsanız dizüstü bilgisayar düzeni sizin için tasarlanmıştır.",
+                        "NVDA'yı yeniden başlatmaya gerek kalmadan istediğiniz zaman düzenler arasında geçiş yapabilirsiniz. Değişiklik hemen devreye girer."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Düzeninizi kontrol etmek veya değiştirmek için: NVDA menüsünü açmak için NVDA+N (NVDA komutu) tuşlarına basın, ardından Tercihler için T'ye ve ardından da Ayarlar için L'ye basın. Ayarlar iletişim kutusu açılır. Soldaki kategori listesinde, ilk harflerle gezinmeyi kullanarak Klavye kategorisine atlamak için K tuşuna basın. Sekme tuşuyla Klavye düzeni açılır kutusuna gidin, Masaüstü veya Dizüstü Bilgisayar'ı seçmek için Yukarı ve Aşağı Ok tuşlarını kullanın, ardından Sekme tuşuyla Tamam'a gidin ve kaydetmek için Enter tuşuna basın. NVDA'yı Kişiselleştirme bölümü bu süreci ayrıntılı olarak ele almaktadır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA artı N, NVDA menüsünü açar. Tercihler için T, Ayarlar için L. Daha sonra kategori listesindeki K, ilk harf dolaşımını kullanarak Klavye'ye atlar.",
+                        "Klavye düzeni açılır kutusunda iki seçenek bulunur: Masaüstü ve Dizüstü Bilgisayar. Seçmek için Ok tuşlarını, Tamam düğmesine gitmek için Sekme'yi ve kaydetmek için Enter'ı kullanın.",
+                        "Şu anda hangi düzenin etkin olduğundan emin değilseniz, Girdi Yardımı'nı açmak için NVDA artı 1 tuşuna basın, sayısal tuş takımından bir tuşa basın ve NVDA'nın söylediklerini dinleyin. Girdi Yardımını kapatmak için NVDA artı 1'e tekrar basın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Komutlar düzenler arasında farklılık gösterdiğinde, NVDA Eğitmeni daima her ikisini de gösterir. Örneğin: 'NVDA+NumPad5 (masaüstü) veya NVDA+Shift+Virgül (dizüstü bilgisayar) tuşlarına basın.' Mevcut düzen ayarınıza hangisi uyuyorsa onu kullanın. Bir komut beklendiği gibi çalışmıyorsa bunun en yaygın nedeni, NVDA düzen ayarlarınızla bastığınız tuşlar arasındaki uyumsuzluktur. Diğer sorun giderme adımlarını denemeden önce ilk olarak düzen ayarlarınızı kontrol edin. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni komutu ilk olarak listelenir; dizüstü düzeni parantez içinde veya 'veya'dan sonra gösterilir. NVDA düzen ayarınıza uygun sürümü kullanın.",
+                        "Düzen ayarı ile basılan tuşlar arasındaki uyumsuzluk, bir komutun çalışmamasının en yaygın nedenidir. Komutlar yanlış görünüyorsa NVDA Ayarları'nı açın ve Klavye düzeninizi doğrulayın.",
+                        "Unutmayın: düzen bir klavye donanım özelliği değil, bir NVDA ayarıdır. İsterseniz dizüstü bilgisayar düzenini masaüstü klavyesinde veya masaüstü düzenini dizüstü bilgisayarda kullanabilirsiniz."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Klavyeniz bölümünü tamamladınız! Artık değiştirici tuşların standart ve dizüstü bilgisayar klavyelerinde nerede bulunduğunu, fonksiyon tuşlarının ve Fn tuşu davranışının nasıl çalıştığını ve NVDA klavye düzeni ayarınızı nasıl seçip değiştireceğinizi biliyorsunuz. Bu temel sayesinde NVDA Eğitmeni'ndeki tüm tuş kombinasyonları daha anlamlı hale gelecek; parmaklarınızın tam olarak nereye gitmesi gerektiğini bileceksiniz. Hazır olduğunuzda ders seçiciyi açmak ve diğer bölümleri keşfetmek için NVDA+Shift+C tuşlarına basın. Bitirmek için Enter'a basın.",
+                    "hints": [
+                        "Bu bölüm istediğiniz zaman dönebileceğiniz bir referanstır. Bir komut çalışmıyorsa ve tuşun nerede olduğundan emin değilseniz buraya geri gelin.",
+                        "Değiştirici tuş konumlarının özeti: Ctrl sol alttadır (veya bazı dizüstü bilgisayarlarda Fn'nin sağındadır). Shift Ctrl'nin üzerindedir. Alt, Boşluk çubuğunun yanındadır. Windows tuşu Ctrl ve Alt arasındadır. NVDA tuşu Insert veya Caps Lock'tur.",
+                        "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamlanan tüm dersler işaretlenir."
+                    ]
+                }
+            ]
+        }
+    ]
+}

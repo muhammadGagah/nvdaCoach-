@@ -1,0 +1,165 @@
+{
+  "id": "keyboard_reference",
+  "title": "Tu Teclado",
+  "description": "Comprende el teclado físico: ubicación de las teclas modificadoras, teclas de función, comportamiento de la tecla Fn y cómo configurar el teclado según la distribución de NVDA.",
+  "order": 2,
+  "lessons": [
+    {
+      "id": "modifier_keys",
+      "title": "Teclas Modificadoras y su Ubicación",
+      "order": 1,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las teclas modificadoras son teclas que mantienes presionadas mientras pulsas otra tecla para cambiar su función. Las cuatro teclas modificadoras principales en Windows son: Control (Ctrl), Shift, Alt y la tecla Windows. Ninguna de ellas hace nada por sí sola — solo modifican otras teclas. Entender dónde están en tu teclado es tan importante como saber qué comandos usar. Esta lección cubre dónde encontrar cada una. Presiona Enter para continuar.",
+          "hints": [
+            "Las teclas modificadoras siempre se mantienen presionadas mientras pulsas otra tecla. Soltarlas antes — o presionarlas en el orden incorrecto — puede impedir que un comando funcione.",
+            "La mayoría de los teclados tienen teclas modificadoras duplicadas en ambos lados: Ctrl a la izquierda y a la derecha, Shift a la izquierda y a la derecha, Alt a la izquierda y a la derecha. Cualquier lado funciona para la mayoría de los comandos.",
+            "La tecla Windows y la tecla Menú (si está presente) suelen estar solo en el lado izquierdo o en un solo lado del teclado."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La tecla Control (Ctrl) suele estar en la esquina inferior izquierda del teclado y en la esquina inferior derecha. Sin embargo, en algunas laptops la tecla Fn ocupa la esquina inferior izquierda, desplazando Ctrl una tecla hacia la derecha. Si esperas que Ctrl esté en la esquina misma y no funciona, busca la tecla etiquetada Ctrl justo a la derecha de la tecla Fn. Ambas teclas Ctrl — izquierda y derecha — funcionan de manera idéntica para casi todos los comandos. Presiona Enter para continuar.",
+          "hints": [
+            "Ubicación estándar: Ctrl es la tecla del extremo inferior izquierdo. En algunas laptops: Fn está en la esquina inferior izquierda y Ctrl es la segunda tecla desde la izquierda en esa fila.",
+            "La tecla Ctrl derecha funciona igual que la izquierda para todos los comandos de este curso. Usa la que sea más cómoda para la posición de tu mano.",
+            "¿No estás seguro de cuál es Ctrl? Presiona NVDA más 1 para activar la Ayuda de entrada, presiona la tecla que crees que es Ctrl y NVDA confirmará si la reconoció como Control. Presiona NVDA más 1 de nuevo para desactivar la Ayuda de entrada."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La tecla Shift es la tecla ancha directamente sobre Control en ambos lados del teclado. Es una de las teclas más anchas de la mayoría de los teclados, lo que la hace fácil de encontrar al tacto. El Shift izquierdo está sobre el Control izquierdo; el Shift derecho está sobre el Control derecho. Cualquier tecla Shift funciona para la mayoría de los comandos. Shift se usa constantemente con NVDA: Shift+Tab retrocede entre controles (comando de Windows), Shift+H retrocede entre encabezados en el modo exploración, y NVDA+Shift+C abre el selector de lecciones. Presiona Enter para continuar.",
+          "hints": [
+            "Shift izquierdo está sobre la tecla Ctrl izquierda en el lado izquierdo del teclado. Shift derecho está sobre la tecla Ctrl derecha en el lado derecho.",
+            "Shift es más ancha que la mayoría de las teclas — generalmente puedes encontrarla al tacto sin mirar. Es la tecla ancha justo encima de Ctrl en ambos lados.",
+            "Cualquier tecla Shift funciona para cualquier comando. Usa la que esté más cerca de las otras teclas que necesitas presionar al mismo tiempo."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La tecla Alt está inmediatamente a la izquierda y a la derecha de la barra espaciadora. La barra espaciadora es la tecla larga y plana en la parte inferior central del teclado — la tecla más larga del teclado. Alt es la tecla directamente adyacente a ella en cada lado. El Alt izquierdo se usa con más frecuencia. Alt+Tab (comando de Windows) usa el Alt izquierdo. Alt+F4 (comando de Windows) cierra una ventana. Algunos programas usan el Alt derecho (también llamado AltGr en algunos teclados) para caracteres especiales, pero para la navegación en NVDA y Windows casi siempre usarás el Alt izquierdo. Presiona Enter para continuar.",
+          "hints": [
+            "Alt está directamente a la izquierda y a la derecha de la barra espaciadora. La barra espaciadora es fácil de encontrar — es la tecla más larga del teclado.",
+            "Usa el Alt izquierdo para Alt+Tab y otros comandos de navegación de Windows. El Alt derecho (AltGr) se usa normalmente para caracteres especiales en algunos idiomas.",
+            "Alt más Tab es un comando de Windows. Alt más F4 cierra la ventana actual. Ambos usan la tecla Alt izquierda."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La tecla Windows tiene el logotipo de Windows impreso en ella y generalmente está entre la tecla Ctrl izquierda y la tecla Alt izquierda. En algunas laptops puede estar en una posición ligeramente diferente, pero siempre está en algún lugar de la fila inferior. La tecla Windows abre el menú Inicio cuando se presiona sola. Windows+Flecha Arriba (comando de Windows) maximiza una ventana. Windows+D (comando de Windows) muestra el escritorio. Windows+L (comando de Windows) bloquea la pantalla. Presiona Enter para continuar.",
+          "hints": [
+            "La tecla Windows suele estar entre las teclas Ctrl y Alt izquierdas en la fila inferior. Tiene el logotipo de Windows — cuatro cuadrados de colores dispuestos en una cuadrícula — impreso en ella.",
+            "Windows más Flecha Arriba maximiza la ventana actual a pantalla completa. Esto es útil antes de usar la navegación por objetos — una ventana maximizada muestra todos los objetos.",
+            "La tecla Windows sola abre el menú Inicio. Presiona Escape para cerrarlo sin seleccionar nada."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Tu tecla NVDA es una de dos opciones: Insert o Bloq Mayús. Insert está en el grupo de teclas sobre las teclas de flecha en la mayoría de los teclados, cerca de Inicio, Supr, Re Pág y Av Pág. Bloq Mayús está en el lado izquierdo del teclado, justo sobre la tecla Shift izquierda. Ambas pueden servir como tu tecla NVDA al mismo tiempo — NVDA acepta cualquiera. Muchos usuarios de laptop prefieren Bloq Mayús porque Insert puede ser más difícil de alcanzar. Puedes elegir tu tecla NVDA preferida en la Configuración de NVDA en la sección Teclado. Presiona Enter para finalizar esta lección.",
+          "hints": [
+            "Insert está en el grupo sobre las teclas de flecha — cerca de Inicio, Supr, Fin, Re Pág y Av Pág. No es un modificador por sí mismo; solo se convierte en la tecla NVDA porque NVDA le asigna ese rol.",
+            "Bloq Mayús está a la izquierda, justo sobre Shift. Usar Bloq Mayús como tu tecla NVDA significa que Bloq Mayús ya no alterna entre mayúsculas — presiona NVDA más F2 y luego Bloq Mayús para alternar realmente cuando lo necesites.",
+            "Tanto Insert como Bloq Mayús funcionan como la tecla NVDA simultáneamente. No tienes que elegir — puedes usar cualquiera dependiendo de cuál sea más conveniente para cada comando."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "function_keys",
+      "title": "Teclas de Función y la Tecla Fn",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "La fila superior de tu teclado tiene teclas etiquetadas F1 a F12 — estas son las teclas de función. Cada una puede tener asignada una acción específica por Windows, NVDA o la aplicación que estás usando. En NVDA Coach, F1 repite la instrucción del paso actual, F2 da una pista y F3 omite un paso. F1 también abre la Ayuda en la mayoría de las aplicaciones de Windows (comando de aplicación). F5 actualiza páginas web en la mayoría de los navegadores (comando de aplicación). NVDA usa F12 para leer la hora (NVDA+F12). Estos son solo algunos ejemplos — las teclas de función tienen muchos propósitos. Presiona Enter para continuar.",
+          "hints": [
+            "Las teclas de función están en la fila superior, etiquetadas F1 a F12 de izquierda a derecha. F1 está en el extremo izquierdo; F12 está en el extremo derecho.",
+            "En NVDA Coach: F1 repite la instrucción, F2 da una pista, F3 omite el paso. Estos son comandos específicos de NVDA Coach.",
+            "En la mayoría de las aplicaciones de Windows, F1 abre la Ayuda (comando de aplicación). En la mayoría de los navegadores, F5 actualiza la página (comando de aplicación). NVDA+F12 lee la hora (comando de NVDA)."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "En muchas laptops, la fila de teclas de función tiene dos modos. En un modo, las teclas actúan como F1 a F12 para comandos de software. En el otro modo, las mismas teclas controlan funciones de hardware — ajustan el brillo de la pantalla, el volumen del altavoz, la iluminación del teclado y la reproducción multimedia. Estas funciones de hardware suelen mostrarse como iconos impresos en las teclas. Qué modo está activo de forma predeterminada depende del modelo de laptop. Presiona Enter para continuar.",
+          "hints": [
+            "Observa tus teclas F1 a F12. Si tienen pequeños iconos impresos en ellas — un sol para el brillo, un altavoz para el volumen, una nota musical para multimedia — esas son las acciones de función de hardware.",
+            "En algunas laptops, los iconos de hardware (multimedia) son primarios y presionas Fn más la tecla para obtener F1 a F12. En otras, F1 a F12 son primarias y presionas Fn para las funciones de hardware.",
+            "La tecla Fn no es un modificador estándar de Windows — el firmware del teclado la procesa antes de que Windows la vea. Esto significa que NVDA y Windows no saben cuándo presionas Fn."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La tecla Fn suele estar en la esquina inferior izquierda de un teclado de laptop, o a la derecha de la tecla Ctrl izquierda. Cuando mantienes Fn y presionas una tecla de flecha, muchas laptops producen Inicio, Fin, Re Pág o Av Pág — porque los teclados compactos a menudo no tienen esas como teclas dedicadas. Fn más Flecha Izquierda es normalmente Inicio. Fn más Flecha Derecha es Fin. Fn más Flecha Arriba es Re Pág. Fn más Flecha Abajo es Av Pág. Revisa las etiquetas de tus teclas de flecha para estos símbolos secundarios. Presiona Enter para continuar.",
+          "hints": [
+            "Mira tus teclas de flecha para ver etiquetas secundarias pequeñas — una línea horizontal con flecha para Inicio/Fin, o flecha-arriba-con-barra para Re Pág/Av Pág.",
+            "Fn más Flecha Izquierda es Inicio en la mayoría de las laptops compactas. Fn más Flecha Derecha es Fin. Fn más Flecha Arriba es Re Pág. Fn más Flecha Abajo es Av Pág.",
+            "Estas combinaciones de Fn son funciones del firmware del teclado — son invisibles para Windows y NVDA. Producen el mismo resultado que las teclas dedicadas Inicio, Fin, Re Pág y Av Pág."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Muchos teclados de laptop tienen una función de bloqueo Fn. Cuando el bloqueo Fn está activo, no necesitas mantener Fn — las funciones secundarias están activas todo el tiempo. Esto es útil si necesitas F1 a F12 constantemente y no quieres mantener Fn cada vez. El bloqueo Fn suele activarse presionando Fn más Escape, Fn más Bloq Mayús, o una tecla dedicada con un icono de candado. Consulta la documentación de tu laptop para encontrar la tecla de bloqueo Fn y cómo activarla. Los distintos fabricantes la colocan en diferentes lugares y pueden usar diferentes combinaciones de teclas. Presiona Enter para continuar.",
+          "hints": [
+            "Busca una tecla con un icono de candado combinado con Fn, o consulta el manual de tu laptop para la combinación de bloqueo Fn. Las opciones comunes son Fn más Escape o Fn más Bloq Mayús.",
+            "Algunas laptops indican el estado actual del bloqueo Fn con una pequeña luz indicadora. Otras emiten un sonido o muestran una pantalla emergente cuando lo activas.",
+            "Si presionar F2 en NVDA Coach te da una pista — en lugar de cambiar el brillo de la pantalla — entonces el bloqueo Fn está activo o tu laptop usa el modo de teclas de función de forma predeterminada."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Un consejo práctico para usar NVDA Coach: si presionar F2 cambia el brillo de tu pantalla o el volumen en lugar de darte una pista, tu teclado está en modo multimedia. O bien mantén Fn y presiona F2, o activa el bloqueo Fn para que F1 a F12 sean primarias. Una vez que las teclas de función funcionen como F1 a F12, F1 repite la instrucción de la lección, F2 te da una pista y F3 omite el paso. Estos son comandos específicos de NVDA Coach. Presiona Enter para finalizar esta lección.",
+          "hints": [
+            "Prueba: presiona F2 mientras estás en una lección. Si escuchas una pista, las teclas de función están en modo de software. Si el brillo de tu pantalla cambia, estás en modo multimedia — mantén Fn y presiona F2 en su lugar.",
+            "Una vez que conozcas el estado de bloqueo Fn, puedes usar las teclas de atajo de Coach sin frustración. F1 repite la instrucción, F2 da una pista, F3 omite — todos comandos específicos de Coach.",
+            "El estado del bloqueo Fn generalmente persiste entre reinicios en la mayoría de las laptops. Una vez que lo configures a tu gusto, no deberías necesitar cambiarlo de nuevo."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nvda_keyboard_layout",
+      "title": "Distribución de Teclado: Escritorio vs Portátil",
+      "order": 3,
+      "chapterComplete": true,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA tiene dos configuraciones de distribución de teclado: escritorio y portátil. Esto no se refiere al hardware de tu teclado físico — es una configuración dentro de NVDA que determina qué combinaciones de teclas escucha NVDA. La distribución de escritorio usa el teclado numérico para muchos comandos de NVDA. La distribución portátil usa NVDA más teclas de letras o símbolos en su lugar, para que los usuarios sin teclado numérico puedan acceder a todos los comandos de NVDA. Eliges tu distribución en la Configuración de NVDA. Presiona Enter para continuar.",
+          "hints": [
+            "Las distribuciones de escritorio y portátil son configuraciones de software de NVDA — no cambian cómo Windows o tus aplicaciones se comportan, solo cómo NVDA responde a las pulsaciones de teclas.",
+            "Si tu teclado tiene un teclado numérico en el lado derecho, la distribución de escritorio puede ser natural. Si estás en una laptop sin teclado numérico, la distribución portátil está diseñada para ti.",
+            "Puedes cambiar entre distribuciones en cualquier momento sin reiniciar NVDA. El cambio surte efecto de inmediato."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Para verificar o cambiar tu distribución: presiona NVDA+N (comando de NVDA) para abrir el menú de NVDA, luego P de Preferencias, luego C de Configuración. Se abre el cuadro de diálogo de Configuración. En la lista de categorías de la izquierda, presiona T para ir a la categoría Teclado usando la navegación por primera letra. Muévete con Tab al cuadro combinado de distribución de teclado, usa las teclas de Flecha Arriba y Abajo para elegir Escritorio o Portátil, luego muévete a Aceptar con Tab y presiona Enter para guardar. El capítulo Personalización de NVDA cubre este proceso en detalle. Presiona Enter para continuar.",
+          "hints": [
+            "NVDA más N abre el menú de NVDA. P de Preferencias, C de Configuración. Luego T en la lista de categorías salta a Teclado usando la navegación por primera letra.",
+            "El cuadro combinado de distribución de teclado tiene dos opciones: Escritorio y Portátil. Usa las teclas de flecha para elegir, Tab para llegar a Aceptar y Enter para guardar.",
+            "Si no estás seguro de qué distribución está activa, presiona NVDA más 1 para activar la Ayuda de entrada, presiona una tecla del teclado numérico y escucha lo que dice NVDA. Presiona NVDA más 1 de nuevo para desactivar la Ayuda de entrada."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Cuando los comandos difieren entre distribuciones, NVDA Coach siempre muestra ambos. Por ejemplo: 'Presiona NVDA+NumPad5 (escritorio) o NVDA+Shift+Coma (portátil).' Usa el que coincida con tu configuración de distribución actual. Si un comando no funciona como se esperaba, la causa más común es una discrepancia entre tu configuración de distribución de NVDA y las teclas que estás presionando. Verifica tu configuración de distribución primero antes de intentar otros pasos de solución de problemas. Presiona Enter para continuar.",
+          "hints": [
+            "El comando de distribución de escritorio aparece primero, la distribución portátil entre paréntesis o después de 'o'. Usa la versión que coincida con tu configuración de distribución de NVDA.",
+            "Una discrepancia entre la configuración de distribución y las teclas presionadas es la razón más común por la que un comando no funciona. Abre la Configuración de NVDA y verifica tu distribución de teclado si los comandos parecen incorrectos.",
+            "Recuerda: la distribución es una configuración de software de NVDA, no una característica del hardware del teclado. Puedes usar la distribución portátil en un teclado de escritorio o la distribución de escritorio en una laptop si lo prefieres."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "¡Has completado el capítulo Tu Teclado! Ahora sabes dónde están las teclas modificadoras en teclados estándar y de laptop, cómo funcionan las teclas de función y el comportamiento de la tecla Fn, y cómo elegir y cambiar la configuración de distribución de teclado de NVDA. Con esta base, todas las combinaciones de teclas a lo largo de NVDA Coach tendrán más sentido — sabrás exactamente dónde deben ir tus dedos. Cuando estés listo, presiona NVDA+Shift+C para abrir el selector de lecciones y explorar los otros capítulos. Presiona Enter para finalizar.",
+          "hints": [
+            "Este capítulo es una referencia a la que puedes volver en cualquier momento. Si un comando no funciona y no estás seguro de dónde está una tecla, regresa aquí.",
+            "Resumen de ubicaciones de teclas modificadoras: Ctrl está en la esquina inferior izquierda (o a la derecha de Fn en algunas laptops). Shift está sobre Ctrl. Alt está junto a la barra espaciadora. La tecla Windows está entre Ctrl y Alt. La tecla NVDA es Insert o Bloq Mayús.",
+            "NVDA Coach guarda tu progreso automáticamente. Todas las lecciones completadas están marcadas cuando regresas."
+          ]
+        }
+      ]
+    }
+  ]
+}

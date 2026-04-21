@@ -1,165 +1,196 @@
-# Translating NVDA Coach
+# NVDA Coach — Translator Guide
 
-Thank you for your interest in translating NVDA Coach!
-This guide covers everything you need to contribute a translation of the add-on UI strings and lesson content.
+Thank you for contributing a translation! This guide covers everything you need to translate NVDA Coach into your language and test your work as you go.
 
 ---
 
-## What can be translated
+## What You'll Need
 
-NVDA Coach has two layers of translatable content:
+- NVDA installed and running
+- NVDA Coach installed — download the latest `.nvda-addon` from the [releases page](https://github.com/tonygeb23/nvdaCoach-/releases) and open it to install
+- **Poedit** — a free, accessible translation editor that handles compiling for you. Download it at [poedit.net](https://poedit.net). It works well with NVDA.
+
+---
+
+## What Can Be Translated
+
+NVDA Coach has three layers of translatable content:
 
 | Layer | What it is | Where to find it |
 |---|---|---|
-| **UI strings** | Button labels, spoken announcements, status messages, hint output | `locale/<lang>/LC_MESSAGES/nvda.po` |
-| **Lesson content** | Full lesson text, step instructions, hints | `globalPlugins/nvdaCoach/lessons/<lang>/` |
+| **UI strings** | Button labels, spoken announcements, status messages, dialog text | `locale/[lang]/LC_MESSAGES/nvda.po` |
+| **Lesson content** | Step instructions, hints, chapter titles and descriptions | `globalPlugins/nvdaCoach/lessons/[lang]/` |
+| **Documentation** | User guide, practice page, resources page | `doc/[lang]/` |
 
-Both layers are needed for a complete translation.
-A UI-only translation is still valuable and can be submitted on its own.
+A UI-only translation is still valuable and can be submitted on its own. All three layers together make a complete translation.
 
 ---
 
-## Translating UI strings (the .po file)
+## Step 1 — Set NVDA's Language to Yours
 
-### 1. Copy the template
+1. Press `NVDA+N` to open the NVDA menu
+2. Go to **Preferences → Settings → General**
+3. Find the **Language** dropdown and set it to your language
+4. Press OK and let NVDA restart
 
-The translation template is at:
+NVDA Coach will now look for your language's files automatically.
 
-```
-locale/nvda.pot
-```
+---
 
-Copy it to a new file at:
+## Step 2 — Find the Installed Add-on Folder
 
-```
-locale/<your-language-code>/LC_MESSAGES/nvda.po
-```
-
-For example, for Portuguese (Portugal):
+Once NVDA Coach is installed, your files live here:
 
 ```
-locale/pt_PT/LC_MESSAGES/nvda.po
+C:\Users\[YourName]\AppData\Roaming\nvda\addons\nvdaCoach\
 ```
 
-For Russian:
+Inside that folder you'll find your language's scaffold files at:
 
 ```
-locale/ru/LC_MESSAGES/nvda.po
+locale\[lang]\LC_MESSAGES\nvda.po
+locale\[lang]\LC_MESSAGES\nvda.mo
+globalPlugins\nvdaCoach\lessons\[lang]\
+doc\[lang]\
 ```
 
-Use the standard NVDA language codes (e.g. `de`, `fr`, `es`, `pt_BR`, `zh_CN`).
+Replace `[lang]` with your language code (for example: `ru` for Russian, `tr` for Turkish, `pt_BR` for Brazilian Portuguese).
 
-### 2. Fill in the file header
+This is where you copy your translated files to test them.
 
-At the top of your `.po` file, fill in:
+---
 
-```
-"Language: ru\n"
-"Language-Team: Russian NVDA user community\n"
-"Last-Translator: Your Name <your@email.com>\n"
-"PO-Revision-Date: YYYY-MM-DD HH:MM+0000\n"
-```
+## Step 3 — Translate and Test UI Strings (nvda.po)
 
-Remove the `#, fuzzy` line from the header once you have filled it in.
+The translation template is at `locale/nvda.pot`. A scaffold `.po` file for your language is already in the repository with all strings listed and empty `msgstr` fields ready to fill in.
 
-### 3. Translate each string
+### Translating
 
-For each entry, fill in the `msgstr` with your translation:
+1. Open your `nvda.po` file in **Poedit**
+2. Fill in your translations — each entry shows the English source on top and an empty field below for your translation:
 
 ```po
 msgid "Lesson stopped."
-msgstr "Leçon arrêtée."
+msgstr "Lição interrompida."
 ```
 
-Leave `msgstr ""` empty for any string you are not yet sure about — NVDA Coach will fall back to English for untranslated strings.
+3. Leave `msgstr ""` empty for any string you are not yet ready to translate — NVDA Coach falls back to English for untranslated strings
+
+### Testing
+
+1. Press **Ctrl+S** in Poedit — it saves the `.po` and automatically compiles the `.mo` file alongside it
+2. Copy both `nvda.po` and `nvda.mo` into the add-on folder at the path above
+3. **Restart NVDA** — press `NVDA+Q`, choose Restart, then reopen NVDA Coach with `NVDA+Shift+C`
+
+You should now hear your translated strings.
 
 ### Tips
 
-- Strings containing `{placeholders}` like `{title}` or `{stepNum}` must keep those placeholders exactly as written. Only translate the surrounding text.
-- Unicode characters (arrows, bullets, em-dashes) can be kept as-is or replaced with equivalents that make sense in your language.
-- You do not need to compile the `.po` to a `.mo` file — NVDA handles that automatically during installation.
+- Strings containing `{placeholders}` like `{name}` or `{stepNum}` must keep those placeholders exactly as written — only translate the surrounding text
+- Unicode characters (arrows, bullets, em-dashes) can be kept as-is or replaced with equivalents that make sense in your language
+- Poedit shows you which strings are still untranslated so you can track your progress
 
 ---
 
-## Translating lesson content
+## Step 4 — Translate and Test Lesson Files
 
-Lesson files are JSON. Each lesson is a plain text file you can open in any editor.
+The six JSON lesson files are in `globalPlugins/nvdaCoach/lessons/[lang]/`. You can edit these in any plain text editor — Notepad works fine.
 
-### 1. Copy the English lesson folder
+### What to translate
 
+Each lesson step looks like this:
+
+```json
+{
+  "instruction": "Press NVDA+F1 to open the NVDA help menu.",
+  "hint": "Hold NVDA, then press F1."
+}
 ```
-globalPlugins/nvdaCoach/lessons/en/
-```
 
-Copy the entire folder to:
+Translate the `instruction`, `hint`, and `text` fields. Leave everything else exactly as-is — do **not** change:
 
-```
-globalPlugins/nvdaCoach/lessons/<your-language-code>/
-```
+- `"id"` values
+- `"type"` values
+- `"gesture"` and `"expectedGestures"` — these are key codes, not text
+- `"title"` and `"description"` at the chapter level if you are unsure
 
-### 2. Translate each JSON file
-
-There are five lesson files:
+### Files and chapters
 
 | File | Chapter |
 |---|---|
 | `getting_started.json` | Chapter 1: Getting Started with NVDA |
-| `reading_text.json` | Chapter 2: Reading and Moving Through Text |
-| `browse_mode.json` | Chapter 3: Browse Mode and Web Navigation |
-| `object_navigation.json` | Chapter 4: Object Navigation |
-| `nvda_settings.json` | Chapter 5: Customizing NVDA |
+| `reading_text.json` | Chapter 3: Reading and Moving Through Text |
+| `browse_mode.json` | Chapter 4: Browse Mode and Web Navigation |
+| `object_navigation.json` | Chapter 5: Object Navigation |
+| `nvda_settings.json` | Chapter 6: Customizing NVDA |
+| `keyboard_reference.json` | Chapter 2: Your Keyboard |
 
-For each file, translate:
-- `"title"` — the chapter/lesson title
-- `"description"` — the chapter description shown in the lesson picker
-- `"instruction"` — the spoken instruction for each step
-- `"hints"` — the three hint strings for each step
+### Testing
 
-Do **not** change:
-- `"id"` values
-- `"type"` values
-- `"monitorGestures"` or `"expectedGestures"` — these are key codes, not text
-- `"practiceText"` — leave in English unless you have verified screen reader behaviour with translated text
-
-### 3. Key command names in instructions
-
-When referring to key names in instructions (e.g. "Press NVDA+T"), keep the key names in their standard form for your locale. NVDA's own documentation for your language is the best reference.
+After editing a lesson file, copy it into the add-on folder and restart NVDA. Open NVDA Coach with `NVDA+Shift+C`, choose the lesson, and run through it to hear your translation.
 
 ---
 
-## Submitting your translation
+## Step 5 — Translate and Test Documentation
 
-1. Fork the repository: https://github.com/tonygeb23/nvdaCoach-
-2. Add your files under `locale/<lang>/` and/or `globalPlugins/nvdaCoach/lessons/<lang>/`
-3. Open a pull request with the title: `[Translation] <Language name>`
-4. Include your name and contact in the PR description so you can be acknowledged in the release notes
+The three HTML files in `doc/[lang]/` can be edited in any text editor. Translate the visible text between the HTML tags — leave the tags themselves untouched.
 
-Questions? Email: info@tonygebhard.me
+| File | What it is |
+|---|---|
+| `readme.html` | Main user guide — opened with F4 inside NVDA Coach |
+| `practice.html` | Practice page used during Browse Mode lessons |
+| `resources.html` | Additional resources and links |
+
+To test: copy your updated file into the add-on folder. In NVDA Coach, press **F4** to open the help documentation and confirm it shows your translation.
 
 ---
 
-## Language codes reference
+## Submitting Your Translation
+
+When you're ready — or when you have a batch ready — **zip up your translated files and reply to your open GitHub issue** with the zip attached. No pull request needed.
+
+Files to include:
+
+```
+locale\[lang]\LC_MESSAGES\nvda.po
+locale\[lang]\LC_MESSAGES\nvda.mo
+globalPlugins\nvdaCoach\lessons\[lang]\    (all six .json files)
+doc\[lang]\                                (readme.html, practice.html, resources.html)
+locale\[lang]\manifest.ini                 (add-on description in your language, if translated)
+```
+
+You don't have to submit everything at once. Partial translations are welcome — submit what you have and we'll track the rest in the issue.
+
+---
+
+## Language Codes Reference
+
+Use the same codes NVDA uses:
 
 | Language | Code |
 |---|---|
-| English | `en` |
-| French | `fr` |
-| German | `de` |
-| Spanish | `es` |
-| Portuguese (Portugal) | `pt_PT` |
-| Portuguese (Brazil) | `pt_BR` |
-| Russian | `ru` |
+| Arabic | `ar` |
 | Chinese (Simplified) | `zh_CN` |
 | Chinese (Traditional) | `zh_TW` |
+| French | `fr` |
+| German | `de` |
 | Japanese | `ja` |
-| Arabic | `ar` |
+| Portuguese (Brazil) | `pt_BR` |
+| Portuguese (Portugal) | `pt_PT` |
+| Russian | `ru` |
+| Spanish | `es` |
+| Turkish | `tr` |
 
-Use the same codes NVDA uses — see the NVDA source for the full list.
+For a full list of codes NVDA supports, see the [NVDA source repository](https://github.com/nvaccess/nvda).
 
 ---
 
-## Maintainer
+## Questions
 
-Tony Gebhard — Assistive Technology Instructor
+If you're unsure what a string is for, or want to check your understanding of a lesson step, ask in your GitHub issue and Tony will tell you exactly where it appears in the app.
+
+Thank you for helping make NVDA Coach accessible to more people around the world.
+
+**Tony Gebhard** — Assistive Technology Instructor
 info@tonygebhard.me
 https://github.com/tonygeb23/nvdaCoach-

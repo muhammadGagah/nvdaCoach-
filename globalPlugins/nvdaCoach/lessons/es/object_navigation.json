@@ -1,0 +1,207 @@
+{
+  "id": "object_navigation",
+  "title": "Navegación por Objetos",
+  "description": "Aprende a explorar e interactuar con controles a los que no se puede acceder con la tecla Tab, usando los comandos de navegación por objetos de NVDA.",
+  "order": 5,
+  "lessons": [
+    {
+      "id": "what_is_object_nav",
+      "title": "¿Qué es la Navegación por Objetos?",
+      "order": 1,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Bienvenido al capítulo de Navegación por Objetos. La mayor parte de lo que has aprendido hasta ahora usa las teclas Tab y de flecha para moverte por la pantalla. Pero algunos programas — especialmente las aplicaciones de escritorio más antiguas — tienen controles a los que Tab no puede llegar. NVDA tiene un sistema separado para explorar estos controles llamado navegación por objetos. Te permite moverte por cada elemento de la pantalla, independientemente de si acepta el foco del teclado. Antes de comenzar: maximiza tu ventana de aplicación actual si aún no está en pantalla completa. Presiona Windows+Flecha Arriba (comando de Windows) para maximizar. Esto garantiza que todos los objetos sean visibles y accesibles para el navegador. Presiona Enter para continuar.",
+          "hints": [
+            "La navegación por objetos es independiente de la navegación con Tab. Tab solo llega a los controles diseñados para aceptar el foco del teclado. La navegación por objetos llega a todo lo que hay en la pantalla.",
+            "Las aplicaciones de escritorio más antiguas — como algunos reproductores multimedia, barras de herramientas personalizadas y herramientas de accesibilidad — a menudo tienen controles que no responden a Tab. La navegación por objetos es como llegas a ellos.",
+            "Para maximizar tu ventana antes de explorar, presiona Windows+Flecha Arriba. Una ventana maximizada garantiza que ningún objeto esté oculto fuera de la pantalla o cortado."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "NVDA piensa en la pantalla como un árbol de objetos — imagina una pirámide. En la cima está la ventana de la aplicación. El nivel inferior contiene paneles, barras de herramientas y menús. El nivel inferior a ese contiene los controles individuales: botones, campos de texto y casillas de verificación. Cada objeto puede contener más objetos en el nivel inferior. La navegación por objetos te permite moverte por esta pirámide en cualquier dirección: hacia el siguiente objeto en el mismo nivel, hacia arriba un nivel hasta el contenedor, o hacia abajo un nivel hasta el primer objeto interior. Presiona Enter para continuar.",
+          "hints": [
+            "Piensa en la pirámide como un edificio. El edificio completo es la aplicación. Cada piso es un nivel. Cada habitación en un piso es un panel o barra de herramientas. Cada elemento en una habitación es un control individual.",
+            "Cada elemento de la pantalla — un botón de barra de herramientas, una barra de estado, un indicador de progreso — vive en algún lugar de esta pirámide, aunque Tab no pueda llegar a él.",
+            "La navegación por objetos es más útil en programas que tienen controles no estándar — barras de herramientas personalizadas, barras de estado, áreas de notificación y controles integrados."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Hay dos distribuciones de teclado en NVDA: escritorio y portátil. La distribución de escritorio usa el teclado numérico en el lado derecho de un teclado de tamaño completo. La distribución portátil usa combinaciones de NVDA más letra o símbolo para que no necesites un teclado numérico. Todos los comandos de navegación por objetos en este capítulo mostrarán ambas distribuciones. Si no estás seguro de qué distribución estás usando, abre el menú de NVDA con NVDA+N (comando de NVDA), ve a Preferencias, luego Configuración, luego Teclado, y escucha la configuración de distribución. Presiona Enter para continuar.",
+          "hints": [
+            "La distribución de escritorio usa teclas del teclado numérico para la navegación por objetos. La distribución portátil agrega Shift a muchas combinaciones de teclas de flecha. Todos los comandos en este capítulo listan ambas.",
+            "Si no estás seguro de qué distribución estás usando, presiona NVDA+1 (comando de NVDA) para activar la Ayuda de entrada, luego presiona una de las teclas de navegación por objetos para escuchar qué distribución espera NVDA. Luego presiona NVDA+1 de nuevo para desactivar la Ayuda de entrada.",
+            "Puedes cambiar tu distribución de teclado en cualquier momento en la Configuración de NVDA bajo la categoría Teclado. El capítulo Personalización de NVDA cubre esto en detalle."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "move_next_prev_object",
+      "title": "Moverse al Objeto Siguiente y Anterior",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Para moverte al siguiente objeto en el mismo nivel de la pirámide, presiona NVDA+NumPad6 (distribución de escritorio) o NVDA+Shift+Flecha Derecha (distribución portátil). Estos son comandos de NVDA. Para moverte al objeto anterior en el mismo nivel, presiona NVDA+NumPad4 (escritorio) o NVDA+Shift+Flecha Izquierda (portátil). NVDA anuncia cada objeto cuando aterrizas en él — su nombre, tipo y a veces su valor. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: mantén NVDA y presiona NumPad6 — la tecla de flecha derecha del teclado numérico — para moverte al siguiente objeto. NumPad4 — la flecha izquierda del teclado numérico — se mueve al objeto anterior.",
+            "Distribución portátil: mantén NVDA y Shift juntos, luego presiona Flecha Derecha para el siguiente objeto, o Flecha Izquierda para el anterior.",
+            "NVDA anuncia el nombre, tipo y a veces el valor de cada objeto cuando aterrizas en él — similar a lo que NVDA+Tab te dice sobre los controles enfocados."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Mantén tu tecla NVDA y presiona NumPad6 (escritorio) o Shift+Flecha Derecha (portátil) para moverte al siguiente objeto. NVDA anunciará lo que es. Luego mantén NVDA y presiona NumPad4 (escritorio) o Shift+Flecha Izquierda (portátil) para moverte al objeto anterior. Intenta moverte por algunos objetos en cualquier aplicación abierta para hacerte a la idea. Presiona Enter aquí cuando estés listo para continuar.",
+          "monitorGestures": [
+            "kb:nvda+numpad6",
+            "kb:nvda+shift+rightArrow"
+          ],
+          "hints": [
+            "Distribución de escritorio: NumPad6 es la tecla de flecha derecha en el teclado numérico. Mantén NVDA y presiónala para moverte al siguiente objeto en el mismo nivel.",
+            "Distribución portátil: mantén NVDA y Shift al mismo tiempo, luego presiona Flecha Derecha. Asegúrate de estar presionando Shift — sin él, las teclas de flecha controlan el cursor de revisión.",
+            "Abre cualquier aplicación familiar como el Explorador de archivos o el Bloc de notas y explora su pirámide de objetos. Muévete por algunos objetos para hacerte una idea de cómo están organizados."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Observa que NVDA anuncia el nombre, tipo y a veces el valor de cada objeto — independientemente de si tiene el foco del teclado. Esta es una distinción importante. NVDA+Tab (comando de NVDA) lee el control que actualmente tiene el foco del teclado. La navegación por objetos lee cualquier objeto al que apunte el navegador — son dos cosas separadas. Puedes usar NVDA+Tab en cualquier momento para verificar dónde está el foco del teclado, y usar la navegación por objetos para explorar más allá de él. Presiona Enter para continuar.",
+          "hints": [
+            "NVDA+Tab te informa sobre el control enfocado — el que actualmente tiene tu teclado. La navegación por objetos se mueve de forma independiente al foco del teclado.",
+            "Incluso si un objeto no puede recibir el foco del teclado, la navegación por objetos aún puede llegar a él y leerlo en voz alta.",
+            "Podrías usar NVDA+Tab para verificar dónde estás, luego usar la navegación por objetos para explorar controles cercanos que no son accesibles con Tab."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "move_parent_child",
+      "title": "Moverse Hacia Arriba y Hacia Abajo en los Niveles",
+      "order": 3,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Para subir un nivel — al contenedor que sostiene el objeto actual — presiona NVDA+NumPad8 (distribución de escritorio) o NVDA+Shift+Flecha Arriba (distribución portátil). Estos son comandos de NVDA. Para bajar un nivel — al primer objeto dentro del actual — presiona NVDA+NumPad2 (escritorio) o NVDA+Shift+Flecha Abajo (portátil). Así es como explores la pirámide en profundidad: subiendo para ver el panorama general, o bajando para encontrar controles anidados dentro de un panel o barra de herramientas. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: NumPad8 — la flecha arriba del teclado numérico — te mueve un nivel hacia arriba al contenedor. NumPad2 — la flecha abajo del teclado numérico — te mueve un nivel hacia abajo al primer objeto interior.",
+            "Distribución portátil: NVDA más Shift más Flecha Arriba sube un nivel. NVDA más Shift más Flecha Abajo baja un nivel.",
+            "Subir te lleva al contenedor — el panel o barra de herramientas que contiene el objeto actual. Bajar te lleva al primer objeto dentro del contenedor actual."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Mantén NVDA y presiona NumPad8 (escritorio) o Shift+Flecha Arriba (portátil) para subir un nivel. NVDA anunciará el contenedor. Luego presiona NVDA+NumPad2 (escritorio) o NVDA+Shift+Flecha Abajo (portátil) para bajar un nivel hasta el primer objeto interior. Subir y bajar por los niveles te ayuda a encontrar controles que están agrupados dentro de paneles o barras de herramientas. Presiona Enter cuando estés listo para continuar.",
+          "monitorGestures": [
+            "kb:nvda+numpad8",
+            "kb:nvda+shift+upArrow"
+          ],
+          "hints": [
+            "Distribución de escritorio: NumPad8 es la flecha arriba del teclado numérico. Mantén NVDA y presiónala para subir un nivel.",
+            "Distribución portátil: mantén NVDA y Shift juntos, luego presiona Flecha Arriba para subir un nivel. Mantén NVDA y Shift, luego presiona Flecha Abajo para bajar un nivel.",
+            "Si subes un nivel y quieres volver a entrar, presiona el comando bajar para entrar al nivel inferior. El primer objeto abajo es el primer elemento dentro del contenedor actual."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "read_current_object",
+      "title": "Leer el Objeto Navegador Actual",
+      "order": 4,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Cuando hayas navegado a un objeto, puedes hacer que NVDA lo lea. Presiona NVDA+NumPad5 (distribución de escritorio) o NVDA+Shift+Coma (distribución portátil) para escuchar la descripción completa del objeto navegador actual. Estos son comandos de NVDA. La tecla de coma está en la fila inferior de letras, entre M y el punto. Presiona el comando dos veces rápidamente para deletrear el nombre del objeto carácter por carácter. Esto es útil cuando el nombre no es familiar o está abreviado. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: mantén NVDA y presiona NumPad5 — la tecla central del teclado numérico — para leer el objeto navegador actual.",
+            "Distribución portátil: mantén NVDA y Shift, luego presiona la tecla de coma. La coma está en la fila inferior de letras, entre M y el punto.",
+            "Presiona el comando dos veces rápidamente para deletrear el nombre del objeto un carácter a la vez. Útil cuando el nombre no es familiar o está abreviado."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Navega a cualquier objeto usando NVDA+NumPad6 (escritorio) o NVDA+Shift+Flecha Derecha (portátil). Luego presiona NVDA+NumPad5 (escritorio) o NVDA+Shift+Coma (portátil) para escuchar la descripción completa de ese objeto. Presiona el comando dos veces rápidamente para deletrear el nombre. Cuando estés listo, presiona Enter para continuar.",
+          "monitorGestures": [
+            "kb:nvda+numpad5",
+            "kb:nvda+shift+,"
+          ],
+          "hints": [
+            "Primero navega a un objeto usando el comando de objeto siguiente, luego léelo con NVDA+NumPad5 (escritorio) o NVDA+Shift+Coma (portátil).",
+            "Presionar el comando de lectura dos veces rápidamente deletrea el nombre del objeto un carácter a la vez — muy útil para nombres o abreviaturas desconocidos.",
+            "La tecla de coma para la distribución portátil está en la fila inferior del teclado, entre M y la tecla de punto."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "route_focus_to_object",
+      "title": "Mover el Foco del Teclado a un Objeto Navegador",
+      "order": 5,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Una vez que hayas usado la navegación por objetos para encontrar un control, puedes mover el foco del teclado a él para poder interactuar con él normalmente. Presiona NVDA+Shift+NumPadMenos (escritorio) o NVDA+Shift+Retroceso (portátil) para enrutar el foco al objeto navegador actual. Estos son comandos de NVDA. Si el objeto puede aceptar el foco, el foco de tu teclado se moverá a él y luego podrás presionar Enter, Espacio o escribir normalmente. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: mantén NVDA y Shift, luego presiona la tecla menos del teclado numérico — arriba a la derecha del teclado numérico — para enrutar el foco del teclado al objeto navegador actual.",
+            "Distribución portátil: mantén NVDA y Shift, luego presiona Retroceso — la tecla grande sobre Enter en el lado derecho del teclado.",
+            "No todos los objetos pueden aceptar el foco del teclado. Si enrutar el foco no funciona, el objeto puede ser solo de visualización — puedes leerlo pero no interactuar con él."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "También hay un comando inverso: presiona NVDA+NumPadMenos (escritorio) o NVDA+Retroceso (portátil) — sin Shift — para mover el objeto navegador a donde esté actualmente el foco de tu teclado. Esto es útil cuando quieres empezar a explorar desde donde ya estás en el programa, en lugar de comenzar desde la cima de la pirámide. Presiona Enter para continuar.",
+          "hints": [
+            "Distribución de escritorio: NVDA más NumPadMenos (sin Shift) mueve el navegador al control actualmente enfocado — un buen punto de partida para la exploración de objetos.",
+            "Distribución portátil: NVDA más Retroceso (sin Shift) hace lo mismo. Usa esto para sincronizar el navegador con tu foco del teclado actual.",
+            "Usa este comando al inicio de una sesión de navegación por objetos para comenzar a explorar desde donde estás en lugar de buscar desde la cima de la pirámide."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La navegación por objetos requiere práctica. La mejor manera de sentirte cómodo es maximizar un programa familiar — como el Bloc de notas o el Explorador de archivos — y pasar unos minutos explorando su pirámide. Muévete por los objetos en el mismo nivel, sube a los contenedores, vuelve a bajar y lee cada objeto mientras avanzas. Con el tiempo, desarrollarás una imagen mental de cómo están estructurados los programas en cada nivel. Presiona Enter para continuar.",
+          "hints": [
+            "Comienza con el Explorador de archivos — tiene una pirámide bien estructurada con carpetas, barras de herramientas y paneles con nombres claros. Bueno para practicar.",
+            "El Bloc de notas es otro buen entorno de práctica. Su pirámide de objetos es simple y predecible.",
+            "Maximiza la ventana de la aplicación primero (Windows+Flecha Arriba) para que todos los objetos sean visibles. Luego explora — no te preocupes por memorizar todos los comandos de una vez."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when_object_nav_helps",
+      "title": "Cuándo Ayuda la Navegación por Objetos",
+      "order": 6,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "La navegación por objetos es más útil en tres situaciones. Primero, cuando un programa tiene controles a los que Tab no puede llegar — algunas barras de herramientas, paneles personalizados y controles específicos de aplicaciones solo aparecen en la pirámide de objetos. Segundo, cuando necesitas leer algo en la pantalla que no está enfocado — como una barra de estado que muestra el progreso o un área de notificación. Tercero, cuando quieres explorar la estructura de un nuevo programa antes de decidir cómo interactuar con él. Un consejo clave: maximiza siempre la ventana de la aplicación primero. Una ventana maximizada le da al navegador de objetos la vista más completa de todos los objetos disponibles. Presiona Enter para continuar.",
+          "hints": [
+            "Las barras de estado y los indicadores de progreso son objetos comunes a los que Tab no puede llegar. La navegación por objetos te permite leerlos sin ningún foco del teclado.",
+            "Las barras de herramientas personalizadas en aplicaciones más antiguas — reproductores multimedia, editores de fotos y algunas herramientas de oficina — a menudo solo responden a la navegación por objetos.",
+            "Maximiza primero (Windows+Flecha Arriba), luego navega. Encontrarás más objetos y tendrás menos sorpresas."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La mayoría de las tareas cotidianas — correo electrónico, navegación web, procesamiento de texto — no requieren navegación por objetos. Tab, las teclas de flecha y el modo exploración cubren casi todo. La navegación por objetos es una herramienta avanzada a la que recurres cuando los métodos estándar son insuficientes. Saber que está disponible significa que ningún control en ninguna pantalla está realmente fuera de tu alcance. Presiona Enter para continuar.",
+          "hints": [
+            "Si Tab y el modo exploración te llevan a través de tu trabajo diario, eso es completamente normal. La navegación por objetos es una herramienta especializada, no una necesidad diaria para la mayoría de los usuarios.",
+            "Cuando un asistente vidente dice que hay un botón en la pantalla pero Tab no puede llegar a él, la navegación por objetos es tu respuesta.",
+            "A medida que adquieras experiencia, desarrollarás el instinto de cuándo cambiar a la navegación por objetos. La mayoría de los nuevos usuarios de lectores de pantalla raramente la necesitan al principio."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "¡Has completado el capítulo de Navegación por Objetos! Ahora sabes cómo moverte por los objetos en el mismo nivel, subir a los contenedores, descender al nivel inferior, leer cualquier objeto y enrutar el foco del teclado a él. Cuando estés listo, presiona NVDA+Shift+C para abrir el selector de lecciones y continuar al siguiente capítulo: Personalización de NVDA — donde aprenderás a ajustar tu distribución de teclado y afinar la velocidad de voz, el tono, la voz y el volumen. Presiona Enter para finalizar.",
+          "chapterComplete": true,
+          "hints": [
+            "El siguiente capítulo es Personalización de NVDA. Cubre cómo ajustar la velocidad de voz, el tono, la voz y la distribución del teclado — todo sin abrir menús de configuración si lo prefieres.",
+            "Referencia rápida de navegación por objetos — escritorio: NumPad4/6 en el mismo nivel, NumPad8/2 arriba y abajo en los niveles, NumPad5 para leer. Portátil: NVDA+Shift+Flecha, NVDA+Shift+Coma para leer.",
+            "NVDA Coach guarda tu progreso automáticamente. Todas las lecciones completadas están marcadas cuando regresas."
+          ]
+        }
+      ]
+    }
+  ]
+}

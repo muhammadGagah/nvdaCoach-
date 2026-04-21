@@ -1,323 +1,434 @@
 {
-  "id": "reading_text",
-  "title": "Metin Okuma ve Metin İçinde Hareket Etme",
-  "description": "Belgeler arasında nasıl dolaşacağınızı ve NVDA'nın metni size geri okumasını nasıl sağlayacağınızı öğrenin. Her alıştırma adımında Eğitmen penceresinin hemen içinde bir metin alanı bulunur; ekstra pencereye gerek yoktur.",
-  "order": 3,
-  "lessons": [
-    {
-      "id": "move_by_character",
-      "title": "Karakter karakter okutma",
-      "order": 1,
-      "steps": [
+    "id": "reading_text",
+    "title": "Metin Okuma ve Metin İçinde Dolaşma",
+    "description": "Belgeler arasında nasıl dolaşacağınızı ve NVDA'nın metninin boyutunu geri okumasını nasıl sağlayacağınızı öğrenin. Her adımında Eğitmen penceresinin hemen içinde bir metin alanı bulunur; ekstra pencereye gerek yoktur.",
+    "order": 3,
+    "lessons": [
         {
-          "type": "info",
-          "instruction": "İmleciniz metnin içindeyken, Sağ Ok tuşu her defasında bir karakter ileri, Sol Ok tuşu ise geriye doğru hareket eder. NVDA, üzerine geldiğinizde her karakteri konuşur. Görebilen kullanıcılar her karakteri görebilir; NVDA siz hareket ettikçe bunu sizin için seslendirir. Aşağıdaki her pratik adımında bir pratik metin alanı bulunmaktadır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Sağ ve Sol Ok tuşları, klavyenin sağ alt kısmındaki ok tuşu kümesindedir. Sağa bir karakter ileri gider; Sol bir geri gider.",
-            "NVDA, imleciniz üzerine geldiğinde her karakteri duyurur. Noktalama işaretleri için NVDA, noktalama işaretinin adını söyler; örneğin, yalnızca ses çıkarmak yerine 'nokta' der.",
-            "Karaktere göre hareket etmek, yazım denetimi yapmak, tanımadığınız bir kelimeyi karakter karakter okumak veya az önce yazdığınızı onaylamak için kullanışlıdır."
-          ]
+            "id": "move_by_character",
+            "title": "Karakter karakter okuma",
+            "order": 1,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "İmleciniz metni içindeyken, Sağ Ok tuşu onu defasında bir karakter ileri, Sol Ok tuşu ise geriye doğru hareket eder. NVDA, ortaya çıktığınızda onun karakterini anlatır. Görebilen kişilerin kendi özelliklerini görebilmesi; NVDA siz hareket ettikçe bunu sizin için seslendirir. Aşağıda her pratik adımında bir pratik metin alanı bulunmaktadır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sağ ve Sol Ok tuşları, klavyenin sağ alt kısmındaki ok tuşu ayarındadır. Sağa bir karakter ileri gider; Sol bir geri gider.",
+                        "NVDA, imlecin üzerine geldiğinde karakterini duyurur. Noktalama işaretleri için NVDA, noktalama işaretinin adını söyler; Örneğin, yalnızca sesi çıkarmak yerine 'nokta' der.",
+                        "Karaktere göre hareket etmek, yazım denetimi yapmak, tanımadığınız bir kelimeyi karakter okumak veya az önce yazmanızı onaylamak için kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki bilgilerin alanını tamamlayın, ardından bir karakter ileri gitmek için Sağ Ok'a basın. NVDA, geldiğimiz karakteri duyuracaktır. Birkaç kez deneme.",
+                    "hint": "Sağ Ok tuşu, klavyenizin sağ alt kısmındaki ok tuşu ayarındadır.",
+                    "hints": [
+                        "Sağ Ok tuşu, klavyenin sağ alt kısmındaki ok tuşu ayarındadır. Bir karakter ileri gitmek için bir kez basın.",
+                        "NVDA'nın içerdiği karakteri duyurur. Harfler için harfi söyler; kuruluşlar için 'aralık' der; noktalama hataları için adı diyor.",
+                        "Önce, alanın alanına tıklayın veya odak noktasına gitmek için Sekme tuşuna basın, ardından Sağ Ok tuşuna basmaya başlayın."
+                    ],
+                    "expectedGestures": [
+                        "kb:sağ tamam"
+                    ],
+                    "successMessage": "Bir karakter ileri gittiniz. NVDA, hangi karakterin üzerine geldiğini seslendirdi.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar Kelime kelimeleri ilerler.\nEv ve Ende bir satır sınırına taşınmak.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi bir karakteri geri almak için Sol Ok tuşuna basın. NVDA bunu seslendirecek.",
+                    "hint": "Sol Ok tuşu Aşağı Ok tuşlarının çözümündedir.",
+                    "hints": [
+                        "Sol Ok tuşu, ok tuşlarının ayarlarındaki Aşağı Ok tuşlarının çözümündedir. Bir karakter geriye doğru gitmek için bir kez basın.",
+                        "NVDA, imlecinizin üzerine geldiği karakteri seslendirir. Bu, farklılık yerin solundaki karakterin aynısıdır.",
+                        "Sağ ve Sol Ok, herhangi bir kelimeyi veya satırda tek seferde bir karakter olarak okuma konusunda boyut tam kontrolü sağlar; Düzeltme yapmak veya yazmayı onaylamak için kullanışlıdır."
+                    ],
+                    "expectedGestures": [
+                        "kb:sol tamam"
+                    ],
+                    "successMessage": "Bir karakter geri gittiniz. Sağ ve Sol Ok, herhangi bir anda tek seferde karakter karakter okumanızı sağlar.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelimesi dolaşır.\nEv ve Ende bir satır sınırına taşınmak.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                }
+            ]
         },
         {
-          "type": "gesture",
-          "instruction": "Aşağıdaki alıştırma metni alanına okla gidin, ardından bir karakter ileri gitmek için Sağ Ok'a basın. NVDA, geldiğiniz karakteri duyuracaktır. Birkaç kez deneyin.",
-          "hint": "Sağ Ok tuşu, klavyenizin sağ alt kısmındaki ok tuşu kümesindedir.",
-          "hints": [
-            "Sağ Ok tuşu, klavyenin sağ alt kısmındaki ok tuşu kümesindedir. Bir karakter ileri gitmek için bir kez basın.",
-            "NVDA imlecinizin bulunduğu karakteri duyurur. Harfler için harfi söyler; boşluklar için 'aralık' der; noktalama işaretleri için adı söyler.",
-            "Önce alıştırma metni alanına tıklayın veya odağı oraya taşımak için Sekme tuşuna basın, ardından Sağ Ok tuşuna basmaya başlayın."
-          ],
-          "expectedGestures": [
-            "kb:sağ ok"
-          ],
-          "successMessage": "Bir karakter ileri gittiniz. NVDA, imlecinizin hangi karakterin üzerine geldiğini seslendirdi.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar Kelime kelime ilerler.\nHome ve Ende bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
+            "id": "jump_by_word",
+            "title": "Kelime Kelime Okuma",
+            "order": 2,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Metni taramanız karakter karakter yavaştır. Kontrol artı Sağ Tamam sonraki kişilerin başına atlar. Kontrol artı Sol Ok önceki sözcüğe geri atlar. NVDA, üzerine geldiğinizde kelimeyi seslendirir. Bu erişilebilir, ekran okuyuculu veya ekran okuyucusuz Word, Not Defteri, e-posta ve diğer birçok programda aynı şekilde çalışır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kontrol artı Sağ Tamam, her fırsatta bir kelime ileri atlar. Klavyenin sol alt köşesindeki Kontrol tuşları basılı tutun ve Sağ Ok tuşuna basın.",
+                        "Kontrol artı Sol Ok bir kelime geriye atlar. NVDA, imleciniz üzerine geldiğinde ona kelimeyi seslendirir.",
+                        "Kelime kelime dolaşması, bir cümleyi taramak veya bir paragrafta belirli bir kelimeyi bulmak için karakter karakter dolaşmaktan çok daha hızlıdır."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki satırların içeriğini tamamlayın, ardından sonraki sözcüğe atlamak için Kontrol+Sağ Ok tuşlarına basın. NVDA, geldiğiz kelimeyi seslendirecektir.",
+                    "hint": "Kontrol parçasını (klavyenin sol alt kısmı) basılı tutun ve aynı anda Sağ Ok tuşuna basın.",
+                    "hints": [
+                        "Klavyenin sol alt köşesindeki Kontrol tuşları basılı tutun ve Sağ Ok tuşuna basın. Her iki tuşun da aynı anda kesilmesi gerekir.",
+                        "NVDA imlecinizin atladığı kelimeyi seslendirir. Her bastığınızda bir tam kelime ileri gider.",
+                        "Kontrol ve Sağ Ok tuşlarına basarak tutarsanız imleciniz hızla kelime kelime atlamaya devam edecek. Durdurmak için bırakın."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+sağ tamam"
+                    ],
+                    "successMessage": "Bir kelime ileri atladınız. NVDA imlecinizin geldiği kelimeyi seslendirdi.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEv ve Ende bir satır sınırına taşınmak.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi önceki sözcüğe geri dönmek için Kontrol+Sol Ok tuşlarına basın. NVDA bunu seslendirecek.",
+                    "hint": "Kontrol parçasını basılı tutun ve Sol Ok'a basın.",
+                    "hints": [
+                        "Kontrol parçasını basılı tutun ve Sol Ok'a basın. Bu, ilecinizi daha önce yaşadıklarınızı geri götürmek.",
+                        "NVDA her fırsatta geldiğinde kelimeyi seslendirir. Az önce bozulmaz, sözcükleri gözden geçirmek için bunu kullanın.",
+                        "Kontrol artı Sol ve Sağ Ok birlikte, herhangi bir belgeyi hızlı bir şekilde taramanızı sağlar; Aynı anda bir karakter hareket eden öğrencilerden çok daha hızlıdır."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+sol Tamam"
+                    ],
+                    "successMessage": "Bir kelime geri atladınız. Kontrol artı oklar, herhangi bir belgede hızlı bir şekilde kelime kelime dolaşmanızı sağlar.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelimesi dolaşır.\nEv ve Son bir satır sınırına taşınmak.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                }
+            ]
         },
         {
-          "type": "gesture",
-          "instruction": "Şimdi bir karakter geri gitmek için Sol Ok tuşuna basın. NVDA bunu seslendirecek.",
-          "hint": "Sol Ok tuşu Aşağı Ok tuşunun solundadır.",
-          "hints": [
-            "Sol Ok tuşu, ok tuşu kümesindeki Aşağı Ok tuşunun solundadır. Bir karakter geriye doğru gitmek için bir kez basın.",
-            "NVDA, imlecinizin üzerine geldiği karakteri seslendirir. Bu, bulunduğunuz yerin solundaki karakterin aynısıdır.",
-            "Sağ ve Sol Ok, herhangi bir kelimeyi veya satırı tek seferde bir karakter olarak okuma konusunda size tam kontrol sağlar; düzeltme yapmak veya yazımı onaylamak için kullanışlıdır."
-          ],
-          "expectedGestures": [
-            "kb:sol ok"
-          ],
-          "successMessage": "Bir karakter geri gittiniz. Sağ ve Sol Ok, herhangi bir metni tek seferde karakter karakter okumanızı sağlar.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime dolaşır.\nHome ve Ende bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
+            "id": "move_by_line",
+            "title": "Satır Satır Dolaşması",
+            "order": 3,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Aşağı Ok belgedeki bir sonraki satıra gider. Yukarı Ok önceki satıra gider. NVDA, onun satıra geçişinizde bölümünün tamamını okur. Görme yetisi olan kullanıcıların satırları görsel olarak taranabilir; her birinin gidersiniz ve NVDA bunlardan yüksek sesle okur. Bu, belgeler ve web sayfaları için en önemli dolaşım yöntemlerinden biridir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Aşağı Ok bir sonraki satıra geçer ve NVDA bölümünün tamamını yüksek sesle okur. Yukarı Ok önceki satıra gider.",
+                        "Aşağı ve Yukarı Ok tuşları klavyenin sağ alt kısmındaki ok tuşu ayarındadır.",
+                        "Satır satır dolaşması, bir belgeyi, e-postayı veya web kökten okumanın en yaygın şekilde yayılması; bunu sürekli kullanacaksınız."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki bilgilerle tamamlayın, ardından bir sonraki satıra geçmek için Aşağı Ok'a basın. NVDA sizin için bölümün tamamını okuyacaktır.",
+                    "hint": "Aşağı Ok tuşu, ok tuşlarının ayarlanmasındadır. Her fırsatta bir satır ilerlemek için bir kez basın.",
+                    "hints": [
+                        "Aşağı Ok tuşu, klavyenin sağ alt kısmındaki ok tuşu ayarındadır. Bir satır aşağı gitmek için bir kez basın.",
+                        "NVDA siz belleğin üzerine geldiğinizde verinin tamamını okur. Sadece bir kısmını tekrar tercih ederseniz, NVDA artı Yukarı Ok tuşlarını kullanarak mevcut bilgileri yeniden okuyun.",
+                        "Birkaç satır aşağıya doğru ilerleyin, ardından Yukarı Ok ile tekrar yukarıya çıkmayı deneyin. NVDA her iki yönde de hareket ettiğinde her satırda okur."
+                    ],
+                    "expectedGestures": [
+                        "kb:aşağı Tamam"
+                    ],
+                    "successMessage": "Bir satır aşağı gittiniz. NVDA sizin için bölümünün tamamını inceledi.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEv ve Son bir satır sınırına taşınmak.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi önceki satıra dönmek için Yukarı Ok tuşuna basın. NVDA bunu okumayacak.",
+                    "hint": "Yukarı Ok tuşu, Aşağı Ok tuşlarının hemen üzerindedir.",
+                    "hints": [
+                        "Yukarı Ok tuşu, ok ayarındaki Aşağı Ok tuşlarının hemen üzerindedir. Bir satır yukarıya gitmek için bir kez basın.",
+                        "NVDA, aşağıya doğru hareket ettiğinizde olduğu gibi, yukarıya doğru hareket ettiğinizde bölümünün tamamını okur.",
+                        "Yukarı ve Aşağı Ok, herhangi bir belge için ana okuma araçlarınızdır. Çoğu ekran okuyucu kullanıcısı, zamanlarının çoğunu yalnızca bu iki tuşu kullanarak geçirir."
+                    ],
+                    "expectedGestures": [
+                        "kb:yukarı tamam"
+                    ],
+                    "successMessage": "Bir satır yukarı çıktınız. Yukarı ve Aşağı Ok, herhangi bir belgeyi satır satır okumak için ana araçlarınızdır.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEnter ve Hom bir satır sınırına taşınma.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                }
+            ]
+        },
+        {
+            "id": "jump_to_ends",
+            "title": "Başa ve Sona Gitme",
+            "order": 4,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Kontrol+Home anında bir belgenin, dinlemenin veya web sürümünün en başına atlar. Kontrol+End ve son aşamada. Bunlar, yeni bir belgeye girdiğinizde yönünüzü anlamanız için harikadır. Görme yeteneği olan kullanıcıların resminin tamamını görmek için hızla kaydırılabilir; Bu tuşlar klavye için anında aynısını yapar. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Kontrol artı Ana Sayfada bir belgenin en başına. Kontrol artı End ve sona atlar.",
+                        "Home (Baş) genellikle Insert, Sil ve Sayfa Yukarı tuşlarının yanında, çoğu klavyede ok tuşlarının üstünde bulunur.",
+                        "Bu iki kısayol, yeni bir belge açtığınızda ve baştan başlamak istediğinizde veya ne kadar uzun süre görmek için tüm süreyi geçirmek istediğinizde kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki bilgilerin içeriğini tamamlayın ve en baştan başlamak için Kontrol+Home tuşlarına basın. NVDA ilk satırını okuyamayacak.",
+                    "hint": "Kontrol düğmesini basılı tutun ve Ana sayfa tuşuna basın. Ana sayfa tuşu genellikle Insert, Sil ve Sayfa Yukarı tuşlarının yakınındadır.",
+                    "hints": [
+                        "Kontrol düğmesini basılı tutun ve Ana sayfa tuşuna basın. Ana sayfa tuşu, çoğu klavyede, Insert ve Sil'in yanındaki ok tuşlarının üzerinde kümelenmiştir.",
+                        "Siz oraya gittikten sonra NVDA belgesinin ilk satırını okur. Artık en başındasınız.",
+                        "Kontrol artı Ana sayfa belgelerinde, web sayfalarında, listelerde ve diğer birçok metin alanında çalışır. Sizi her zaman en üst düzeyde taşır."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+Ana Sayfa"
+                    ],
+                    "successMessage": "En üste atladınız. NVDA ilk satırını okudu.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1500,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEnter ve Hom bir satır sınırına taşınma.\nKontrol artı Home veya End, Belgenin en uç noktalara atlar\nBölünebilirliğin son bölümüdür."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi en son satıra geçmek için Kontrol+End tuşlarına basın. NVDA bunu okumayacak.",
+                    "hint": "Kontrol öğelerini basılı tutun ve Ana sayfa öğelerinin gösterimi Sonlandırma tuşuna basın.",
+                    "hints": [
+                        "Kontrol parçasını basılı tutun ve Bitir tuşuna basın. Uç, ok düğmelerinin üzerindeki kümede, Home açıklıkların yakınındadır.",
+                        "NVDA, Kontrol artı Son tuşlara bastığınızda belgenin son satırını okur.",
+                        "Kontrol artı Home ve Kontrol artı End birlikte, herhangi bir belgenin tüm kapsamını hızlı bir şekilde elden izin verir tanır; en işi yapmak için Hom tuşuna basın, en sona gitmek için End tuşuna basın."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+Son"
+                    ],
+                    "successMessage": "En sona gittiniz. Kontrol artı Ana Sayfa veya Son, sizi anında herhangi bir belgenin her iki ucuna da götürebilir.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1500,
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEv ve Son bir satır sınırına taşınmak.\nKontrol artı Home veya End, Bir belgenin en uç noktalara atlar..\nBölünebilirliğin son bölümüdür."
+                }
+            ]
+        },
+        {
+            "id": "say_all",
+            "title": "Tümünü Okuma",
+            "order": 5,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Tümünü Oku NVDA'ya belgenin geçerli durumda olduğu süre boyunca durmadan okumaya başladığını söyler. Tuş vuruşu klavye düzeninize bağlıdır. Masaüstünüzde düzenlediğiniz NVDA artı Aşağı Ok tuşlarına basın. Bilgisayar düzeninizdeyseniz, NVDA artı A tuşlarına basın. NVDA sonuna ulaşana veya sizi durdurana kadar okumaya devam ediyor. Görme yeteneği olan kullanıcıların bir görünüm sayfasının tamamına göz atabilir; Tümünü Oku sizin eşdeğerinizdir; Siz bırakın, dinlerken NVDA her şeyi okusun. Durdurmak için istediğiniz zaman Kontrol tuşuna basabilirsiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA tuşlarına basılı tutun ve Aşağı Ok tuşuna basın. Bilgisayarın bilgisayar düzeni: NVDA kayıtlarını basılı tutun ve A harfine basın. Hangi düzenden emin değil misiniz? NVDA'yı Kişiselleştirme bölümüne bakın.",
+                        "Tümünü Oku'yu hemen görmek için istediğiniz zaman Kontrol tuşuna basın. Duraklatmak için Shift tuşuna basın; Durduğu yerden devam etmek için Shift tuşuna tekrar basın.",
+                        "Tümünü Oku, uzun belgeleri, e-postaları veya web makalelerini Aşağı Ok tuşları art arda basmak için dosyaları okumak için çok kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Aşağıdaki belgenin alanını okla kaydırın ve imlecinizi ortada bir yere konumlandırın. Ayrıca Tümünü Oku'yu başlatın: Kullanıcı düzeni Kullanıcı NVDA artı Aşağı Ok tuşlarına basın; dizüstü bilgisayar düzeni NVDA artı A tuşlarına basarlar. NVDA, imlecinizden sonuna kadar durmadan her şeyi okumaya başlayacak. Belirli zaman dilimleri için Kontrol tuşuna basın. İşiniz bittiğinde devam etmek için Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+aşağı tamam",
+                        "kb:nvda+a"
+                    ],
+                    "practiceText": "Hızlı kahverengi tilki yavrusunun üzerinden atlıyor.\nEkran okuyucuları dijital dünyanın herkese açılıyor.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metninde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atları.\nEv ve Son bir satır sınırına taşınmak.\nKontrol artı Home veya End, Bir belgenin en uç noktalara atlar..\nBölünebilirliğin son bölümüdür.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA — Insert veya Caps Lock — tuşları basılı tutun ve Aşağı Ok tuşuna basın. Bilgisayarın bilgisayar düzeni: NVDA'yı basılı tutun ve A harfine basın.",
+                        "Tümünü Oku başladıktan sonra hiçbir şey yapmanıza gerek yoktur; sadece sınırlıdır. Herhangi bir konumda için Kontrol tuşuna basın.",
+                        "Alıştırma metninde Tümünü Oku'ya farklı konumlardan başlamayı deneyin. Her zaman imleç konumundan sonuna kadar okur."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "select_text",
+            "title": "Metni Seçme ve Vurgulama",
+            "order": 6,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Ok tuşlarına basarken Shift tuşunu basılı tutarak metni seçebilirsiniz. Bunlar Windows komutlarıdır; NVDA ile veya NVDA olmadan, herhangi bir uygulamada aynı şekilde çalışırlar. Siz seçim yaptıkça NVDA, seçime eklenen karakterleri, kelimeleri veya satırları okur. Görebilen kullanıcılar vurgulanan metni ekranda görebilir; NVDA seçtiğiniz her parçayı duyurur, böylece neyin dahil olduğunu her zaman tam olarak bilirsiniz. Seçilen metin Kontrol+C ile kopyalanabilir ve Kontrol+V ile yazabileceğiniz her yere yapıştırılabilir; her ikisi de aynı zamanda Windows komutlarıdır. Bu bölüm Windows komutlarının ve NVDA komutlarının bir karışımını kapsamaktadır; bu yüzden ilerledikçe hangisinin ne olduğuna dikkat edin. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Seçimi genişletmek için Shift tuşunu basılı tutun ve herhangi bir ok tuşuna basın. Shift artı Sağ Ok bir karakter seçer; Shift artı Aşağı Ok bir satırı seçer; Kontrol artı Shift artı Sağ Ok bir kelime seçer. Bunların hepsi Windows komutlarıdır.",
+                        "NVDA, seçime eklediğiniz her karakteri, kelimeyi veya satırı duyurur. Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın.",
+                        "Metin seçildikten sonra Kontrol artı C onu kopyalar ve Kontrol artı V yapıştırır. Bunlar Windows komutlarıdır; NVDA çalışıyor olsa da olmasa da her uygulamada çalışırlar."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki alıştırma metnine okla gidin. Bir karakter ileriye doğru seçmek için Shift tuşunu basılı tutun ve Sağ Ok tuşuna basın. NVDA bunu açıklayacak. Seçim karakterini karakter karakter genişletmek için Shift+Sağ Ok tuşlarına basmaya devam edin.",
+                    "hint": "Önce Shift tuşunu basılı tutun, ardından Sağ Ok tuşuna basın. Seçimi daha da genişletmek için Shift tuşunu basılı tutun.",
+                    "hints": [
+                        "Önce Shift tuşunu basılı tutun, ardından Shift'i basılı tutarken Sağ Ok tuşuna basın. Shift tuşu, sol Kontrol tuşunun üzerindeki geniş tuştur.",
+                        "NVDA, seçime eklediğiniz her karakteri duyurur. Karakter adının ardından 'seçili' ifadesini duymalısınız.",
+                        "Daha fazla karakteri birer birer seçmek için Shift'i basılı tutun ve Sağ Ok tuşuna basmaya devam edin. Seçmeyi tamamladığınızda Shift tuşunu bırakın."
+                    ],
+                    "expectedGestures": [
+                        "kb:shift+sağ ok"
+                    ],
+                    "successMessage": "Bir karakter seçtiniz. NVDA seçildiğini duyurdu.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşma alışkanlığını geliştirir.\nOk tuşları metinde adım adım ilerlemenizi sağlar.\nKontrol artı oklar aynı anda tüm kelimelerin yanından atlar.\nHome ve End imleci bir Satır başına ve sonuna taşır.\nKontrol artı Home veya End, Belgenin başına ve sonuna atlar5.\nBurası alıştırma alanının son satırıdır."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi bir kelimenin tamamını seçmeyi deneyin. Sonraki kelimeyi aynı anda seçmek için Kontrol+Shift+Sağ Ok tuşlarına basın. NVDA seçilen kelimeyi okuyacaktır.",
+                    "hint": "Hem Kontrol hem de Shift tuşlarını basılı tutun, ardından Sağ Ok tuşuna basın. Üç tuşun tümü birlikte, aynı anda bir kelimeyi seçer.",
+                    "hints": [
+                        "Kontrol ve Shift tuşlarını aynı anda basılı tutun, ardından Sağ Ok tuşuna basın. Kontrol artı Shift artı Sağ Ok aynı anda bir tam kelime seçer.",
+                        "NVDA seçilen kelimeyi duyurur. Ek kelimeleri birer birer seçmek için Kontrol artı Shift artı Sağ Ok tuşlarına basmaya devam edebilirsiniz.",
+                        "Bu kombinasyon (Kontrol artı Shift artı Sağ Ok) metni seçmenin en hızlı yollarından biridir. Hızlı bir şekilde çok kelimeli bir seçim oluşturabilirsiniz."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+Shift+sağ ok"
+                    ],
+                    "successMessage": "Tam bir kelime seçtiniz. Shift tuşunu herhangi bir dolaşım tuşuyla basılı tutmak, seçimi bu miktarda genişletir.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde adım adım ilerlemenizi sağlar.\nKontrol artı oklar aynı anda tüm kelimelerin yanından atlar.\nHome ve End imleci bir satırın başına ve sonuna taşır.\nKontrol artı Home veya End, Belgenin başına ve sonuna atlar.\nBurası alıştırma alanının son satırıdır."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi geçerli satırın tamamını ve onun altındaki bir satırı daha seçmek için Shift tuşunu basılı tutun ve Aşağı Ok tuşuna basın. NVDA seçilen bloğu okuyacaktır.",
+                    "hint": "Sonraki satırı seçmek için Shift tuşunu basılı tutun ve Aşağı Ok tuşuna bir kez basın.",
+                    "hints": [
+                        "Shift tuşunu basılı tutun ve Aşağı Ok tuşuna bir kez basın. Bu, seçimi bir tam satır aşağıya doğru uzatır.",
+                        "",
+                        "Shift artı Aşağı Ok, tam satırları seçmenin en hızlı yoludur. Her ilave basış, seçime başka bir satır ekler."
+                    ],
+                    "expectedGestures": [
+                        "kb:shift+aşağı Ok"
+                    ],
+                    "successMessage": "Bir satır seçtiniz. Shift artı Aşağı Ok, tüm satırları hızlı bir şekilde seçmek için mükemmeldir.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde adım adım ilerlemenizi sağlar.\nKontrol artı oklar aynı anda tüm kelimelerin yanından atlar.\nHome ve End imleci bir satırın başına ve sonuna taşır.\nKontrol artı Home veya End, belgenin başına ve sonuna atlar.\nBurası alıştırma alanının son satırıdır."
+                },
+                {
+                    "type": "info",
+                    "instruction": "Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın. Seçimi kopyalamak için Kontrol+C (Windows komutu) tuşlarına basın. Bir yere yapıştırmak için Kontrol+V (Windows komutu) tuşlarına basın. Kontrol+A geçerli belgedeki tüm metni aynı anda seçer; ayrıca bir Windows komutudur. Shift artı oklarla yapılan seçim, Word, Not Defteri, e-posta, web formları ve diğer birçok metin alanında aynı şekilde çalışır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın. Kontrol artı C seçimi kopyalar; Kontrol artı V bunu yazabileceğiniz her yere yapıştırır. Her ikisi de Windows komutlarıdır.",
+                        "Kontrol artı A, geçerli belgedeki veya metin alanındaki tüm metni aynı anda seçer; her şeyi seçmenin hızlı bir yolu. Bu bir Windows komutudur.",
+                        "Shift artı oklarla yapılan seçim, NVDA çalışıyor olsa da olmasa da Word, Not Defteri, e-posta, web formları ve diğer birçok metin alanında aynı şekilde çalışır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Metni seçtikten sonra NVDA'dan tam olarak seçtiğiniz metni okumasını isteyebilirsiniz. Bu bir NVDA komutudur; yalnızca NVDA çalışırken çalışır. Masaüstü düzeninde NVDA+Shift+Yukarı Ok tuşlarına basın. Dizüstü bilgisayar düzeninde NVDA+Shift+S tuşlarına basın. NVDA seçilen metnin tamamını yüksek sesle okuyacaktır. Bu, oluşturmak için iyi bir alışkanlıktır: metni seçin, ardından kopyalamadan veya onunla başka bir şey yapmadan önce seçimi doğrulayın. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından geçerli seçiminizin tekrar okunmasını dinlemek için Yukarı Ok tuşuna basın.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından geçerli seçiminizin tekrar okunmasını dinlemek için S harfine basın.",
+                        "Kopyalamak için Kontrol artı C tuşlarına basmadan önce bu NVDA komutunu kullanın. Tam olarak neyin seçildiğini onaylar, böylece yanlışlıkla yanlış metni kopyalamazsınız."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Tebrikler. Metni Seçme ve Vurgulama dersini tamamladınız. Sıradaki ders bu bölümdeki son ders: Paragraf ve Sayfaya Göre Dolaşma - burada paragraflar için Ctrl+Yukarı/Aşağı Ok tuşlarını ve daha büyük bölümler için Sayfa Yukarı/Sayfa Aşağı tuşlarını kullanarak uzun belgeler arasında daha büyük atlamalarla atlamayı öğreneceksiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Bir sonraki ders Paragraf ve Sayfaya Göre Dolaşma'dır. Paragraf ve sayfada Dolaşma Windows komutlarıdır; çoğu metin düzenleyicide ve kelime işlemcide çalışırlar.",
+                        "Seçim komutlarının özeti: Shift+Ok taşınan miktara göre seçer; Ctrl+C kopyalar; Ctrl+V yapıştırır. Tüm Windows komutları. NVDA+Shift+Up veya NVDA+Shift+S seçiminizi bildirir - NVDA komutu.",
+                        "Paragrafa ve Sayfaya Göre Dolaşma dersine geçmek için Enter tuşuna basın."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "navigate_paragraph_page",
+            "title": "Paragraf ve Sayfaya Göre Dolaşma",
+            "order": 7,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bir belgede çok sayıda paragraf bulunduğunda satır satır ilerlemek yavaş olur. Kontrol+Aşağı Ok sonraki paragrafın başına atlar. Kontrol+Yukarı Ok önceki paragrafa atlar. Bunlar Windows komutlarıdır; NVDA çalışıyor olsa da olmasa da Word'de, Not Defteri'nde, e-posta istemcilerinde ve çoğu metin düzenleme uygulamasında çalışırlar. NVDA, siz paragrafın üzerine geldiğinizde paragraf metnini okur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sonraki paragrafa atlamak için klavyenin sol alt köşesindeki Kontrol tuşunu basılı tutun ve Aşağı Ok tuşuna basın. Kontrol artı Yukarı Ok önceki paragrafa atlar.",
+                        "Bunlar Windows komutlarıdır; Word, Outlook, Not Defteri ve diğer birçok metin uygulamasında ekran okuyucu olmadan bile çalışırlar.",
+                        "Uzun bir belgeyi tararken ve doğru bölüme hızlı bir şekilde ulaşmak istediğinizde paragrafta dolaşma, satır satır dolaşmadan daha hızlıdır."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Aşağıdaki alıştırma metnine okla gidin, ardından sonraki paragrafa atlamak için Kontrol+Aşağı Ok tuşlarına basın. NVDA, geldiğiniz paragrafın ilk satırını okuyacaktır.",
+                    "hint": "Kontrol'ü basılı tutun ve Aşağı Ok tuşuna basın. Her ikisine de aynı anda basılmalıdır.",
+                    "hints": [
+                        "Klavyenin sol alt kısmındaki Kontrol tuşunu basılı tutun ve aynı anda Aşağı Ok tuşuna basın. İmleciniz bir sonraki paragrafın başına atlar.",
+                        "NVDA atladığınız paragrafın başındaki metni okur. Sonraki paragraflarda ilerlemek için Kontrol ve Aşağı Ok tuşlarına basmaya devam edin.",
+                        "Bazı uygulamalarda Ctrl+Aşağı Ok, bir sonrakine geçmeden önce geçerli paragrafın sonuna atlayabilir. Davranış programa göre biraz değişir."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+aşağı ok"
+                    ],
+                    "successMessage": "Bir sonraki paragrafa atladınız. NVDA, imlecinizin geldiği metni okur.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "İlk paragraf: Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor. Bu cümle alfabenin her harfini içerdiğinden klavyeleri ve yazı tiplerini test etmek için yaygın olarak kullanılır.\n\nİkinci paragraf: Ekran okuyucular dijital dünyayı herkese açar. NVDA ücretsiz, açık kaynaktır ve ihtiyacı olan herkesin kullanımına açıktır. Ekran okuyucu kullanmayı öğrenmek pratik ve sabır gerektirir.\n\nÜçüncü paragraf: Kontrol artı Aşağı Ok bir sonraki paragrafa geçer. Kontrol artı Yukarı Ok geri gider. Bunlar, ekran okuyucunun çalışıp çalışmadığına bakılmaksızın çoğu metin uygulamasında çalışan Windows komutlarıdır.\n\nDördüncü paragraf: Sayfa Yukarı ve Sayfa Aşağı, belgede daha büyük atlamalarla hareket eder. Uzun bir web makalesinde veya çok sayfalı bir belgede olduğu gibi paragrafların doğru dolaşma birimi olmadığı durumlarda bunları kullanın.\n\nBeşinci paragraf: Uygulama alanındaki son paragraftır. Metnin sonuna ulaştınız."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi önceki paragrafa geri dönmek için Kontrol+Yukarı Ok tuşlarına basın. NVDA bunu okuyacaktır.",
+                    "hint": "Kontrol'ü basılı tutun ve Yukarı Ok tuşuna basın.",
+                    "hints": [
+                        "Önceki paragrafın başlangıcına geri dönmek için Kontrol tuşunu basılı tutun ve Yukarı Ok tuşuna basın.",
+                        "NVDA, geldiğiniz paragraf metnini okur. Geçtiğiniz bir paragrafı yeniden okumak için bunu kullanın.",
+                        "Kontrol artı Yukarı ve Kontrol artı Aşağı, her türlü uzun belgede hızlı, paragraf düzeyinde tarama yapmanızı sağlar."
+                    ],
+                    "expectedGestures": [
+                        "kb:kontrol+yukarı ok"
+                    ],
+                    "successMessage": "Önceki paragrafa geri döndünüz. Kontrol artı Yukarı ve Aşağı Ok, uzun belgeleri hızlı bir şekilde taramak için mükemmeldir.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "İlk paragraf: Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor. Bu cümle alfabenin her harfini içerdiğinden klavyeleri ve yazı tiplerini test etmek için yaygın olarak kullanılır.\n\nİkinci paragraf: Ekran okuyucular dijital dünyayı herkese açar. NVDA ücretsiz, açık kaynaktır ve ihtiyacı olan herkesin kullanımına açıktır. Ekran okuyucu kullanmayı öğrenmek pratik ve sabır gerektirir.\n\nÜçüncü paragraf: Kontrol artı Aşağı Ok bir sonraki paragrafa geçer. Kontrol artı Yukarı Ok geri gider. Bunlar, ekran okuyucunun çalışıp çalışmadığına bakılmaksızın çoğu metin uygulamasında çalışan Windows komutlarıdır.\n\nDördüncü paragraf: Sayfa Yukarı ve Sayfa Aşağı, belgede daha büyük atlamalarla hareket eder. Uzun bir web makalesinde veya çok sayfalı bir belgede olduğu gibi paragrafların doğru dolaşma birimi olmadığı durumlarda bunları kullanın.\n\nBeşinci paragraf: Uygulama alanındaki son paragraftır. Metnin sonuna ulaştınız."
+                },
+                {
+                    "type": "info",
+                    "instruction": "Sayfa Yukarı ve Sayfa Aşağı daha büyük atlamalarla hareket eder; genellikle aynı anda bir ekran değerindeki içerik. Bunlar çoğu uygulamada çalışan Windows komutlarıdır. Kelime işlemcide Sayfa Aşağı yaklaşık bir tam sayfa ileri gider. Tarama Kipindeki bir web tarayıcısında, bir ekran aşağı kaydırılır. Bazı programlarda Sayfa Yukarı ve Sayfa Aşağı tuşları da imleci hareket ettirir. NVDA, her atlamadan sonra imlecinizin bulunduğu satırı okur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sayfa Yukarı ve Sayfa Aşağı tuşları genellikle ok tuşlarının üzerindeki kümede, Home ve End tuşlarının yanında bulunur.",
+                        "Bunlar Windows komutlarıdır; NVDA çalışıyor olsa da olmasa da Word'de, tarayıcılarda, PDF görüntüleyicilerde ve diğer birçok uygulamada çalışırlar.",
+                        "Sayfa Yukarı ve Sayfa Aşağı, uzun belgelerde veya web sayfalarında, baştan veya sona atlamadan hızlı bir şekilde hareket etmek istediğinizde en iyi şekilde kullanılır."
+                    ]
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Bir ekran değerindeki içerikte ilerlemek için Sayfa Aşağı'ya basın. NVDA, imlecinizin bulunduğu yerde metni okuyacaktır.",
+                    "hint": "Sayfa Aşağı tuşu genellikle ok tuşlarının üstünde, Home ve End'in yakınında bulunur.",
+                    "hints": [
+                        "Sayfa Aşağı tuşu çoğu klavyede ok tuşlarının üzerinde, Home, End ve Sayfa Yukarı tuşunun yakınında bulunan kümede bulunur.",
+                        "NVDA, Sayfa Aşağı'dan sonra imlecinizin bulunduğu satırı okur. Bir alıştırma metni alanında, eğer metin bir ekrandan kısaysa bu durum sona atlayabilir.",
+                        "Uzun bir web makalesinde veya çok sayfalı bir belgede Sayfa Aşağı, Aşağı Ok tuşuna art arda basmaktan çok daha hızlıdır."
+                    ],
+                    "expectedGestures": [
+                        "kb:sayfaAşağı"
+                    ],
+                    "successMessage": "Sayfa Aşağı'ya bastınız. Daha uzun belgelerde bu sizi her seferinde yaklaşık bir ekran ileri götürür.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "İlk paragraf: Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor. Bu cümle alfabenin her harfini içerdiğinden klavyeleri ve yazı tiplerini test etmek için yaygın olarak kullanılır.\n\nİkinci paragraf: Ekran okuyucular dijital dünyayı herkese açar. NVDA ücretsiz, açık kaynaktır ve ihtiyacı olan herkesin kullanımına açıktır. Ekran okuyucu kullanmayı öğrenmek pratik ve sabır gerektirir.\n\nÜçüncü paragraf: Kontrol artı Aşağı Ok bir sonraki paragrafa geçer. Kontrol artı Yukarı Ok geri gider. Bunlar, ekran okuyucunun çalışıp çalışmadığına bakılmaksızın çoğu metin uygulamasında çalışan Windows komutlarıdır.\n\nDördüncü paragraf: Sayfa Yukarı ve Sayfa Aşağı, belgede daha büyük atlamalarla hareket eder. Uzun bir web makalesinde veya çok sayfalı bir belgede olduğu gibi paragrafların doğru dolaşım birimi olmadığı durumlarda bunları kullanın.\n\nBeşinci paragraf: Uygulama alanındaki son paragraftır. Metnin sonuna ulaştınız."
+                },
+                {
+                    "type": "gesture",
+                    "instruction": "Şimdi bir ekranın değeri kadar geri gitmek için Sayfa Yukarı'ya basın. NVDA geldiğiniz satırı okuyacaktır.",
+                    "hint": "Sayfa Yukarı, Sayfa Aşağı'nın yanında, genellikle ok tuşlarının üzerindedir.",
+                    "hints": [
+                        "Sayfa Yukarı tuşu, ok tuşlarının üzerindeki kümede Sayfa Aşağı'nın yanındadır.",
+                        "NVDA, Sayfa Yukarı'dan sonra imlecinizin bulunduğu satırı okur.",
+                        "Sayfa Yukarı ve Sayfa Aşağı birlikte, belgeler arasında hızlı, büyük ölçekli hareket olanağı sağlar; farklı hızlarda dolaşmak için bunları Kontrol artı Home/End'den sonra kullanın."
+                    ],
+                    "expectedGestures": [
+                        "kb:sayfaYukarı"
+                    ],
+                    "successMessage": "Sayfa Yukarı'ya bastınız. Sayfa Yukarı ve Sayfa Aşağı birlikte uzun belgelerde büyük atlamalarla ilerlemenize olanak sağlar.",
+                    "allowExecution": true,
+                    "feedbackDelay": 1000,
+                    "practiceText": "İlk paragraf: Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor. Bu cümle alfabenin her harfini içerdiğinden klavyeleri ve yazı tiplerini test etmek için yaygın olarak kullanılır.\n\nİkinci paragraf: Ekran okuyucular dijital dünyayı herkese açar. NVDA ücretsiz, açık kaynaktır ve ihtiyacı olan herkesin kullanımına açıktır. Ekran okuyucu kullanmayı öğrenmek pratik ve sabır gerektirir.\n\nÜçüncü paragraf: Kontrol artı Aşağı Ok bir sonraki paragrafa geçer. Kontrol artı Yukarı Ok geri gider. Bunlar, ekran okuyucunun çalışıp çalışmadığına bakılmaksızın çoğu metin uygulamasında çalışan Windows komutlarıdır.\n\nDördüncü paragraf: Sayfa Yukarı ve Sayfa Aşağı, belgede daha büyük atlamalarla hareket eder. Uzun bir web makalesinde veya çok sayfalı bir belgede olduğu gibi paragrafların doğru dolaşım birimi olmadığı durumlarda bunları kullanın.\n\nBeşinci paragraf: Uygulama alanındaki son paragraftır. Metnin sonuna ulaştınız."
+                },
+                {
+                    "type": "info",
+                    "instruction": "Mükemmel iş — Metin Okuma ve İçinde Dolaşma bölümünü tamamladınız! Artık karaktere, kelimeye, satıra, paragrafa ve sayfaya göre nasıl dolaşabileceğinizi biliyorsunuz; aşırılıkları belgelemeye geçin; Tümünü Oku'yu kullanın; Shift artı oklarla metni seçin; NVDA+Shift+Yukarı Ok veya NVDA+Shift+S tuşlarıyla seçimleri doğrulayın; ve Windows komutlarıyla kopyalayıp yapıştırın. Bu beceriler NVDA'nın aktif olduğu her yerde işe yarar. Kısa ipucu: Eğer pratik yaparken NVDA çok hızlı veya çok yavaş okuyorsa, Sentezleyici ayar halkasını kullanarak konuşma hızını ayarlayabilirsiniz; bu, NVDA'yı Kişiselleştirme bölümünde ele alınmıştır. Hazır olduğunuzda ders seçiciyi açmak ve bir sonraki bölüme başlamak için NVDA+Shift+C tuşlarına basın: Nesne Dolaşımı. Bitirmek için Enter'a basın.",
+                    "hints": [
+                        "Bir sonraki bölüm Nesne Dolaşımı'dır. NVDA'nın Sekme ile ulaşılamayan nesneler arasında nasıl dolaşılacağını ele alır.",
+                        "NVDA'nın okuma hızı çok hızlı veya yavaşsa, bunu Sentezleyici ayar halkasını kullanarak NVDA'yı Kişiselleştirme bölümünde ayarlayabilirsiniz.",
+                        "NVDA Eğitmeni ilerlemenizi kaydeder. Geri döndüğünüzde tamamladığınız dersler işaretlenir, böylece kaldığınız yerden devam edebilirsiniz."
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "jump_by_word",
-      "title": "Kelime Kelime Atla",
-      "order": 2,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Metni taramanız gerektiğinde karakter karakter yavaştır. Kontrol artı Sağ Ok sonraki kelimenin başına atlar. Kontrol artı Sol Ok önceki sözcüğe geri atlar. NVDA, üzerine geldiğiniz kelimeyi seslendirir. Bu kısayol, ekran okuyuculu veya ekran okuyucusuz Word, Not Defteri, e-posta ve diğer birçok programda aynı şekilde çalışır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Kontrol artı Sağ Ok, her seferinde bir kelime ileri atlar. Klavyenin sol alt köşesindeki Kontrol tuşunu basılı tutun ve Sağ Ok tuşuna basın.",
-            "Kontrol artı Sol Ok bir kelime geriye atlar. NVDA, imleciniz üzerine geldiğinde her kelimeyi seslendirir.",
-            "Kelime kelime dolaşma, bir cümleyi taramak veya bir paragrafta belirli bir kelimeyi bulmak için karakter karakter dolaşmaktan çok daha hızlıdır."
-          ]
-        },
-        {
-          "type": "gesture",
-          "instruction": "Aşağıdaki alıştırma metnine okla gidin, ardından sonraki sözcüğe atlamak için Kontrol+Sağ Ok tuşlarına basın. NVDA, geldiğiniz kelimeyi seslendirecektir.",
-          "hint": "Kontrol tuşunu (klavyenin sol alt kısmı) basılı tutun ve aynı anda Sağ Ok tuşuna basın.",
-          "hints": [
-            "Klavyenin sol alt köşesindeki Kontrol tuşunu basılı tutun ve Sağ Ok tuşuna basın. Her iki tuşun da aynı anda tutulması gerekir.",
-            "NVDA imlecinizin atladığı kelimeyi seslendirir. Her bastığınızda bir tam kelime ileri gider.",
-            "Kontrol ve Sağ Ok tuşunu basılı tutarsanız imleciniz hızla kelime kelime atlamaya devam edecektir. Durdurmak için bırakın."
-          ],
-          "expectedGestures": [
-            "kb:kontrol+sağ ok"
-          ],
-          "successMessage": "Bir kelime ileri atladınız. NVDA imlecinizin geldiği kelimeyi seslendirdi.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve Ende bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "gesture",
-          "instruction": "Şimdi önceki sözcüğe geri dönmek için Kontrol+Sol Ok tuşlarına basın. NVDA bunu seslendirecek.",
-          "hint": "Kontrol tuşunu basılı tutun ve Sol Ok'a basın.",
-          "hints": [
-            "Kontrol tuşunu basılı tutun ve Sol Ok'a basın. Bu, imlecinizi önceki kelimenin başına geri götürür.",
-            "NVDA her seferinde geldiğiniz kelimeyi seslendirir. Az önce geçtiğiniz kelimeleri gözden geçirmek için bunu kullanın.",
-            "Kontrol artı Sol ve Sağ Ok birlikte, herhangi bir belgeyi hızlı bir şekilde taramanızı sağlar; aynı anda bir karakteri hareket ettirmekten çok daha hızlıdır."
-          ],
-          "expectedGestures": [
-            "kb:kontrol+sol Ok"
-          ],
-          "successMessage": "Bir kelime geri atladınız. Kontrol artı oklar, herhangi bir belgede hızlı bir şekilde kelime kelime dolaşmanızı sağlar.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime dolaşır.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
-        }
-      ]
-    },
-    {
-      "id": "move_by_line",
-      "title": "Satır Satır Dolaşma",
-      "order": 3,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Aşağı Ok belgedeki bir sonraki satıra gider. Yukarı Ok önceki satıra gider. NVDA, her satıra geçtiğinizde satırın tamamını okur. Görme yetisi olan kullanıcılar satırları görsel olarak tarayabilir; her birine gidersiniz ve NVDA bunları yüksek sesle okur. Bu, belgeler ve web sayfaları için en önemli dolaşım yöntemlerinden biridir. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Aşağı Ok bir sonraki satıra geçer ve NVDA satırın tamamını yüksek sesle okur. Yukarı Ok önceki satıra gider.",
-            "Aşağı ve Yukarı Ok tuşları klavyenin sağ alt kısmındaki ok tuşu kümesindedir.",
-            "Satır satır dolaşma, bir belgeyi, e-postayı veya web sayfasını okumanın en yaygın yoludur; bunu sürekli kullanacaksınız."
-          ]
-        },
-        {
-          "type": "gesture",
-          "instruction": "Aşağıdaki alıştırma metnine okla gidin, ardından bir sonraki satıra geçmek için Aşağı Ok'a basın. NVDA sizin için satırın tamamını okuyacaktır.",
-          "hint": "Aşağı Ok tuşu, ok tuşu kümesindedir. Her seferinde bir satır ilerlemek için bir kez basın.",
-          "hints": [
-            "Aşağı Ok tuşu, klavyenin sağ alt kısmındaki ok tuşu kümesindedir. Bir satır aşağı gitmek için bir kez basın.",
-            "NVDA siz satırın üzerine geldiğinizde satırın tamamını okur. Sadece bir kısmını tekrar dinlemek isterseniz, NVDA artı Yukarı Ok tuşlarını kullanarak mevcut satırı yeniden okuyun.",
-            "Birkaç satır aşağıya doğru ilerleyin, ardından Yukarı Ok ile tekrar yukarıya çıkmayı deneyin. NVDA her iki yönde de hareket ettiğinizde her satırı okur."
-          ],
-          "expectedGestures": [
-            "kb:aşağı Ok"
-          ],
-          "successMessage": "Bir satır aşağı gittiniz. NVDA sizin için satırın tamamını okudu.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "gesture",
-          "instruction": "Şimdi önceki satıra dönmek için Yukarı Ok tuşuna basın. NVDA bunu okuyacaktır.",
-          "hint": "Yukarı Ok tuşu, Aşağı Ok tuşunun hemen üzerindedir.",
-          "hints": [
-            "Yukarı Ok tuşu, ok kümesindeki Aşağı Ok tuşunun hemen üzerindedir. Bir satır yukarı gitmek için bir kez basın.",
-            "NVDA, aşağıya doğru hareket ettiğinizde olduğu gibi, yukarıya doğru hareket ettiğinizde de satırın tamamını okur.",
-            "Yukarı ve Aşağı Ok, herhangi bir belge için ana okuma araçlarınızdır. Çoğu ekran okuyucu kullanıcısı, zamanlarının çoğunu yalnızca bu iki tuşu kullanarak geçirir."
-          ],
-          "expectedGestures": [
-            "kb:yukarı Ok"
-          ],
-          "successMessage": "Bir satır yukarı çıktınız. Yukarı ve Aşağı Ok, herhangi bir belgeyi satır satır okumak için ana araçlarınızdır.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nEnter ve Hom bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
-        }
-      ]
-    },
-    {
-      "id": "jump_to_ends",
-      "title": "Başa ​​ve Sona Git",
-      "order": 4,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Kontrol+Home anında bir belgenin, listenin veya web sayfasının en başına atlar. Kontrol+End en sona atlar. Bunlar, yeni bir belgeye girdiğinizde yönünüzü anlamanız için harikadır. Görme yeteneği olan kullanıcılar resmin tamamını görmek için hızla kaydırabilir; bu tuşlar klavye kullanıcıları için anında aynısını yapar. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Kontrol artı Home bir belgenin en başına atlar. Kontrol artı End en sona atlar.",
-            "Home (Baş) genellikle Insert, Sil ve Sayfa Yukarı tuşlarının yanında, çoğu klavyede ok tuşlarının üstünde bulunur.",
-            "Bu iki kısayol, yeni bir belge açtığınızda ve baştan okumaya başlamak istediğinizde veya ne kadar uzun olduğunu görmek için sonuna atlamak istediğinizde kullanışlıdır."
-          ]
-        },
-        {
-          "type": "gesture",
-          "instruction": "Aşağıdaki alıştırma metnine okla gidin ve en başlangıca atlamak için Kontrol+Home tuşlarına basın. NVDA ilk satırı okuyacaktır.",
-          "hint": "Kontrol tuşunu basılı tutun ve Home tuşuna basın. Home tuşu genellikle Insert, Sil ve Sayfa Yukarı tuşlarının yakınındadır.",
-          "hints": [
-            "Kontrol tuşunu basılı tutun ve Home tuşuna basın. Home tuşu, çoğu klavyede, Insert ve Sil'in yanındaki ok tuşlarının üzerindeki kümededir.",
-            "Siz oraya gittikten sonra NVDA belgenin ilk satırını okur. Artık en başındasınız.",
-            "Kontrol artı Home belgelerde, web sayfalarında, listelerde ve diğer birçok metin alanında çalışır. Sizi her zaman en üst noktaya taşır."
-          ],
-          "expectedGestures": [
-            "kb:kontrol+Home"
-          ],
-          "successMessage": "En üste atladınız. NVDA ilk satırı okudu.",
-          "allowExecution": true,
-          "feedbackDelay": 1500,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nEnter ve Hom bir satır sınırına taşınır.\nKontrol artı Home veya End, Belgenin en uç noktalarına atlar\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "gesture",
-          "instruction": "Şimdi en son satıra atlamak için Kontrol+End tuşlarına basın. NVDA bunu okuyacaktır.",
-          "hint": "Kontrol tuşunu basılı tutun ve Home tuşunun yakınındaki End tuşuna basın.",
-          "hints": [
-            "Kontrol tuşunu basılı tutun ve End tuşuna basın. End, ok tuşlarının üzerindeki kümede, Home tuşunun yakınındadır.",
-            "NVDA, Kontrol artı End tuşlarına bastığınızda belgenin son satırını okur.",
-            "Kontrol artı Home ve Kontrol artı End birlikte, herhangi bir belgenin tüm kapsamını hızlı bir şekilde elde etmenize olanak tanır; en başa gitmekiçin Hom tuşuna basın, en sona gitmek için End tuşuna basın."
-          ],
-          "expectedGestures": [
-            "kb:kontrol+End"
-          ],
-          "successMessage": "En sona gittiniz. Kontrol artı Home veya End, sizi anında herhangi bir belgenin her iki ucuna da götürür.",
-          "allowExecution": true,
-          "feedbackDelay": 1500,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Bir belgenin en uç noktalarına atlar..\nBurası alıştırma alanının son satırıdır."
-        }
-      ]
-    },
-    {
-      "id": "say_all",
-      "title": "Tümünü Buradan Oku",
-      "order": 5,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Tümünü Oku NVDA'ya belgenin geçerli konumundan sonuna kadar durmadan okumaya başlamasını söyler. Tuş vuruşu klavye düzeninize bağlıdır. Masaüstü düzenindeyseniz NVDA artı Aşağı Ok tuşlarına basın. Dizüstü bilgisayar düzenindeyseniz, NVDA artı A tuşlarına basın. NVDA sonuna ulaşana veya siz durdurana kadar okumaya devam eder. Görme yeteneği olan kullanıcılar bir bakışta sayfanın tamamına göz atabilir; Tümünü Oku sizin eşdeğerinizdir; bırakın siz dinlerken NVDA her şeyi okusun. Durdurmak için istediğiniz zaman Kontrol tuşuna basabilirsiniz. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: NVDA tuşunu basılı tutun ve Aşağı Ok tuşuna basın. Dizüstü bilgisayar düzeni: NVDA tuşunu basılı tutun ve A harfine basın. Hangi düzeni kullandığınızdan emin değil misiniz? NVDA'yı Kişiselleştirme bölümüne bakın.",
-            "Tümünü Oku'yu hemen durdurmak için istediğiniz zaman Kontrol tuşuna basın. Duraklatmak için Shift tuşuna basın; Durduğu yerden devam etmek için Shift tuşuna tekrar basın.",
-            "Tümünü Oku, uzun belgeleri, e-postaları veya web makalelerini Aşağı Ok tuşuna art arda basmak zorunda kalmadan okumak için çok kullanışlıdır."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Aşağıdaki alıştırma metni alanına okla gidin ve imlecinizi ortada bir yere konumlandırın. Ardından Tümünü Oku'yu başlatın: masaüstü düzeni kullanıcıları NVDA artı Aşağı Ok tuşlarına basar; dizüstü bilgisayar düzeni kullanıcıları NVDA artı A tuşuna basarlar. NVDA, imlecinizden sonuna kadar durmadan her şeyi okumaya başlayacaktır. İstediğiniz zaman durdurmak için Kontrol tuşuna basın. İşiniz bittiğinde devam etmek için Enter tuşuna basın.",
-          "monitorGestures": [
-            "kb:nvda+aşağı ok",
-            "kb:nvda+a"
-          ],
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Bir belgenin en uç noktalarına atlar..\nBurası alıştırma alanının son satırıdır.",
-          "hints": [
-            "Masaüstü düzeni: NVDA — Insert veya Caps Lock — tuşunu basılı tutun ve Aşağı Ok tuşuna basın. Dizüstü bilgisayar düzeni: NVDA'yı basılı tutun ve A harfine basın.",
-            "Tümünü Oku başladıktan sonra hiçbir şey yapmanıza gerek yoktur; sadece dinleyin. Herhangi bir noktada durdurmak için Kontrol tuşuna basın.",
-            "Alıştırma metninde Tümünü Oku'ya farklı konumlardan başlamayı deneyin. Her zaman imleç konumundan sonuna kadar okur."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "select_text",
-      "title": "Metin seçme ve vurgulama",
-      "order": 6,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Ok tuşlarına basarken Shift tuşunu basılı tutarak metni seçebilirsiniz. Siz seçim yaptıkça NVDA, seçime eklenen karakterleri, kelimeleri veya satırları okur. Görebilen kullanıcılar vurgulanan metni görebilir; NVDA seçtiğiniz her parçayı seslendirir, böylece neyin dahil olduğunu her zaman tam olarak bilirsiniz. Seçilen metin Kontrol+C ile kopyalanabilir ve Kontrol+V ile yazma alanı olan her yere yapıştırılabilir. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Seçimi genişletmek için Shift tuşunu basılı tutun ve herhangi bir ok tuşuna basın. Shift artı Sağ Ok bir karakter seçer; Shift artı Aşağı Ok bir satırı seçer; Kontrol artı Shift artı Sağ Ok bir kelime seçer.",
-            "NVDA, seçime eklediğiniz her karakteri, kelimeyi veya satırı seslendirir. Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın.",
-            "Metin seçildikten sonra Kontrol artı C onu kopyalar ve Kontrol artı V yapıştırır. Bunlar her uygulamada çalışan Windows komutlarıdır."
-          ]
-        },
-        {
-          "type": "gesture",
-          "instruction": "Aşağıdaki alıştırma metnine okla gidin. Bir karakter ileriye doğru seçmek için Shift tuşunu basılı tutun ve Sağ Ok tuşuna basın. NVDA bunu seslendirecek. Seçim karakterini karakter karakter genişletmek için Shift+Sağ Ok tuşlarına basmaya devam edin.",
-          "hint": "Önce Shift tuşunu basılı tutun, ardından Sağ Ok tuşuna basın. Seçimi daha da genişletmek için Shift tuşunu basılı tutun.",
-          "hints": [
-            "Önce Shift tuşunu basılı tutun, ardından Shift'i basılı tutarken Sağ Ok tuşuna basın. Shift tuşu, sol Kontrol tuşunun üzerindeki geniş tuştur.",
-            "NVDA, seçime eklediğiniz her karakteri seslendirir. Karakter adının ardından 'seçili' ifadesini duymalısınız.",
-            "Daha fazla karakteri birer birer seçmek için Shift'i basılı tutun ve Sağ Ok tuşuna basmaya devam edin. Seçmeyi tamamladığınızda Shift tuşunu bırakın."
-          ],
-          "expectedGestures": [
-            "kb:shift+sağ ok"
-          ],
-          "successMessage": "Bir karakter seçtiniz. NVDA seçildiğini Seslendirdi.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Bir belgenin en uç noktalarına atlar..\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "gesture",
-          "instruction": "Şimdi bir kelimenin tamamını seçmeyi deneyin. Sonraki kelimeyi aynı anda seçmek için Kontrol+Shift+Sağ Ok tuşlarına basın. NVDA seçilen kelimeyi okuyacaktır.",
-          "hint": "Hem Kontrol hem de Shift tuşlarını basılı tutun, ardından Sağ Ok tuşuna basın. Üç tuşun tümü birlikte, aynı anda bir kelimeyi seçer.",
-          "hints": [
-            "Kontrol ve Shift tuşlarını aynı anda basılı tutun, ardından Sağ Ok tuşuna basın. Kontrol artı Shift artı Sağ Ok aynı anda bir tam kelime seçer.",
-            "NVDA seçilen kelimeyi seslendirir. Ek kelimeleri birer birer seçmek için Kontrol artı Shift artı Sağ Ok tuşlarına basmaya devam edebilirsiniz.",
-            "Bu kombinasyon (Kontrol artı Shift artı Sağ Ok) metni seçmenin en hızlı yollarından biridir. Hızlı bir şekilde çok kelimeli bir seçim oluşturabilirsiniz."
-          ],
-          "expectedGestures": [
-            "kb:kontrol+Shift+sağ ok"
-          ],
-          "successMessage": "Tam bir kelime seçtiniz. Shift tuşunu herhangi bir dolaşım tuşuyla basılı tutmak, seçimi bu miktarda genişletir.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Bir belgenin en uç noktalarına atlar..\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "gesture",
-          "instruction": "Şimdi geçerli satırın tamamını ve onun altındaki bir satırı daha seçmek için Shift tuşunu basılı tutun ve Aşağı Ok tuşuna basın. NVDA seçilen bloğu okuyacaktır.",
-          "hint": "Sonraki satırı seçmek için Shift tuşunu basılı tutun ve Aşağı Ok tuşuna bir kez basın.",
-          "hints": [
-            "Shift tuşunu basılı tutun ve Aşağı Ok tuşuna bir kez basın. Bu, seçimi bir tam satır aşağıya doğru genişletir.",
-            "NVDA, yeni seçilen satırın içeriğini seçime eklediğinizde okur.",
-            "Shift artı Aşağı Ok, tam satırları seçmenin en hızlı yoludur. Her ilave basış, seçime başka bir satır ekler."
-          ],
-          "expectedGestures": [
-            "kb:shift+aşağı Ok"
-          ],
-          "successMessage": "Bir satır seçtiniz. Shift artı Aşağı Ok, tüm satırları hızlı bir şekilde seçmek için mükemmeldir.",
-          "allowExecution": true,
-          "feedbackDelay": 1000,
-          "practiceText": "Hızlı kahverengi tilki tembel köpeğin üzerinden atlıyor.\nEkran okuyucular dijital dünyayı herkese açar.\nNVDA ücretsiz ve açık kaynaklı bir yazılımdır.\nAlıştırma, ekran okuyucuda dolaşım alışkanlığını geliştirir.\nOk tuşları metinde karakter karakter ilerlemenizi sağlar.\nKontrol artı oklar kelime kelime atlar.\nHome ve End bir satır sınırına taşınır.\nKontrol artı Home veya End, Bir belgenin en uç noktalarına atlar..\nBurası alıştırma alanının son satırıdır."
-        },
-        {
-          "type": "info",
-          "instruction": "Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın. Seçimi kopyalamak için Kontrol+C tuşlarına basın. Bir yere yapıştırmak için Kontrol+V tuşlarına basın. Seçim, NVDA'nın aktif olduğu her yerde belgelerde, e-postalarda, metin alanlarında ve web sayfalarında aynı şekilde çalışır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Seçimi kaldırmak için Shift olmadan herhangi bir ok tuşuna basın. Kontrol artı C seçimi kopyalar; Kontrol artı V bunu yazma alanı olan her yere yapıştırır.",
-            "Kontrol artı A, geçerli belgedeki veya metin alanındaki tüm metni aynı anda seçer; her şeyi seçmenin hızlı bir yolu.",
-            "Shift artı oklarla yapılan seçim, Word, Not Defteri, e-posta, web formları ve diğer birçok metin alanında aynı şekilde çalışır."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Mükemmel iş — Metin Okuma ve İçinde Hareket Etme bölümünü tamamladınız! Artık karaktere, kelimeye ve satıra göre nasıl dolaşacağınızı, bir belgenin başına ve sonuna nasıl atlayacağınızı, Tümünü Oku'yu (masaüstü düzeninde NVDA artı Aşağı Ok, dizüstü bilgisayar düzeninde NVDA artı A) kullanmayı ve Shift artı ok tuşlarıyla metni nasıl seçeceğinizi biliyorsunuz. Bu beceriler NVDA'nın aktif olduğu her yerde işe yarar. Kısa ipucu: Eğer pratik yaparken NVDA çok hızlı veya çok yavaş okuyorsa, konuşma hızını ve diğer ses özelliklerini, NVDA'yı Kişiselleştirme bölümünde ele alınan Sentezleyici ayar halkasını kullanarak anında ayarlayabilirsiniz. Hazır olduğunuzda ders seçiciyi açmak ve bir sonraki bölüme başlamak için NVDA+Shift+C tuşlarına basın: Tarama Kipi ve Web Dolaşımı. Bitirmek için Enter'a basın.",
-          "hints": [
-            "Bir sonraki bölüm Tarama Kipi ve Web Dolaşımıdır. NVDA'nın tek harfli kısayollarını kullanarak web sayfalarının nasıl okunacağını ve bu sayfalarla nasıl etkileşime girileceğini kapsar.",
-            "NVDA'nın okuma hızı çok hızlı veya yavaşsa, bunu Sentezleyici ayar halkasını kullanarak NVDA'yı Kişiselleştirme bölümünde ayarlayabilirsiniz.",
-            "NVDA Eğitmeni ilerlemenizi kaydeder. Geri döndüğünüzde tamamladığınız dersler işaretlenir, böylece kaldığınız yerden devam edebilirsiniz."
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }

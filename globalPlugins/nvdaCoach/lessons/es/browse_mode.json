@@ -1,0 +1,576 @@
+{
+  "id": "browse_mode",
+  "title": "Modo exploración y navegación web",
+  "description": "Aprende a navegar por páginas web y documentos HTML usando el modo exploración de NVDA. Una página web de práctica se abrirá automáticamente al iniciar una lección.",
+  "order": 4,
+  "practicePage": true,
+  "lessons": [
+    {
+      "id": "intro_browse_mode",
+      "title": "Acerca del modo exploración",
+      "order": 1,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "El modo exploración es la forma en que NVDA te ayuda a leer páginas web. Los usuarios videntes pueden ver una página web con su diseño visual. NVDA crea una copia de texto virtual de la página que puedes navegar con teclas de flecha y atajos de una sola letra, como si fuera un documento. Cuando pulses Enter, se abrirá una página web de práctica en tu navegador en una ventana separada. Quédate aquí y termina de leer estas instrucciones primero. NVDA Coach permanecerá enfocado para que puedas leer el siguiente paso. Cuando estés listo, pulsa Alt+Tab para cambiar a tu navegador. Pulsa Enter para abrir la página de práctica y continuar.",
+          "openPracticePageAfter": true,
+          "hints": [
+            "El modo exploración crea una copia virtual de la página web como documento de texto. Las teclas de flecha se mueven por él igual que en un documento normal.",
+            "Los atajos de una sola letra como H para encabezado y K para enlace solo funcionan en modo exploración, no en formularios o campos de texto donde necesitas escribir.",
+            "NVDA cambia al modo exploración automáticamente cuando abres una página web. Escucharás 'modo exploración' anunciado cuando se active."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "La página de práctica ya está abierta en tu navegador. Pulsa Alt+Tab para cambiar a ella. Una vez allí, pulsa Flecha Abajo para comenzar a leer la página. Pulsa NVDA+Shift+C en cualquier momento para volver aquí y continuar tu lección. Pulsa Enter cuando estés listo.",
+          "hints": [
+            "Pulsa Alt+Tab para cambiar a tu navegador. Mantén pulsada Alt y toca Tab una vez para pasar a la siguiente ventana abierta.",
+            "Una vez en el navegador, simplemente pulsa Flecha Abajo para comenzar a leer la página línea a línea, igual que leerías un documento.",
+            "Pulsa NVDA+Shift+C en cualquier momento para volver a la ventana del Coach y continuar tu lección."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa Alt+Tab para cambiar a tu navegador.",
+          "hint": "Mantén pulsada la tecla Alt y pulsa Tab. Esto cicla por tus ventanas abiertas. Suelta ambas teclas cuando se anuncie tu navegador.",
+          "hints": [
+            "Mantén pulsada la tecla Alt, a la izquierda de la barra espaciadora, y pulsa Tab una vez. Suelta ambas teclas cuando escuches anunciado tu navegador.",
+            "Si pasas de largo el navegador, sigue manteniendo Alt y pulsa Tab de nuevo para continuar ciclando por las ventanas abiertas.",
+            "Una vez en el navegador, NVDA debería anunciar el título de la página y 'modo exploración' para indicarte que estás en una página web."
+          ],
+          "expectedGestures": [
+            "kb:alt+tab"
+          ],
+          "successMessage": "Cambiaste de ventana. Ahora deberías estar en tu navegador en la página de práctica.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Estás en el navegador. Pulsa Flecha Abajo para comenzar a leer la página línea a línea.",
+          "hint": "Simplemente pulsa la tecla Flecha Abajo. En modo exploración, NVDA lee cada línea a medida que te mueves hacia abajo.",
+          "hints": [
+            "Pulsa la tecla Flecha Abajo, la que apunta hacia abajo en el grupo de flechas. En modo exploración, se mueve por la página una línea a la vez.",
+            "NVDA lee cada línea a medida que bajas, igual que al leer un documento. El contenido de la página fluye de arriba a abajo.",
+            "Si NVDA está en silencio, asegúrate de que el foco está en la ventana del navegador. Intenta pulsar NVDA+T para confirmar qué ventana está activa."
+          ],
+          "expectedGestures": [
+            "kb:downArrow"
+          ],
+          "successMessage": "Estás navegando por la página de práctica en modo exploración. Las teclas de flecha funcionan igual que al leer un documento de texto. Muy bien.",
+          "allowExecution": true,
+          "feedbackDelay": 1000
+        }
+      ]
+    },
+    {
+      "id": "browse_headings",
+      "title": "Navegar por encabezados",
+      "order": 2,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las páginas web están estructuradas con encabezados, como capítulos en un libro. Los usuarios videntes los ven visualmente: son más grandes o en negrita. NVDA anuncia el texto del encabezado y su nivel. En modo exploración, pulsa H para saltar al siguiente encabezado. Shift+H va al encabezado anterior. Asegúrate de estar en tu navegador en la página de práctica. Pulsa Enter para continuar.",
+          "hints": [
+            "Pulsa H sola, solo la letra H sin ninguna tecla modificadora. En modo exploración, las letras solas son atajos, no texto escrito.",
+            "NVDA anuncia el texto del encabezado y su nivel; por ejemplo, 'nivel 2 encabezado: Primeros pasos'. El nivel indica su posición en la estructura de la página.",
+            "Shift+H retrocede al encabezado anterior. El patrón de pulsar una tecla para avanzar y Shift más esa tecla para retroceder se aplica a la mayoría de los atajos del modo exploración."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa H para saltar al siguiente encabezado de la página.",
+          "hint": "Pulsa la letra H sola. En modo exploración, las letras solas son atajos de navegación, no caracteres escritos.",
+          "hints": [
+            "Pulsa H sola, solo la tecla de letra sin modificador. En modo exploración, las teclas de letra saltan a elementos de la página en lugar de escribir caracteres.",
+            "NVDA anuncia el texto del encabezado y su número de nivel. El nivel 1 es el título principal; el nivel 2 es una sección; el nivel 3 es una subsección.",
+            "Si no ocurre nada, asegúrate de estar en modo exploración en el navegador. Pulsa NVDA+Shift+C para volver al Coach si es necesario."
+          ],
+          "expectedGestures": [
+            "kb:h"
+          ],
+          "successMessage": "Saltaste al siguiente encabezado. NVDA anunció el texto del encabezado y su nivel.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa H de nuevo para pasar al siguiente encabezado.",
+          "hint": "Sigue pulsando H para avanzar por los encabezados de la página.",
+          "hints": [
+            "Sigue pulsando H para avanzar por todos los encabezados de la página. Cada pulsación salta al siguiente.",
+            "Recorrer los encabezados con H es la forma más rápida de tener una visión general de la estructura de una página web, como leer un índice.",
+            "Si NVDA dice 'no hay siguiente encabezado', has llegado al último encabezado de la página."
+          ],
+          "expectedGestures": [
+            "kb:h"
+          ],
+          "successMessage": "Bien. Puedes pulsar H repetidamente para recorrer todos los encabezados de una página muy rápidamente.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Shift+H para volver al encabezado anterior.",
+          "hint": "Mantén pulsada Shift y pulsa H para retroceder por los encabezados.",
+          "hints": [
+            "Mantén pulsada Shift y pulsa H. Esta es la versión hacia atrás del atajo H; el mismo patrón se aplica a la mayoría de las teclas de navegación del modo exploración.",
+            "NVDA anuncia el encabezado al que retrocedes, incluido su nivel y texto.",
+            "Shift más una letra de navegación siempre retrocede en modo exploración. H y Shift+H te permiten recorrer los encabezados de cualquier página en cualquier dirección."
+          ],
+          "expectedGestures": [
+            "kb:shift+h"
+          ],
+          "successMessage": "Retrocediste un encabezado. Shift más una tecla de navegación siempre retrocede. H y Shift+H te permiten recorrer la estructura de cualquier página en segundos.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "heading_levels",
+      "title": "Saltar a niveles de encabezado",
+      "order": 3,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las páginas web usan distintos niveles de encabezado para su estructura: el nivel 1 es el título principal, el nivel 2 es una sección principal, el nivel 3 es una subsección. Los usuarios videntes pueden ver esta jerarquía por el tamaño del texto. En modo exploración, puedes pulsar un número del 1 al 6 para saltar directamente a un encabezado de ese nivel. Pulsa Enter para continuar.",
+          "hints": [
+            "Pulsa 1 para saltar a los encabezados de nivel 1, 2 para el nivel 2, y así sucesivamente hasta el 6. Usa la fila de números en la parte superior del teclado, no el teclado numérico.",
+            "Shift más un número salta hacia atrás al encabezado anterior de ese nivel; el mismo patrón hacia adelante y hacia atrás que otras teclas del modo exploración.",
+            "La mayoría de las páginas bien estructuradas tienen un encabezado de nivel 1 (el título principal) y varios encabezados de nivel 2 (secciones principales). Los encabezados de nivel 3 son subsecciones dentro de esas."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa 1 para saltar al siguiente encabezado de nivel 1 de la página.",
+          "hint": "Pulsa el número 1 de la fila superior del teclado, no el teclado numérico.",
+          "hints": [
+            "Pulsa el número 1 de la fila superior del teclado, la fila que está encima de las letras. No uses el teclado numérico.",
+            "NVDA anuncia el texto del encabezado de nivel 1. El nivel 1 es normalmente el título principal de la página.",
+            "Si NVDA dice 'no hay siguiente encabezado de nivel 1', la página solo tiene un encabezado de nivel 1 o ninguno."
+          ],
+          "expectedGestures": [
+            "kb:1"
+          ],
+          "successMessage": "Saltaste a un encabezado de nivel 1. Este es normalmente el título principal de la página.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa 2 para saltar al siguiente encabezado de nivel 2.",
+          "hint": "Pulsa el número 2 de la fila superior del teclado.",
+          "hints": [
+            "Pulsa el número 2 de la fila superior del teclado. Los encabezados de nivel 2 son las secciones principales de una página.",
+            "NVDA anuncia el texto del encabezado de nivel 2. Sigue pulsando 2 para moverte por todos los encabezados de nivel 2 en orden.",
+            "Los encabezados de nivel 2 en un sitio de noticias pueden ser títulos de artículos. En una página de ayuda pueden ser nombres de temas."
+          ],
+          "expectedGestures": [
+            "kb:2"
+          ],
+          "successMessage": "Saltaste a un encabezado de nivel 2. Estos son los encabezados de las secciones principales.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa 3 para saltar al siguiente encabezado de nivel 3.",
+          "hint": "Pulsa el número 3 de la fila superior.",
+          "hints": [
+            "Pulsa el número 3 de la fila superior. Los encabezados de nivel 3 son subsecciones dentro de una sección de nivel 2.",
+            "NVDA anuncia el texto del encabezado de nivel 3. Los encabezados de nivel 3 proporcionan una estructura más detallada dentro de las secciones principales.",
+            "La navegación por nivel de encabezado es una de las herramientas más potentes para recorrer rápidamente una página web. Combina H para todos los encabezados con números para niveles específicos."
+          ],
+          "expectedGestures": [
+            "kb:3"
+          ],
+          "successMessage": "Saltaste a un encabezado de nivel 3. La navegación por nivel de encabezado es una de las herramientas más potentes para recorrer rápidamente una página web.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "navigate_links",
+      "title": "Navegar por enlaces",
+      "order": 4,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Los enlaces son lo que activas para moverte entre páginas web. Los usuarios videntes pueden verlos como texto subrayado o de color. En modo exploración, pulsa K para saltar al siguiente enlace; NVDA anuncia el texto del enlace para que sepas adónde lleva. Shift+K va al enlace anterior. Tab también te mueve hacia adelante entre enlaces y otros elementos interactivos. Pulsa Enter para continuar.",
+          "hints": [
+            "Pulsa K sola para saltar al siguiente enlace. NVDA anuncia el texto del enlace; esto te dice adónde lleva antes de seguirlo.",
+            "Shift+K va al enlace anterior. El patrón hacia adelante y hacia atrás se aplica aquí igual que con los encabezados.",
+            "Tab también se mueve entre enlaces y elementos interactivos, pero omite el texto sin formato. K se mueve solo por los enlaces, mientras que Tab también incluye botones y campos de formulario."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa K para saltar al siguiente enlace de la página.",
+          "hint": "Pulsa la letra K sola. NVDA anunciará el texto del enlace.",
+          "hints": [
+            "Pulsa K sola, solo la tecla de letra sin modificador. NVDA anuncia el texto del enlace para que sepas adónde lleva.",
+            "El texto del enlace es el nombre descriptivo del enlace. Un buen texto de enlace indica el destino; un texto vago como 'haz clic aquí' no.",
+            "Para seguir un enlace, pulsa Enter. Para seguir explorando sin seguirlo, simplemente pulsa K de nuevo para pasar al siguiente enlace."
+          ],
+          "expectedGestures": [
+            "kb:k"
+          ],
+          "successMessage": "Saltaste a un enlace. NVDA anunció el texto del enlace. Para seguir un enlace en modo exploración, pulsa Enter.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa K de nuevo para saltar al siguiente enlace.",
+          "hint": "Sigue pulsando K para recorrer todos los enlaces de la página.",
+          "hints": [
+            "Pulsa K de nuevo para saltar al siguiente enlace. Sigue pulsando K para recorrer todos los enlaces de la página en orden.",
+            "NVDA anuncia el texto de cada enlace cuando te detienes en él. Esto te permite recorrer rápidamente todas las opciones de navegación de una página.",
+            "Si NVDA dice 'no hay siguiente enlace', has llegado al último enlace de la página."
+          ],
+          "expectedGestures": [
+            "kb:k"
+          ],
+          "successMessage": "Bien. Puedes recorrer todos los enlaces de una página muy rápidamente con K.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa Shift+K para volver al enlace anterior.",
+          "hint": "Mantén pulsada Shift y pulsa K para retroceder por los enlaces.",
+          "hints": [
+            "Mantén pulsada Shift y pulsa K para retroceder. Sigue el mismo patrón que Shift+H para los encabezados.",
+            "NVDA anuncia el texto del enlace anterior cuando retrocedes a él.",
+            "K y Shift+K juntos te permiten recorrer libremente todos los enlaces de una página en cualquier dirección."
+          ],
+          "expectedGestures": [
+            "kb:shift+k"
+          ],
+          "successMessage": "Retrocediste un enlace. K y Shift+K te permiten revisar rápidamente todos los enlaces de una página.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa Tab para moverte al siguiente elemento interactivo de la página.",
+          "hint": "Tab te mueve entre enlaces, botones y campos de formulario. Solo visita elementos interactivos, no texto sin formato.",
+          "hints": [
+            "Tab se mueve entre todos los elementos interactivos: enlaces, botones y campos de formulario, saltando el contenido de texto sin formato.",
+            "Tab es útil cuando quieres moverte solo por las partes accionables de una página sin leer el contenido que las rodea.",
+            "La tecla Tab está en el extremo izquierdo del teclado, encima de Bloq Mayús. Púlsala sola, sin ningún modificador."
+          ],
+          "expectedGestures": [
+            "kb:tab"
+          ],
+          "successMessage": "Tab te llevó al siguiente elemento interactivo. Tab es ideal para moverte entre controles en formularios y navegar por menús.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "navigate_forms",
+      "title": "Interactuar con formularios",
+      "order": 5,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las páginas web suelen tener formularios con campos de edición, botones y casillas de verificación. Los usuarios videntes pueden verlos visualmente; NVDA anuncia qué tipo de campo es cuando llegas a él. En modo exploración, pulsa F para saltar al siguiente campo de formulario. Pulsa E para saltar al siguiente campo de edición, que es un cuadro de texto donde puedes escribir. Pulsa B para saltar al siguiente botón. Pulsa Enter para continuar.",
+          "hints": [
+            "F salta al siguiente campo de formulario de cualquier tipo. E salta específicamente a los campos de entrada de texto. B salta a los botones. Todos usan el mismo patrón hacia adelante y hacia atrás; Shift más la letra retrocede.",
+            "NVDA anuncia el tipo de campo y su etiqueta cuando llegas a él; por ejemplo, 'Buscar, campo de edición' o 'Enviar, botón'.",
+            "Para escribir en un campo de edición, primero debes cambiar al modo foco. NVDA lo hace a menudo de forma automática, o puedes pulsar Enter o NVDA+Espacio para cambiar manualmente."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa F para saltar al siguiente campo de formulario de la página.",
+          "hint": "Pulsa la letra F sola. Incluye cuadros de texto, casillas de verificación, botones de radio y más.",
+          "hints": [
+            "Pulsa F sola, solo la tecla de letra. Esto salta al siguiente campo de formulario de cualquier tipo en la página.",
+            "NVDA anuncia el tipo de campo: 'edición', 'casilla de verificación', 'botón de radio', 'cuadro combinado', para que sepas qué tipo de control es.",
+            "Shift+F va al campo de formulario anterior. El mismo patrón hacia adelante y hacia atrás se aplica aquí."
+          ],
+          "expectedGestures": [
+            "kb:f"
+          ],
+          "successMessage": "Saltaste a un campo de formulario. NVDA anunció qué tipo de campo es.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa E para saltar al siguiente campo de entrada de texto.",
+          "hint": "Pulsa la letra E. Los campos de edición son cuadros de texto donde escribes información.",
+          "hints": [
+            "Pulsa E sola para saltar al siguiente campo de edición, un cuadro de texto donde puedes escribir.",
+            "NVDA anuncia la etiqueta del campo y la palabra 'edición' para identificarlo como campo de entrada de texto.",
+            "Para escribir en un campo de edición, pulsa Enter para cambiar al modo foco, escribe el texto y luego pulsa Escape para volver al modo exploración."
+          ],
+          "expectedGestures": [
+            "kb:e"
+          ],
+          "successMessage": "Llegaste a un campo de edición. Para escribir en él, primero pulsarías Enter o NVDA+Espacio para cambiar al modo foco.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa B para saltar al siguiente botón.",
+          "hint": "Pulsa la letra B. Los botones son controles que activas con Enter o Espacio.",
+          "hints": [
+            "Pulsa B sola para saltar al siguiente botón de la página.",
+            "NVDA anuncia la etiqueta del botón. Activa cualquier botón pulsando Enter o Espacio mientras está enfocado en él.",
+            "B es la forma más rápida de encontrar botones de acción, como Enviar, Buscar o Iniciar sesión, en cualquier página web."
+          ],
+          "expectedGestures": [
+            "kb:b"
+          ],
+          "successMessage": "Encontraste un botón. Los botones se activan pulsando Enter o Espacio. B es la forma más rápida de encontrar botones en cualquier página.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "focus_mode",
+      "title": "Modo foco frente a modo exploración",
+      "order": 6,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "El modo exploración te permite leer y navegar por las páginas. Pero cuando necesitas escribir en un cuadro de texto, debes cambiar al modo foco. Cuando se activa el modo foco, el cursor se coloca dentro del cuadro de edición y puedes escribir directamente; esto es intencionado. El modo foco sitúa el cursor en el cuadro de edición para que puedas interactuar con los campos de formulario. Las pulsaciones de teclas van directamente a la aplicación en lugar de usarse como atajos de navegación. NVDA a menudo cambia al modo foco automáticamente cuando pulsas Tab para entrar en un campo de texto. También puedes alternar manualmente con NVDA+Espacio (comando de NVDA). Pulsa Enter para continuar.",
+          "hints": [
+            "Modo exploración: las teclas de letra son atajos de navegación. Modo foco: las teclas de letra escriben caracteres en un campo; el cursor está en el cuadro de edición. NVDA+Espacio alterna entre ellos.",
+            "NVDA suele cambiar al modo foco automáticamente cuando entras en un campo de texto. Escucharás 'modo foco' anunciado y el cursor estará en el cuadro de edición listo para escribir.",
+            "Si intentas escribir y las letras están saltando por la página en lugar de aparecer en un campo, estás en modo exploración. Pulsa NVDA+Espacio para cambiar al modo foco y colocar el cursor en el cuadro de edición."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Mantén pulsada la tecla NVDA y pulsa la barra espaciadora. NVDA anunciará 'modo foco' o 'modo exploración' para indicarte a cuál estás cambiando. En modo foco, las teclas de letra escriben caracteres en un campo en lugar de navegar por la página. En modo exploración, las teclas de letra son atajos de navegación. NVDA a menudo cambia automáticamente al pulsar Tab en un campo de texto, pero saber alternar manualmente con NVDA+Espacio te da control total en cualquier momento. Pulsa Enter aquí para continuar.",
+          "monitorGestures": [
+            "kb:nvda+space"
+          ],
+          "hints": [
+            "Mantén pulsada la tecla NVDA (Insert o Bloq Mayús) y pulsa la barra espaciadora. La barra espaciadora es la larga tecla plana en la parte inferior central del teclado.",
+            "NVDA anuncia 'modo foco' o 'modo exploración' para confirmar a cuál cambiaste. Alterna varias veces para acostumbrarte.",
+            "Si se escribe texto cuando esperas navegación, pulsa NVDA+Espacio para cambiar al modo exploración. Si ocurre navegación cuando esperas escribir, pulsa NVDA+Espacio para cambiar al modo foco."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pulsa NVDA+Espacio una vez más para volver al otro modo. Mantén pulsada la tecla NVDA y pulsa Espacio, y escucha cómo NVDA anuncia el nombre del modo. Recordar este único atajo significa que siempre tendrás control sobre cómo se comporta tu teclado en cualquier página web. Pulsa Enter aquí para continuar.",
+          "monitorGestures": [
+            "kb:nvda+space"
+          ],
+          "hints": [
+            "Mantén pulsada NVDA y pulsa la barra espaciadora de nuevo para alternar. NVDA anuncia el nombre del modo cada vez que cambias.",
+            "La barra espaciadora es la larga tecla plana en la parte inferior del teclado. Mantén pulsada la tecla NVDA y luego toca Espacio.",
+            "NVDA+Espacio es uno de los atajos de navegación web más importantes. Una vez que se vuelve un reflejo, nunca te sentirás atrapado en el modo equivocado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmarks_and_lists",
+      "title": "Puntos de referencia y listas",
+      "order": 7,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las páginas web bien diseñadas usan puntos de referencia: regiones con nombre como navegación, contenido principal y pie de página. Los usuarios videntes pueden ver estas secciones de un vistazo. En modo exploración, pulsa D para saltar al siguiente punto de referencia y pasar directamente a la parte de la página que necesitas. Shift+D retrocede. Las páginas también tienen listas de elementos. Pulsa L para saltar a la siguiente lista. Estos atajos te ayudan a ir directamente a la parte correcta de una página sin leer todo. Pulsa Enter para continuar.",
+          "hints": [
+            "D salta a la siguiente región de punto de referencia. Los puntos de referencia comunes incluyen: banner (encabezado de página), navegación, main (contenido principal) y contentinfo (pie de página).",
+            "L salta a la siguiente lista de la página. Una vez dentro de una lista, pulsa I para moverte entre los elementos individuales de la lista.",
+            "Usar D para saltar al punto de referencia principal omite los enlaces de navegación repetidos en la parte superior de una página, lo que supone un gran ahorro de tiempo en cada sitio que visitas."
+          ]
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa D para saltar al siguiente punto de referencia de la página.",
+          "hint": "Pulsa la letra D. NVDA anunciará el tipo de punto de referencia, como navegación, main o contentinfo.",
+          "hints": [
+            "Pulsa D sola. NVDA anuncia el tipo de punto de referencia; por ejemplo, 'punto de referencia de navegación' o 'punto de referencia principal'.",
+            "El punto de referencia principal contiene el contenido primario de la página. Saltar a él con D omite los encabezados y menús de navegación repetidos.",
+            "Shift+D retrocede al punto de referencia anterior."
+          ],
+          "expectedGestures": [
+            "kb:d"
+          ],
+          "successMessage": "Saltaste a un punto de referencia. Los puntos de referencia son una forma rápida de llegar al área de contenido principal y omitir los enlaces de navegación repetidos.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Pulsa D de nuevo para pasar al siguiente punto de referencia.",
+          "hint": "Sigue pulsando D para ciclar por todos los puntos de referencia de la página.",
+          "hints": [
+            "Pulsa D de nuevo para saltar al siguiente punto de referencia. Sigue pulsando para ciclar por todas las regiones de puntos de referencia de la página.",
+            "NVDA anuncia cada tipo de punto de referencia cuando te detienes en él.",
+            "Si NVDA dice 'no hay siguiente punto de referencia', la página no tiene más puntos de referencia o no está bien estructurada con roles ARIA."
+          ],
+          "expectedGestures": [
+            "kb:d"
+          ],
+          "successMessage": "Bien. Puedes pulsar D repetidamente para moverte entre todas las secciones principales de una página.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        },
+        {
+          "type": "gesture",
+          "instruction": "Ahora pulsa L para saltar a la siguiente lista de la página.",
+          "hint": "Pulsa la letra L. Las listas contienen elementos agrupados como menús de navegación, listados de productos o viñetas.",
+          "hints": [
+            "Pulsa L sola para saltar a la siguiente lista. Las listas contienen elementos agrupados: menús de navegación, viñetas, listados de productos y más.",
+            "Una vez dentro de una lista, pulsa I para moverte entre los elementos individuales uno a uno.",
+            "NVDA anuncia 'lista con X elementos' cuando llegas a una lista, para que sepas cuántos elementos contiene antes de empezar a leerla."
+          ],
+          "expectedGestures": [
+            "kb:l"
+          ],
+          "successMessage": "Encontraste una lista. Una vez dentro de una lista, pulsa I para moverte entre los elementos. L y D juntas cubren la mayor parte de la navegación estructural que necesitas en cualquier página.",
+          "allowExecution": true,
+          "feedbackDelay": 1500
+        }
+      ]
+    },
+    {
+      "id": "elements_list",
+      "title": "La lista de elementos",
+      "order": 8,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA tiene un potente cuadro de diálogo llamado Lista de elementos que muestra todos los encabezados, enlaces, campos de formulario o puntos de referencia de la página actual en un solo lugar. Puedes filtrar la lista y saltar directamente a cualquier elemento. Los usuarios videntes pueden escanear visualmente una página y detectar lo que necesitan; la Lista de elementos te ofrece la misma visión general en un cuadro de diálogo accesible. Es como un índice de toda la página. Pulsa Enter para continuar.",
+          "hints": [
+            "La Lista de elementos se abre con NVDA+F7. Muestra encabezados, enlaces, campos de formulario o puntos de referencia según la pestaña en la que estés.",
+            "Dentro de la Lista de elementos, Tab se mueve entre los botones de categoría de la parte superior. Las teclas de flecha se mueven por la lista de elementos. Enter salta al elemento seleccionado en la página.",
+            "La Lista de elementos es una de las formas más rápidas de encontrar un enlace o encabezado específico en una página larga sin leer todo."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Mantén pulsada la tecla NVDA y pulsa F7 en la parte superior del teclado. Se abrirá el cuadro de diálogo Lista de elementos y NVDA lo anunciará. Dentro del cuadro de diálogo, pulsa Tab para cambiar entre ver encabezados, enlaces, campos de formulario y puntos de referencia de la página actual. Usa las teclas de flecha para moverte por la lista y pulsa Enter en cualquier elemento para saltar directamente a él en la página. Es como un índice instantáneo de toda la página, una de las herramientas más potentes que NVDA te ofrece para navegar por la web. Cuando termines de explorar, pulsa Escape para cerrar el cuadro de diálogo y luego pulsa Enter aquí para continuar.",
+          "monitorGestures": [
+            "kb:nvda+f7"
+          ],
+          "hints": [
+            "Mantén pulsada la tecla NVDA y pulsa F7, la séptima tecla de función en la fila superior. El cuadro de diálogo Lista de elementos se abre inmediatamente.",
+            "Dentro del cuadro de diálogo, Tab se mueve entre los botones de categoría: encabezados, enlaces, campos de formulario, botones y puntos de referencia. Las teclas de flecha se mueven por los elementos de la categoría seleccionada.",
+            "Escribe algunas letras en el cuadro de filtro para reducir la lista a los elementos que contienen ese texto. Esto es muy útil en páginas con muchos enlaces."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Muy bien. La Lista de elementos es una de las formas más rápidas de tener una visión general de cualquier página. Pulsa Enter para continuar a la siguiente lección.",
+          "hints": [
+            "Usa la Lista de elementos cada vez que llegues a una página desconocida y quieras entender rápidamente su estructura antes de leerla.",
+            "El cuadro de filtro de la Lista de elementos te permite escribir una palabra para reducir la lista; por ejemplo, escribe 'contacto' para encontrar un enlace de contacto en cualquier página.",
+            "Recuerda: NVDA+F7 abre la Lista de elementos desde cualquier página web. Funciona en la mayoría de los navegadores, incluidos Chrome, Firefox y Edge."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nvda_find",
+      "title": "Buscar texto en una página",
+      "order": 9,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "NVDA+Ctrl+F abre el cuadro de diálogo Buscar de NVDA, que te permite buscar cualquier texto en la página web actual. Los usuarios videntes pueden pulsar Ctrl+F en su navegador para encontrar texto en pantalla. El cuadro de diálogo Buscar de NVDA funciona de la misma manera pero anuncia el resultado mediante la voz. Funciona en modo exploración y en muchos documentos. Pulsa Enter para continuar.",
+          "hints": [
+            "NVDA+Control+F abre el cuadro de diálogo Buscar de NVDA. Mantén pulsada NVDA, luego Control y luego pulsa F.",
+            "Escribe el texto que quieres encontrar y luego pulsa Enter. NVDA salta a la primera coincidencia y lee el texto circundante.",
+            "NVDA+F3 encuentra la siguiente coincidencia después de la primera. NVDA+Shift+F3 encuentra la coincidencia anterior."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora. Mantén pulsada la tecla NVDA, luego Control, luego pulsa F. Se abrirá el cuadro de diálogo Buscar. Escribe una palabra que aparezca en la página de práctica, como 'encabezado' o 'enlace', y luego pulsa Enter para saltar a la primera coincidencia. NVDA anunciará el texto alrededor del resultado. Pulsa Escape para cerrar el cuadro de diálogo sin buscar. Cuando termines, pulsa NVDA+Shift+C para volver aquí y luego pulsa Enter para continuar.",
+          "monitorGestures": [
+            "kb:nvda+control+f"
+          ],
+          "hints": [
+            "Mantén pulsadas NVDA, Control y F; las tres al mismo tiempo. La tecla Control está en la esquina inferior izquierda; F está en la fila central de letras.",
+            "Escribe una palabra que sepas que está en la página y luego pulsa Enter. NVDA salta a la primera aparición y lee el texto circundante.",
+            "Si no se encuentra ninguna coincidencia, NVDA dice 'no encontrado'. Prueba con un término de búsqueda diferente o comprueba la ortografía."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "También puedes encontrar la siguiente o anterior aparición sin volver a abrir el cuadro de diálogo. Pulsa NVDA+F3 para encontrar la siguiente coincidencia y NVDA+Shift+F3 para encontrar la anterior. Funcionan igual que Buscar siguiente en otras aplicaciones. Pulsa Enter para continuar.",
+          "hints": [
+            "NVDA+F3 encuentra la siguiente coincidencia. NVDA+Shift+F3 encuentra la coincidencia anterior. F3 es la tercera tecla de función en la fila superior.",
+            "Tras abrir Buscar y saltar al primer resultado, cierra el cuadro de diálogo con Escape y usa NVDA+F3 para seguir moviéndote por las coincidencias posteriores.",
+            "Este atajo funciona en modo exploración en páginas web y en muchos visores de documentos; útil siempre que busques una palabra o frase específica."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigate_tables",
+      "title": "Navegar por tablas",
+      "order": 10,
+      "chapterComplete": true,
+      "steps": [
+        {
+          "type": "info",
+          "instruction": "Las páginas web a menudo usan tablas para mostrar información estructurada: filas y columnas de datos como horarios, precios o cuadros comparativos. Los usuarios videntes pueden ver el diseño de cuadrícula visualmente. Cuando el cursor llega a una tabla en modo exploración, NVDA anuncia 'tabla con X filas e Y columnas' para que conozcas el tamaño de la tabla. Comprender qué tipo de comando estás usando es importante aquí: los comandos de navegación por celdas de tabla son comandos de NVDA; requieren la tecla NVDA o una combinación que NVDA interpreta. No son comandos de Windows ni del navegador. Pulsa Enter para continuar.",
+          "hints": [
+            "NVDA anuncia 'tabla con X filas e Y columnas' cuando llegas a una tabla. Esto te indica su tamaño antes de empezar a navegar por ella.",
+            "Los comandos de navegación por tablas de esta lección son comandos de NVDA; solo funcionan cuando NVDA está en ejecución y estás en modo exploración en una página web.",
+            "No todas las tablas de las páginas web son tablas de datos. Algunas páginas usan tablas para el diseño visual. NVDA las anunciará igualmente, pero puede que no tengan una estructura significativa de filas y columnas."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Para moverte entre las celdas de una tabla, usa Ctrl+Alt+Teclas de flecha; estos son comandos de NVDA para la navegación por tablas. Ctrl+Alt+Flecha Derecha se mueve a la siguiente celda de la misma fila. Ctrl+Alt+Flecha Izquierda se mueve a la celda anterior. Ctrl+Alt+Flecha Abajo se mueve a la celda directamente debajo en la misma columna. Ctrl+Alt+Flecha Arriba se mueve a la celda directamente encima. A medida que te mueves, NVDA anuncia el contenido de la celda y su posición de fila y columna. Esto funciona igual tanto en la distribución de teclado de escritorio como en la portátil. Pulsa Enter para continuar.",
+          "hints": [
+            "Mantén pulsadas Ctrl y Alt juntas y luego pulsa una Tecla de flecha para moverte por las celdas de la tabla. Derecha e Izquierda se mueven a lo largo de una fila. Abajo y Arriba se mueven por una columna.",
+            "NVDA anuncia el contenido de la celda, más su posición de fila y columna; por ejemplo, 'fila 2, columna 3, Precio: 49 euros'. Esto te indica exactamente dónde estás en la tabla.",
+            "Estos son comandos de NVDA. Ctrl+Alt+Flechas son interceptadas por NVDA en modo exploración. No funcionan de la misma manera fuera de una tabla de una página web."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Pruébalo ahora en la página de práctica. Navega hasta una tabla usando H o Flecha Abajo para encontrar la sección etiquetada como Tablas. Una vez dentro de la tabla, intenta pulsar Ctrl+Alt+Flecha Derecha para pasar a la siguiente celda y luego Ctrl+Alt+Flecha Abajo para bajar una fila. NVDA anunciará el contenido y la posición de la celda a medida que te muevas. Cuando estés listo para continuar, pulsa NVDA+Shift+C para volver aquí y pulsa Enter.",
+          "monitorGestures": [
+            "kb:control+alt+rightArrow",
+            "kb:control+alt+leftArrow",
+            "kb:control+alt+downArrow",
+            "kb:control+alt+upArrow"
+          ],
+          "hints": [
+            "Mantén pulsadas Ctrl y Alt al mismo tiempo, ambas con la mano izquierda, y luego pulsa Flecha Derecha para pasar a la siguiente celda de la fila.",
+            "Mantén pulsadas Ctrl y Alt y luego pulsa Flecha Abajo para pasar a la celda directamente debajo en la misma columna. NVDA anuncia el número de fila y columna.",
+            "Si la tabla tiene encabezados, NVDA anuncia la etiqueta del encabezado de columna o fila a medida que te mueves; por ejemplo, 'Lunes, columna 1' o 'Precio, fila 3'."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Un recordatorio sobre las categorías de comandos: Ctrl+Alt+Flecha para la navegación por tablas es un comando de NVDA. La tecla Tab regular y las teclas de flecha son comandos de Windows que funcionan en cualquier lugar. H, K, D y otros atajos de una sola letra son comandos del modo exploración de NVDA que solo funcionan en modo exploración en páginas web. Hacer un seguimiento de qué comandos pertenecen a cada categoría te ayuda a entender por qué algunas teclas funcionan en algunos lugares pero no en otros. Pulsa Enter para continuar.",
+          "hints": [
+            "Los comandos de NVDA requieren que NVDA esté en ejecución y activo. Tab y las teclas de flecha son comandos de Windows que funcionan en cualquier aplicación.",
+            "Los atajos de una sola letra del modo exploración como H y K solo funcionan cuando estás en modo exploración. Si no funcionan, puede que estés en modo foco; pulsa NVDA+Espacio para comprobarlo.",
+            "Ctrl+Alt+Flecha para tablas es un comando de NVDA que solo se activa dentro de una tabla en modo exploración. Fuera de una tabla, Ctrl+Alt+Flecha puede hacer algo diferente o nada."
+          ]
+        },
+        {
+          "type": "info",
+          "instruction": "Excelente trabajo; has completado el capítulo Modo exploración y navegación web. Ahora sabes cómo navegar por páginas web usando encabezados, enlaces, campos de formulario, puntos de referencia, listas, la Lista de elementos, Buscar de NVDA, el modo foco y la navegación por tablas. Estas habilidades te permiten navegar por cualquier página web de forma rápida e independiente. Cuando estés listo, pulsa NVDA+Shift+C para abrir el selector de lecciones y continuar al siguiente capítulo: Navegación por objetos, donde aprenderás a acceder a cualquier control en pantalla, incluso a los que Tab no puede alcanzar. Pulsa Enter para terminar.",
+          "hints": [
+            "El siguiente capítulo es Navegación por objetos. Te enseña a llegar a cualquier elemento en pantalla, incluso controles a los que Tab y el modo exploración no pueden acceder.",
+            "Referencia rápida del modo exploración: H para encabezados, K para enlaces, F para campos de formulario, D para puntos de referencia, L para listas, Ctrl+Alt+Flecha para celdas de tabla. Shift más cualquiera de estos retrocede.",
+            "NVDA Coach guarda tu progreso automáticamente. Todas las lecciones completadas estarán marcadas cuando regreses."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,180 +1,454 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<title>NVDA Eğitmeni - Etkileşimli Ekran Okuyucu Eğitimi</title>
-<style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 1em 2em; line-height: 1.6; }
-h1, h2, h3 { border-bottom: 1px solid #ccc; }
-code { background: #f4f4f4; padding: 0.1em 0.4em; border-radius: 3px; }
-footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ccc; font-size: 0.9em; color: #555; }
-</style>
-</head>
-<body>
-
-<h1>NVDA Eğitmeni</h1>
-<p><strong>Sürüm 1.4</strong></p>
-<p><strong>Tony Gebhard</strong> tarafından oluşturuldu, Yardımcı Teknolojiler Eğitmeni</p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="generator" content="MarkdownForever" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>NVDA Eğitmeni - İnteraktif Ekran Okuyucu Eğitimi</title>
+	</head>
+	<body>
+		<header id="header-block"><h1 class="title"></h1>
+<p class="subtitle"></p></header>
+		<main id="main-content"><h1 id="nvda-egitmeni">
+ NVDA Eğitmeni
+</h1>
+<p>
+ <strong>
+  Sürüm 1.5.1
+ </strong>
+</p>
+<p>
+ <strong>
+  Tony Gebhard
+ </strong>
+ , Yardımcı Teknoloji Eğitmeni tarafından oluşturulmuştur
+</p>
 <ul>
-  <li>E-posta: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
-  <li>Web: <a href="https://tonygebhard.me/NVDACoach">tonygebhard.me/NVDACoach</a></li>
+ <li>
+  E-posta:
+  <a href="mailto:info@tonygebhard.me">
+   info@tonygebhard.me
+  </a>
+ </li>
+ <li>
+  Web: tonygebhard.me/NVDACoach
+ </li>
 </ul>
-
-<h2>NVDA Eğitmeni Nedir?</h2>
-<p>NVDA Eğitmeni, NVDA komutlarını kısa ve uygulamalı alıştırmalarla öğreten etkileşimli bir eğitim eklentisidir. Komutları bir kılavuzdan okumak yerine, anlık sesli geri bildirimle gerçek zamanlı olarak pratik yaparsınız. Coach sizi adım adım yönlendirir ve doğrudan NVDA içinden kendi hızınızda ilerlemenizi sağlar.</p>
-<p>NVDA Eğitmeni, özellikle tamamen yeni başlayanlar ve ekran okuyucularla yeni tanışan kişiler için tasarlanmıştır. Her gün bu öğrencilerle çalışan bir yardımcı teknoloji eğitmeni tarafından geliştirilmiştir.</p>
-
-<h2>Başlarken</h2>
-<p>NVDA Eğitmeni'u açmak için <strong>NVDA+Shift+C</strong> tuşlarına basın. Ekranda kalıcı bir Coach penceresi açılacaktır. İlk açtığınızda bir tanıtım ve ders seçici göreceksiniz. Ok tuşlarıyla bir ders seçin ve başlamak için Enter'a basın.</p>
-<p>Coach penceresi oturum boyunca açık kalır, böylece yönergeler her zaman önünüzde olur. Başka bir pencerede pratik yaparken Coach penceresine geri dönmek için ders sırasında herhangi bir anda <strong>NVDA+Shift+C</strong> tuşlarına basabilirsiniz.</p>
-
-<h2>Ders Sırasında</h2>
-<p>Her ders sizi kısa bir adım dizisi boyunca yönlendirir. NVDA komutunu denemenizi isteyen adımlarda başka bir pencereye geçin ve işlemi gerçekleştirin, ardından Coach penceresine dönmek için <strong>NVDA+Shift+C</strong> tuşlarına basın ve onaylayıp devam etmek için <strong>Enter</strong> tuşuna basın. Satır içi alıştırma metni içeren adımlarda ise doğrudan Coach penceresindeki metin alanına ok tuşlarıyla inerek burada pratik yapabilirsiniz. Aşağıdaki tuşlar her ders sırasında her zaman kullanılabilir:</p>
+<hr/>
+<h2 id="nvda-egitmeni-nedir">
+ NVDA Eğitmeni Nedir?
+</h2>
+<p>
+ NVDA Eğitmeni, NVDA komutlarını kısa, uygulamalı alıştırmalarla öğreten etkileşimli bir eğitim eklentisidir. Komutları bir kılavuzdan okumak yerine, bunları gerçek zamanlı olarak, sesli geri bildirimle birlikte pratik yaparsınız. Eğitmen sizi adım adım yönlendirir ve NVDA’nın içinden kendi hızınızda ilerlemenizi sağlar.
+</p>
+<p>
+ NVDA Eğitmeni, özellikle tamamen yeni başlayanlar ve ekran okuyucularla yeni tanışan kişiler için tasarlanmıştır. Her gün bu öğrencilerle çalışan bir yardımcı teknoloji eğitmeni tarafından geliştirilmiştir.
+</p>
+<hr/>
+<h2 id="baslarken">
+ Başlarken
+</h2>
+<p>
+ NVDA Eğitmeni’ni açmak için
+ <strong>
+  NVDA+Shift+C
+ </strong>
+ tuşlarına basın. Ekranda kalıcı bir Eğitmen penceresi açılır. İlk açtığınızda bir giriş ve ders seçici görürsünüz. Ok tuşlarıyla bir ders seçin ve başlamak için Enter’a basın.
+</p>
+<p>
+ Eğitmen penceresi oturum boyunca açık kalır, böylece talimatlar her zaman önünüzde olur. Bir ders sırasında başka bir pencereye geçerseniz, Eğitmen penceresine dönmek için istediğiniz zaman
+ <strong>
+  NVDA+Shift+C
+ </strong>
+ tuşlarına basabilirsiniz.
+</p>
+<hr/>
+<h2 id="ders-srasnda">
+ Ders Sırasında
+</h2>
+<p>
+ Her ders sizi kısa bir adım dizisi boyunca yönlendirir. NVDA komutu denemenizi isteyen adımlarda başka bir pencereye geçin, işlemi yapın, ardından Eğitmen penceresine dönmek için
+ <strong>
+  NVDA+Shift+C
+ </strong>
+ tuşlarına basın ve devam etmek için
+ <strong>
+  Enter
+ </strong>
+ tuşuna basın. Metin içi alıştırma içeren adımlarda, doğrudan Eğitmen penceresindeki metin alanına ok tuşlarıyla giderek pratik yapabilirsiniz.
+</p>
+<p>
+ Her derste kullanılabilen tuşlar:
+</p>
 <ul>
-  <li><strong>Enter</strong>: Bir sonraki adıma geç.</li>
-  <li><strong>F1</strong>: Mevcut yönergeyi tekrar et.</li>
-  <li><strong>F2</strong>: Mevcut adım için ipucu al. Her basışta en fazla üç ipucu arasında geçiş yapar.</li>
-  <li><strong>F3</strong>: Mevcut adımı atla.</li>
-  <li><strong>Escape</strong>: Mevcut dersi durdur.</li>
-  <li><strong>NVDA+Shift+C</strong>: Herhangi bir pencereden Coach penceresine geri dön.</li>
+ <li>
+  <strong>
+   Enter
+  </strong>
+  : Sonraki adıma geçer
+ </li>
+ <li>
+  <strong>
+   F1
+  </strong>
+  : Mevcut talimatı tekrar eder
+ </li>
+ <li>
+  <strong>
+   F2
+  </strong>
+  : İpucu al (her adımda en fazla üç ipucu arasında geçiş yapar)
+ </li>
+ <li>
+  <strong>
+   F3
+  </strong>
+  : Mevcut adımı atlar
+ </li>
+ <li>
+  <strong>
+   Escape
+  </strong>
+  : Dersi durdurur
+ </li>
+ <li>
+  <strong>
+   NVDA+Shift+C
+  </strong>
+  : Herhangi bir pencereden Eğitmen penceresine döner
+ </li>
 </ul>
-
-<h2>Dersler Arasında Gezinme</h2>
-<p>Bir dersi tamamladıktan sonra seçiciyi yeniden açmadan bir sonrakine geçebilirsiniz:</p>
+<hr/>
+<h2 id="dersler-arasnda-dolasma">
+ Dersler Arasında Dolaşma
+</h2>
+<p>
+ Bir dersi tamamladıktan sonra ders seçiciyi tekrar açmadan ilerleyebilirsiniz:
+</p>
 <ul>
-  <li><strong>Ctrl+N</strong>: Mevcut bölümdeki bir sonraki derse geç.</li>
-  <li><strong>Ctrl+B</strong>: Önceki derse geri dön.</li>
-  <li><strong>Ctrl+R</strong>: Mevcut dersi baştan başlat.</li>
-  <li><strong>NVDA+Shift+C</strong>: Herhangi bir ders veya bölüme atlamak için ders seçiciyi aç.</li>
+ <li>
+  <strong>
+   Ctrl+N
+  </strong>
+  : Aynı bölümde sonraki derse Gider
+ </li>
+ <li>
+  <strong>
+   Ctrl+B
+  </strong>
+  : Önceki derse Gider
+ </li>
+ <li>
+  <strong>
+   Ctrl+R
+  </strong>
+  : Mevcut dersi baştan başlatır
+ </li>
+ <li>
+  <strong>
+   NVDA+Shift+C
+  </strong>
+  : Ders seçiciyi açar
+ </li>
 </ul>
-
-<h2>Dahil Edilen Dersler</h2>
-
-<h3>1. NVDA ile Başlarken</h3>
-<p>Her yeni başlayan için gerekli temel komutları kapsayan on kısa alıştırma. Önceden deneyim gerekmez.</p>
+<hr/>
+<h2 id="dahil-edilen-dersler">
+ Dahil Edilen Dersler
+</h2>
+<h3 id="1-nvda-ile-baslarken">
+ 1. NVDA ile Başlarken
+</h3>
+<p>
+ Başlangıç seviyesindeki herkes için gerekli temel komutları kapsayan on üç kısa alıştırma.
+</p>
 <ol>
-  <li><strong>NVDA Tuşunla Tanış</strong> — NVDA değiştirici tuşunu (Insert, Caps Lock veya Num Pad Zero) bul ve kullan.</li>
-  <li><strong>Başlık Çubuğunu Oku</strong> — Herhangi bir anda etkin pencereyi belirlemek için NVDA+T'yi öğren.</li>
-  <li><strong>Saati Oku</strong> — Mevcut saat ve tarihi duymak için NVDA+F12'yi öğren.</li>
-  <li><strong>NVDA'nın Konuşmasını Durdur</strong> — Konuşmayı anında susturmak için Control tuşunu kullan.</li>
-  <li><strong>Nerede Olduğunu Öğren</strong> — Odaktaki denetimi belirlemek için NVDA+Sekme tuşunu öğren. Canlı bir giriş formu alıştırması içerir.</li>
-  <li><strong>Sekme ile Denetimler Arasında Gezin</strong> — Sekme ve Shift+Sekme ile diyalog ve formlarda gezin. Canlı bir form içerir.</li>
-  <li><strong>Düğmeleri ve Denetimleri Etkinleştir</strong> — Üzerine geldiğin öğeyi etkinleştirmek için Enter ve Aralık tuşlarını kullan. Canlı alıştırma denetimleri içerir.</li>
-  <li><strong>Mevcut Satırı Oku</strong> — İstediğin satırı yeniden okumak için NVDA+Yukarı Ok'u öğren. Satır içi alıştırma metni içerir.</li>
-  <li><strong>Girdi Yardımı ile Tuşları Keşfet</strong> — Herhangi bir tuşun ne yaptığını güvenle öğrenmek için NVDA+1'i kullan.</li>
-  <li><strong>Kullanıcı Kılavuzunu Aç</strong> — NVDA menüsünden yardım sistemini bul.</li>
+ <li>
+  <strong>
+   Komut Kategorilerini Anlama
+  </strong>
+  — Klavye komutlarının üç kategorisini öğrenin (Windows, program, ekran okuyucu)
+ </li>
+ <li>
+  <strong>
+   NVDA Tuşuyla Tanışma
+  </strong>
+  — NVDA değiştirici tuşunu bulun (Insert veya Caps Lock)
+ </li>
+ <li>
+  <strong>
+   Başlık Çubuğunu Okuma
+  </strong>
+  — NVDA+T ile aktif pencereyi öğrenin
+ </li>
+ <li>
+  <strong>
+   Saati Seslendir
+  </strong>
+  — NVDA+F12 ile saat ve tarihi duyun
+ </li>
+ <li>
+  <strong>
+   NVDA Konuşmasını Durdurma
+  </strong>
+  — Control tuşu ile konuşmayı durdurun
+ </li>
+ <li>
+  <strong>
+   Nerede Olduğunuzu Öğrenin
+  </strong>
+  — NVDA+Sekme ile odaklanan öğeyi öğrenin
+ </li>
+ <li>
+  <strong>
+   Sekme tuşuyla kontroller arasında geçiş yapma
+  </strong>
+  — Sekme ve Shift+Sekme ile formlarda dolaşın
+ </li>
+ <li>
+  <strong>
+   Düğmeleri ve Kontrolleri Etkinleştirme
+  </strong>
+  — Enter ve Aralık kullanımı
+ </li>
+ <li>
+  <strong>
+   Geçerli Satırı Oku
+  </strong>
+  — NVDA+Yukarı Ok ile satırı tekrar et
+ </li>
+ <li>
+  <strong>
+   Girdi yardımı ile tuşları keşfetme
+  </strong>
+  — NVDA+1 kullanımı
+ </li>
+ <li>
+  <strong>
+   Kullanım Kılavuzunu Açma
+  </strong>
+ </li>
+ <li>
+  <strong>
+   Klavyeyi Anlama
+  </strong>
+ </li>
+ <li>
+  <strong>
+   Alt+Sekme ile Pencereler arasında geçiş yapma
+  </strong>
+ </li>
 </ol>
-
-<h3>2. Metin Okuma ve Metin İçinde Gezinme</h3>
-<p>Belgeler, e-postalar ve metin alanlarında hassas gezinme için altı ders. Her ders, doğrudan Coach penceresine yerleştirilmiş bir satır içi alıştırma metni içerir — başka bir uygulamaya geçmeye gerek yoktur.</p>
-<ol>
-  <li><strong>Karakter Karakter İlerle</strong> — Sağ ve Sol Ok ile metinde karakter karakter ilerle.</li>
-  <li><strong>Kelime Kelime Atlama</strong> — Control+Sağ ve Control+Sol Ok ile kelime kelime ilerle.</li>
-  <li><strong>Satır Satır İlerle</strong> — Aşağı ve Yukarı Ok ile belgeyi satır satır oku.</li>
-  <li><strong>Başa ve Sona Git</strong> — Control+Home ve Control+End ile anında başa veya sona git.</li>
-  <li><strong>Buradan İtibaren Her Şeyi Oku</strong> — Hepsini Oku durmadan okur. Masaüstü: NVDA+Aşağı Ok. Dizüstü: NVDA+A.</li>
-  <li><strong>Metin Seç ve Vurgula</strong> — Shift ile birlikte ok tuşlarını kullanarak karakter, kelime ve satır bazında seçim yap; Control+C ile kopyala.</li>
-</ol>
-
-<h3>3. Tarama Kipi ve Web Gezinme</h3>
-<p>NVDA'nın Tarama Kipinu kullanarak web sayfalarında gezinmek için sekiz ders. Bu kategorideki herhangi bir dersi başlattığınızda bir alıştırma web sayfası otomatik olarak açılır.</p>
-<ol>
-  <li><strong>Tarama Kipi Hakkında</strong> — Tarama Kipinun ne olduğu ve tarayıcıya nasıl geçileceği.</li>
-  <li><strong>Başlığa Göre Gezin</strong> — Herhangi bir sayfada başlıklar arasında geçmek için H ve Shift+H.</li>
-  <li><strong>Başlık Seviyelerine Git</strong> — Belirli başlık seviyelerine gitmek için 1–6 sayı tuşları.</li>
-  <li><strong>Bağlantıya Göre Gezin</strong> — Bağlantılar arasında geçmek için K ve Shift+K; etkileşimli öğeler için Sekme.</li>
-  <li><strong>Formlarla Etkileşim</strong> — Form alanları, düzenleme alanları ve düğmeleri bulmak için F, E ve B.</li>
-  <li><strong>Odak Modu ve Tarama Kipi</strong> — Okuma ve yazma modları arasında geçiş yapmak için NVDA+Aralık.</li>
-  <li><strong>Yer İşaretleri ve Listeler</strong> — Sayfa yer işaretleri arasında geçmek için D; listeler arasında geçmek için L.</li>
-  <li><strong>Öğeler Listesi</strong> — Tüm başlıkların, bağlantıların veya form alanlarının tam listesini açmak için NVDA+F7.</li>
-</ol>
-
-<h2>Alıştırma Ortamları</h2>
-<p>Bazı dersler, dersten çıkmadan gerçek komutları denemeniz için yerleşik alıştırma ortamları içerir:</p>
+<hr/>
+<h3 id="2-klavyeniz">
+ 2. Klavyeniz
+</h3>
+<p>
+ Üç derslik fiziksel klavye tanıtımı.
+</p>
+<hr/>
+<h3 id="3-metin-okuma-ve-metin-icinde-dolasma">
+ 3. Metin Okuma ve Metin İçinde Dolaşma
+</h3>
+<p>
+ Belgelerde ve metinlerde hassas dolaşma için yedi ders.
+</p>
+<hr/>
+<h3 id="4-tarama-modu-ve-web-dolasm">
+ 4. Tarama Modu ve Web Dolaşımı
+</h3>
+<p>
+ NVDA’nın tarama modu ile web sayfalarında Dolaşma üzerine on ders.
+</p>
+<hr/>
+<h3 id="5-nesne-dolasm">
+ 5. Nesne Dolaşımı
+</h3>
+<p>
+ Sekme ile ulaşılamayan öğelere erişim için altı ders.
+</p>
+<hr/>
+<h3 id="6-nvday-kisisellestirme">
+ 6. NVDA’yı Kişiselleştirme
+</h3>
+<p>
+ NVDA’yı kişisel tercihlere göre ayarlama üzerine iki ders.
+</p>
+<hr/>
+<h2 id="alstrma-ortamlar">
+ Alıştırma Ortamları
+</h2>
 <ul>
-  <li><strong>Canlı alıştırma formları</strong> — Sekme ile gezinme, denetimleri etkinleştirme ve odağı belirleme dersleri; gerçek düğmeler, onay kutuları ve metin alanları içeren ayrı bir erişilebilir form penceresi açar.</li>
-  <li><strong>Satır içi alıştırma metni</strong> — Okuma ve metin gezinme dersleri, Coach penceresine doğrudan yerleştirilmiş bir metin alanı sunar. Pencere değiştirmeden karakter, kelime, satır ve seçim gezintisi pratiği yapabilirsiniz.</li>
-  <li><strong>Alıştırma web sayfası</strong> — Tarama Kipi dersleri, başlıklar, bağlantılar, formlar, yer işaretleri ve listeler içeren tam erişilebilir bir HTML sayfası açar.</li>
+ <li>
+  <strong>
+   Canlı form alıştırmaları
+  </strong>
+ </li>
+ <li>
+  <strong>
+   Metin içi alıştırmalar
+  </strong>
+ </li>
+ <li>
+  <strong>
+   Web sayfası alıştırması
+  </strong>
+ </li>
 </ul>
-
-<h2>İlerleme Takibi</h2>
-<p>NVDA Eğitmeni, tamamladığınız dersleri hatırlar. Tamamlanan dersler ders seçicide işaretlenir, böylece ilerlemenizi kolayca görebilirsiniz. İlerlemeniz NVDA kullanıcı yapılandırma klasöründe kaydedilir ve NVDA yeniden başlatıldığında da korunur.</p>
-
-<h2>Eğitmenler İçin</h2>
-<p>Dersler, eklentinin <code>lessons</code> klasöründe düz JSON dosyaları olarak saklanır. Her JSON dosyası, sıralı ders listesinden oluşan bir ders kategorisini tanımlar ve her ders bir adım listesidir. Adımlar bilgilendirici (öğrenci okur ve Enter'a basar), eylem tabanlı (öğrenci işlemi yapar ve Enter ile onaylar) veya pencere içi gezinme alıştırmaları için satır içi metin içerebilir. Yeni bir JSON dosyası ekleyerek yeni ders kategorileri oluşturabilirsiniz — örnek olarak verilen dosyalara bakın.</p>
-<p>Özel ders geliştirme, eğitim danışmanlığı veya NVDA Eğitmeni'u öğrencilerinizle kullanma hakkında sorular için doğrudan Tony ile iletişime geçin:</p>
+<hr/>
+<h2 id="ilerleme-takibi">
+ İlerleme Takibi
+</h2>
+<p>
+ NVDA Eğitmeni tamamlanan dersleri hatırlar. İlerleme NVDA kullanıcı yapılandırma klasöründe saklanır ve NVDA yeniden başlatıldığında korunur.
+</p>
+<hr/>
+<h2 id="egitmenler-icin">
+ Eğitmenler İçin
+</h2>
+<p>
+ Dersler JSON dosyaları olarak saklanır. Her dosya bir ders kategorisini tanımlar. Yeni dersler eklenebilir.
+</p>
+<p>
+ İletişim:
+</p>
 <ul>
-  <li>E-posta: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
-  <li>Web: <a href="https://tonygebhard.me/NVDACoach">tonygebhard.me/NVDACoach</a></li>
+ <li>
+  E-posta:
+  <a href="mailto:info@tonygebhard.me">
+   info@tonygebhard.me
+  </a>
+ </li>
+ <li>
+  Web: tonygebhard.me/NVDACoach
+ </li>
 </ul>
-
-<h2>Sistem Gereksinimleri</h2>
+<hr/>
+<h2 id="sistem-gereksinimleri">
+ Sistem Gereksinimleri
+</h2>
 <ul>
-  <li>NVDA 2024.1 veya üzeri (NVDA 2025.1'e kadar test edilmiştir)</li>
-  <li>Windows 10 veya Windows 11</li>
-  <li>Ek yazılım gerekmez</li>
+ <li>
+  NVDA 2024.1 veya üzeri
+ </li>
+ <li>
+  Windows 10 veya Windows 11
+ </li>
+ <li>
+  Ek yazılım gerekmez
+ </li>
 </ul>
-
-<h2>Destek ve İletişim</h2>
-<p>Sorularınız varsa, bir sorunla karşılaşırsanız veya yeni dersler önermek isterseniz doğrudan iletişime geçin:</p>
+<hr/>
+<h2 id="destek-ve-iletisim">
+ Destek ve İletişim
+</h2>
+<p>
+ Sorularınız veya önerileriniz için:
+</p>
 <ul>
-  <li><strong>Tony Gebhard</strong>, Yardımcı Teknolojiler Eğitmeni</li>
-  <li>E-posta: <a href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
-  <li>Web: <a href="https://tonygebhard.me/NVDACoach">tonygebhard.me/NVDACoach</a></li>
+ <li>
+  <strong>
+   Tony Gebhard
+  </strong>
+ </li>
+ <li>
+  E-posta:
+  <a href="mailto:info@tonygebhard.me">
+   info@tonygebhard.me
+  </a>
+ </li>
+ <li>
+  Web: tonygebhard.me/NVDACoach
+ </li>
 </ul>
-
-<h2>Teşekkürler</h2>
-<p>NVDA Eğitmeni, onu kullanan insanlar sayesinde şekillenmektedir. Geri bildirim, düzeltme ve desteklerini paylaşan herkese teşekkür ederiz.</p>
+<hr/>
+<h2 id="tesekkurler">
+ Teşekkürler
+</h2>
+<p>
+ NVDA Eğitmeni kullanıcı geri bildirimleriyle şekillenmiştir.
+</p>
 <ul>
-  <li><strong>Jessica Tegner</strong> (Be My Eyes) — eklentinin temelden şekillenmesine katkı sağlayan değerli erken geri bildirimler ve özellik/ders önerileri.</li>
-  <li><strong>Nash</strong> — özellik ve ders önerileri.</li>
-  <li><strong>John Hess</strong>, Adaptive Technology Specialist — Nesne Gezinme bölümünde dizüstü düzeni kısayollarının detaylı düzeltmesi.</li>
-  <li><strong>Brandon Patterson</strong> — sentezleyici ayar halkası kısayollarının düzeltilmesi.</li>
-  <li><strong>Valentin Kupriyanov</strong> — yerelleştirme önerileri, Rusça çeviri ve hata raporları.</li>
-  <li>Geri bildirim gönderen anonim kullanıcılar ve topluluk üyeleri.</li>
+ <li>
+  Jessica Tegner
+ </li>
+ <li>
+  Nash
+ </li>
+ <li>
+  John Hess
+ </li>
+ <li>
+  Brandon Patterson
+ </li>
+ <li>
+  Valentin Kupriyanov
+ </li>
+ <li>
+  <strong>
+   Umut KORKMAZ (Türkiye)
+  </strong>
+  — Türkçe çeviri
+ </li>
+ <li>
+  Diğer katkı sağlayanlar
+ </li>
 </ul>
-
-<h2>Yenilikler</h2>
-
-<h3>Sürüm 1.3.2</h3>
+<hr/>
+<h2 id="yenilikler">
+ Yenilikler
+</h2>
+<h3 id="surum-151">
+ Sürüm 1.5.1
+</h3>
 <ul>
-  <li><strong>Yerelleştirme tamamen etkin:</strong> <code>addonHandler.initTranslation()</code> eksikti, bu yüzden tüm çeviriler İngilizceye düşüyordu.</li>
-  <li><strong>Dil farkındalıklı belge açma:</strong> Belgeler artık kullanıcı diline göre açılır.</li>
-  <li><strong>Ek çeviri kapsamı:</strong> Daha fazla metin <code>_()</code> ile çevrilebilir hâle getirildi.</li>
-  <li><strong>İlk tam Rusça çeviri:</strong> Tüm içerik Rusçaya çevrildi.</li>
+ <li>
+  Kullanım kılavuzu kısayolu hatası düzeltildi
+ </li>
+ <li>
+  Rusça çeviri geri yüklendi
+ </li>
 </ul>
-
-<h3>Sürüm 1.3.1</h3>
+<h3 id="surum-15">
+ Sürüm 1.5
+</h3>
 <ul>
-  <li><strong>Yerelleştirme altyapısı tamamlandı:</strong> Çeviri dosyaları ve rehberi eklendi.</li>
+ <li>
+  Kişiselleştirme (F7)
+ </li>
+ <li>
+  F4–F7 hızlı tuşlar
+ </li>
+ <li>
+  Tamamlama sertifikası
+ </li>
+ <li>
+  Bölüm sıralaması güncellendi
+ </li>
 </ul>
-
-<h3>Sürüm 1.3</h3>
+<h3 id="surum-14">
+ Sürüm 1.4
+</h3>
 <ul>
-  <li><strong>Yerelleştirme altyapısı:</strong> Dersler dil klasörlerine ayrıldı.</li>
-  <li><strong>Tam çeviri desteği:</strong> Tüm metinler çeviri için hazırlandı.</li>
+ <li>
+  Yeni dersler eklendi
+ </li>
+ <li>
+  Hata düzeltmeleri
+ </li>
+ <li>
+  Türkçe çeviri eklendi
+ </li>
 </ul>
-
-<h3>Sürüm 1.2.2</h3>
-<ul>
-  <li><strong>Hata düzeltmesi:</strong> Konuşma hızı kısayolları düzeltildi.</li>
-  <li><strong>İpuçları geliştirildi:</strong> F2 artık döngüsel ipuçları verir.</li>
-</ul>
-
-<h3>Sürüm 1.2.1</h3>
-<ul>
-  <li><strong>Hata düzeltmeleri:</strong> Dizüstü düzeni kısayolları düzeltildi.</li>
-</ul>
-
-<h3>Sürüm 1.2.0</h3>
-<ul>
-  <li><strong>Yeni ders:</strong> Komut kategorileri eklendi.</li>
-  <li><strong>Ses sistemi güncellendi</strong></li>
-</ul>
-
-<footer>
-  <p>NVDA Eğitmeni ücretsizdir ve öğrenenler için geliştirilmiştir. İhtiyacı olan herkesle özgürce paylaşabilirsiniz.</p>
-</footer>
-
-</body>
+<hr/>
+<p>
+ Tam sürüm geçmişi için CHANGELOG dosyasına bakın.
+</p>
+<hr/>
+<p>
+ <strong>
+  NVDA Eğitmeni ücretsizdir ve öğrenenler için geliştirilmiştir. İhtiyacı olan herkesle özgürce paylaşın.
+ </strong>
+</p>
+</main>
+	</body>
 </html>

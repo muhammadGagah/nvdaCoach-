@@ -1,206 +1,206 @@
 {
-  "id": "object_navigation",
-  "title": "Nesne Dolaşımı",
-  "description": "NVDA'nın nesne Dolaşımı komutlarını kullanarak Sekme tuşuyla ulaşılamayan kontrolleri nasıl keşfedeceğinizi ve bunlarla nasıl etkileşim kuracağınızı öğrenin.",
-  "order": 5,
-  "lessons": [
-    {
-      "id": "what_is_object_nav",
-      "title": "Nesne Dolaşımı Nedir?",
-      "order": 1,
-      "steps": [
+    "id": "object_navigation",
+    "title": "Nesne Dolaşımı",
+    "description": "NVDA'nın nesne Dolaşımı komutlarını kullanarak Sekme tuşuyla ulaşılamayan kontrolleri nasıl keşfedeceğinizi ve bunlarla nasıl etkileşim kuracağınızı öğrenin.",
+    "order": 5,
+    "lessons": [
         {
-          "type": "info",
-          "instruction": "Nesne Dolaşımı bölümüne hoş geldiniz. Şu ana kadar öğrendiklerinizin çoğunda ekranda hareket etmek için Sekme tuşu ve ok tuşları kullanılıyor. Ancak bazı programlarda, özellikle de eski masaüstü uygulamalarında, Sekme tuşunun erişemeyeceği denetimler bulunur. NVDA'nın nesne Dolaşımı adı verilen bunları keşfetmek için ayrı bir sistemi vardır. Klavye odağını kabul etse de etmese de ekrandaki her öğe arasında hareket etmenize olanak tanır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Nesne Dolaşımı Sekme Dolaşımınden ayrıdır. Sekme yalnızca klavye odağını kabul etmek üzere tasarlanmış kontrollere ulaşır. Nesne Dolaşımı ekrandaki her şeye ulaşır.",
-            "Bazı medya oynatıcılar, özel araç çubukları ve erişilebilirlik araçları gibi eski masaüstü uygulamaları genellikle Sekme tuşuna yanıt vermeyen denetimlere sahiptir. Nesne Dolaşımı onlara ulaşabilmenin farklı bir yoludur.",
-            "Çoğu günlük görev için nesne Dolaşımını kullanmanıza gerek yoktur. Sekme ve Tarama Kipinin yetersiz kaldığı durumlarda başvurabileceğiniz gelişmiş bir araçtır."
-          ]
+            "id": "what_is_object_nav",
+            "title": "Nesne Dolaşımı Nedir?",
+            "order": 1,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Nesne Dolaşımı bölümüne hoş geldiniz. Şu ana kadar öğrendiklerinizin çoğunda ekranda hareket etmek için Sekme tuşu ve ok tuşları kullanılıyor. Ancak bazı programlarda, özellikle de eski masaüstü uygulamalarında, Sekme tuşunun erişemeyeceği denetimler bulunur. NVDA'nın nesne Dolaşımı adı verilen bunları keşfetmek için ayrı bir sistemi vardır. Klavye odağını kabul etse de etmese de ekrandaki her öğe arasında hareket etmenize olanak tanır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Nesne Dolaşımı Sekme Dolaşımınden ayrıdır. Sekme yalnızca klavye odağını kabul etmek üzere tasarlanmış kontrollere ulaşır. Nesne Dolaşımı ekrandaki her şeye ulaşır.",
+                        "Bazı medya oynatıcılar, özel araç çubukları ve erişilebilirlik araçları gibi eski masaüstü uygulamaları genellikle Sekme tuşuna yanıt vermeyen denetimlere sahiptir. Nesne Dolaşımı onlara ulaşabilmenin farklı bir yoludur.",
+                        "Çoğu günlük görev için nesne Dolaşımını kullanmanıza gerek yoktur. Sekme ve Tarama Kipinin yetersiz kaldığı durumlarda başvurabileceğiniz gelişmiş bir araçtır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA ekranı bir nesneler ağacı olarak düşünüyor. Masaüstü veya ana uygulama penceresi olabilecek üst düzey bir nesne vardır. İçinde araç çubukları, paneller, menüler ve kontroller gibi alt nesneler bulunur. Her nesne daha fazla çocuk içerebilir. Nesne Dolaşımı, bu ağaçta herhangi bir yönde hareket etmenize olanak tanır: sonraki veya önceki kardeşe, ebeveyne veya aşağıya ilk çocuğa. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Nesne ağacını bir dosya klasörü gibi düşünün. Uygulama penceresi bir klasördür. İçinde alt klasörler (paneller ve araç çubukları) bulunur ve bunların içinde dosyalar (bireysel kontroller) bulunur.",
+                        "Ekrandaki her öğe (araç çubuğu düğmesi, durum çubuğu, ilerleme göstergesi) Sekme tuşuyla ulaşılamasa bile bu ağaçtaki bir nesnedir.",
+                        "Nesne Dolaşımı, standart olmayan denetimlere (özel araç çubukları, durum çubukları, bildirim alanları ve yerleşik denetimler) sahip programlarda en kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA'da iki klavye düzeni vardır: masaüstü ve dizüstü bilgisayar. Masaüstü düzeni, tam boyutlu klavyenin sağ tarafındaki sayısal tuş takımını kullanır. Dizüstü bilgisayar düzeni, NVDA artı harf tuşlarının kombinasyonlarını kullandığından sayısal tuş takımına ihtiyacınız kalmaz. Bu bölümdeki tüm nesne Dolaşım komutları her iki düzeni de gösterecektir. Hangi düzeni kullandığınızdan emin değilseniz, NVDA+N ile NVDA menüsünü açın, Tercihler'e, ardından Ayarlar'a, ardından Klavye'ye gidin ve düzen ayarını dinleyin. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni, nesne Dolaşımı için sayısal tuş takımındaki tuşları kullanır. Dizüstü bilgisayar düzeni, birçok ok tuşu birleşimine Shift ekler. Bu bölümdeki tüm komutlar her ikisini de listeler.",
+                        "Hangi düzeni kullandığınızdan emin değilseniz, Girdi Yardımı'nı açmak için NVDA artı 1'e basın, ardından NVDA'nın hangi düzeni beklediğini öğrenmek için nesne Dolaşımı tuşlarından birine basın. Daha sonra Girdi Yardımını kapatmak için NVDA artı 1 tuşuna tekrar basın.",
+                        "Klavye düzeninizi istediğiniz zaman NVDA Ayarlarında Klavye kategorisi altında değiştirebilirsiniz. NVDA'yı Kişiselleştirme bölümünde bu konu ayrıntılı olarak ele alınmaktadır."
+                    ]
+                }
+            ]
         },
         {
-          "type": "info",
-          "instruction": "NVDA ekranı bir nesneler ağacı olarak düşünüyor. Masaüstü veya ana uygulama penceresi olabilecek üst düzey bir nesne vardır. İçinde araç çubukları, paneller, menüler ve kontroller gibi alt nesneler bulunur. Her nesne daha fazla çocuk içerebilir. Nesne Dolaşımı, bu ağaçta herhangi bir yönde hareket etmenize olanak tanır: sonraki veya önceki kardeşe, ebeveyne veya aşağıya ilk çocuğa. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Nesne ağacını bir dosya klasörü gibi düşünün. Uygulama penceresi bir klasördür. İçinde alt klasörler (paneller ve araç çubukları) bulunur ve bunların içinde dosyalar (bireysel kontroller) bulunur.",
-            "Ekrandaki her öğe (araç çubuğu düğmesi, durum çubuğu, ilerleme göstergesi) Sekme tuşuyla ulaşılamasa bile bu ağaçtaki bir nesnedir.",
-            "Nesne Dolaşımı, standart olmayan denetimlere (özel araç çubukları, durum çubukları, bildirim alanları ve yerleşik denetimler) sahip programlarda en kullanışlıdır."
-          ]
+            "id": "move_next_prev_object",
+            "title": "Sonraki ve Önceki Nesneye Gitme",
+            "order": 2,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Aynı seviyedeki bir sonraki nesneye geçmek için masaüstü düzeninde NVDA+NumPad6 tuşlarına veya dizüstü düzeninde NVDA+Shift+Sağ Ok tuşlarına basın. Önceki nesneye gitmek için masaüstünde NVDA+NumPad4 tuşlarına veya dizüstü bilgisayarda NVDA+Shift+Sol Ok tuşlarına basın. NVDA, üzerine geldiğiniz her nesneyi duyurur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA tuşunu basılı tutun ve bir sonraki nesneye geçmek için NumPad6'ya (sayısal tuş takımında sağda) basın. NumPad4 (sayısal tuş takımının solunda) önceki nesneye gider.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarına birlikte basın, ardından sonraki nesne için Sağ Ok'a veya önceki nesne için Sol Ok'a basın.",
+                        "NVDA, üzerine geldiğinizde her nesnenin adını, türünü ve bazen değerini duyurur; tıpkı NVDA artı Sekme tuşunun odaklanmış kontroller hakkında size söylediklerine benzer şekilde."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve bir sonraki nesneye geçmek için NumPad6 (masaüstü) veya Shift+Sağ Ok (dizüstü bilgisayar) tuşlarına basın. NVDA bunun ne olduğunu seslendirecek. Daha sonra NVDA tuşunu basılı tutun ve önceki nesneye gitmek için NumPad4 (masaüstü) veya Shift+Sol Ok (dizüstü bilgisayar) tuşlarına basın. Hissetmek için herhangi bir açık uygulamada birkaç nesne arasında dolaşmayı deneyin. Devam etmeye hazır olduğunuzda burada Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+numpad6",
+                        "kb:nvda+shift+sağ ok"
+                    ],
+                    "hints": [
+                        "Masaüstü düzeni: NumPad6 sayısal tuş takımındaki sağ ok tuşudur. NVDA'yı basılı tutun ve bir sonraki kardeş nesneye geçmek için ona basın.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını aynı anda basılı tutun, ardından Sağ Ok tuşuna basın. Shift tuşuna bastığınızdan emin olun; bu tuş olmadan, bunun yerine ok tuşları inceleme imlecini kontrol eder.",
+                        "Dosya Gezgini veya Not Defteri gibi tanıdık herhangi bir uygulamayı açın ve nesne ağacını keşfedin. Nasıl organize edildiklerine dair bir fikir edinmek için birkaç nesnenin üzerinden geçin."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "NVDA'nın her nesnenin adını, türünü ve bazen değerini duyurduğuna dikkat edin; NVDA+Sekme tuşunun odaklanmış kontrol hakkında söylediklerine benzer şekilde, ancak klavye odağına sahip olsun ya da olmasın ekrandaki herhangi bir nesne için. Bu özellikle Sekme tuşuna yanıt vermeyen programlarda kullanışlıdır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "NVDA'nın her nesne için duyurduğu bilgiler nesnenin adını, rolünü (kontrol türünü) ve bazen de durumunu veya değerini içerir.",
+                        "Bir nesne klavye odağını alamasa bile nesne Dolaşımı yine de ona ulaşabilir ve onu yüksek sesle okuyabilir.",
+                        "Nesne Dolaşımınu Başlarken bölümündeki NVDA artı Sekme ile karşılaştırın. NVDA artı Sekme odaklanılan kontrolü okur; nesne Dolaşımı, odaktan bağımsız olarak herhangi bir nesneyi okur."
+                    ]
+                }
+            ]
         },
         {
-          "type": "info",
-          "instruction": "NVDA'da iki klavye düzeni vardır: masaüstü ve dizüstü bilgisayar. Masaüstü düzeni, tam boyutlu klavyenin sağ tarafındaki sayısal tuş takımını kullanır. Dizüstü bilgisayar düzeni, NVDA artı harf tuşlarının kombinasyonlarını kullandığından sayısal tuş takımına ihtiyacınız kalmaz. Bu bölümdeki tüm nesne Dolaşım komutları her iki düzeni de gösterecektir. Hangi düzeni kullandığınızdan emin değilseniz, NVDA+N ile NVDA menüsünü açın, Tercihler'e, ardından Ayarlar'a, ardından Klavye'ye gidin ve düzen ayarını dinleyin. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni, nesne Dolaşımı için sayısal tuş takımındaki tuşları kullanır. Dizüstü bilgisayar düzeni, birçok ok tuşu birleşimine Shift ekler. Bu bölümdeki tüm komutlar her ikisini de listeler.",
-            "Hangi düzeni kullandığınızdan emin değilseniz, Girdi Yardımı'nı açmak için NVDA artı 1'e basın, ardından NVDA'nın hangi düzeni beklediğini öğrenmek için nesne Dolaşımı tuşlarından birine basın. Daha sonra Girdi Yardımını kapatmak için NVDA artı 1 tuşuna tekrar basın.",
-            "Klavye düzeninizi istediğiniz zaman NVDA Ayarlarında Klavye kategorisi altında değiştirebilirsiniz. NVDA'yı Kişiselleştirme bölümünde bu konu ayrıntılı olarak ele alınmaktadır."
-          ]
+            "id": "move_parent_child",
+            "title": "Ebeveyn ve İlk Çocuğa Geçiş",
+            "order": 3,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Ana nesneye (geçerli nesneyi tutan kapsayıcıya) gitmek için, masaüstü düzeninde NVDA+NumPad8 tuşlarına veya dizüstü düzeninde NVDA+Shift+Yukarı Ok tuşlarına basın. Geçerli nesnenin içindeki ilk alt nesneye gitmek için masaüstünde NVDA+NumPad2 tuşlarına veya dizüstü bilgisayarda NVDA+Shift+Aşağı Ok tuşlarına basın. Nesne ağacını bu şekilde derinlemesine keşfedersiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NumPad8 (sayısal tuş takımında yukarı) ebeveyne gider. NumPad2 (sayısal tuş takımında aşağı) ilk çocuğa gider.",
+                        "Dizüstü bilgisayar düzeni: NVDA artı Shift artı Yukarı Ok üst öğeye gider. NVDA artı Shift artı Aşağı Ok ilk çocuğa gider.",
+                        "Ebeveyne gitmek sizi ağaçta bir seviye yukarıya, mevcut nesneyi tutan kaba götürür. İlk çocuğa geçmek sizi mevcut nesnenin içeriğine götürür."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. Geçerli nesnenin üst öğesine gitmek için NVDA tuşunu basılı tutun ve NumPad8 (masaüstü) veya Shift+Yukarı Ok (dizüstü bilgisayar) tuşlarına basın. NVDA ebeveyni açıklayacak. Daha sonra ilk alt öğeye geri dönmek için NVDA+NumPad2 (masaüstü) veya NVDA+Shift+Aşağı Ok (dizüstü bilgisayar) tuşlarına basın. Ağacın yukarısını ve aşağısını keşfetmek, panellerde veya araç çubuklarında bir arada gruplandırılmış kontrolleri bulmanıza yardımcı olur. Devam etmeye hazır olduğunuzda Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+numpad8",
+                        "kb:nvda+shift+yukarı ok"
+                    ],
+                    "hints": [
+                        "Masaüstü düzeni: NumPad8, sayısal tuş takımındaki yukarı ok tuşudur. NVDA tuşunu basılı tutun ve ana nesneye gitmek için ona basın.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarına birlikte basın, ardından üst öğeye gitmek için Yukarı Ok tuşuna basın. NVDA ve Shift tuşlarını basılı tutun, ardından ilk alt öğeye geçmek için Aşağı Ok tuşuna basın.",
+                        "Ebeveyne giderseniz ve tekrar içeri girmek isterseniz, tekrar girmek için ilk alt komuta basın. İlk çocuk geçerli kapsayıcının içindeki ilk nesnedir."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "read_current_object",
+            "title": "Geçerli Dolaşım Nesnesini Oku",
+            "order": 4,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bir nesneye gittiğinizde NVDA'nın onu farklı şekillerde okumasını sağlayabilirsiniz. Geçerli Dolaşım nesnesinin tam açıklamasını duymak için NVDA+NumPad5 (masaüstü) veya NVDA+Shift+ (dizüstü bilgisayar — yani NVDA, Shift ve virgül tuşu) tuşlarına basın. Nesne adını hecelemek için iki kez hızlıca basın. Bu, üzerine indiğiniz herhangi bir nesneyi incelemenin birincil yoludur. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: Geçerli Dolaşım nesnesini okumak için NVDA tuşunu basılı tutun ve NumPad5'e (sayısal tuş takımındaki orta tuş) basın.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından virgül tuşuna basın. Virgül tuşu temel sırada, İ harfinden sonra gelen tuştur.",
+                        "Nesne adını karakter karakter hecelemek için komuta iki kez hızlı bir şekilde basın. Bu, ad tanıdık olmadığında veya kısaltıldığında kullanışlıdır."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Şimdi deneyin. NVDA+NumPad6 (masaüstü) veya NVDA+Shift+Sağ Ok (dizüstü bilgisayar) tuşlarını kullanarak herhangi bir nesneye gidin. Daha sonra o nesnenin tam açıklamasını duymak için NVDA+NumPad5 (masaüstü) veya NVDA+Shift+Virgül (dizüstü bilgisayar) tuşlarına basın. Adı karakter karakter hecelemek için iki kez hızlıca basın. Hazır olduğunuzda devam etmek için Enter tuşuna basın.",
+                    "monitorGestures": [
+                        "kb:nvda+numpad5",
+                        "kb:nvda+Shift+,"
+                    ],
+                    "hints": [
+                        "Öncelikle NVDA artı NumPad6 veya NVDA artı Shift artı Sağ Ok kullanarak bir nesneye gidin, ardından NVDA artı NumPad5 veya NVDA artı Shift artı Virgül kullanarak okuyun.",
+                        "Okuma komutuna iki kez basmak, nesne adını her seferinde bir karakter olmak üzere hızlı bir şekilde heceler; alışılmadık adlar veya kısaltmalar için çok kullanışlıdır.",
+                        "Dizüstü bilgisayar düzeni için virgül tuşu klavyenin temel sırasında İ harfinden sonra gelen tuştur."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "route_focus_to_object",
+            "title": "Klavye Odağını Dolaşım Nesnesine Taşıma",
+            "order": 5,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Bir kontrolü bulmak için nesne Dolaşımıni kullandıktan sonra klavye odağını ona taşıyabilir, böylece onunla normal şekilde etkileşim kurabilirsiniz. Odağı geçerli Dolaşım nesnesine yönlendirmek için NVDA+Shift+NumPadEksi (masaüstü) veya NVDA+Shift+BackSpace (dizüstü bilgisayar) tuşlarına basın. Nesne odağı kabul edebiliyorsa klavye odağınız ona taşınır ve ardından Enter, Aralık tuşuna basabilir veya normal şekilde yazabilirsiniz. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından odağı geçerli Dolaşım nesnesine yönlendirmek için sayısal tuş takımı eksi tuşuna (sayısal tuş takımının sağ üst kısmı) basın.",
+                        "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından Geri Silme tuşuna basın. Geri Silme (BackSpace) tuşu, klavyenin sağ tarafında Enter'ın üzerindeki büyük tuştur.",
+                        "Tüm nesneler klavye odağını kabul edemez. Yönlendirme odağı çalışmazsa nesne salt görüntülenebilir olabilir; onu okuyabilir ancak onunla etkileşimde bulunamazsınız."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Ayrıca bir ters komut da vardır: NVDA+NumPadMinus (masaüstü) veya NVDA+BackSpace (dizüstü bilgisayar), dolaşım nesnesini klavye odağınızın o anda bulunduğu yere taşır. Bu, nesne ağacının en üstünden başlamak yerine, programda halihazırda bulunduğunuz yerden araştırmaya başlamak istediğinizde kullanışlıdır. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Masaüstü düzeni: NVDA artı NumPad eksi (Shift olmadan), dolaşımı o anda odaklanmış olan kontrole, yani nesne araştırmanızın başlangıç ​​noktasına taşır.",
+                        "Dizüstü bilgisayar düzeni: NVDA artı Backspace (Shift olmadan) aynı şeyi yapar. Dolaşımı mevcut klavye odağınızla senkronize etmek için bunu kullanın.",
+                        "Ağacın tepesinden arama yapmak yerine, bulunduğunuz yerden araştırmaya başlamak için nesne Dolaşımı oturumunun başlangıcında bu komutu kullanın."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Nesne Dolaşımı pratik gerektirir. Buna alışmanın en iyi yolu, Not Defteri veya Dosya Gezgini gibi tanıdık bir programı açmak ve nesne ağacını keşfetmek için birkaç dakika harcamaktır. Kardeşlerin yanına gidin, ebeveynlerin yanına gidin, çocukların yanına geri dönün ve ilerledikçe her nesneyi okuyun. Zamanla programların nasıl yapılandırıldığına dair zihinsel bir resim oluşturacaksınız. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Dosya Gezgini ile başlayın; açıkça adlandırılmış klasörler, araç çubukları ve paneller içeren iyi yapılandırılmış bir nesne ağacına sahiptir. Pratik için iyi.",
+                        "Not Defteri başka bir iyi uygulama ortamıdır. Nesne ağacı basit ve öngörülebilirdir.",
+                        "Tüm komutları aynı anda ezberleme konusunda endişelenmeyin. Önce sonraki ve önceki nesnelere odaklanın, ardından bunlar doğal göründüğünde ebeveyn ve alt Dolaşımıyi ekleyin."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "when_object_nav_helps",
+            "title": "Nesne Dolaşımı Ne Zaman Yardımcı Olur?",
+            "order": 6,
+            "steps": [
+                {
+                    "type": "info",
+                    "instruction": "Nesne Dolaşımı en çok üç durumda faydalıdır. Birincisi, bir programda Sekme tuşunun ulaşamayacağı kontroller varsa bazı araç çubukları, özel paneller ve uygulamaya özel kontroller yalnızca nesne ağacında görünür. İkincisi, ekranda ilerlemeyi gösteren durum çubuğu veya bildirim alanı gibi odaklanmamış bir şeyi okumanız gerektiğinde. Üçüncüsü, yeni bir programın yapısını, onunla nasıl etkileşim kuracağınıza karar vermeden önce keşfetmek istediğinizde. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Durum çubukları ve ilerleme göstergeleri Sekme tuşunun ulaşamadığı yaygın nesnelerdir. Nesne Dolaşımı, bunları herhangi bir klavye odağı olmadan okumanıza olanak tanır.",
+                        "Eski uygulamalardaki (medya oynatıcılar, fotoğraf düzenleyiciler ve bazı ofis araçları) özel araç çubukları genellikle yalnızca nesne Dolaşımına yanıt verir.",
+                        "Nesne Dolaşımı içeren yeni bir programı kullanmaya çalışmadan önce onu keşfetmek, programın düzenini anlamanıza ve normalde gözden kaçırabileceğiniz kontrolleri bulmanıza yardımcı olur."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Günlük görevlerin çoğu (e-posta, web'de Dolaşım, kelime işlem) nesne Dolaşımınu gerektirmez. Sekme, ok tuşları ve Tarama kipi neredeyse her şeyi kapsar. Nesne Dolaşımı, standart yöntemlerin yetersiz kaldığı durumlarda başvurabileceğiniz gelişmiş bir araçtır. Orada olduğunu bilmek, hiçbir ekranda hiçbir kontrolün gerçekten erişilemez olduğu anlamına gelir. Devam etmek için Enter'a basın.",
+                    "hints": [
+                        "Sekme ve Tarama kipi günlük işlerinizi tamamlamanıza yardımcı oluyorsa bu tamamen normaldir. Nesne Dolaşımı uzman bir araçtır ve çoğu kullanıcı için günlük bir zorunluluk değildir.",
+                        "Görebilen bir yardımcı 'ekranda bir düğme var ama ona dokunamıyorum' dediğinde cevabınız nesne Dolaşımı olacaktır.",
+                        "Deneyim kazandıkça nesne Dolaşımına ne zaman geçeceğiniz konusunda bir içgüdü geliştireceksiniz. Yeni ekran okuyucu kullanıcılarının çoğu ilk başta buna nadiren ihtiyaç duyar."
+                    ]
+                },
+                {
+                    "type": "info",
+                    "instruction": "Nesne Dolaşımı bölümünü tamamladınız! Artık nesne ağacında herhangi bir yönde nasıl hareket edeceğinizi, nesneleri okuyup inceleyeceğinizi ve klavye odağını ekrandaki herhangi bir kontrole nasıl yönlendireceğinizi biliyorsunuz. Hazır olduğunuzda, NVDA+Shift+C tuşlarına basarak ders seçiciyi açın ve bir sonraki bölüme geçin: NVDA'yı Kişiselleştirme — klavye düzeninizi ayarlamayı ve Sentezleyici ayar halkasını ve Ayarlar iletişim kutusunu kullanarak konuşma hızını, perdesini, sesini ve ses seviyesini ayarlamayı öğreneceksiniz. Bitirmek için Enter'a basın.",
+                    "hints": [
+                        "Bir sonraki bölüm NVDA'yı Kişiselleştirmedir. Konuşma hızının, perdenin, sesin ve klavye düzeninin nasıl ayarlanacağını kapsar; üstelik isterseniz ayar menülerini açmadan.",
+                        "Nesne Dolaşımı komutlarının özeti — masaüstü düzeni: Önceki ve sonraki için NumPad4 ve 6, ebeveyn ve çocuk için NumPad8 ve 2, okumak için NumPad5. Dizüstü bilgisayar düzeni: ok tuşlarına NVDA artı Shift ekleyin.",
+                        "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamlanan tüm dersler işaretlenir."
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "move_next_prev_object",
-      "title": "Sonraki ve Önceki Nesneye Gitme",
-      "order": 2,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Aynı seviyedeki bir sonraki nesneye geçmek için masaüstü düzeninde NVDA+NumPad6 tuşlarına veya dizüstü düzeninde NVDA+Shift+Sağ Ok tuşlarına basın. Önceki nesneye gitmek için masaüstünde NVDA+NumPad4 tuşlarına veya dizüstü bilgisayarda NVDA+Shift+Sol Ok tuşlarına basın. NVDA, üzerine geldiğiniz her nesneyi duyurur. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: NVDA tuşunu basılı tutun ve bir sonraki nesneye geçmek için NumPad6'ya (sayısal tuş takımında sağda) basın. NumPad4 (sayısal tuş takımının solunda) önceki nesneye gider.",
-            "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarına birlikte basın, ardından sonraki nesne için Sağ Ok'a veya önceki nesne için Sol Ok'a basın.",
-            "NVDA, üzerine geldiğinizde her nesnenin adını, türünü ve bazen değerini duyurur; tıpkı NVDA artı Sekme tuşunun odaklanmış kontroller hakkında size söylediklerine benzer şekilde."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Şimdi deneyin. NVDA tuşunu basılı tutun ve bir sonraki nesneye geçmek için NumPad6 (masaüstü) veya Shift+Sağ Ok (dizüstü bilgisayar) tuşlarına basın. NVDA bunun ne olduğunu seslendirecek. Daha sonra NVDA tuşunu basılı tutun ve önceki nesneye gitmek için NumPad4 (masaüstü) veya Shift+Sol Ok (dizüstü bilgisayar) tuşlarına basın. Hissetmek için herhangi bir açık uygulamada birkaç nesne arasında dolaşmayı deneyin. Devam etmeye hazır olduğunuzda burada Enter tuşuna basın.",
-          "monitorGestures": [
-            "kb:nvda+numpad6",
-            "kb:nvda+shift+sağ ok"
-          ],
-          "hints": [
-            "Masaüstü düzeni: NumPad6 sayısal tuş takımındaki sağ ok tuşudur. NVDA'yı basılı tutun ve bir sonraki kardeş nesneye geçmek için ona basın.",
-            "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını aynı anda basılı tutun, ardından Sağ Ok tuşuna basın. Shift tuşuna bastığınızdan emin olun; bu tuş olmadan, bunun yerine ok tuşları inceleme imlecini kontrol eder.",
-            "Dosya Gezgini veya Not Defteri gibi tanıdık herhangi bir uygulamayı açın ve nesne ağacını keşfedin. Nasıl organize edildiklerine dair bir fikir edinmek için birkaç nesnenin üzerinden geçin."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "NVDA'nın her nesnenin adını, türünü ve bazen değerini duyurduğuna dikkat edin; NVDA+Sekme tuşunun odaklanmış kontrol hakkında söylediklerine benzer şekilde, ancak klavye odağına sahip olsun ya da olmasın ekrandaki herhangi bir nesne için. Bu özellikle Sekme tuşuna yanıt vermeyen programlarda kullanışlıdır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "NVDA'nın her nesne için duyurduğu bilgiler nesnenin adını, rolünü (kontrol türünü) ve bazen de durumunu veya değerini içerir.",
-            "Bir nesne klavye odağını alamasa bile nesne Dolaşımı yine de ona ulaşabilir ve onu yüksek sesle okuyabilir.",
-            "Nesne Dolaşımınu Başlarken bölümündeki NVDA artı Sekme ile karşılaştırın. NVDA artı Sekme odaklanılan kontrolü okur; nesne Dolaşımı, odaktan bağımsız olarak herhangi bir nesneyi okur."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "move_parent_child",
-      "title": "Ebeveyn ve İlk Çocuğa Geçiş",
-      "order": 3,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Ana nesneye (geçerli nesneyi tutan kapsayıcıya) gitmek için, masaüstü düzeninde NVDA+NumPad8 tuşlarına veya dizüstü düzeninde NVDA+Shift+Yukarı Ok tuşlarına basın. Geçerli nesnenin içindeki ilk alt nesneye gitmek için masaüstünde NVDA+NumPad2 tuşlarına veya dizüstü bilgisayarda NVDA+Shift+Aşağı Ok tuşlarına basın. Nesne ağacını bu şekilde derinlemesine keşfedersiniz. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: NumPad8 (sayısal tuş takımında yukarı) ebeveyne gider. NumPad2 (sayısal tuş takımında aşağı) ilk çocuğa gider.",
-            "Dizüstü bilgisayar düzeni: NVDA artı Shift artı Yukarı Ok üst öğeye gider. NVDA artı Shift artı Aşağı Ok ilk çocuğa gider.",
-            "Ebeveyne gitmek sizi ağaçta bir seviye yukarıya, mevcut nesneyi tutan kaba götürür. İlk çocuğa geçmek sizi mevcut nesnenin içeriğine götürür."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Şimdi deneyin. Geçerli nesnenin üst öğesine gitmek için NVDA tuşunu basılı tutun ve NumPad8 (masaüstü) veya Shift+Yukarı Ok (dizüstü bilgisayar) tuşlarına basın. NVDA ebeveyni açıklayacak. Daha sonra ilk alt öğeye geri dönmek için NVDA+NumPad2 (masaüstü) veya NVDA+Shift+Aşağı Ok (dizüstü bilgisayar) tuşlarına basın. Ağacın yukarısını ve aşağısını keşfetmek, panellerde veya araç çubuklarında bir arada gruplandırılmış kontrolleri bulmanıza yardımcı olur. Devam etmeye hazır olduğunuzda Enter tuşuna basın.",
-          "monitorGestures": [
-            "kb:nvda+numpad8",
-            "kb:nvda+shift+yukarı ok"
-          ],
-          "hints": [
-            "Masaüstü düzeni: NumPad8, sayısal tuş takımındaki yukarı ok tuşudur. NVDA tuşunu basılı tutun ve ana nesneye gitmek için ona basın.",
-            "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarına birlikte basın, ardından üst öğeye gitmek için Yukarı Ok tuşuna basın. NVDA ve Shift tuşlarını basılı tutun, ardından ilk alt öğeye geçmek için Aşağı Ok tuşuna basın.",
-            "Ebeveyne giderseniz ve tekrar içeri girmek isterseniz, tekrar girmek için ilk alt komuta basın. İlk çocuk geçerli kapsayıcının içindeki ilk nesnedir."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "read_current_object",
-      "title": "Geçerli Dolaşım Nesnesini Oku",
-      "order": 4,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Bir nesneye gittiğinizde NVDA'nın onu farklı şekillerde okumasını sağlayabilirsiniz. Geçerli Dolaşım nesnesinin tam açıklamasını duymak için NVDA+NumPad5 (masaüstü) veya NVDA+Shift+ (dizüstü bilgisayar — yani NVDA, Shift ve virgül tuşu) tuşlarına basın. Nesne adını hecelemek için iki kez hızlıca basın. Bu, üzerine indiğiniz herhangi bir nesneyi incelemenin birincil yoludur. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: Geçerli Dolaşım nesnesini okumak için NVDA tuşunu basılı tutun ve NumPad5'e (sayısal tuş takımındaki orta tuş) basın.",
-            "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından virgül tuşuna basın. Virgül tuşu temel sırada, İ harfinden sonra gelen tuştur.",
-            "Nesne adını karakter karakter hecelemek için komuta iki kez hızlı bir şekilde basın. Bu, ad tanıdık olmadığında veya kısaltıldığında kullanışlıdır."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Şimdi deneyin. NVDA+NumPad6 (masaüstü) veya NVDA+Shift+Sağ Ok (dizüstü bilgisayar) tuşlarını kullanarak herhangi bir nesneye gidin. Daha sonra o nesnenin tam açıklamasını duymak için NVDA+NumPad5 (masaüstü) veya NVDA+Shift+Virgül (dizüstü bilgisayar) tuşlarına basın. Adı karakter karakter hecelemek için iki kez hızlıca basın. Hazır olduğunuzda devam etmek için Enter tuşuna basın.",
-          "monitorGestures": [
-            "kb:nvda+numpad5",
-            "kb:nvda+Shift+,"
-          ],
-          "hints": [
-            "Öncelikle NVDA artı NumPad6 veya NVDA artı Shift artı Sağ Ok kullanarak bir nesneye gidin, ardından NVDA artı NumPad5 veya NVDA artı Shift artı Virgül kullanarak okuyun.",
-            "Okuma komutuna iki kez basmak, nesne adını her seferinde bir karakter olmak üzere hızlı bir şekilde heceler; alışılmadık adlar veya kısaltmalar için çok kullanışlıdır.",
-            "Dizüstü bilgisayar düzeni için virgül tuşu klavyenin temel sırasında İ harfinden sonra gelen tuştur."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "route_focus_to_object",
-      "title": "Klavye Odağını Dolaşım Nesnesine Taşıma",
-      "order": 5,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Bir kontrolü bulmak için nesne Dolaşımıni kullandıktan sonra klavye odağını ona taşıyabilir, böylece onunla normal şekilde etkileşim kurabilirsiniz. Odağı geçerli Dolaşım nesnesine yönlendirmek için NVDA+Shift+NumPadEksi (masaüstü) veya NVDA+Shift+BackSpace (dizüstü bilgisayar) tuşlarına basın. Nesne odağı kabul edebiliyorsa klavye odağınız ona taşınır ve ardından Enter, Aralık tuşuna basabilir veya normal şekilde yazabilirsiniz. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından odağı geçerli Dolaşım nesnesine yönlendirmek için sayısal tuş takımı eksi tuşuna (sayısal tuş takımının sağ üst kısmı) basın.",
-            "Dizüstü bilgisayar düzeni: NVDA ve Shift tuşlarını basılı tutun, ardından Geri Silme tuşuna basın. Geri Silme (BackSpace) tuşu, klavyenin sağ tarafında Enter'ın üzerindeki büyük tuştur.",
-            "Tüm nesneler klavye odağını kabul edemez. Yönlendirme odağı çalışmazsa nesne salt görüntülenebilir olabilir; onu okuyabilir ancak onunla etkileşimde bulunamazsınız."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Ayrıca bir ters komut da vardır: NVDA+NumPadMinus (masaüstü) veya NVDA+BackSpace (dizüstü bilgisayar), dolaşım nesnesini klavye odağınızın o anda bulunduğu yere taşır. Bu, nesne ağacının en üstünden başlamak yerine, programda halihazırda bulunduğunuz yerden araştırmaya başlamak istediğinizde kullanışlıdır. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Masaüstü düzeni: NVDA artı NumPad eksi (Shift olmadan), dolaşımı o anda odaklanmış olan kontrole, yani nesne araştırmanızın başlangıç ​​noktasına taşır.",
-            "Dizüstü bilgisayar düzeni: NVDA artı Backspace (Shift olmadan) aynı şeyi yapar. Dolaşımı mevcut klavye odağınızla senkronize etmek için bunu kullanın.",
-            "Ağacın tepesinden arama yapmak yerine, bulunduğunuz yerden araştırmaya başlamak için nesne Dolaşımı oturumunun başlangıcında bu komutu kullanın."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Nesne Dolaşımı pratik gerektirir. Buna alışmanın en iyi yolu, Not Defteri veya Dosya Gezgini gibi tanıdık bir programı açmak ve nesne ağacını keşfetmek için birkaç dakika harcamaktır. Kardeşlerin yanına gidin, ebeveynlerin yanına gidin, çocukların yanına geri dönün ve ilerledikçe her nesneyi okuyun. Zamanla programların nasıl yapılandırıldığına dair zihinsel bir resim oluşturacaksınız. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Dosya Gezgini ile başlayın; açıkça adlandırılmış klasörler, araç çubukları ve paneller içeren iyi yapılandırılmış bir nesne ağacına sahiptir. Pratik için iyi.",
-            "Not Defteri başka bir iyi uygulama ortamıdır. Nesne ağacı basit ve öngörülebilirdir.",
-            "Tüm komutları aynı anda ezberleme konusunda endişelenmeyin. Önce sonraki ve önceki nesnelere odaklanın, ardından bunlar doğal göründüğünde ebeveyn ve alt Dolaşımıyi ekleyin."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "when_object_nav_helps",
-      "title": "Nesne Dolaşımı Ne Zaman Yardımcı Olur?",
-      "order": 6,
-      "steps": [
-        {
-          "type": "info",
-          "instruction": "Nesne Dolaşımı en çok üç durumda faydalıdır. Birincisi, bir programda Sekme tuşunun ulaşamayacağı kontroller varsa bazı araç çubukları, özel paneller ve uygulamaya özel kontroller yalnızca nesne ağacında görünür. İkincisi, ekranda ilerlemeyi gösteren durum çubuğu veya bildirim alanı gibi odaklanmamış bir şeyi okumanız gerektiğinde. Üçüncüsü, yeni bir programın yapısını, onunla nasıl etkileşim kuracağınıza karar vermeden önce keşfetmek istediğinizde. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Durum çubukları ve ilerleme göstergeleri Sekme tuşunun ulaşamadığı yaygın nesnelerdir. Nesne Dolaşımı, bunları herhangi bir klavye odağı olmadan okumanıza olanak tanır.",
-            "Eski uygulamalardaki (medya oynatıcılar, fotoğraf düzenleyiciler ve bazı ofis araçları) özel araç çubukları genellikle yalnızca nesne Dolaşımına yanıt verir.",
-            "Nesne Dolaşımı içeren yeni bir programı kullanmaya çalışmadan önce onu keşfetmek, programın düzenini anlamanıza ve normalde gözden kaçırabileceğiniz kontrolleri bulmanıza yardımcı olur."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Günlük görevlerin çoğu (e-posta, web'de Dolaşım, kelime işlem) nesne Dolaşımınu gerektirmez. Sekme, ok tuşları ve Tarama kipi neredeyse her şeyi kapsar. Nesne Dolaşımı, standart yöntemlerin yetersiz kaldığı durumlarda başvurabileceğiniz gelişmiş bir araçtır. Orada olduğunu bilmek, hiçbir ekranda hiçbir kontrolün gerçekten erişilemez olduğu anlamına gelir. Devam etmek için Enter'a basın.",
-          "hints": [
-            "Sekme ve Tarama kipi günlük işlerinizi tamamlamanıza yardımcı oluyorsa bu tamamen normaldir. Nesne Dolaşımı uzman bir araçtır ve çoğu kullanıcı için günlük bir zorunluluk değildir.",
-            "Görebilen bir yardımcı 'ekranda bir düğme var ama ona dokunamıyorum' dediğinde cevabınız nesne Dolaşımı olacaktır.",
-            "Deneyim kazandıkça nesne Dolaşımına ne zaman geçeceğiniz konusunda bir içgüdü geliştireceksiniz. Yeni ekran okuyucu kullanıcılarının çoğu ilk başta buna nadiren ihtiyaç duyar."
-          ]
-        },
-        {
-          "type": "info",
-          "instruction": "Nesne Dolaşımı bölümünü tamamladınız! Artık nesne ağacında herhangi bir yönde nasıl hareket edeceğinizi, nesneleri okuyup inceleyeceğinizi ve klavye odağını ekrandaki herhangi bir kontrole nasıl yönlendireceğinizi biliyorsunuz. Hazır olduğunuzda, NVDA+Shift+C tuşlarına basarak ders seçiciyi açın ve bir sonraki bölüme geçin: NVDA'yı Kişiselleştirme — klavye düzeninizi ayarlamayı ve Sentezleyici ayar halkasını ve Ayarlar iletişim kutusunu kullanarak konuşma hızını, perdesini, sesini ve ses seviyesini ayarlamayı öğreneceksiniz. Bitirmek için Enter'a basın.",
-          "hints": [
-            "Bir sonraki bölüm NVDA'yı Kişiselleştirmedir. Konuşma hızının, perdenin, sesin ve klavye düzeninin nasıl ayarlanacağını kapsar; üstelik isterseniz ayar menülerini açmadan.",
-            "Nesne Dolaşımı komutlarının özeti — masaüstü düzeni: Önceki ve sonraki için NumPad4 ve 6, ebeveyn ve çocuk için NumPad8 ve 2, okumak için NumPad5. Dizüstü bilgisayar düzeni: ok tuşlarına NVDA artı Shift ekleyin.",
-            "NVDA Eğitmeni ilerlemenizi otomatik olarak kaydeder. Geri döndüğünüzde tamamlanan tüm dersler işaretlenir."
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }

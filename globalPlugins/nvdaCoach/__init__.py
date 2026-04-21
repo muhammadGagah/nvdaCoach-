@@ -443,11 +443,22 @@ class CoachWindow(wx.Frame):
 			"starting NVDA Coach. They can help you find keys, adjust settings, or answer "
 			"questions before you begin. If you are working on your own, that is perfectly "
 			"fine too. NVDA Coach is built to guide you step by step, at your own pace.\n\n"
+			"--- KEYS AVAILABLE DURING EVERY LESSON ---\n"
+			"  Enter  —  Confirm you have tried the step and move to the next one.\n"
+			"  F1  —  Repeat the current instruction.\n"
+			"  F2  —  Hear a hint. Press again for more hints.\n"
+			"  F3  —  Skip the current step.\n"
+			"  Escape  —  Stop the lesson. Press three times to close NVDA Coach.\n\n"
+			"--- KEYS AVAILABLE ANY TIME IN THIS WINDOW ---\n"
+			"  F4  —  Open help documentation (press twice within 5 seconds).\n"
+			"  F5  —  Send feedback by email (press twice within 5 seconds).\n"
+			"  F6  —  Toggle lesson sounds on or off.\n"
+			"  F7  —  Open your profile (name, instructor, training center).\n\n"
+			"--- LESSON NAVIGATION ---\n"
+			"  Ctrl+N  —  Next lesson  ·  Ctrl+B  —  Previous  ·  Ctrl+R  —  Restart\n\n"
 			"When you are ready to begin, press Tab to find the Start Course button below "
 			"and press Enter or Space to start the first lesson. "
-			"You can also press NVDA+Shift+C to open the lesson picker and choose any lesson directly. "
-			"At any time during a lesson, press Ctrl+N to move to the next lesson, "
-			"Ctrl+B to go back, Ctrl+R to restart, or press Escape three times to close this window."
+			"You can also press NVDA+Shift+C to open the lesson picker and choose any lesson directly."
 		))
 		sizer.Add(self._instructionText, 1, wx.ALL | wx.EXPAND, 8)
 
@@ -565,11 +576,16 @@ class CoachWindow(wx.Frame):
 		if not self.IsShown():
 			self.Show()
 
-	def showCertificateButton(self):
-		"""Reveal the certificate export button once all lessons are complete."""
+	def showCertificateButton(self, silent=False):
+		"""Reveal the certificate export button once all lessons are complete.
+
+		Pass silent=True when called on startup so NVDA does not announce
+		course completion every time the add-on loads.
+		"""
 		if not self._certBtn.IsShown():
 			self._certBtn.Show()
 			self._panel.Layout()
+		if not silent:
 			ui.message(_(
 				"Congratulations — you have completed every lesson in NVDA Coach! "
 				"Tab to the Export Certificate of Completion button to save your certificate."
@@ -629,6 +645,33 @@ class CoachWindow(wx.Frame):
 				"You can use Input Help at any time, even during a lesson.\n\n"
 			)
 			+ instructor_line + "\n\n"
+			+ _(
+				"--- KEYS AVAILABLE DURING EVERY LESSON ---\n"
+				"These function keys work at any time while a lesson is open:\n\n"
+				"  Enter  —  Confirm you have tried the step and move to the next one.\n"
+				"  F1  —  Repeat the current instruction. Use this whenever you want "
+				"NVDA to read the step again.\n"
+				"  F2  —  Hear a hint. If you are not sure what to do, press F2 for "
+				"a helpful suggestion. Press it again for additional hints.\n"
+				"  F3  —  Skip the current step and move on. Use this if you cannot "
+				"complete a step right now and want to continue.\n"
+				"  Escape  —  Stop the lesson. Press Escape three times to close NVDA Coach.\n\n"
+				"--- KEYS AVAILABLE ANY TIME IN THIS WINDOW ---\n"
+				"These keys work whether a lesson is running or not:\n\n"
+				"  F4  —  Open the NVDA Coach help documentation in your web browser. "
+				"Press F4 once to arm it, then press F4 again within five seconds to open.\n"
+				"  F5  —  Send feedback to the developer by email. "
+				"Press F5 once to arm it, then press F5 again within five seconds to open.\n"
+				"  F6  —  Toggle lesson sounds on or off. "
+				"Press once to silence sounds, press again to restore them.\n"
+				"  F7  —  Open your profile. Set your name, your instructor's name, "
+				"and your training center. This information personalizes your lessons "
+				"and appears on your certificate of completion.\n\n"
+				"--- LESSON NAVIGATION ---\n"
+				"  Ctrl+N  —  Move to the next lesson in the current chapter.\n"
+				"  Ctrl+B  —  Go back to the previous lesson.\n"
+				"  Ctrl+R  —  Restart the current lesson from the beginning.\n\n"
+			)
 			+ _(
 				"When you are ready to begin, press Tab to find the Start Course button below "
 				"and press Enter or Space to start the first lesson. "
@@ -804,6 +847,63 @@ class CoachWindow(wx.Frame):
 				"  2. To print to PDF, choose 'Save as PDF' or 'Microsoft Print to PDF' "
 				"as your printer.\n"
 				"  3. A copy is also saved automatically to your Downloads folder."
+			)
+		)
+
+		self._statusText.SetLabel(_("NVDA Coach — Course Complete!"))
+		self._statusText.GetParent().Layout()
+		self._startCourseBtn.Hide()
+		self._nextStepBtn.Hide()
+		if not self._certBtn.IsShown():
+			self._certBtn.Show()
+		self._panel.Layout()
+		self._instructionText.SetValue(body)
+		self._clearEscapeCount()
+		ui.message(spoken)
+
+	def showCompletionReturn(self):
+		"""Show the course-complete screen quietly when the student re-opens Coach.
+
+		Called on subsequent sessions after the full completion fanfare has already
+		been presented. No lesson-complete sound plays — just updates the window
+		content and makes a brief spoken announcement.
+		"""
+		name = config.conf["nvdaCoach"].get("userName", "").strip()
+
+		heading = (
+			_("Welcome back, {name} — NVDA Coach Complete!").format(name=name)
+			if name else
+			_("Welcome back — NVDA Coach Complete!")
+		)
+		spoken = (
+			_("Welcome back, {name}. You have already completed every lesson in NVDA Coach. "
+			  "Your certificate is available below.").format(name=name)
+			if name else
+			_("Welcome back. You have already completed every lesson in NVDA Coach. "
+			  "Your certificate is available below.")
+		)
+
+		body = (
+			heading + "\n\n"
+			+ _(
+				"You have completed all six chapters of NVDA Coach. "
+				"Your progress is saved and your certificate of completion is ready.\n\n"
+				"--- YOUR CERTIFICATE ---\n"
+				"Tab to the Export Certificate of Completion button below and press Enter "
+				"to open your certificate in your web browser. A copy is also saved to your "
+				"Downloads folder automatically.\n\n"
+				"--- CONTINUE LEARNING ---\n"
+				"Press NVDA+Shift+C to open the lesson picker. "
+				"You can revisit any lesson at any time to review commands and practice.\n\n"
+				"--- LESSON NAVIGATION ---\n"
+				"  Ctrl+N  —  Next lesson in the current category\n"
+				"  Ctrl+B  —  Previous lesson\n"
+				"  Ctrl+R  —  Restart the current lesson\n\n"
+				"--- QUICK KEYS ---\n"
+				"  F4 — Open help documentation\n"
+				"  F5 — Send feedback to the developer\n"
+				"  F6 — Toggle lesson sounds on or off\n"
+				"  F7 — Update your profile (name, instructor, training center)"
 			)
 		)
 
@@ -1386,7 +1486,9 @@ class LessonPickerDialog(wx.Dialog):
 			label=_(
 				"Browse lessons and resources below. "
 				"Right arrow expands a section, Left arrow collapses it. "
-				"Press Enter or the Open / Start button to activate the selected item."
+				"Press Enter or the Open / Start button to activate the selected item. "
+				"Press F4 for help, F5 for feedback, F6 to toggle sounds, "
+				"F7 or the Profile button to set your name and instructor."
 			),
 		)
 		hint.Wrap(560)
@@ -1446,13 +1548,22 @@ class LessonPickerDialog(wx.Dialog):
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		startBtn = wx.Button(panel, wx.ID_OK, label=_("&Open / Start"))
 		startBtn.SetDefault()
+		profileBtn = wx.Button(panel, label=_("&Profile  (F7)"))
+		profileBtn.SetToolTip(_(
+			"Set your name, instructor name, and training center. "
+			"This information appears on your certificate of completion and "
+			"personalizes lesson instructions throughout NVDA Coach. "
+			"You can update your profile at any time."
+		))
 		cancelBtn = wx.Button(panel, wx.ID_CANCEL, label=_("&Cancel"))
 		btnSizer.Add(startBtn, flag=wx.RIGHT, border=5)
+		btnSizer.Add(profileBtn, flag=wx.RIGHT, border=5)
 		btnSizer.Add(cancelBtn)
 		sizer.Add(btnSizer, flag=wx.ALL | wx.ALIGN_RIGHT, border=10)
 
 		panel.SetSizer(sizer)
 		startBtn.Bind(wx.EVT_BUTTON, self._onActivate)
+		profileBtn.Bind(wx.EVT_BUTTON, self._onProfile)
 		cancelBtn.Bind(wx.EVT_BUTTON, self._onCancel)
 		self._tree.Bind(wx.EVT_TREE_ITEM_ACTIVATED, self._onActivate)
 		self.Bind(wx.EVT_CHAR_HOOK, self._onKeyPress)
@@ -1525,6 +1636,11 @@ class LessonPickerDialog(wx.Dialog):
 	def _onCancel(self, event):
 		self.Destroy()
 
+	def _onProfile(self, event):
+		"""Open the personalization dialog (same as F7) from the lesson picker."""
+		if self._coachWindow:
+			self._coachWindow._handleF7()
+
 	def _onKeyPress(self, event):
 		key = event.GetKeyCode()
 		if key == wx.WXK_ESCAPE:
@@ -1583,9 +1699,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		)
 		log.info(f"NVDA Coach loaded. {len(self._categories)} lesson categories found.")
 		# If the student has already completed the final chapter in a prior session,
-		# quietly show the certificate button when the add-on loads (no fanfare).
+		# quietly show the certificate button when the add-on loads (no fanfare, no speech).
 		if self._categories and self._nvdaSettingsComplete():
-			self._coachWindow.showCertificateButton()
+			self._coachWindow.showCertificateButton(silent=True)
 
 	def terminate(self):
 		self._lessonRunner.cleanup()
@@ -1631,6 +1747,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._coachWindow.IsShown():
 			self._coachWindow.Show()
 		self._coachWindow.Raise()
+		# If the student has already completed every lesson, show the quiet
+		# "welcome back / course complete" screen before the picker opens.
+		if self._allLessonsComplete():
+			self._coachWindow.showCompletionReturn()
 		self._showLessonPicker()
 
 	@script(
